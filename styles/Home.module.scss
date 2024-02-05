@@ -1,0 +1,26 @@
+@import "_variabels.module.scss";
+@import "_mixins.module.scss";
+@import "layout.module.scss";
+@import "artikler.module.scss";
+@import "error.module.scss";
+@import "loader.module.scss";
+
+.home_container {
+    background-color: $tertiary-color;
+
+    main {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        column-gap: 1rem;
+        height: 88vh;
+        width: 100%;
+    }
+}
+
+/* ----------------------------------------------------- Tablet -------------------------------------------- */
+@media (min-width: 768px) {}
+
+/* ----------------------------------------------------- Mobile -------------------------------------------- */
+@media (min-width: 375px) {}
