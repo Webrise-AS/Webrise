@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 import styles from "../styles/Home.module.scss";
 
 export default function page() {
@@ -10,11 +11,11 @@ export default function page() {
           people, who can help youre business compete in the ever changeing
           digital world.
         </p>
-        <h1>OUR WEBSITE IS CURRENTLY ON BUILDING</h1>
+        <h1>We are currently working on updating our website</h1>
         <div>
-          <a href="mailto:ahmed.j.jibril@hotmail.com">
+          <Link href="mailto:ahmed.j.jibril@hotmail.com">
             <button>Contact us</button>
-          </a>
+          </Link>
         </div>
       </main>
     </div>

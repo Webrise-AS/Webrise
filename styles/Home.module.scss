@@ -10,11 +10,12 @@
     
 
     main {
-        width: 85%;
+        width: 88%;
         margin: auto;
         display: flex;
         flex-direction: column;
         justify-content: center;
+        row-gap: -1rem;
         height: 95.6vh;
 
         p {
