@@ -1,21 +1,55 @@
 @import "_variabels.module.scss";
 @import "_mixins.module.scss";
 @import "layout.module.scss";
-@import "artikler.module.scss";
 @import "error.module.scss";
-@import "loader.module.scss";
+
 
 .home_container {
-    background-color: $tertiary-color;
+    background-color: $black-color;
+    color: $white-color;
+    
 
     main {
+        width: 85%;
+        margin: auto;
         display: flex;
-        flex-direction: row;
-        align-items: center;
+        flex-direction: column;
         justify-content: center;
-        column-gap: 1rem;
-        height: 88vh;
-        width: 100%;
+        height: 95.6vh;
+
+        p {
+            width: 50%;
+            font-weight: 500;
+        }
+
+        h1 {
+        font-size: 90px;
+        line-height: 110%;
+        letter-spacing: 1px;
+        text-indent: 0px;
+        text-transform: uppercase;
+        white-space: normal;
+        }
+
+        button {
+            margin-left: 1rem;
+            padding: 25px 50px;
+            border-radius: 0px 10px 0px 10px;
+            background-color: $white-color;
+            font-family: Montserrat, sans-serif;
+            color: $black-color;
+            font-size: 22px;
+            line-height: 110%;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: $black-color;
+            color: $white-color;
+            border: 2px solid $white-color;
+            transition: 0.2s;
+        }
     }
 }
 
