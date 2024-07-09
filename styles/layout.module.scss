@@ -1,17 +1,108 @@
 .nav_container {
-    border: solid 1px red;
-    height: 5rem;
+    height: 4.2rem;
     width: 100%;
-    padding: 0 1rem;
+    padding: 0 2.35rem;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    position: none;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
     top: 0;
-    box-shadow: 0px 0px 0.375rem 0px rgba(0, 0, 0, 0.14);
+    box-shadow: 0 0 0.175rem 0 rgba(0, 0, 0, 0.14);
     background-color: $white-color;
     color: $black-color;
 
+    .nav_logo {
+
+        span {
+            font-size: 2.188rem;
+            font-weight: 600;
+            letter-spacing: 0.3rem;
+            font-style: oblique;
+        }
+
+    }
+
+    .nav_links {
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        column-gap: 2rem;
+
+        ul {
+            display: flex;
+            column-gap: 1.7rem;
+
+            li {
+                font-size: 0.85rem;
+                font-weight: 600;
+                color: $black-color;
+                letter-spacing: 0.1rem;
+                font-style: oblique;
+            }
+            
+            li:hover {
+                cursor: pointer;
+                text-decoration: underline 1.8px;
+                
+            }
+        }
+
+        button {
+            @include buttons;
+        }
+
+        button:hover {
+            @include hover_button_effects;
+        }
+    }
+
+}
+
+.loader_container {
+    height: 90vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.error_container {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    height: 90vh;
+    width: 100%;
+    background-color: teal;
+    color: $white-color;
+    
+    h1 {
+        color: $white-color;
+        font-weight: bolder;
+        text-decoration: double;
+    }
+
+    p {
+        width: 500px;
+        text-align: center;
+        letter-spacing: normal;
+    }
+
+    div {
+        display: flex;
+        column-gap: 1rem;
+    }
+
+
+    button {
+        @include buttons;
+    }
+
+    button:hover {
+        @include hover_button_effects;
+    }
 }
 
 .footer_container {
@@ -19,7 +110,6 @@
     flex-direction: column;
     justify-content: space-between;
     padding: 7.5rem 2.35rem 1.563rem 2.35rem;
-    border: solid 0.063rem red;
     height: 832px;
     width: 100%;
     background-color: $black-color;
@@ -83,7 +173,7 @@
             align-items: center;
 
             span {
-                font-size: 21.683rem;
+                font-size: 21.589rem;
             }
         }
 

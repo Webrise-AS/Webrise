@@ -20,7 +20,7 @@ function Footer() {
           </ul>
         </div>
         <div className={styles.footer_top_newsletter}>
-          <p>Join newsletter and get notified!</p>
+          <p>Join our newsletter and get notified!</p>
           <input placeholder="Email" type="email"></input>
         </div>
       </div>
