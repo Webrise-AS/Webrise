@@ -4,8 +4,8 @@ import styles from "../styles/Home.module.scss";
 import Image from "next/image";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
-import { Accordion } from "@mantine/core";
 import { BsLinkedin, BsTiktok, BsInstagram } from "react-icons/bs";
+import { Accordion, AccordionItem } from "@nextui-org/accordion";
 
 const QuestionAndAnswer_data = [
   {
@@ -51,7 +51,29 @@ export default function Home() {
 
       <div className={styles.home_container}>
         <section className={styles.hero_container}></section>
-        <section className={styles.about_container}></section>
+        <section className={styles.about_container}>
+          <div className={styles.about_content_left}>
+            <h4>(Who we are)</h4>
+            <Image
+              src="https://placehold.jp/400x450.png"
+              width={400}
+              height={450}
+              alt=""
+            />
+          </div>
+          <div className={styles.about_content_right}>
+            <p>
+              At Webrise, we are a dedicated web design agency comprised of a
+              team of creative professionals committed to helping your business
+              thrive in the ever-changing digital landscape.
+              <br />
+              <br />
+              Our mission is to design and develop visually stunning and highly
+              functional websites that perfectly reflect your brand and meet
+              your unique needs.
+            </p>
+          </div>
+        </section>
         <section className={styles.project_container}>
           <div className={styles.project_hero_textfield}>
             <h2>Recent</h2>
@@ -178,31 +200,91 @@ export default function Home() {
             <h2>HAPPY CLIENTS</h2>
             <div className={styles.embla} ref={emblaRef}>
               <div className={styles.embla__container}>
-                <div className={styles.embla__slide}>Slide 1</div>
-                <div className={styles.embla__slide}>Slide 2</div>
-                <div className={styles.embla__slide}>Slide 3</div>
-                <div className={styles.embla__slide}>Slide 4</div>
+                <div className={styles.embla__slide}>
+                  <h3>Lena M. – Founder of Caffeine Coders</h3>
+                  <p>
+                    &quot;Webrise transformed our digital presence with a
+                    stunning website that not only looks sleek but functions
+                    like a dream. Our site now truly reflects the vibrant energy
+                    of our coding café in Berlin.&quot;
+                  </p>
+                </div>
+                <div className={styles.embla__slide}>
+                  <h3>Marco G. – Head Chef at Pasta Palette</h3>
+                  <p>
+                    &quot;The creativity of Webrise is unmatched. They&apos;ve
+                    crafted an online experience that captures the essence of
+                    our kitchen&apos;s innovation. It&apos;s not just our pasta
+                    that&apos;s artful now—our digital platform is too!&quot;
+                  </p>
+                </div>
+                <div className={styles.embla__slide}>
+                  <h3>Lena M. – Founder of Caffeine Coders</h3>
+                  <p>
+                    &quot;Webrise transformed our digital presence with a
+                    stunning website that not only looks sleek but functions
+                    like a dream. Our site now truly reflects the vibrant energy
+                    of our coding café in Berlin.&quot;
+                  </p>
+                </div>
+                <div className={styles.embla__slide}>
+                  <h3>Marco G. – Head Chef at Pasta Palette</h3>
+                  <p>
+                    &quot;The creativity of Webrise is unmatched. They&apos;ve
+                    crafted an online experience that captures the essence of
+                    our kitchen&apos;s innovation. It&apos;s not just our pasta
+                    that&apos;s artful now—our digital platform is too!&quot;
+                  </p>
+                </div>
               </div>
             </div>
           </div>
         </section>
-        <section className={styles.hire_container}></section>
-        <section className={styles.info_container}>
+        <section className={styles.hire_container}>
           <div>
+            <p>
+              Be part of the innovation journey with Strobe™. Our monthly
+              insights showcase the cutting-edge trends, technologies, and
+              creative strategies shaping the future. Stay informed, inspired,
+              and ahead of the curve with Strobe™
+            </p>
+            <button>Learn more</button>
+          </div>
+        </section>
+        <section className={styles.info_container}>
+          <div className={styles.info_title}>
             <span>YOU ASK</span>
             <span>WE ANSWER</span>
           </div>
-          <div>
-            {/* {QuestionAndAnswer_data.map((data) => {
-              return (
-                <Accordion key={data.key} radius="xs" chevronPosition="left">
-                  <Accordion.Item value={data.value}>
-                    <Accordion.Control>{data.value}</Accordion.Control>
-                    <Accordion.Panel>{data.description}</Accordion.Panel>
-                  </Accordion.Item>
-                </Accordion>
-              );
-            })} */}
+          <div style={styles.info_accordion}>
+            <Accordion variant="bordered">
+              <AccordionItem
+                key="1"
+                aria-label="Accordion 1"
+                title="Accordion 1"
+              >
+                &quot;Strobe™ stands out through our unique fusion of
+                Berlin&apos;s artistic heritage with modern digital innovation.
+                Our approach is not just about creating visually stunning
+                designs; it&apos;s about delivering functional, user-centered
+                experiences that drive results and embody the vibrant spirit of
+                our city.&quot;
+              </AccordionItem>
+              <AccordionItem
+                key="2"
+                aria-label="Accordion 2"
+                title="Accordion 2"
+              >
+                defaultContent
+              </AccordionItem>
+              <AccordionItem
+                key="3"
+                aria-label="Accordion 3"
+                title="Accordion 3"
+              >
+                defaultContent
+              </AccordionItem>
+            </Accordion>
           </div>
         </section>
       </div>

@@ -18,10 +18,53 @@
     }
 
     .about_container {
+        height: 120vh;
         width: 95%;
         margin: auto;
-        border: solid 1px green;
-        height: 90vh;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .about_content_left {
+            display: flex;
+            flex-direction: column;
+            row-gap: 1.8rem;
+
+            h4 {
+                margin: 0;
+                font-size: 1.25rem;
+                font-weight: 500;
+            }
+
+            img {
+                border-radius: 0.5rem;
+            }
+        }
+
+        .about_content_right {
+            width: 52rem;
+            color: $quaternary-color;
+            background-clip: text;
+            background-repeat: no-repeat;
+            background-size: 0% 100%;
+            background-image: linear-gradient(90deg $black-color, $black-color);
+            animation: scroll-reveal linear forwards;
+            animation-timeline: view(y);
+
+            p {
+                font-size: 3rem;
+                font-weight: 600;
+                line-height: 98%;
+                letter-spacing: -0.05rem;
+                margin: 0;
+            }
+        }
+
+        @keyframes scroll-reveal  {
+            to {
+                background-size: 100% 100%;
+            }
+        }
     }
 
     .project_container {
@@ -293,8 +336,12 @@
                 display: flex;
                 
                 .embla__slide {
-                    height: 520px;
-                    width: 750px;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    height: 32.5rem;
+                    width: 46.875rem;
                     padding: 3rem;
                     margin-right: 3rem;
                     border-radius: 0.5rem;
@@ -302,6 +349,22 @@
                     min-width: 0;
                     max-width: 100%;
                     background-color: $white-color;
+
+                    h3 {
+                        margin-bottom: 3rem;
+                        width: 37rem;
+                        font-size: 1.25rem;
+                        font-weight: 500;
+                    }
+
+                    p {
+                        margin: 0;
+                        width: 37rem;
+                        font-size: 2.5rem;
+                        font-weight: 600;
+                        letter-spacing: -0.1rem;
+                        line-height: 98%;
+                    }
                 }
             }
             
@@ -312,28 +375,68 @@
     .hire_container {
         background-color: $black-color;
         color: $white-color;
-        height: 90vh;
+        height: 150vh;
+        background-image: url('https://assets-global.website-files.com/6606f0f658b42ca7220e3695/660bfcae5749fee5cdae4952_Bg%20Text%20Video-poster-00001.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        padding: 37rem 0rem 2rem 0rem;
+
+        div:first-child {
+            width: 95%;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            row-gap: 2rem;
+
+
+            p {
+                width: 78.5%;
+                margin: 0;
+                font-size: 3rem;
+                font-weight: 600;
+                letter-spacing: -0.06rem;
+                line-height: 97%;
+            }
+
+            button {
+                width: 7rem;
+                height: 2.5rem;
+                background: transparent;
+                color: $white-color;
+                border: solid 0.08rem $white-color;
+                border-radius: 0.4rem;
+                font-size: 1rem;
+                font-weight: 500;
+            }
+
+            button:hover {
+                cursor: pointer;
+            }
+        }
+
     }
 
     .info_container {
-        height: 90vh;
+        height: 110vh;
         width: 95%;
         margin: auto;
         display: flex;
-        justify-content: space-between;
+        align-items: center;
         border: solid 1px red;
 
-        div:first-child {
+        .info_title {
             display: flex;
             flex-direction: column;
-            row-gap: -1rem;
+
+            span {
+                height: 3.9rem;
+                font-size: 4.5rem;
+                font-weight: 700;
+                letter-spacing: -0.2rem;
+            }
         }
 
-        span {
-            font-size: 4.5rem;
-            font-weight: 700;
-            font-style: oblique;
-        }
     }
 
 

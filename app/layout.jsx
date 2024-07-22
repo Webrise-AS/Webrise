@@ -1,13 +1,14 @@
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import "../styles/global.scss";
+import { Providers } from "./providers";
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" className="light">
       <body>
         <Header />
-        {children}
+        <Providers>{children}</Providers>
         <Footer />
       </body>
     </html>
