@@ -5,7 +5,7 @@ import Image from "next/image";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 import { BsLinkedin, BsTiktok, BsInstagram } from "react-icons/bs";
-import { Accordion, AccordionItem } from "@nextui-org/accordion";
+import Accordion from "@/components/accordion";
 
 const QuestionAndAnswer_data = [
   {
@@ -63,14 +63,16 @@ export default function Home() {
           </div>
           <div className={styles.about_content_right}>
             <p>
-              At Webrise, we are a dedicated web design agency comprised of a
-              team of creative professionals committed to helping your business
-              thrive in the ever-changing digital landscape.
-              <br />
-              <br />
-              Our mission is to design and develop visually stunning and highly
-              functional websites that perfectly reflect your brand and meet
-              your unique needs.
+              <span>
+                At Webrise, we are a dedicated web design agency comprised of a
+                team of creative professionals committed to helping your
+                business thrive in the ever-changing digital landscape.
+                <br />
+                <br />
+                Our mission is to design and develop visually stunning and
+                highly functional websites that perfectly reflect your brand and
+                meet your unique needs.
+              </span>
             </p>
           </div>
         </section>
@@ -257,34 +259,7 @@ export default function Home() {
             <span>WE ANSWER</span>
           </div>
           <div style={styles.info_accordion}>
-            <Accordion variant="bordered">
-              <AccordionItem
-                key="1"
-                aria-label="Accordion 1"
-                title="Accordion 1"
-              >
-                &quot;Strobe™ stands out through our unique fusion of
-                Berlin&apos;s artistic heritage with modern digital innovation.
-                Our approach is not just about creating visually stunning
-                designs; it&apos;s about delivering functional, user-centered
-                experiences that drive results and embody the vibrant spirit of
-                our city.&quot;
-              </AccordionItem>
-              <AccordionItem
-                key="2"
-                aria-label="Accordion 2"
-                title="Accordion 2"
-              >
-                defaultContent
-              </AccordionItem>
-              <AccordionItem
-                key="3"
-                aria-label="Accordion 3"
-                title="Accordion 3"
-              >
-                defaultContent
-              </AccordionItem>
-            </Accordion>
+            <Accordion />
           </div>
         </section>
       </div>

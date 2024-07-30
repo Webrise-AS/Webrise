@@ -1,6 +1,7 @@
 @import "_variabels.module.scss";
 @import "_mixins.module.scss";
 @import "layout.module.scss";
+@import "Accordion.module.scss";
 
 .home_container {
     color: $black-color;
@@ -9,6 +10,7 @@
     display: flex;
     flex-direction: column;
     padding: 1rem 0rem;
+    scroll-behavior: smooth;
 
     .hero_container {
         width: 95%;
@@ -23,7 +25,7 @@
         margin: auto;
         display: flex;
         align-items: center;
-        justify-content: space-between;
+        justify-content: space-evenly;
 
         .about_content_left {
             display: flex;
@@ -43,24 +45,29 @@
 
         .about_content_right {
             width: 52rem;
-            color: $quaternary-color;
-            background-clip: text;
-            background-repeat: no-repeat;
-            background-size: 0% 100%;
-            background-image: linear-gradient(90deg $black-color, $black-color);
-            animation: scroll-reveal linear forwards;
-            animation-timeline: view(y);
 
             p {
                 font-size: 3rem;
                 font-weight: 600;
-                line-height: 98%;
+                line-height: 1;
                 letter-spacing: -0.05rem;
                 margin: 0;
+
+                span {
+                    color: hsl(0 0% 50% / 0.2);
+                    background-clip: text;
+                    background-repeat: no-repeat;
+                    background-size: 0% 100%;
+                    background-image: linear-gradient(90deg, $black-color, $black-color) ;
+                    animation: scroll_reveal linear forwards;
+                    animation-timeline: view(y);
+                    animation-range-start: cover 9rem;
+                    animation-range-end: contain 10vh;
+                }
             }
         }
 
-        @keyframes scroll-reveal  {
+        @keyframes scroll_reveal  {
             to {
                 background-size: 100% 100%;
             }
@@ -418,16 +425,18 @@
     }
 
     .info_container {
-        height: 110vh;
+        height: 150vh;
         width: 95%;
         margin: auto;
         display: flex;
         align-items: center;
+        justify-content: space-between;
         border: solid 1px red;
 
         .info_title {
             display: flex;
             flex-direction: column;
+            border: solid 1px blue;
 
             span {
                 height: 3.9rem;
