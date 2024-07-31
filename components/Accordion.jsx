@@ -49,19 +49,19 @@ const data = [
   },
   {
     id: 2,
-    question: "Question 2",
+    question: "How does Webrise ensure trends?",
     answer:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent congue lacus eget sem facilisis aliquam vitae eu erat. Donec pulvinar pharetra neque imperdiet aliquam. Donec ultrices mauris sed ante varius viverra. Aliquam semper ullamcorper ex, et lobortis diam semper vel. In felis ex, aliquam aliquet pharetra eget, condimentum eget sem. Nam auctor tellus ac ligula egestas molestie. Etiam congue velit ut nisi cursus vehicula. Vestibulum in blandit arcu. Aenean eu.",
   },
   {
     id: 3,
-    question: "Question 3",
+    question: "Can Webrise help my brand?",
     answer:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent congue lacus eget sem facilisis aliquam vitae eu erat. Donec pulvinar pharetra neque imperdiet aliquam. Donec ultrices mauris sed ante varius viverra. Aliquam semper ullamcorper ex, et lobortis diam semper vel. In felis ex, aliquam aliquet pharetra eget, condimentum eget sem. Nam auctor tellus ac ligula egestas molestie. Etiam congue velit ut nisi cursus vehicula. Vestibulum in blandit arcu. Aenean eu.",
   },
   {
     id: 4,
-    question: "Question 4",
+    question: "What is the process?",
     answer:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent congue lacus eget sem facilisis aliquam vitae eu erat. Donec pulvinar pharetra neque imperdiet aliquam. Donec ultrices mauris sed ante varius viverra. Aliquam semper ullamcorper ex, et lobortis diam semper vel. In felis ex, aliquam aliquet pharetra eget, condimentum eget sem. Nam auctor tellus ac ligula egestas molestie. Etiam congue velit ut nisi cursus vehicula. Vestibulum in blandit arcu. Aenean eu.",
   },

@@ -20,7 +20,12 @@
                 align-items: center ;
 
                 span {
-                    font-size: 3.4rem;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    height: 3.15rem;
+                    width: 2.5rem;
+                    font-size: 3rem;
                     font-weight: 200;
                     padding-bottom: 0.5rem;
                 }
@@ -35,12 +40,13 @@
 
             .single_accordion_content {
                 max-height: 0;
-                width: 95%;
                 overflow: hidden;
-                margin-top: 1.75rem;
-                transition: all 0.5s cubic-bezier(0,1,0,1);
+                transition: all 0.5s ease, opacity 0.5s ease;
+                opacity: 0;
+                margin-left: 4rem;
                 
                 p {
+                    width: 45rem;
                     font-size: 1.25rem;
                     font-weight: 500;
                     line-height: 140%;
@@ -50,12 +56,13 @@
 
             .single_accordion_content_show {
                 height: auto;
-                max-height: 9999px;
-                width: 95%;
+                max-height: 100rem;
                 margin-top: 1.75rem;
                 transition: all 0.5s cubic-bezier(0,1,0,1);
+                margin-left: 4rem;
 
                 p {
+                    width: 45rem;
                     font-size: 1.25rem;
                     font-weight: 500;
                     line-height: 140%;
