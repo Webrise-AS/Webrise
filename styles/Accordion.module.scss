@@ -8,7 +8,6 @@
 
     .accordion_content {
 
-
         .single_accordion {
             padding: 2.5rem 0;
             border-top: solid 1px $black-color;
@@ -28,6 +27,7 @@
                     font-size: 3rem;
                     font-weight: 200;
                     padding-bottom: 0.5rem;
+                    transition: all 10s cubic-bezier(0,1,0,1);
                 }
 
                 h2 {
@@ -58,7 +58,7 @@
                 height: auto;
                 max-height: 100rem;
                 margin-top: 1.75rem;
-                transition: all 0.5s cubic-bezier(0,1,0,1);
+                transition: all 3s cubic-bezier(0,1,0,1);
                 margin-left: 4rem;
 
                 p {
@@ -70,5 +70,69 @@
                 }
             }
         }
+
+        .single_accordion_bottom {
+            padding: 2.5rem 0;
+            border-top: solid 1px $black-color;
+            border-bottom: solid 1px $black-color;
+            cursor: pointer;
+
+            .single_accordion_tittle {
+               display: flex;
+               column-gap: 1.5rem;
+               align-items: center ;
+
+               span {
+                   display: flex;
+                   align-items: center;
+                   justify-content: center;
+                   height: 3.15rem;
+                   width: 2.5rem;
+                   font-size: 3rem;
+                   font-weight: 200;
+                   padding-bottom: 0.5rem;
+                   transition: all 10s cubic-bezier(0,1,0,1);
+               }
+
+               h2 {
+                   margin: 0;
+                   font-size: 2.5rem;
+                   font-weight: 600;
+                   letter-spacing: -0.1rem;
+               }
+           }
+
+           .single_accordion_content {
+               max-height: 0;
+               overflow: hidden;
+               transition: all 0.5s ease, opacity 0.5s ease;
+               opacity: 0;
+               margin-left: 4rem;
+               
+               p {
+                   width: 45rem;
+                   font-size: 1.25rem;
+                   font-weight: 500;
+                   line-height: 140%;
+                   margin: 0;
+               }
+           }
+
+           .single_accordion_content_show {
+               height: auto;
+               max-height: 100rem;
+               margin-top: 1.75rem;
+               transition: all 3s cubic-bezier(0,1,0,1);
+               margin-left: 4rem;
+
+               p {
+                   width: 45rem;
+                   font-size: 1.25rem;
+                   font-weight: 500;
+                   line-height: 140%;
+                   margin: 0;
+               }
+           }
+       }
     }
 }

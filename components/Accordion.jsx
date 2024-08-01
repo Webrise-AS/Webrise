@@ -16,7 +16,11 @@ function Accordion() {
       <div className={styles.accordion_content}>
         {data.map((info, i) => (
           <div
-            className={styles.single_accordion}
+            className={
+              info.id != 4
+                ? styles.single_accordion
+                : styles.single_accordion_bottom
+            }
             key={info.id}
             onClick={() => toggle(i)}
           >
