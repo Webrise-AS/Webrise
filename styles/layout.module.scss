@@ -7,8 +7,9 @@
     justify-content: space-between;
     position: sticky;
     top: 0;
-    box-shadow: 0 0 0.175rem 0 rgba(0, 0, 0, 0.14);
+    box-shadow: 0 0 0.1rem 0 rgba(0, 0, 0, 0.14);
     background-color: $white-color;
+    opacity: 99.2%;
     color: $black-color;
     z-index: $high-index;
 
@@ -35,6 +36,7 @@
             column-gap: 1.7rem;
 
             li {
+                padding: 0.5rem 0;
                 font-size: 0.85rem;
                 font-weight: 600;
                 color: $black-color;
@@ -44,8 +46,10 @@
             
             li:hover {
                 cursor: pointer;
-                text-decoration: underline 1.8px;
-                
+                text-decoration: underline ;
+                text-decoration-thickness: 0.125rem;
+                text-decoration-color: $black-color;
+                text-underline-offset: 0.5rem;
             }
         }
 

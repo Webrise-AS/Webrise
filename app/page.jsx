@@ -6,31 +6,36 @@ import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 import { BsLinkedin, BsTiktok, BsInstagram } from "react-icons/bs";
 import Accordion from "@/components/accordion";
+import AnimatedCursor from "react-animated-cursor";
 
-const QuestionAndAnswer_data = [
+const ProjectsData = [
   {
-    key: 1,
-    value: "Apples",
-    description:
-      "Crisp and refreshing fruit. Apples are known for their versatility and nutritional benefits. They come in a variety of flavors and are great for snacking, baking, or adding to salads.",
+    id: 1,
+    name: "Sand & Witch",
+    slogan: "The crunchier the butter",
+    image_url: "https://placehold.jp/640x700.png",
+    image_desc: "Picture of the project",
   },
   {
-    key: 2,
-    value: "Bananas",
-    description:
-      "Naturally sweet and potassium-rich fruit. Bananas are a popular choice for their energy-boosting properties and can be enjoyed as a quick snack, added to smoothies, or used in baking.",
+    id: 2,
+    name: "Sweet Lorens",
+    slogan: "Cookies made of dreams",
+    image_url: "https://placehold.jp/640x700.png",
+    image_desc: "Picture of the project",
   },
   {
-    key: 3,
-    value: "Broccoli",
-    description:
-      "Nutrient-packed green vegetable. Broccoli is packed with vitamins, minerals, and fiber. It has a distinct flavor and can be enjoyed steamed, roasted, or added to stir-fries.",
+    id: 3,
+    name: "Caffeine Coders",
+    slogan: "Code flows as smooth as our coffee",
+    image_url: "https://placehold.jp/640x700.png",
+    image_desc: "Picture of the project",
   },
   {
-    key: 4,
-    value: "Orange",
-    description:
-      "Crisp and refreshing fruit. Apples are known for their versatility and nutritional benefits. They come in a variety of flavors and are great for snacking, baking, or adding to salads.",
+    id: 4,
+    name: "Pasta Palette",
+    slogan: "Every flavor tells a tale",
+    image_url: "https://placehold.jp/640x700.png",
+    image_desc: "Picture of the project",
   },
 ];
 
@@ -48,6 +53,38 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+
+      <AnimatedCursor
+        innerSize={12}
+        outerSize={60}
+        innerScale={1.5}
+        outerScale={1.5}
+        outerAlpha={15}
+        hasBlendMode={true}
+        showSystemCursor={true}
+        outerStyle={{
+          mixBlendMode: "plus-lighter",
+          zIndex: "9999",
+        }}
+        innerStyle={{
+          borderRadius: "0px 10px 10px 10px",
+          zIndex: "9999",
+          backgroundColor: "#151515",
+        }}
+        clickables={[
+          "a",
+          'input[type="text"]',
+          'input[type="email"]',
+          'input[type="number"]',
+          'input[type="submit"]',
+          'input[type="image"]',
+          "label[for]",
+          "select",
+          "textarea",
+          "button",
+          ".link",
+        ]}
+      />
 
       <div className={styles.home_container}>
         <section className={styles.hero_container}></section>
@@ -82,48 +119,22 @@ export default function Home() {
             <h2>Projects</h2>
           </div>
           <div className={styles.project_work_section}>
-            <div className={styles.works_content}>
-              <div className={styles.content_image_container}>
-                <Image
-                  src="https://placehold.jp/640x700.png"
-                  width={640}
-                  height={650}
-                  alt="Picture of the author"
-                />
+            {ProjectsData.map((project) => (
+              <div className={styles.works_content} key={project.id}>
+                <div className={styles.content_image_container}>
+                  <Image
+                    src={project.image_url}
+                    width={640}
+                    height={650}
+                    alt={project.image_desc}
+                  />
+                </div>
+                <span className={styles.works_content_span}>
+                  {project.name}
+                </span>
+                <span>{project.slogan}</span>
               </div>
-              <span className={styles.works_content_span}>Sand & Witch</span>
-              <span>The crunchier the butter</span>
-            </div>
-            <div className={styles.works_content}>
-              <Image
-                src="https://placehold.jp/640x700.png"
-                width={640}
-                height={650}
-                alt="Picture of the author"
-              />
-              <span className={styles.works_content_span}>Sand & Witch</span>
-              <span>The crunchier the butter</span>
-            </div>
-            <div className={styles.works_content}>
-              <Image
-                src="https://placehold.jp/640x700.png"
-                width={640}
-                height={650}
-                alt="Picture of the author"
-              />
-              <span className={styles.works_content_span}>Sand & Witch</span>
-              <span>The crunchier the butter</span>
-            </div>
-            <div className={styles.works_content}>
-              <Image
-                src="https://placehold.jp/640x700.png"
-                width={640}
-                height={650}
-                alt="Picture of the author"
-              />
-              <span className={styles.works_content_span}>Sand & Witch</span>
-              <span>The crunchier the butter</span>
-            </div>
+            ))}
           </div>
         </section>
         <section className={styles.social_container}>

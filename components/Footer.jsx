@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "@/styles/Home.module.scss";
+import Link from "next/link";
 
 function Footer() {
   return (
@@ -7,11 +8,21 @@ function Footer() {
       <div className={styles.footer_top}>
         <div className={styles.footer_top_links}>
           <ul>
-            <li>Services</li>
-            <li>Projects</li>
-            <li>Blog</li>
-            <li>About</li>
-            <li>Contact</li>
+            <Link href={"/services"}>
+              <li>Services</li>
+            </Link>
+            <Link href={"/projects"}>
+              <li>Projects</li>
+            </Link>
+            <Link href={"/blog"}>
+              <li>Blog</li>
+            </Link>
+            <Link href={"/about"}>
+              <li>About</li>
+            </Link>
+            <Link href={"/contact"}>
+              <li>Contact</li>
+            </Link>
           </ul>
           <ul>
             <li>Linkedin</li>
@@ -26,10 +37,14 @@ function Footer() {
       </div>
       <div className={styles.footer_bottom}>
         <div className={styles.footer_bottom_logo}>
-          <span>Webrise</span>
+          <Link href={"/"}>
+            <span>Webrise</span>
+          </Link>
         </div>
         <div className={styles.footer_bottom_info}>
-          <span>Privacy Policy</span>
+          <Link href={"#"}>
+            <span>Privacy Policy</span>
+          </Link>
           <span>Design & Development by Webrise</span>
           <span>©2024 Webrise</span>
         </div>
