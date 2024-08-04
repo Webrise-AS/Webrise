@@ -1,8 +1,8 @@
 import Head from "next/head";
 import styles from "/_repos/webrise/styles/Home.module.scss";
 import AnimatedCursor from "react-animated-cursor";
-import { BsArrowRightShort } from "react-icons/bs";
 import Link from "next/link";
+import { BsArrowRightShort } from "react-icons/bs";
 
 export default function Contact() {
   return (
@@ -24,7 +24,7 @@ export default function Contact() {
         outerScale={1.5}
         outerAlpha={15}
         hasBlendMode={true}
-        showSystemCursor={true}
+        showSystemCursor={false}
         outerStyle={{
           mixBlendMode: "plus-lighter",
           zIndex: "9999",

@@ -25,9 +25,15 @@ function Footer() {
             </Link>
           </ul>
           <ul>
-            <li>Linkedin</li>
-            <li>Tiktok</li>
-            <li>Instagram</li>
+            <Link href={"#"}>
+              <li>Linkedin</li>
+            </Link>
+            <Link href={"#"}>
+              <li>Tiktok</li>
+            </Link>
+            <Link href={"#"}>
+              <li>Instagram</li>
+            </Link>
           </ul>
         </div>
         <div className={styles.footer_top_newsletter}>

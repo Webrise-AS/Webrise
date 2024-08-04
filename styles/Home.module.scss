@@ -2,6 +2,7 @@
 @import "_mixins.module.scss";
 @import "layout.module.scss";
 @import "Contact.module.scss";
+@import "blog.module.scss";
 @import "Accordion.module.scss";
 
 .home_container {
@@ -142,9 +143,7 @@
 
             }
 
-            .works_content:hover {
-                
-            }
+            
         }
 
     }
