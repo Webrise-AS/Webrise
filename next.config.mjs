@@ -7,6 +7,11 @@ const nextConfig = {
         hostname: "placehold.jp",
         pathname: "**",
       },
+      {
+        protocol: "https",
+        hostname: "fakestoreapi.com",
+        pathname: "**",
+      },
     ],
   },
 };

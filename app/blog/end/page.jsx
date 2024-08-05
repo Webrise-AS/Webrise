@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import AnimatedCursor from "react-animated-cursor";
 
-export default async function blog() {
+export default async function blogEnd() {
   async function getData() {
     const res = await fetch("https://fakestoreapi.com/products?limit=10");
 
@@ -67,7 +67,7 @@ export default async function blog() {
         </div>
         <div className={styles.blog_content}>
           <div className={styles.blog_cards_container}>
-            {data.slice(0, 8).map((card) => (
+            {data.slice(8, 10).map((card) => (
               <Link
                 href={"http://localhost:3000/blog/" + card.id}
                 key={card.id}
@@ -88,13 +88,9 @@ export default async function blog() {
               </Link>
             ))}
           </div>
-          {data.length >= 6 ? (
-            <Link href={"http://localhost:3000/blog/end"}>
-              <span>NEXT</span>
-            </Link>
-          ) : (
-            <span className={styles.prev_btn}>NEXT</span>
-          )}
+          <Link href={"http://localhost:3000/blog/"}>
+            <span className={styles.prev_button}>PREVIOUS</span>
+          </Link>
         </div>
       </section>
     </>
