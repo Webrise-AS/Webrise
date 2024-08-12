@@ -1,40 +1,38 @@
-"use client";
-
 import styles from "/_repos/webrise/styles/Home.module.scss";
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useState } from "react";
 import AnimatedCursor from "react-animated-cursor";
 
-export default function BlogDetails({ params }) {
-  const [data, setData] = useState([]);
-  const [error, setError] = useState(null);
-  const blogId = params.blogId;
+export default async function BlogDetails({ params }) {
+  const id = params.blogId;
 
-  useEffect(() => {
-    async function getData() {
-      try {
-        const res = await fetch("https://fakestoreapi.com/products?limit=10");
-        if (!res.ok) {
-          throw new Error("Failed to fetch data");
-        }
-        const data = await res.json();
-        setData(data);
-      } catch (error) {
-        setError(error.message);
-      }
+  async function getData() {
+    const res = await fetch(`https://fakestoreapi.com/products?limit=${id}`);
+
+    if (!res.ok) {
+      throw new Error("Failed to fetch data");
     }
 
-    getData();
-  }, []);
-
-  function filterRelatedPosts(data, blogId) {
-    return data.filter((item) => item.id != blogId).slice(0, 3);
+    return res.json();
   }
+  const data = await Object.assign(getData());
 
-  if (error) {
-    return <div>Error: {error}</div>;
+  console.log("data======[", data.price, "]=======");
+
+  async function getRelatedData() {
+    const res = await fetch("https://fakestoreapi.com/products?limit=10");
+
+    if (!res.ok) {
+      throw new Error("Failed to fetch data");
+    }
+
+    return res.json();
+  }
+  const dataRelated = await getRelatedData();
+
+  function filterRelatedPosts(dataToFilter, id) {
+    return dataToFilter.filter((item) => item.id != id).slice(0, 3);
   }
 
   return (
@@ -99,72 +97,77 @@ export default function BlogDetails({ params }) {
           <div className={styles.hero_overlay}></div>
         </div>
         <div className={styles.blogDetails_info_section}>
-          <h4>
-            In an era where digital technology and social media are integral
-            parts of our daily lives, modern couples face unique challenges.
-            This article explores how couples can navigate relationships in the
-            digital age, striking a balance between the online world and their
-            personal connection.
-          </h4>
-          <div className={styles.info_block}>
-            <h2>Communication Dynamics</h2>
-            <p>
-              Adapting to Communication Styles: Digital communication varies
-              greatly from traditional methods. Couples need to adapt and
-              understand each other’s preferred styles, whether it’s texting,
-              emailing, or video calls. This helps in reducing misunderstandings
-              and fostering better communication. Balancing Online Interaction:
-              Digital age relationships often involve an online component.
-              Couples should discuss and agree on their digital interaction
-              levels, including social media usage, online friendships, and
-              digital footprints that they are comfortable with.
-            </p>
-          </div>
-          <Image
-            src={"https://placehold.jp/866x480.png"}
-            width={866}
-            height={480}
-            alt={"image for the specified blog card"}
-            loading="lazy"
-          />
-          <div className={styles.info_block}>
-            <h2>Digital communication varies</h2>
-            <p>
-              Adapting to Communication Styles: Digital communication varies
-              greatly from traditional methods. Couples need to adapt and
-              understand each other’s preferred styles, whether it’s texting,
-              emailing, or video calls. This helps in reducing misunderstandings
-              and fostering better communication. Balancing Online Interaction:
-              Digital age relationships often involve an online component.
-              Couples should discuss and agree on their digital interaction
-              levels, including social media usage, online friendships, and
-              digital footprints that they are comfortable with.
-            </p>
-          </div>
-          <h5>
-            “Couples should find a balance where they feel comfortable sharing
-            online passwords or friend lists without feeling obligated or
-            pressured.”
-          </h5>
-          <div className={styles.info_block}>
-            <h2>Balancing Online Interaction</h2>
-            <p>
-              Adapting to Communication Styles: Digital communication varies
-              greatly from traditional methods. Couples need to adapt and
-              understand each other’s preferred styles, whether it’s texting,
-              emailing, or video calls. This helps in reducing misunderstandings
-              and fostering better communication. Balancing Online Interaction:
-              Digital age relationships often involve an online component.
-              Couples should discuss and agree on their digital interaction
-              levels, including social media usage, online friendships, and
-              digital footprints that they are comfortable with.
-            </p>
+          <div className={styles.blogDetails_info_content}>
+            <h4>
+              In an era where digital technology and social media are integral
+              parts of our daily lives, modern couples face unique challenges.
+              This article explores how couples can navigate relationships in
+              the digital age, striking a balance between the online world and
+              their personal connection.
+            </h4>
+            <div className={styles.info_block}>
+              <h2>Communication Dynamics</h2>
+              <p>
+                Adapting to Communication Styles: Digital communication varies
+                greatly from traditional methods. Couples need to adapt and
+                understand each other’s preferred styles, whether it’s texting,
+                emailing, or video calls. This helps in reducing
+                misunderstandings and fostering better communication. Balancing
+                Online Interaction: Digital age relationships often involve an
+                online component. Couples should discuss and agree on their
+                digital interaction levels, including social media usage, online
+                friendships, and digital footprints that they are comfortable
+                with.
+              </p>
+            </div>
+            <Image
+              src={"https://placehold.jp/866x480.png"}
+              width={866}
+              height={480}
+              alt={"image for the specified blog card"}
+              loading="lazy"
+            />
+            <div className={styles.info_block}>
+              <h2>Digital communication varies</h2>
+              <p>
+                Adapting to Communication Styles: Digital communication varies
+                greatly from traditional methods. Couples need to adapt and
+                understand each other’s preferred styles, whether it’s texting,
+                emailing, or video calls. This helps in reducing
+                misunderstandings and fostering better communication. Balancing
+                Online Interaction: Digital age relationships often involve an
+                online component. Couples should discuss and agree on their
+                digital interaction levels, including social media usage, online
+                friendships, and digital footprints that they are comfortable
+                with.
+              </p>
+            </div>
+            <h5>
+              “Couples should find a balance where they feel comfortable sharing
+              online passwords or friend lists without feeling obligated or
+              pressured.”
+            </h5>
+            <div className={styles.info_block}>
+              <h2>Balancing Online Interaction</h2>
+              <p>
+                Adapting to Communication Styles: Digital communication varies
+                greatly from traditional methods. Couples need to adapt and
+                understand each other’s preferred styles, whether it’s texting,
+                emailing, or video calls. This helps in reducing
+                misunderstandings and fostering better communication. Balancing
+                Online Interaction: Digital age relationships often involve an
+                online component. Couples should discuss and agree on their
+                digital interaction levels, including social media usage, online
+                friendships, and digital footprints that they are comfortable
+                with.
+              </p>
+            </div>
           </div>
         </div>
         <div className={styles.blogDetails_related_section}>
           <span>RELATED</span>
           <div className={styles.related_cards_container}>
-            {filterRelatedPosts(data, blogId).map((card) => (
+            {filterRelatedPosts(dataRelated, id).map((card) => (
               <Link
                 href={"http://localhost:3000/blog/" + card.id}
                 key={card.id}

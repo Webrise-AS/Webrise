@@ -1,7 +1,7 @@
 .blog_container {
     height: fit-content;
     width: 95%;
-    margin: 3rem auto 7.5rem auto ;
+    margin: 3rem auto 7.5rem auto;
     scroll-behavior: smooth;
 
     .blog_title {
@@ -10,7 +10,7 @@
 
         h1 {
             height: 21.85rem;
-            width:  50rem;
+            width: 50rem;
             margin: 0;
             font-size: 15rem;
             font-weight: 600;
@@ -38,11 +38,11 @@
             row-gap: 2rem;
             column-gap: 1.5rem;
             margin-bottom: 2rem;
-    
+
             .single_card {
                 width: 27.6rem;
                 padding-bottom: 2rem;
-                border-bottom:solid 1px $black-color;
+                border-bottom: solid 1px $black-color;
 
                 .image_wrapper {
                     border-radius: 0.5rem;
@@ -56,20 +56,20 @@
                         width: 100%;
                         transition: transform .8s ease;
                     }
-        
+
                     img:hover {
                         transform: scale(1.1);
                     }
                 }
-    
-    
+
+
                 h2 {
                     font-size: 1.25rem;
                     font-weight: 500;
                     margin: 1rem 0 0.2rem 0;
                     line-height: 140%;
                 }
-    
+
                 h3 {
                     height: 5.5rem;
                     margin: 0;
@@ -79,7 +79,7 @@
                     letter-spacing: -0.04rem;
                 }
             }
-    
+
         }
 
         span {
@@ -100,11 +100,10 @@
 
     .blogDetails_hero_section {
         height: 82vh;
-        width: 100%; 
+        width: 100%;
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
-        border-bottom: dashed 1px $black-color;
 
         .hero_content {
             position: absolute;
@@ -151,56 +150,61 @@
     }
 
     .blogDetails_info_section {
-        height: fit-content;
-        width: 54.125rem;
-        margin: auto;
-        padding: 4.5rem 0 6.25rem 0;
+        border-top: dashed 1px $black-color;
+        border-bottom: solid 1px $black-color;
 
-        h4 {
-            font-size: 1.5rem;
-            font-weight: 500;
-            line-height: 116%;
-            letter-spacing: -0.03rem;
-            margin-bottom: 5rem;
-        }
-        
-        .info_block {
-            display: flex;
-            flex-direction: column;
-            row-gap: 1.75rem;
+        .blogDetails_info_content {
+            height: fit-content;
+            width: 54.125rem;
+            margin: auto;
+            padding: 4.5rem 0 6.25rem 0; 
 
-            h2 {
-                margin: 0;
-                font-size: 2.5rem;
+            h4 {
+                font-size: 1.5rem;
+                font-weight: 500;
+                line-height: 116%;
+                letter-spacing: -0.03rem;
+                margin-bottom: 5rem;
+            }
+    
+            .info_block {
+                display: flex;
+                flex-direction: column;
+                row-gap: 1.75rem;
+    
+                h2 {
+                    margin: 0;
+                    font-size: 2.5rem;
+                    font-weight: 600;
+                    line-height: 100%;
+                    letter-spacing: -0.1rem;
+                }
+    
+                p {
+                    font-size: 1.25rem;
+                    font-weight: 400;
+                    line-height: 140%;
+                    letter-spacing: -0.05rem;
+                }
+            }
+    
+            img {
+                border-radius: 0.5rem;
+                margin: 1.6rem 0 8.95rem 0;
+            }
+    
+            h5 {
+                font-size: 3rem;
+                margin: 2.75rem 0 2.75rem 0;
                 font-weight: 600;
                 line-height: 100%;
-                letter-spacing: -0.1rem;
-            }
-
-            p {
-                font-size: 1.25rem;
-                font-weight: 400;
-                line-height: 140%;
-                letter-spacing: -0.05rem;
+                letter-spacing: -0.14rem;
             }
         }
-        
-        img {
-            border-radius: 0.5rem;
-            margin: 1.6rem 0 8.95rem 0;
-        }
 
-        h5 {
-            font-size: 3rem;
-            margin: 2.75rem 0 2.75rem 0;
-            font-weight: 600;
-            line-height: 100%;
-            letter-spacing: -0.14rem;
-        }
     }
 
     .blogDetails_related_section {
-        border-top: solid 1px $black-color;
         height: fit-content;
         width: 95%;
         margin: auto;
@@ -220,11 +224,11 @@
             flex-wrap: wrap;
             column-gap: 1.5rem;
             margin-bottom: 2rem;
-    
+
             .single_card {
                 width: 27.6rem;
                 padding-bottom: 2rem;
-                border-bottom:solid 1px $black-color;
+                border-bottom: solid 1px $black-color;
 
                 .image_wrapper {
                     border-radius: 0.5rem;
@@ -238,20 +242,20 @@
                         width: 100%;
                         transition: transform .8s ease;
                     }
-        
+
                     img:hover {
                         transform: scale(1.1);
                     }
                 }
-    
-    
+
+
                 h2 {
                     font-size: 1.25rem;
                     font-weight: 500;
                     margin: 1rem 0 0.2rem 0;
                     line-height: 140%;
                 }
-    
+
                 h3 {
                     height: 5.5rem;
                     margin: 0;
@@ -261,7 +265,7 @@
                     letter-spacing: -0.04rem;
                 }
             }
-    
+
         }
     }
 }
