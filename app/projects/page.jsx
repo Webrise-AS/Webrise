@@ -34,7 +34,7 @@ export default async function Projects() {
         </div>
         <div className={styles.projects_content}>
           <div className={styles.projects_cards_container}>
-            {data.slice(0, 5).map(
+            {data.slice(0, 8).map(
               (card) => (
                 console.log("=========|", card.id, "|=========="),
                 (

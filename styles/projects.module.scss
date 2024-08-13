@@ -15,14 +15,14 @@
             font-size: 15rem;
             font-weight: 600;
             line-height: 83%;
-            letter-spacing: -1.2rem;
+            letter-spacing: -.08em;
         }
 
         span {
             margin-top: 1.4rem;
             font-size: 1.25rem;
             font-weight: 500;
-            letter-spacing: -0.03rem;
+            letter-spacing: -.03em;
         }
     }
 
@@ -68,12 +68,16 @@
                     font-size: 1.5rem;
                     font-weight: 500;
                     text-decoration:underline;
+                    letter-spacing: -.02em;
+                    line-height: 116%;
                 }
 
                 h3 {
                     margin: 0;
                     font-size: 1.5rem;
                     font-weight: 500;
+                    letter-spacing: -.02em;
+                    line-height: 116%;
                 }
             }
         }
@@ -81,11 +85,172 @@
         span {
             font-size: 7.5rem;
             font-weight: 700;
-            letter-spacing: -0.5rem;
+            letter-spacing: -.08em;
         }
 
         .prev_btn {
             opacity: .2;
+        }
+    }
+}
+
+.projectsDetails_container {
+    height: fit-content;
+    padding: 3.5rem 0;
+    width: 95%;
+    margin: auto;
+
+    .projectsDetails_title {
+        border-bottom: solid 1px $black-color;
+        display: flex;
+        justify-content: space-between;
+        align-items: end;
+        padding-bottom: 3rem;
+
+        h1 {
+            width: 65.3%;
+            margin: 0;
+            text-transform: uppercase;
+            font-size: 7.5rem;
+            font-weight: 600;
+            line-height: 86%;
+            letter-spacing: -.08em;
+        }
+
+        span {
+            font-size: 1.5rem;
+            font-weight: 500;
+            text-transform: capitalize;
+            letter-spacing: -.02em;
+            line-height: 116%;
+        }
+    }
+
+    .projectsDetails_content {
+        padding: 5rem 0 8rem 0;
+        width: 65.3%;
+        margin-left: auto;
+
+        h3 {
+            font-size: 2rem;
+            font-weight: 600;
+            line-height: 100%;
+            letter-spacing: -.04em;
+            margin: 0;
+        }
+
+        img {
+            height: 54rem;
+            width: 100%;
+            margin: 4rem 0;
+            border-radius: 0.5rem;
+        }
+
+        h2 {
+            margin: 0 0 1rem 0;
+            font-size: 3rem;
+            font-weight: 600;
+            line-height: 100%;
+            letter-spacing: -.04em;
+        }
+
+        p {
+            margin: 0;
+            font-size: 1.25rem;
+            font-weight: 500;
+            line-height: 140%;
+            letter-spacing: -.03em;
+        }
+
+        .duo_images {
+            display: flex;
+            column-gap: 1.5rem;
+            margin: 2rem 0 4rem 0;
+
+            img {
+                margin: 0;
+                height: 31.25rem;
+                width: 50%;
+            }
+        }
+
+        .single_image {
+            margin-top: 2rem;
+        }
+
+        .result_images {
+            display: flex;
+            flex-direction: column;
+            row-gap: 0;
+
+            .duo_images {
+                margin-bottom: 0;
+            }
+
+            .single_image {
+                margin: 2rem 0 0 0;
+            }
+        }
+    }
+
+    .projectsDetails_otherProjects_container {
+        border-top: solid 1px $black-color;
+        padding: 9rem 0;
+        display: flex;
+        flex-direction: column;
+        row-gap: 2rem;
+
+        span {
+            width: 27%;
+            font-size: 4.5rem;
+            font-weight: 700;
+            line-height: 100%;
+            letter-spacing: -.04em;
+        }
+
+        .otherProjects_content {
+            display: flex;
+            column-gap: 1.5rem;
+
+            .single_project {
+                width: 20.34rem;
+                height: fit-content;
+
+                .image_wrapper {
+                    border-radius: 0.5rem;
+                    width: 100%;
+                    height: 25rem;
+                    overflow: hidden;
+
+                    img {
+                        object-fit: cover;
+                        height: 100%;
+                        width: 100%;
+                        transition: transform .8s ease;
+                    }
+
+                    img:hover {
+                        transform: scale(1.1);
+                    }
+                }
+
+                h4 {
+                    margin: 1rem 0 0.2rem 0 ;
+                    font-size: 1.5rem;
+                    font-weight: 500;
+                    line-height: 116%;
+                    letter-spacing: -.02em;
+                    text-decoration:underline;
+                }
+
+                h5 {
+                    margin: 0;
+                    font-size: 1.5rem;
+                    font-weight: 500;
+                    line-height: 116%;
+                    letter-spacing: -.02em;
+                }
+            }
         }
     }
 }

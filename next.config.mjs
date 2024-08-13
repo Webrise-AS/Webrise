@@ -12,6 +12,11 @@ const nextConfig = {
         hostname: "fakestoreapi.com",
         pathname: "**",
       },
+      {
+        protocol: "https",
+        hostname: "assets-global.website-files.com",
+        pathname: "**",
+      },
     ],
   },
 };

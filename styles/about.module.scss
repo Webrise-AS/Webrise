@@ -1,0 +1,85 @@
+.about_container {
+    background-color: $primary-color;
+
+    .about_hero_section {
+        height: fit-content;
+        width: 95%;
+        margin: auto;
+        padding: 3rem 0;
+        border-bottom: solid 1px $black-color;
+
+        
+        .hero_section_top {
+            height: 23.8rem;
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: space-between;
+
+            div:first-child {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+
+                .image_wrapper {
+                    border-radius: 0.5rem;
+                    overflow: hidden;
+                    height: 10rem;
+                    width: 18.688rem;
+
+                    img {
+                        height: 100%;
+                        width: 100%;
+                        object-fit: cover;
+                    }
+                }
+
+                span {
+                    font-size: 1.25rem;
+                    letter-spacing: -.03em;
+                    font-weight: 500;
+                    line-height: 140%;
+                    margin: 0;
+                    text-align: end;
+                    margin-bottom: 2.5rem;
+                }
+            }
+
+            img {
+                border-radius: 0.5rem;
+            }
+        }
+
+        .hero_section_bottom {
+
+            h1 {
+                margin: 0;
+                font-size: 15rem;
+                font-weight: 600;
+                line-height: 83%;
+                letter-spacing: -.08em;
+                text-align: end;
+                padding-right: 0.65rem;
+            }
+
+            h2 {
+                margin: 0;
+                font-size: 15rem;
+                font-weight: 600;
+                line-height: 83%;
+                letter-spacing: -.08em;
+            }
+        }
+
+    }
+
+    .about_content_section {
+        border: solid 1px green;
+        padding: 7.5rem 0;
+        height: 150vh;
+    }
+
+    .about_talent_section {
+        border: solid 1px red;
+        height: 100vh;
+    }
+}
