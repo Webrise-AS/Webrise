@@ -1,5 +1,5 @@
 "use client"; // Error components must be Client components
-import styles from "@/styles/Home.module.scss";
+import styles from "../styles/Home.module.scss";
 
 export default function Error({ error, reset }) {
   return (

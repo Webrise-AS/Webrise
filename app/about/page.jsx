@@ -1,6 +1,7 @@
 import Image from "next/image";
 import styles from "../../styles/Home.module.scss";
 import Head from "next/head";
+import Link from "next/link";
 
 export default function About() {
   return (
@@ -45,8 +46,35 @@ export default function About() {
             <h2>PIONEERS</h2>
           </div>
         </div>
-        <div className={styles.about_content_section}>content</div>
-        <div className={styles.about_talent_section}>talent</div>
+        <div className={styles.about_content_section}>
+          <divc className={styles.content_section_story}>
+            <p>
+              Situated in the pulsating heart of Berlin, Strobe™ thrives on the
+              island’s eclectic energy and rich cultural tapestry.
+            </p>
+            <p>
+              Our holistic, collaborative approach is tailored to navigate the
+              challenges and opportunities of our era. Experience transformative
+              digital solutions that captivate and engage.
+            </p>
+          </divc>
+          <divc className={styles.content_section_sliders}></divc>
+          <divc className={styles.content_section_info}></divc>
+        </div>
+        <div className={styles.about_talent_section}>
+          <div>
+            <p>
+              Be part of the innovation journey with Webrise. Our monthly
+              insights showcase the cutting-edge trends, technologies, and
+              creative strategies shaping the future. Stay informed, inspired,
+              and ahead of the curve with Webrise
+            </p>
+            <Link href={"http://localhost:3000/contact/"}>
+              <button>Learn more</button>
+            </Link>
+          </div>
+          <div className={styles.about_talent_overlay}></div>
+        </div>
       </section>
     </>
   );

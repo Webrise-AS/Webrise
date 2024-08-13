@@ -1,6 +1,8 @@
 @mixin footer_text_links {
     font-size: 1.5rem;
     font-weight: 500;
+    line-height: 116%;
+    letter-spacing: -.02rem;
 }
 
 @mixin text_field_newsletter {
@@ -22,7 +24,7 @@
     background-color: $black-color;
     color: $white-color;
     border-radius: 0.35rem;
-    font-size: 0.9rem;
+    font-size: 0.95rem;
     font-weight: 600;
     font-style: oblique;
 }

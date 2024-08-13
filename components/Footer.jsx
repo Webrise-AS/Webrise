@@ -44,7 +44,7 @@ function Footer() {
       <div className={styles.footer_bottom}>
         <div className={styles.footer_bottom_logo}>
           <Link href={"/"}>
-            <span>Webrise</span>
+            <h2>Webrise</h2>
           </Link>
         </div>
         <div className={styles.footer_bottom_info}>
@@ -58,5 +58,4 @@ function Footer() {
     </div>
   );
 }
-
 export default Footer;

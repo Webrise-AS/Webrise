@@ -18,8 +18,7 @@
         span {
             font-size: 2.188rem;
             font-weight: 600;
-            letter-spacing: 0.3rem;
-            font-style: oblique;
+            letter-spacing: -.04rem;
         }
 
     }
@@ -37,17 +36,17 @@
 
             li {
                 padding: 0.5rem 0;
-                font-size: 0.85rem;
-                font-weight: 600;
+                font-size: 0.92rem;
+                font-weight: 500;
                 color: $black-color;
-                letter-spacing: 0.1rem;
-                font-style: oblique;
+                letter-spacing: .025rem;
+                line-height: 140%;
             }
             
             li:hover {
                 cursor: pointer;
                 text-decoration: underline ;
-                text-decoration-thickness: 0.125rem;
+                text-decoration-thickness: 0.1rem;
                 text-decoration-color: $black-color;
                 text-underline-offset: 0.5rem;
             }
@@ -65,7 +64,7 @@
 }
 
 .loader_container {
-    height: 90vh;
+    height: 100%;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -114,13 +113,15 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 7.5rem 2.35rem 1.563rem 2.35rem;
-    height: 832px;
+    height: 50rem;
     width: 100%;
+    padding: 7rem 0 1rem 0;
     background-color: $black-color;
     color: $white-color;
 
     .footer_top {
+        width: 95%;
+        margin: 0 auto;
         display: flex;
         justify-content: space-between;
 
@@ -167,18 +168,25 @@
     }
 
     .footer_bottom {
+        width: 95%;
+        margin: 0 auto;
         display: flex;
         flex-direction: column;
         row-gap: 1rem;
 
         .footer_bottom_logo {
-            height: 18.35rem;
+            height: 16.6rem;
             display: flex;
             justify-content: center;
             align-items: center;
 
-            span {
-                font-size: 21.589rem;
+            h2 {
+                font-size: 22.1rem;
+                letter-spacing: -1.5rem;
+                font-weight: 400;
+                text-transform: uppercase;
+                line-height: 16.6rem;
+                margin: 0;
             }
         }
 
@@ -187,6 +195,7 @@
             justify-content: space-between;
 
             span {
+                line-height: 150%;
                 font-weight: 500;
             }
         }

@@ -35,11 +35,11 @@
 
                 span {
                     font-size: 1.25rem;
-                    letter-spacing: -.03em;
+                    letter-spacing: -.03rem;
                     font-weight: 500;
                     line-height: 140%;
                     margin: 0;
-                    text-align: end;
+                    text-align: right;
                     margin-bottom: 2.5rem;
                 }
             }
@@ -56,8 +56,8 @@
                 font-size: 15rem;
                 font-weight: 600;
                 line-height: 83%;
-                letter-spacing: -.08em;
-                text-align: end;
+                letter-spacing: -.08rem;
+                text-align: right;
                 padding-right: 0.65rem;
             }
 
@@ -66,20 +66,84 @@
                 font-size: 15rem;
                 font-weight: 600;
                 line-height: 83%;
-                letter-spacing: -.08em;
+                letter-spacing: -.08rem;
             }
         }
 
     }
 
     .about_content_section {
-        border: solid 1px green;
+
         padding: 7.5rem 0;
         height: 150vh;
+
+        .content_section_story {
+            width: 95%;
+            margin: auto;
+            border: solid 1px red;;
+
+            p {
+                font-size: 3rem;
+                font-weight: 600;
+                line-height: 100%;
+                letter-spacing: -.04rem;
+            }
+        }
     }
 
     .about_talent_section {
-        border: solid 1px red;
-        height: 100vh;
+        background-color: $black-color;
+        color: $white-color;
+        height: 145vh;
+        background-image: url('https://assets-global.website-files.com/6606f0f658b42ca7220e3695/660bfcae5749fee5cdae4952_Bg%20Text%20Video-poster-00001.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        padding: 36.25rem 0rem 0rem 0rem;
+        position: relative;
+
+        div:first-child {
+            display: block;
+            width: 95%;
+            margin: auto;
+            position:inherit;
+            z-index: $base-index;
+            
+            
+            p {
+                width: 74%;
+                margin: 0;
+                font-size: 3rem;
+                font-weight: 600;
+                letter-spacing: -.04rem;
+                line-height: 100%;
+            }
+
+            button {
+                margin-top: 2rem;
+                padding: 0.75rem 1rem;
+                background: transparent;
+                color: $white-color;
+                border: solid 0.08rem $white-color;
+                border-radius: 0.5rem;
+                font-size: 1rem;
+                font-weight: 500;
+                letter-spacing: -.02rem;
+            }
+
+            button:hover {
+                cursor: pointer;
+            }
+        }
+
+        .about_talent_overlay {
+            background-color: rgba(0, 0, 0, .2);
+            position: absolute;
+            top: 0%;
+            bottom: 0%;
+            left: 0%;
+            right: 0%;
+            z-index: $low-index;
+        }
     }
 }
