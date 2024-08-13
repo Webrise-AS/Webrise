@@ -3,22 +3,13 @@ import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import AnimatedCursor from "react-animated-cursor";
+import { getSingleData } from "@/app/helpers/page";
 
 export default async function BlogDetails({ params }) {
-  const id = params.blogId;
+  const id = Number(params.blogId);
+  const blogData = await getSingleData(id);
 
-  async function getData() {
-    const res = await fetch(`https://fakestoreapi.com/products?limit=${id}`);
-
-    if (!res.ok) {
-      throw new Error("Failed to fetch data");
-    }
-
-    return res.json();
-  }
-  const data = await Object.assign(getData());
-
-  console.log("data======[", data.price, "]=======");
+  console.log("data======[", blogData, "]=======");
 
   async function getRelatedData() {
     const res = await fetch("https://fakestoreapi.com/products?limit=10");
@@ -32,13 +23,13 @@ export default async function BlogDetails({ params }) {
   const dataRelated = await getRelatedData();
 
   function filterRelatedPosts(dataToFilter, id) {
-    return dataToFilter.filter((item) => item.id != id).slice(0, 3);
+    return dataToFilter.filter((item) => item.id != id).slice(2, 5);
   }
 
   return (
     <>
       <Head>
-        <title>BlogDetails | Webrise</title>
+        <title>{blogData.title} | Webrise</title>
         <meta
           name="description"
           content="This is the browse page for the Bits & bots online game store"
@@ -83,84 +74,37 @@ export default async function BlogDetails({ params }) {
         <div
           className={styles.blogDetails_hero_section}
           style={{
-            backgroundImage:
-              "url(https://cdn.prod.website-files.com/6606f0f658b42ca7220e36c3/6609a4da3ad06dd143d13e06_Article%20Main.png)",
+            backgroundImage: `url(${blogData.image})`,
           }}
         >
           <div className={styles.hero_content}>
-            <h3>March 31, 2024</h3>
-            <h1>
-              Inside Webrise: A Day in the Life of Berlin&apos;s Most Innovative
-              Creative Team
-            </h1>
+            <h3>{blogData.price}</h3>
+            <h1>{blogData.title}</h1>
           </div>
           <div className={styles.hero_overlay}></div>
         </div>
         <div className={styles.blogDetails_info_section}>
           <div className={styles.blogDetails_info_content}>
-            <h4>
-              In an era where digital technology and social media are integral
-              parts of our daily lives, modern couples face unique challenges.
-              This article explores how couples can navigate relationships in
-              the digital age, striking a balance between the online world and
-              their personal connection.
-            </h4>
+            <h4>{blogData.description}</h4>
             <div className={styles.info_block}>
-              <h2>Communication Dynamics</h2>
-              <p>
-                Adapting to Communication Styles: Digital communication varies
-                greatly from traditional methods. Couples need to adapt and
-                understand each other’s preferred styles, whether it’s texting,
-                emailing, or video calls. This helps in reducing
-                misunderstandings and fostering better communication. Balancing
-                Online Interaction: Digital age relationships often involve an
-                online component. Couples should discuss and agree on their
-                digital interaction levels, including social media usage, online
-                friendships, and digital footprints that they are comfortable
-                with.
-              </p>
+              <h2>{blogData.title}</h2>
+              <p>{blogData.description}</p>
             </div>
             <Image
-              src={"https://placehold.jp/866x480.png"}
+              src={`${blogData.image}`}
               width={866}
               height={480}
               alt={"image for the specified blog card"}
               loading="lazy"
             />
             <div className={styles.info_block}>
-              <h2>Digital communication varies</h2>
-              <p>
-                Adapting to Communication Styles: Digital communication varies
-                greatly from traditional methods. Couples need to adapt and
-                understand each other’s preferred styles, whether it’s texting,
-                emailing, or video calls. This helps in reducing
-                misunderstandings and fostering better communication. Balancing
-                Online Interaction: Digital age relationships often involve an
-                online component. Couples should discuss and agree on their
-                digital interaction levels, including social media usage, online
-                friendships, and digital footprints that they are comfortable
-                with.
-              </p>
+              <h2>{blogData.title}</h2>
+              <p>{blogData.description}</p>
             </div>
-            <h5>
-              “Couples should find a balance where they feel comfortable sharing
-              online passwords or friend lists without feeling obligated or
-              pressured.”
-            </h5>
+            <h5>“{blogData.description}”</h5>
             <div className={styles.info_block}>
-              <h2>Balancing Online Interaction</h2>
-              <p>
-                Adapting to Communication Styles: Digital communication varies
-                greatly from traditional methods. Couples need to adapt and
-                understand each other’s preferred styles, whether it’s texting,
-                emailing, or video calls. This helps in reducing
-                misunderstandings and fostering better communication. Balancing
-                Online Interaction: Digital age relationships often involve an
-                online component. Couples should discuss and agree on their
-                digital interaction levels, including social media usage, online
-                friendships, and digital footprints that they are comfortable
-                with.
-              </p>
+              <h2>{blogData.title}</h2>
+              <p>{blogData.description}</p>
             </div>
           </div>
         </div>
