@@ -1,4 +1,4 @@
-.about_container {
+.about_main_container {
     background-color: $primary-color;
 
     .about_hero_section {
@@ -35,7 +35,7 @@
 
                 span {
                     font-size: 1.25rem;
-                    letter-spacing: -.03rem;
+                    letter-spacing: -.03em;
                     font-weight: 500;
                     line-height: 140%;
                     margin: 0;
@@ -52,12 +52,12 @@
         .hero_section_bottom {
 
             h1 {
+                text-align: right;
                 margin: 0;
                 font-size: 15rem;
                 font-weight: 600;
                 line-height: 83%;
-                letter-spacing: -.08rem;
-                text-align: right;
+                letter-spacing: -.08em;
                 padding-right: 0.65rem;
             }
 
@@ -66,27 +66,137 @@
                 font-size: 15rem;
                 font-weight: 600;
                 line-height: 83%;
-                letter-spacing: -.08rem;
+                letter-spacing: -.08em;
             }
         }
 
     }
 
     .about_content_section {
-
-        padding: 7.5rem 0;
-        height: 150vh;
+        padding: 7.5rem 0 0 0;
+        height: fit-content;
 
         .content_section_story {
+            display: flex;
+            flex-direction: column;
+            row-gap: 2rem;
             width: 95%;
             margin: auto;
-            border: solid 1px red;;
-
+            
             p {
+                width: 61.1%;
+                margin: 0;
                 font-size: 3rem;
                 font-weight: 600;
                 line-height: 100%;
-                letter-spacing: -.04rem;
+                letter-spacing: -.04em;
+            }
+        }
+
+        .content_section_sliders {
+            display: flex;
+            flex-direction: column;
+            row-gap: 7.5rem;
+            margin: 10rem 0 5rem 0;
+            height: fit-content;
+            width: 100%;
+            
+            .embla {
+                overflow: hidden;
+                
+                .embla__container {
+                    display: flex;
+                    
+                    .embla__slide {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+                        height: 30rem;
+                        width: 30rem;
+                        padding: 3rem;
+                        margin-right: 3rem;
+                        border-radius: 0.5rem;
+                        flex:0 0 auto;
+                        min-width: 0;
+                        max-width: 100%;
+                        background-color: $white-color;
+                    }
+                    
+                    .embla__slide2 {
+                        text-align: center;
+                        margin-left: 1.8rem;
+                        font-size: 7.5rem;
+                        font-weight: 700;
+                        line-height: 86%;
+                        letter-spacing: -.08em;
+                        text-transform: uppercase;
+                        padding-right: 0.6rem;
+                    }
+                }
+            }
+
+        }
+
+        .content_section_info {
+            width: 95%;
+            margin: 12.5rem auto;
+            display: flex;
+            flex-direction: reverse;
+            justify-content: space-between;
+            row-gap: 2rem;
+
+            .section_info_image {
+                height: 50.72rem;
+                width: 32.438rem;
+
+                img {
+                    border-radius: 0.5rem;
+                    object-fit: cover;
+                    height: 100%;
+                    width: 100%;
+                }
+            }
+            
+            .section_info_container {
+                width: 51%;
+
+                h2 {
+                    width: 81%;
+                    margin: 2.5rem 0 0 0;
+                    padding-bottom: 5rem;
+                    font-size: 4.5rem;
+                    letter-spacing: -.04em;
+                    font-weight: 700;
+                    line-height: 88%;
+                }
+                
+                .values_container {
+                    border-top: solid 1px $black-color;
+
+                    .single_value {
+                        display: flex;
+                        column-gap: 5rem;
+                        padding: 2rem 0;
+                        border-bottom: solid 1px $black-color;;
+
+                        h3 {
+                            font-size: 3rem;
+                            font-weight: 600;
+                            line-height: 100%;
+                            letter-spacing: -.04em;
+                            margin: 0;
+                        }
+
+                        h4 {
+                            font-size: 1.25rem;
+                            font-weight: 500;
+                            line-height: 140%;
+                            letter-spacing: -.03em;
+                            margin: 0;
+                        }
+                    }
+                }
             }
         }
     }

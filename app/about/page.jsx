@@ -1,9 +1,15 @@
+"use client";
 import Image from "next/image";
 import styles from "../../styles/Home.module.scss";
 import Head from "next/head";
 import Link from "next/link";
+import useEmblaCarousel from "embla-carousel-react";
+import Autoplay from "embla-carousel-autoplay";
 
 export default function About() {
+  const [emblaRef] = useEmblaCarousel({ loop: true }, [Autoplay()]);
+  const [emblaRef2] = useEmblaCarousel({ loop: true }, [Autoplay()]);
+
   return (
     <>
       <Head>
@@ -15,7 +21,7 @@ export default function About() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <section className={styles.about_container}>
+      <section className={styles.about_main_container}>
         <div className={styles.about_hero_section}>
           <div className={styles.hero_section_top}>
             <div>
@@ -47,9 +53,9 @@ export default function About() {
           </div>
         </div>
         <div className={styles.about_content_section}>
-          <divc className={styles.content_section_story}>
+          <div className={styles.content_section_story}>
             <p>
-              Situated in the pulsating heart of Berlin, Strobe™ thrives on the
+              Situated in the pulsating heart of Berlin, Webrise thrives on the
               island’s eclectic energy and rich cultural tapestry.
             </p>
             <p>
@@ -57,9 +63,67 @@ export default function About() {
               challenges and opportunities of our era. Experience transformative
               digital solutions that captivate and engage.
             </p>
-          </divc>
-          <divc className={styles.content_section_sliders}></divc>
-          <divc className={styles.content_section_info}></divc>
+          </div>
+          <div className={styles.content_section_sliders}>
+            <div className={styles.embla} ref={emblaRef}>
+              {/* {data.map((slide) => {})} */}
+              <div className={styles.embla__container}>
+                <div className={styles.embla__slide}>Slide 1</div>
+                <div className={styles.embla__slide}>Slide 2</div>
+                <div className={styles.embla__slide}>Slide 3</div>
+                <div className={styles.embla__slide}>Slide 4</div>
+              </div>
+            </div>
+            <div className={styles.embla} ref={emblaRef2}>
+              <div className={styles.embla__container}>
+                <div className={styles.embla__slide2}>—</div>
+                <div className={styles.embla__slide2}>Creative</div>
+                <div className={styles.embla__slide2}>—</div>
+                <div className={styles.embla__slide2}>Pioneers</div>
+                <div className={styles.embla__slide2}>—</div>
+                <div className={styles.embla__slide2}>Strategi</div>
+                <div className={styles.embla__slide2}>—</div>
+                <div className={styles.embla__slide2}>Bold</div>
+              </div>
+            </div>
+          </div>
+          <div className={styles.content_section_info}>
+            <div className={styles.section_info_image}>
+              <Image
+                src={
+                  "https://assets-global.website-files.com/6606f0f658b42ca7220e3695/660723ab81a3f7d07a7a97d1_Testimonial.webp"
+                }
+                width={640}
+                height={880}
+                alt={"image of a woman in an office useing a pc for work"}
+              />
+            </div>
+            <div className={styles.section_info_container}>
+              <h2>OUR OFFICE IS FULL OF ENERGY</h2>
+              <div className={styles.values_container}>
+                <div className={styles.single_value}>
+                  <h4>(01)</h4>
+                  <h3>Creatively Bold</h3>
+                </div>
+                <div className={styles.single_value}>
+                  <h4>(02)</h4>
+                  <h3>Digital Pioneers</h3>
+                </div>
+                <div className={styles.single_value}>
+                  <h4>(03)</h4>
+                  <h3>Strategic Thinkers</h3>
+                </div>
+                <div className={styles.single_value}>
+                  <h4>(04)</h4>
+                  <h3>User-Centric</h3>
+                </div>
+                <div className={styles.single_value}>
+                  <h4>(05)</h4>
+                  <h3>Design Savvy</h3>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
         <div className={styles.about_talent_section}>
           <div>
