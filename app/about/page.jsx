@@ -1,14 +1,27 @@
 "use client";
-import Image from "next/image";
 import styles from "../../styles/Home.module.scss";
+import Image from "next/image";
 import Head from "next/head";
 import Link from "next/link";
 import useEmblaCarousel from "embla-carousel-react";
-import Autoplay from "embla-carousel-autoplay";
+import AutoScroll from "embla-carousel-auto-scroll";
+import useSWR from "swr";
+
+const fetcher = (url) => fetch(url).then((res) => res.json());
 
 export default function About() {
-  const [emblaRef] = useEmblaCarousel({ loop: true }, [Autoplay()]);
-  const [emblaRef2] = useEmblaCarousel({ loop: true }, [Autoplay()]);
+  const [emblaRef] = useEmblaCarousel({ watchDrag: false, loop: true }, [
+    AutoScroll({ speed: 1.5 }),
+  ]);
+
+  const [emblaRef2] = useEmblaCarousel({ loop: true, watchDrag: false }, [
+    AutoScroll({ speed: 2.5, direction: "backward" }),
+  ]);
+
+  const { data } = useSWR(
+    "https://fakestoreapi.com/products?limit=10",
+    fetcher
+  );
 
   return (
     <>
@@ -21,6 +34,7 @@ export default function About() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+
       <section className={styles.about_main_container}>
         <div className={styles.about_hero_section}>
           <div className={styles.hero_section_top}>
@@ -66,12 +80,18 @@ export default function About() {
           </div>
           <div className={styles.content_section_sliders}>
             <div className={styles.embla} ref={emblaRef}>
-              {/* {data.map((slide) => {})} */}
               <div className={styles.embla__container}>
-                <div className={styles.embla__slide}>Slide 1</div>
-                <div className={styles.embla__slide}>Slide 2</div>
-                <div className={styles.embla__slide}>Slide 3</div>
-                <div className={styles.embla__slide}>Slide 4</div>
+                {data &&
+                  data.map((slide) => (
+                    <div key={slide.id} className={styles.embla__slide}>
+                      <Image
+                        src={slide.image}
+                        width={640}
+                        height={880}
+                        alt={slide.title}
+                      />
+                    </div>
+                  ))}
               </div>
             </div>
             <div className={styles.embla} ref={emblaRef2}>

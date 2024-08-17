@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import AnimatedCursor from "react-animated-cursor";
 
-export default async function blogEnd() {
+export default async function BlogEnd() {
   async function getData() {
     const res = await fetch("https://fakestoreapi.com/products?limit=10");
 

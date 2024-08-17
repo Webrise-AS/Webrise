@@ -34,31 +34,26 @@ export default async function Projects() {
         </div>
         <div className={styles.projects_content}>
           <div className={styles.projects_cards_container}>
-            {data.slice(0, 8).map(
-              (card) => (
-                console.log("=========|", card.id, "|=========="),
-                (
-                  <Link
-                    href={"http://localhost:3000/projects/" + card.id}
-                    key={card.id}
-                  >
-                    <div className={styles.single_card}>
-                      <div className={styles.image_wrapper}>
-                        <Image
-                          src={card.image}
-                          width={500}
-                          height={700}
-                          alt={"image for the specified blog card"}
-                          loading="lazy"
-                        />
-                      </div>
-                      <h2>{card.price}</h2>
-                      <h3>{card.title}</h3>
-                    </div>
-                  </Link>
-                )
-              )
-            )}
+            {data.slice(0, 8).map((card) => (
+              <Link
+                href={"http://localhost:3000/projects/" + card.id}
+                key={card.id}
+              >
+                <div className={styles.single_card}>
+                  <div className={styles.image_wrapper}>
+                    <Image
+                      src={card.image}
+                      width={500}
+                      height={700}
+                      alt={"image for the specified blog card"}
+                      loading="lazy"
+                    />
+                  </div>
+                  <h2>{card.price}</h2>
+                  <h3>{card.title}</h3>
+                </div>
+              </Link>
+            ))}
           </div>
           {data.length >= 6 ? (
             <Link href={"http://localhost:3000/projects/end"}>

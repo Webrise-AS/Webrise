@@ -40,7 +40,14 @@ const ProjectsData = [
 ];
 
 export default function Home() {
-  const [emblaRef] = useEmblaCarousel({ loop: true }, [Autoplay()]);
+  const [emblaRef] = useEmblaCarousel({ loop: true }, [
+    Autoplay({
+      stopOnInteraction: false,
+      delay: 3000,
+      stopOnMouseEnter: true,
+      watchDrag: false,
+    }),
+  ]);
 
   return (
     <>
@@ -254,15 +261,16 @@ export default function Home() {
           </div>
         </section>
         <section className={styles.hire_container}>
-          <div>
+          <div className={styles.hire_content}>
             <p>
-              Be part of the innovation journey with Strobe™. Our monthly
+              Be part of the innovation journey with Webrise. Our monthly
               insights showcase the cutting-edge trends, technologies, and
               creative strategies shaping the future. Stay informed, inspired,
-              and ahead of the curve with Strobe™
+              and ahead of the curve with Webrise
             </p>
             <button>Learn more</button>
           </div>
+          <div className={styles.hire_overlay}></div>
         </section>
         <section className={styles.info_container}>
           <div className={styles.info_title}>

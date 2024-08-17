@@ -9,8 +9,6 @@ export default async function BlogDetails({ params }) {
   const id = Number(params.blogId);
   const blogData = await getSingleData(id);
 
-  console.log("data======[", blogData, "]=======");
-
   async function getRelatedData() {
     const res = await fetch("https://fakestoreapi.com/products?limit=10");
 

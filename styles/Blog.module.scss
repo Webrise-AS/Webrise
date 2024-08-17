@@ -15,13 +15,14 @@
             font-size: 15rem;
             font-weight: 600;
             line-height: 83%;
-            letter-spacing: -1.2rem;
+            letter-spacing: -.08em;
         }
 
         span {
             font-size: 1.25rem;
             font-weight: 500;
-            margin-right: 5.5rem;
+            margin: 12rem 5.5rem 0 0;
+            letter-spacing: -.03em;
         }
     }
 
@@ -68,6 +69,7 @@
                     font-weight: 500;
                     margin: 1rem 0 0.2rem 0;
                     line-height: 140%;
+                    letter-spacing: -.03em;
                 }
 
                 h3 {
@@ -76,7 +78,7 @@
                     font-size: 1.5rem;
                     font-weight: 500;
                     line-height: 116%;
-                    letter-spacing: -0.04rem;
+                    letter-spacing: -.02em;
                 }
             }
 
@@ -86,6 +88,8 @@
             font-size: 7.5rem;
             font-weight: 700;
             letter-spacing: -0.5rem;
+            line-height: 86%;
+            letter-spacing: -.08em;
         }
 
         .prev_btn {
@@ -124,6 +128,8 @@
                 font-size: 1.25rem;
                 font-weight: 500;
                 margin: 0;
+                line-height: 140%;
+                letter-spacing: -.03em;
             }
 
             h1 {
@@ -132,7 +138,7 @@
                 font-size: 4.5rem;
                 font-weight: 700;
                 line-height: 88%;
-                letter-spacing: -0.15rem;
+                letter-spacing: -.04em;
             }
         }
 
@@ -163,7 +169,7 @@
                 font-size: 1.5rem;
                 font-weight: 500;
                 line-height: 116%;
-                letter-spacing: -0.03rem;
+                letter-spacing: -.02em;
                 margin-bottom: 5rem;
             }
     
@@ -177,14 +183,13 @@
                     font-size: 2.5rem;
                     font-weight: 600;
                     line-height: 100%;
-                    letter-spacing: -0.1rem;
+                    letter-spacing: -.04em;
                 }
     
                 p {
                     font-size: 1.25rem;
                     font-weight: 400;
                     line-height: 140%;
-                    letter-spacing: -0.05rem;
                 }
             }
     
@@ -201,7 +206,7 @@
                 margin: 2.75rem 0 2.75rem 0;
                 font-weight: 600;
                 line-height: 100%;
-                letter-spacing: -0.14rem;
+                letter-spacing: -.04em;
             }
         }
 
@@ -217,7 +222,7 @@
             line-height: 88%;
             font-weight: 700;
             font-size: 4.5rem;
-            letter-spacing: -0.17rem;
+            letter-spacing: -.04em;
         }
 
         .related_cards_container {
@@ -257,6 +262,7 @@
                     font-weight: 500;
                     margin: 1rem 0 0.2rem 0;
                     line-height: 140%;
+                    letter-spacing: -.03em;
                 }
 
                 h3 {
@@ -265,7 +271,7 @@
                     font-size: 1.5rem;
                     font-weight: 500;
                     line-height: 116%;
-                    letter-spacing: -0.04rem;
+                    letter-spacing: -.02em;
                 }
             }
 

@@ -9,8 +9,6 @@ export default async function ProjectDetails({ params }) {
   const id = Number(params.projectId);
   const projectData = await getSingleData(id);
 
-  console.log("data======|", projectData.title, "|=======");
-
   async function getOtherProjectsData() {
     const res = await fetch("https://fakestoreapi.com/products?limit=10");
 

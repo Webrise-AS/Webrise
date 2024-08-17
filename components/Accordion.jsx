@@ -48,8 +48,7 @@ const data = [
   {
     id: 1,
     question: "What sets Webrise apart?",
-    answer:
-      "Strobe™ stands out through our unique fusion of Berlin's artistic heritage with modern digital innovation. Our approach is not just about creating visually stunning designs; it's about delivering functional, user-centered experiences that drive results and embody the vibrant spirit of our city.",
+    answer: `Strobe™ stands out through our unique fusion of Berlin's artistic heritage with modern digital innovation. Our approach is not just about creating visually stunning designs; it's about delivering functional, user-centered experiences that drive results and embody the vibrant spirit of our city.`,
   },
   {
     id: 2,
