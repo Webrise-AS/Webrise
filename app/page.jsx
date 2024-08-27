@@ -7,6 +7,7 @@ import Autoplay from "embla-carousel-autoplay";
 import { BsLinkedin, BsTiktok, BsInstagram } from "react-icons/bs";
 import Accordion from "@/components/accordion";
 import AnimatedCursor from "react-animated-cursor";
+import { Parallax } from "react-scroll-parallax";
 
 const ProjectsData = [
   {
@@ -121,10 +122,12 @@ export default function Home() {
           </div>
         </section>
         <section className={styles.project_container}>
-          <div className={styles.project_hero_textfield}>
-            <h2>Recent</h2>
-            <h2>Projects</h2>
-          </div>
+          <Parallax speed={-6.1}>
+            <div className={styles.project_hero_textfield}>
+              <h2>Recent</h2>
+              <h2>Projects</h2>
+            </div>
+          </Parallax>
           <div className={styles.project_work_section}>
             {ProjectsData.map((project) => (
               <div className={styles.works_content} key={project.id}>

@@ -86,14 +86,14 @@
     .project_container {
         background-color: $black-color;
         color: $white-color;
-        height: 100%;
+        height: fit-content;
         display: flex;
         flex-direction: column;
-        row-gap: 1rem;
+        row-gap: 2rem;
         padding: 10rem 0rem;
 
         .project_hero_textfield {
-            height: 29rem;
+            height: fit-content;
             width: 95%;
             margin:  auto;
             display: flex;
@@ -118,6 +118,7 @@
             flex-wrap: wrap;
             justify-content: space-between;
             row-gap: 5rem;
+            z-index: $base-index;
 
             .works_content {
                 display: flex;

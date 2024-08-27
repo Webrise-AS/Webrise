@@ -6,6 +6,7 @@ import Link from "next/link";
 import useEmblaCarousel from "embla-carousel-react";
 import AutoScroll from "embla-carousel-auto-scroll";
 import useSWR from "swr";
+import { Parallax } from "react-scroll-parallax";
 
 const fetcher = (url) => fetch(url).then((res) => res.json());
 
@@ -66,6 +67,7 @@ export default function About() {
             <h2>PIONEERS</h2>
           </div>
         </div>
+
         <div className={styles.about_content_section}>
           <div className={styles.content_section_story}>
             <p>
@@ -145,20 +147,23 @@ export default function About() {
             </div>
           </div>
         </div>
-        <div className={styles.about_talent_section}>
-          <div>
-            <p>
-              Be part of the innovation journey with Webrise. Our monthly
-              insights showcase the cutting-edge trends, technologies, and
-              creative strategies shaping the future. Stay informed, inspired,
-              and ahead of the curve with Webrise
-            </p>
-            <Link href={"http://localhost:3000/contact/"}>
-              <button>Learn more</button>
-            </Link>
+
+        <Parallax speed={-5}>
+          <div className={styles.about_talent_section}>
+            <div>
+              <p>
+                Be part of the innovation journey with Webrise. Our monthly
+                insights showcase the cutting-edge trends, technologies, and
+                creative strategies shaping the future. Stay informed, inspired,
+                and ahead of the curve with Webrise
+              </p>
+              <Link href={"http://localhost:3000/contact/"}>
+                <button>Learn more</button>
+              </Link>
+            </div>
+            <div className={styles.about_talent_overlay}></div>
           </div>
-          <div className={styles.about_talent_overlay}></div>
-        </div>
+        </Parallax>
       </section>
     </>
   );
