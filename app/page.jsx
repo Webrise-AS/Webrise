@@ -7,38 +7,11 @@ import Autoplay from "embla-carousel-autoplay";
 import { BsLinkedin, BsTiktok, BsInstagram } from "react-icons/bs";
 import Accordion from "@/components/accordion";
 import AnimatedCursor from "react-animated-cursor";
-import { Parallax } from "react-scroll-parallax";
-
-const ProjectsData = [
-  {
-    id: 1,
-    name: "Sand & Witch",
-    slogan: "The crunchier the butter",
-    image_url: "https://placehold.jp/640x700.png",
-    image_desc: "Picture of the project",
-  },
-  {
-    id: 2,
-    name: "Sweet Lorens",
-    slogan: "Cookies made of dreams",
-    image_url: "https://placehold.jp/640x700.png",
-    image_desc: "Picture of the project",
-  },
-  {
-    id: 3,
-    name: "Caffeine Coders",
-    slogan: "Code flows as smooth as our coffee",
-    image_url: "https://placehold.jp/640x700.png",
-    image_desc: "Picture of the project",
-  },
-  {
-    id: 4,
-    name: "Pasta Palette",
-    slogan: "Every flavor tells a tale",
-    image_url: "https://placehold.jp/640x700.png",
-    image_desc: "Picture of the project",
-  },
-];
+import { motion, useScroll } from "framer-motion";
+import { useEffect, useRef } from "react";
+import Lenis from "lenis";
+import Gallery from "@/components/gallery";
+import Link from "next/link";
 
 export default function Home() {
   const [emblaRef] = useEmblaCarousel({ loop: true }, [
@@ -49,6 +22,23 @@ export default function Home() {
       watchDrag: false,
     }),
   ]);
+
+  useEffect(() => {
+    const lenis = new Lenis();
+
+    function raf(time) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+
+    requestAnimationFrame(raf);
+  }, []);
+
+  const ref = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["1 2", "-0.4"],
+  });
 
   return (
     <>
@@ -98,13 +88,24 @@ export default function Home() {
         <section className={styles.hero_container}></section>
         <section className={styles.about_container}>
           <div className={styles.about_content_left}>
-            <h4>(Who we are)</h4>
-            <Image
-              src="https://placehold.jp/400x450.png"
-              width={400}
-              height={450}
-              alt=""
-            />
+            <motion.h4
+              initial={{ opacity: 0, scale: 0.5, x: -200, y: 48, rotate: 10 }}
+              whileInView={{ opacity: 1, scale: 1, x: 0, y: 0, rotate: 0 }}
+              transition={{ ease: "easeInOut", duration: 0.75 }}
+            >
+              (Who we are)
+            </motion.h4>
+            <motion.div
+              ref={ref}
+              style={{ scale: scrollYProgress, opacity: scrollYProgress }}
+            >
+              <Image
+                src="https://placehold.jp/400x450.png"
+                width={400}
+                height={450}
+                alt=""
+              />
+            </motion.div>
           </div>
           <div className={styles.about_content_right}>
             <p>
@@ -122,30 +123,10 @@ export default function Home() {
           </div>
         </section>
         <section className={styles.project_container}>
-          <Parallax speed={-6.1}>
-            <div className={styles.project_hero_textfield}>
-              <h2>Recent</h2>
-              <h2>Projects</h2>
-            </div>
-          </Parallax>
-          <div className={styles.project_work_section}>
-            {ProjectsData.map((project) => (
-              <div className={styles.works_content} key={project.id}>
-                <div className={styles.content_image_container}>
-                  <Image
-                    src={project.image_url}
-                    width={640}
-                    height={650}
-                    alt={project.image_desc}
-                  />
-                </div>
-                <span className={styles.works_content_span}>
-                  {project.name}
-                </span>
-                <span>{project.slogan}</span>
-              </div>
-            ))}
-          </div>
+          <Gallery />
+          <Link href={"/projects"}>
+            <button className={styles.project_button}>SEE ALL</button>
+          </Link>
         </section>
         <section className={styles.social_container}>
           <h2>Follow our journey to PROPEL BRANDS TO all NEW HEIGHTS</h2>
@@ -288,3 +269,20 @@ export default function Home() {
     </>
   );
 }
+
+// {ProjectsData.map((project) => (
+//   <div className={styles.works_content} key={project.id}>
+//     <div className={styles.content_image_container}>
+//       <Image
+//         src={project.image_url}
+//         width={640}
+//         height={650}
+//         alt={project.image_desc}
+//       />
+//     </div>
+//     <span className={styles.works_content_span}>
+//       {project.name}
+//     </span>
+//     <span>{project.slogan}</span>
+//   </div>
+// ))}
