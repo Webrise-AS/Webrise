@@ -36,7 +36,7 @@ export default function Gallery() {
 
   return (
     <>
-      <Parallax speed={-6.1}>
+      <Parallax speed={-4.3}>
         <div className={styles.project_hero_textfield}>
           <motion.h2
             whileInView={{ y: 0, rotate: 0, skew: 0 }}
@@ -70,7 +70,7 @@ const Column = ({ images, y = 0 }) => {
       {images.map((src, index) => {
         return (
           <div key={index} className={styles.image_container}>
-            <Image src={src} alt="" fill />
+            <Image src={src} alt="image of the project" fill />
           </div>
         );
       })}

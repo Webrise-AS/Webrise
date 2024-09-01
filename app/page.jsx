@@ -4,7 +4,12 @@ import styles from "../styles/Home.module.scss";
 import Image from "next/image";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
-import { BsLinkedin, BsTiktok, BsInstagram } from "react-icons/bs";
+import {
+  BsLinkedin,
+  BsTiktok,
+  BsInstagram,
+  BsArrowUpRight,
+} from "react-icons/bs";
 import Accordion from "@/components/accordion";
 import AnimatedCursor from "react-animated-cursor";
 import { motion, useScroll } from "framer-motion";
@@ -124,8 +129,15 @@ export default function Home() {
         </section>
         <section className={styles.project_container}>
           <Gallery />
-          <Link href={"/projects"}>
-            <button className={styles.project_button}>SEE ALL</button>
+          <Link href={"/projects"} className={styles.project_link}>
+            <motion.button
+              className={styles.project_button}
+              animate={{ x: -60, y: 60 }}
+              whileInView={{ x: 0, y: 0, skewY: 0 }}
+              transition={{ ease: "easeIn", duration: 0.1 }}
+            >
+              CASE STUDIES <BsArrowUpRight />
+            </motion.button>
           </Link>
         </section>
         <section className={styles.social_container}>
@@ -269,20 +281,3 @@ export default function Home() {
     </>
   );
 }
-
-// {ProjectsData.map((project) => (
-//   <div className={styles.works_content} key={project.id}>
-//     <div className={styles.content_image_container}>
-//       <Image
-//         src={project.image_url}
-//         width={640}
-//         height={650}
-//         alt={project.image_desc}
-//       />
-//     </div>
-//     <span className={styles.works_content_span}>
-//       {project.name}
-//     </span>
-//     <span>{project.slogan}</span>
-//   </div>
-// ))}

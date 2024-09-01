@@ -1,5 +1,6 @@
 .about_main_container {
     background-color: $primary-color;
+    overflow: hidden;
 
     .about_hero_section {
         height: fit-content;

@@ -5,8 +5,20 @@ import AnimatedCursor from "react-animated-cursor";
 import Link from "next/link";
 import { BsArrowRightShort } from "react-icons/bs";
 import { Parallax } from "react-scroll-parallax";
+import Lenis from "lenis";
+import { useEffect } from "react";
 
 export default function Contact() {
+  useEffect(() => {
+    const lenis = new Lenis();
+
+    function raf(time) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+
+    requestAnimationFrame(raf);
+  }, []);
   return (
     <>
       <Head>

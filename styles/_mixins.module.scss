@@ -19,16 +19,17 @@
 }
 
 @mixin buttons {
-    height: 2.6rem;
+    height: 2.7rem;
     width: 9rem;
     background-color: $black-color;
     color: $white-color;
     border-radius: 0.35rem;
     font-size: 0.95rem;
     font-weight: 600;
-    font-style: oblique;
+    transition: ease-in-out 0.3s;
 }
 
 @mixin hover_button_effects {
     cursor: pointer;
+    scale: percentage($number: 1.07);
 }

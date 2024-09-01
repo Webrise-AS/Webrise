@@ -159,11 +159,32 @@
             
         }
 
-        .project_button {
-            @include buttons;
-            margin-top: 2rem;
-            align-content: center;
+        .project_link {
+            width: 95%;
+            margin: 2rem auto auto auto;
+
+            .project_button {
+                @include buttons;
+                background-color: $white-color;
+                color: $black-color;
+                border: none;
+                width: 13.1rem;
+                height: 3.5rem;
+                font-size: 1.2rem;
+
+                svg {
+                    margin-left: 0.3rem;
+                    font-size: 1.25rem;
+                    font-weight: 600;
+                }
+            }
+    
+            .project_button:hover {
+                @include hover_button_effects;
+                letter-spacing: .02em;
+            }
         }
+
 
     }
 

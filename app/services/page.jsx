@@ -1,11 +1,23 @@
 "use client";
-
-import Image from "next/image";
 import styles from "../../styles/Home.module.scss";
+import Image from "next/image";
 import Head from "next/head";
 import Link from "next/link";
+import Lenis from "lenis";
+import { useEffect } from "react";
 
 export default function Services() {
+  useEffect(() => {
+    const lenis = new Lenis();
+
+    function raf(time) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+
+    requestAnimationFrame(raf);
+  }, []);
+
   return (
     <>
       <Head>
