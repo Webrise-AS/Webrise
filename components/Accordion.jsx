@@ -1,5 +1,6 @@
 import styles from "@/styles/Home.module.scss";
 import { useState } from "react";
+import { motion } from "framer-motion";
 
 function Accordion() {
   const [selected, setSelected] = useState(null);
@@ -25,8 +26,15 @@ function Accordion() {
             onClick={() => toggle(i)}
           >
             <div className={styles.single_accordion_tittle}>
-              <span>{selected === i ? "-" : "+"}</span>
-              <h2>{info.question}</h2>
+              <motion.span
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+              >
+                {selected === i ? "-" : "+"}
+              </motion.span>
+              <motion.h2 initial={{ opacity: 0 }} whileInView={{ opacity: 1 }}>
+                {info.question}
+              </motion.h2>
             </div>
             <div
               className={

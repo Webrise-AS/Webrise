@@ -7,6 +7,7 @@ import { BsArrowRightShort } from "react-icons/bs";
 import { Parallax } from "react-scroll-parallax";
 import Lenis from "lenis";
 import { useEffect } from "react";
+import { motion } from "framer-motion";
 
 export default function Contact() {
   useEffect(() => {
@@ -65,46 +66,70 @@ export default function Contact() {
       <Parallax speed={-8}>
         <section className={styles.contact_container}>
           <div className={styles.contact_content}>
-            <h3>(Contact)</h3>
+            <motion.h3
+              initial={{ y: 50, skewY: 2, opacity: 0 }}
+              animate={{ y: 0, skewY: 0, opacity: 1 }}
+              transition={{ ease: "easeIn", duration: 0.7 }}
+            >
+              (Contact)
+            </motion.h3>
             <ul>
               <Link href={"tel:+4799592853"}>
-                <li>
+                <motion.li
+                  initial={{ y: 50, skewY: 2, opacity: 0 }}
+                  animate={{ y: 0, skewY: 0, opacity: 1 }}
+                  transition={{ ease: "easeIn", duration: 0.7 }}
+                >
                   <BsArrowRightShort
                     fontSize={40}
                     color="#151515"
                     fontWeight={400}
                   />
                   <h2>+47 995 928 53</h2>
-                </li>
+                </motion.li>
               </Link>
               <Link href={"mailto:info@webrise.no"}>
-                <li>
+                <motion.li
+                  initial={{ y: 50, skewY: 2, opacity: 0 }}
+                  animate={{ y: 0, skewY: 0, opacity: 1 }}
+                  transition={{ ease: "easeIn", duration: 0.7 }}
+                >
                   <BsArrowRightShort
                     fontSize={40}
                     color="#151515"
                     fontWeight={400}
                   />
                   <h2>info@webrise.no</h2>
-                </li>
+                </motion.li>
               </Link>
               <Link
                 href={
                   "https://www.google.com/maps/place/Oslo/@59.8937521,10.6203131,11z/data=!3m1!4b1!4m6!3m5!1s0x46416e61f267f039:0x7e92605fd3231e9a!8m2!3d59.9138688!4d10.7522454!16zL20vMDVsNjQ?entry=ttu"
                 }
               >
-                <li>
+                <motion.li
+                  initial={{ y: 50, skewY: 2, opacity: 0 }}
+                  animate={{ y: 0, skewY: 0, opacity: 1 }}
+                  transition={{ ease: "easeIn", duration: 0.7 }}
+                >
                   <BsArrowRightShort
                     fontSize={40}
                     color="#151515"
                     fontWeight={400}
                   />
                   <h2>Oslo, Norway</h2>
-                </li>
+                </motion.li>
               </Link>
             </ul>
           </div>
           <div className={styles.contact_tittle}>
-            <h1>GET IN TOUCH</h1>
+            <motion.h1
+              initial={{ y: 50, skewY: 3, opacity: 0 }}
+              animate={{ y: 0, skewY: 0, opacity: 1 }}
+              transition={{ ease: "easeIn", duration: 0.7 }}
+            >
+              GET IN TOUCH
+            </motion.h1>
           </div>
         </section>
       </Parallax>

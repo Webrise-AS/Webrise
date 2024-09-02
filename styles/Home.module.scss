@@ -35,16 +35,6 @@
 
         .about_content_left {
             width: 30%;
-            display: flex;
-            flex-direction: column;
-            row-gap: 1.8rem;
-
-            h4 {
-                margin: 0;
-                font-size: 1.25rem;
-                font-weight: 500;
-                letter-spacing: -.03em;
-            }
 
             img {
                 border-radius: 0.5rem;
@@ -99,6 +89,10 @@
             display: flex;
             flex-direction: column;
             
+            div {
+                overflow: hidden;
+            }
+
             h2 {
                 height: 12.5rem;
                 width: fit-content;
@@ -109,6 +103,7 @@
                 letter-spacing: -.08em;
                 line-height: 83%;
             } 
+            
         }
 
         .project_gallery {
@@ -199,19 +194,22 @@
         justify-content: space-around;
         row-gap: 2.5rem;
 
+        div {
+            overflow: visible;
+        }
+
         h2 {
             width: 56rem;
             margin: 0;
             line-height: 93.2%;
             letter-spacing: -.08em;
-            line-break: strict;
             font-size: 7.5rem;
             font-weight: 700;
             text-transform: uppercase;
             text-align: center;
         }
 
-        div {
+        .icons_container {
             background-color: $black-color;
             display: flex;
             column-gap: 2rem;
@@ -232,14 +230,23 @@
         flex-direction: column;
         row-gap: 6rem;
 
+        .article_hero_content {
+            
+            height: fit-content;
+            width: fit-content;
+            overflow: visible;
+        }
+
         h2 {
-            width: 21rem;
+            width: fit-content;
             margin: 0;
             font-size: 4.5rem;
             font-weight: 700;
             letter-spacing: -.04em;
             line-height: 88%;
         }
+        
+
 
         .article_content {
             display: flex;
@@ -282,6 +289,7 @@
                     left: auto;
                     right: 6.25rem;
                 }
+
             }
 
             .article_content_top:hover {
@@ -295,7 +303,6 @@
                 img {
                     display:inline-block;
                     transform: rotate(-9deg) ;
-                    mask-image: linear-gradient(to  top, transparent 0.1%, $black-color);
                 }
             }
 
@@ -347,7 +354,6 @@
                 img {
                     display:inline-block;
                     transform: rotate(-9deg) ;
-                    mask-image: linear-gradient(to  top, transparent 0.1%, $black-color);
                 }
             }
         }
@@ -366,6 +372,14 @@
             display: flex;
             flex-direction: column;
             row-gap: 5rem;
+
+                div {
+                    
+                    div {
+                        overflow: visible;
+                    }
+                }
+            
 
             h2 {
                 padding-left: 2%;
@@ -513,46 +527,3 @@
 
 /* ----------------------------------------------------- Mobile -------------------------------------------- */
 @media (min-width: 375px) {}
-
-// .project_work_section {
-//     width: 95%;
-//     margin: auto;
-//     display: flex;
-//     flex-wrap: wrap;
-//     justify-content: space-between;
-//     row-gap: 5rem;
-//     z-index: $base-index;
-
-//     .works_content {
-//         display: flex;
-//         flex-direction: column;
-
-//         .content_image_container {
-//             height: 40.625rem;
-//             border-radius: 0.5rem;
-//             margin-bottom: 0.5rem;
-//             overflow: hidden;
-
-//             img {
-//                 transition: transform .8s ease;
-//             }
-
-//             img:hover {
-//                 transform: scale(1.2);
-//             }
-//         }
-
-//         .works_content_span {
-//             text-decoration: underline;
-//         }
-
-//         span {
-//             font-size: 1.5rem;
-//             font-weight: 500;
-//             letter-spacing: -.02em;
-//         }
-
-//     }
-
-    
-// }

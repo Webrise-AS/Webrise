@@ -42,7 +42,7 @@ export default function Home() {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ["1 2", "-0.4"],
+    offset: ["1 1.95", "-0.35"],
   });
 
   return (
@@ -93,13 +93,6 @@ export default function Home() {
         <section className={styles.hero_container}></section>
         <section className={styles.about_container}>
           <div className={styles.about_content_left}>
-            <motion.h4
-              initial={{ opacity: 0, scale: 0.5, x: -200, y: 48, rotate: 10 }}
-              whileInView={{ opacity: 1, scale: 1, x: 0, y: 0, rotate: 0 }}
-              transition={{ ease: "easeInOut", duration: 0.75 }}
-            >
-              (Who we are)
-            </motion.h4>
             <motion.div
               ref={ref}
               style={{ scale: scrollYProgress, opacity: scrollYProgress }}
@@ -141,28 +134,111 @@ export default function Home() {
           </Link>
         </section>
         <section className={styles.social_container}>
-          <h2>Follow our journey to PROPEL BRANDS TO all NEW HEIGHTS</h2>
           <div>
+            <div>
+              <motion.h2
+                animate={{ y: "30vh", skewY: 8 }}
+                whileInView={{ y: 0, skewY: 0 }}
+                transition={{ ease: "easeIn", duration: 0.5 }}
+              >
+                Follow our
+              </motion.h2>
+            </div>
+            <div>
+              <motion.h2
+                animate={{ y: "30vh", skewY: 8 }}
+                whileInView={{ y: 0, skewY: 0 }}
+                transition={{ ease: "easeIn", duration: 0.5 }}
+              >
+                journey to
+              </motion.h2>
+            </div>
+            <div>
+              <motion.h2
+                animate={{ y: "30vh", skewY: 8 }}
+                whileInView={{ y: 0, skewY: 0 }}
+                transition={{ ease: "easeIn", duration: 0.5 }}
+              >
+                PROPEL BRANDS
+              </motion.h2>
+            </div>
+            <div>
+              <motion.h2
+                animate={{ y: "30vh", skewY: 8 }}
+                whileInView={{ y: 0, skewY: 0 }}
+                transition={{ ease: "easeIn", duration: 0.5 }}
+              >
+                TO all NEW
+              </motion.h2>
+            </div>
+            <div>
+              <motion.h2
+                animate={{ y: "30vh", skewY: 8 }}
+                whileInView={{ y: 0, skewY: 0 }}
+                transition={{ ease: "easeIn", duration: 0.5 }}
+              >
+                HEIGHTS
+              </motion.h2>
+            </div>
+          </div>
+
+          <div className={styles.icons_container}>
             <BsLinkedin fontSize={60} color="white" cursor={"pointer"} />
             <BsTiktok fontSize={60} color="white" cursor={"pointer"} />
             <BsInstagram fontSize={60} color="white" cursor={"pointer"} />
           </div>
-          <Image
-            src="https://placehold.jp/1318x350.png"
-            width={1318}
-            height={350}
-            alt=""
-          />
+          <motion.div
+            animate={{ opacity: 0, scale: 0.5, y: 100 }}
+            whileInView={{ opacity: 1, scale: 1, y: 0 }}
+            transition={{ ease: "easeIn", duration: 0.8 }}
+          >
+            <Image
+              src="https://placehold.jp/1318x350.png"
+              width={1318}
+              height={350}
+              alt=""
+            />
+          </motion.div>
         </section>
         <section className={styles.article_container}>
-          <h2>LATEST ARTICLES</h2>
+          <div>
+            <div className={styles.article_hero_content}>
+              <motion.h2
+                animate={{ y: "30vh", skewY: 8 }}
+                whileInView={{ y: 0, skewY: 0 }}
+                transition={{ ease: "easeIn", duration: 0.5 }}
+              >
+                LATEST
+              </motion.h2>
+            </div>
+            <div className={styles.article_hero_content}>
+              <motion.h2
+                animate={{ y: "30vh", skewY: 8 }}
+                whileInView={{ y: 0, skewY: 0 }}
+                transition={{ ease: "easeIn", duration: 0.5 }}
+              >
+                ARTICLES
+              </motion.h2>
+            </div>
+          </div>
           <div className={styles.article_content}>
             <div className={styles.article_content_top}>
-              <h3>(01)</h3>
-              <span>
+              <motion.h3
+                animate={{ y: 50, opacity: 0 }}
+                whileInView={{ y: 0, opacity: 1 }}
+                transition={{ duration: 0.5 }}
+              >
+                (01)
+              </motion.h3>
+              <motion.span
+                animate={{ y: 50, opacity: 0 }}
+                whileInView={{ y: 0, opacity: 1 }}
+                transition={{ duration: 0.5 }}
+              >
                 Unveiling the Future of Web Design: Trends to Watch in
                 Berlin&apos;s Digital Scene
-              </span>
+              </motion.span>
+
               <Image
                 src="https://placehold.jp/204x306.png"
                 width={204}
@@ -171,11 +247,21 @@ export default function Home() {
               />
             </div>
             <div className={styles.article_content_bottom}>
-              <h3>(02)</h3>
-              <span>
+              <motion.h3
+                animate={{ y: 50, opacity: 0 }}
+                whileInView={{ y: 0, opacity: 1 }}
+                transition={{ duration: 0.5 }}
+              >
+                (02)
+              </motion.h3>
+              <motion.span
+                animate={{ y: 50, opacity: 0 }}
+                whileInView={{ y: 0, opacity: 1 }}
+                transition={{ duration: 0.5 }}
+              >
                 Inside Strobe™: A Day in the Life of Berlin&apos;s Most
                 Innovative Creative Team
-              </span>
+              </motion.span>
               <Image
                 src="https://placehold.jp/204x306.png"
                 width={204}
@@ -184,11 +270,21 @@ export default function Home() {
               />
             </div>
             <div className={styles.article_content_bottom}>
-              <h3>(03)</h3>
-              <span>
+              <motion.h3
+                animate={{ y: 50, opacity: 0 }}
+                whileInView={{ y: 0, opacity: 1 }}
+                transition={{ duration: 0.5 }}
+              >
+                (03)
+              </motion.h3>
+              <motion.span
+                animate={{ y: 50, opacity: 0 }}
+                whileInView={{ y: 0, opacity: 1 }}
+                transition={{ duration: 0.5 }}
+              >
                 Sustainable Design: Strobe™&apos;s Approach to Eco-Friendly
                 Digital Solutions
-              </span>
+              </motion.span>
               <Image
                 src="https://placehold.jp/204x306.png"
                 width={204}
@@ -197,11 +293,21 @@ export default function Home() {
               />
             </div>
             <div className={styles.article_content_bottom}>
-              <h3>(04)</h3>
-              <span>
+              <motion.h3
+                animate={{ y: 50, opacity: 0 }}
+                whileInView={{ y: 0, opacity: 1 }}
+                transition={{ duration: 0.5 }}
+              >
+                (04)
+              </motion.h3>
+              <motion.span
+                animate={{ y: 50, opacity: 0 }}
+                whileInView={{ y: 0, opacity: 1 }}
+                transition={{ duration: 0.5 }}
+              >
                 Unveiling the Future of Web Design: Trends to Watch in
                 Berlin&apos;s Digital Scene
-              </span>
+              </motion.span>
               <Image
                 src="https://placehold.jp/204x306.png"
                 width={204}
@@ -213,7 +319,26 @@ export default function Home() {
         </section>
         <section className={styles.feedback_container}>
           <div className={styles.feedback_content}>
-            <h2>HAPPY CLIENTS</h2>
+            <div>
+              <div>
+                <motion.h2
+                  animate={{ y: "30vh", skewY: 8 }}
+                  whileInView={{ y: 0, skewY: 0 }}
+                  transition={{ ease: "easeIn", duration: 0.5 }}
+                >
+                  HAPPY
+                </motion.h2>
+              </div>
+              <div>
+                <motion.h2
+                  animate={{ y: "30vh", skewY: 8 }}
+                  whileInView={{ y: 0, skewY: 0 }}
+                  transition={{ ease: "easeIn", duration: 0.5 }}
+                >
+                  CLIENTS
+                </motion.h2>
+              </div>
+            </div>
             <div className={styles.embla} ref={emblaRef}>
               <div className={styles.embla__container}>
                 <div className={styles.embla__slide}>
@@ -258,20 +383,42 @@ export default function Home() {
         </section>
         <section className={styles.hire_container}>
           <div className={styles.hire_content}>
-            <p>
+            <motion.p
+              animate={{ y: 100, opacity: 0, skewY: 5 }}
+              whileInView={{ y: 0, opacity: 1, skewY: 0 }}
+              transition={{ duration: 0.7 }}
+            >
               Be part of the innovation journey with Webrise. Our monthly
               insights showcase the cutting-edge trends, technologies, and
               creative strategies shaping the future. Stay informed, inspired,
               and ahead of the curve with Webrise
-            </p>
-            <button>Learn more</button>
+            </motion.p>
+            <motion.button
+              animate={{ x: -50, opacity: 0 }}
+              whileInView={{ x: 0, opacity: 1 }}
+              transition={{ duration: 0.5 }}
+            >
+              Learn more
+            </motion.button>
           </div>
           <div className={styles.hire_overlay}></div>
         </section>
         <section className={styles.info_container}>
           <div className={styles.info_title}>
-            <span>YOU ASK</span>
-            <span>WE ANSWER</span>
+            <motion.span
+              animate={{ y: "30vh", skewY: 8 }}
+              whileInView={{ y: 0, skewY: 0 }}
+              transition={{ ease: "easeIn", duration: 0.5 }}
+            >
+              YOU ASK
+            </motion.span>
+            <motion.span
+              animate={{ y: "30vh", skewY: 8 }}
+              whileInView={{ y: 0, skewY: 0 }}
+              transition={{ ease: "easeIn", duration: 0.5 }}
+            >
+              WE ANSWER
+            </motion.span>
           </div>
           <div style={styles.info_accordion}>
             <Accordion />

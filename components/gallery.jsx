@@ -38,20 +38,24 @@ export default function Gallery() {
     <>
       <Parallax speed={-4.3}>
         <div className={styles.project_hero_textfield}>
-          <motion.h2
-            whileInView={{ y: 0, rotate: 0, skew: 0 }}
-            animate={{ y: 100, rotate: 5, skew: -10 }}
-            transition={{ ease: "easeInOut", duration: 0.4 }}
-          >
-            Recent
-          </motion.h2>
-          <motion.h2
-            whileInView={{ y: 0, rotate: 0 }}
-            animate={{ y: 100, rotate: 5 }}
-            transition={{ ease: "easeInOut", duration: 0.4 }}
-          >
-            Projects
-          </motion.h2>
+          <div>
+            <motion.h2
+              animate={{ y: "30vh", skewY: 8 }}
+              whileInView={{ y: 0, skewY: 0 }}
+              transition={{ ease: "easeIn", duration: 0.5 }}
+            >
+              Recent
+            </motion.h2>
+          </div>
+          <div>
+            <motion.h2
+              animate={{ y: "30vh", skewY: 8 }}
+              whileInView={{ y: 0, skewY: 0 }}
+              transition={{ ease: "easeIn", duration: 0.5 }}
+            >
+              Projects
+            </motion.h2>
+          </div>
         </div>
       </Parallax>
       <div ref={container} className={styles.project_gallery}>

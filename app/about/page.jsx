@@ -58,7 +58,7 @@ export default function About() {
                 className={styles.image_wrapper}
                 initial={{ x: 50, opacity: 0 }}
                 animate={{ x: 0, opacity: 1 }}
-                transition={{ duration: 0.6 }}
+                transition={{ ease: "easeIn", duration: 0.7 }}
               >
                 <Image
                   src={
@@ -72,7 +72,7 @@ export default function About() {
               <motion.span
                 initial={{ y: 50, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
-                transition={{ duration: 0.6 }}
+                transition={{ ease: "easeIn", duration: 0.7 }}
               >
                 (About)
               </motion.span>
@@ -80,7 +80,7 @@ export default function About() {
             <motion.div
               initial={{ x: -50, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
-              transition={{ duration: 0.6 }}
+              transition={{ ease: "easeIn", duration: 0.7 }}
             >
               <Image
                 src={
@@ -94,16 +94,16 @@ export default function About() {
           </div>
           <div className={styles.hero_section_bottom}>
             <motion.h1
-              initial={{ y: 10, skewY: 10, opacity: 0 }}
+              initial={{ y: 10, skewY: 3, opacity: 0 }}
               animate={{ y: 0, skewY: 0, opacity: 1 }}
-              transition={{ duration: 0.6 }}
+              transition={{ ease: "easeIn", duration: 0.7 }}
             >
               DIGITAL
             </motion.h1>
             <motion.h2
               animate={{ x: -100, opacity: 0 }}
               whileInView={{ x: 0, opacity: 1 }}
-              transition={{ duration: 0.6 }}
+              transition={{ ease: "easeIn", duration: 0.7 }}
             >
               PIONEERS
             </motion.h2>
