@@ -40,18 +40,18 @@ export default function Gallery() {
         <div className={styles.project_hero_textfield}>
           <div>
             <motion.h2
-              animate={{ y: "30vh", skewY: 8 }}
+              animate={{ y: "30vh", skewY: 10 }}
               whileInView={{ y: 0, skewY: 0 }}
-              transition={{ ease: "easeIn", duration: 0.5 }}
+              transition={{ ease: "easeIn", duration: 0.6 }}
             >
               Recent
             </motion.h2>
           </div>
           <div>
             <motion.h2
-              animate={{ y: "30vh", skewY: 8 }}
+              animate={{ y: "30vh", skewY: 10 }}
               whileInView={{ y: 0, skewY: 0 }}
-              transition={{ ease: "easeIn", duration: 0.5 }}
+              transition={{ ease: "easeIn", duration: 0.6 }}
             >
               Projects
             </motion.h2>

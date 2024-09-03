@@ -160,8 +160,8 @@
 
                 h2 {
                     width: 81%;
-                    margin: 2.5rem 0 0 0;
-                    padding-bottom: 5rem;
+                    margin:   0;
+                    
                     font-size: 4.5rem;
                     letter-spacing: -.04em;
                     font-weight: 700;
@@ -169,6 +169,7 @@
                 }
                 
                 .values_container {
+                    margin-top: 5rem;
                     border-top: solid 1px $black-color;
 
                     .single_value {
@@ -235,11 +236,13 @@
                 border-radius: 0.5rem;
                 font-size: 1rem;
                 font-weight: 500;
-                letter-spacing: -.02rem;
+                letter-spacing: -.02em;
+                transition: ease-in-out 0.3s;
             }
 
             button:hover {
                 cursor: pointer;
+                scale: percentage($number: 1.08);
             }
         }
 

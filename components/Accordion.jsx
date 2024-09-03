@@ -29,10 +29,15 @@ function Accordion() {
               <motion.span
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
+                transition={{ ease: "easeIn", transition: 0.6 }}
               >
                 {selected === i ? "-" : "+"}
               </motion.span>
-              <motion.h2 initial={{ opacity: 0 }} whileInView={{ opacity: 1 }}>
+              <motion.h2
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ ease: "easeIn", transition: 0.6 }}
+              >
                 {info.question}
               </motion.h2>
             </div>

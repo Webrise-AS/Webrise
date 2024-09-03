@@ -4,12 +4,7 @@ import styles from "../styles/Home.module.scss";
 import Image from "next/image";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
-import {
-  BsLinkedin,
-  BsTiktok,
-  BsInstagram,
-  BsArrowUpRight,
-} from "react-icons/bs";
+import { BsArrowUpRight } from "react-icons/bs";
 import Accordion from "@/components/accordion";
 import AnimatedCursor from "react-animated-cursor";
 import { motion, useScroll } from "framer-motion";
@@ -17,13 +12,14 @@ import { useEffect, useRef } from "react";
 import Lenis from "lenis";
 import Gallery from "@/components/gallery";
 import Link from "next/link";
+import MediaIcons from "@/components/MediaIcons";
 
 export default function Home() {
   const [emblaRef] = useEmblaCarousel({ loop: true }, [
     Autoplay({
       stopOnInteraction: false,
-      delay: 3000,
-      stopOnMouseEnter: true,
+      delay: 3500,
+      stopOnMouseEnter: false,
       watchDrag: false,
     }),
   ]);
@@ -122,75 +118,72 @@ export default function Home() {
         </section>
         <section className={styles.project_container}>
           <Gallery />
-          <Link href={"/projects"} className={styles.project_link}>
-            <motion.button
-              className={styles.project_button}
-              animate={{ x: -60, y: 60 }}
-              whileInView={{ x: 0, y: 0, skewY: 0 }}
-              transition={{ ease: "easeIn", duration: 0.1 }}
-            >
-              CASE STUDIES <BsArrowUpRight />
-            </motion.button>
-          </Link>
+          <motion.div
+            className={styles.project_button_container}
+            animate={{ x: -50, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            transition={{ duration: 0.6 }}
+          >
+            <Link href={"/projects"}>
+              <button className={styles.project_button}>
+                CASE STUDIES <BsArrowUpRight />
+              </button>
+            </Link>
+          </motion.div>
         </section>
         <section className={styles.social_container}>
           <div>
-            <div>
+            <div style={{ overflow: "hidden" }}>
               <motion.h2
-                animate={{ y: "30vh", skewY: 8 }}
+                animate={{ y: "24.5vh", skewY: 15 }}
                 whileInView={{ y: 0, skewY: 0 }}
-                transition={{ ease: "easeIn", duration: 0.5 }}
+                transition={{ ease: "easeIn", duration: 0.6 }}
               >
                 Follow our
               </motion.h2>
             </div>
-            <div>
+            <div style={{ overflow: "hidden" }}>
               <motion.h2
-                animate={{ y: "30vh", skewY: 8 }}
+                animate={{ y: "24.5vh", skewY: 15 }}
                 whileInView={{ y: 0, skewY: 0 }}
-                transition={{ ease: "easeIn", duration: 0.5 }}
+                transition={{ ease: "easeIn", duration: 0.6 }}
               >
                 journey to
               </motion.h2>
             </div>
-            <div>
+            <div style={{ overflow: "hidden" }}>
               <motion.h2
-                animate={{ y: "30vh", skewY: 8 }}
+                animate={{ y: "24.5vh", skewY: 15 }}
                 whileInView={{ y: 0, skewY: 0 }}
-                transition={{ ease: "easeIn", duration: 0.5 }}
+                transition={{ ease: "easeIn", duration: 0.6 }}
               >
                 PROPEL BRANDS
               </motion.h2>
             </div>
-            <div>
+            <div style={{ overflow: "hidden" }}>
               <motion.h2
-                animate={{ y: "30vh", skewY: 8 }}
+                animate={{ y: "24.5vh", skewY: 15 }}
                 whileInView={{ y: 0, skewY: 0 }}
-                transition={{ ease: "easeIn", duration: 0.5 }}
+                transition={{ ease: "easeIn", duration: 0.6 }}
               >
                 TO all NEW
               </motion.h2>
             </div>
-            <div>
+            <div style={{ overflow: "hidden" }}>
               <motion.h2
-                animate={{ y: "30vh", skewY: 8 }}
+                animate={{ y: "24.5vh", skewY: 15 }}
                 whileInView={{ y: 0, skewY: 0 }}
-                transition={{ ease: "easeIn", duration: 0.5 }}
+                transition={{ ease: "easeIn", duration: 0.6 }}
               >
                 HEIGHTS
               </motion.h2>
             </div>
           </div>
-
-          <div className={styles.icons_container}>
-            <BsLinkedin fontSize={60} color="white" cursor={"pointer"} />
-            <BsTiktok fontSize={60} color="white" cursor={"pointer"} />
-            <BsInstagram fontSize={60} color="white" cursor={"pointer"} />
-          </div>
+          <MediaIcons />
           <motion.div
             animate={{ opacity: 0, scale: 0.5, y: 100 }}
             whileInView={{ opacity: 1, scale: 1, y: 0 }}
-            transition={{ ease: "easeIn", duration: 0.8 }}
+            transition={{ ease: "easeIn", duration: 1 }}
           >
             <Image
               src="https://placehold.jp/1318x350.png"
@@ -202,20 +195,20 @@ export default function Home() {
         </section>
         <section className={styles.article_container}>
           <div>
-            <div className={styles.article_hero_content}>
+            <div style={{ overflow: "hidden" }}>
               <motion.h2
-                animate={{ y: "30vh", skewY: 8 }}
+                animate={{ y: "13.5vh", skewY: 15 }}
                 whileInView={{ y: 0, skewY: 0 }}
-                transition={{ ease: "easeIn", duration: 0.5 }}
+                transition={{ ease: "easeIn", duration: 0.6 }}
               >
                 LATEST
               </motion.h2>
             </div>
-            <div className={styles.article_hero_content}>
+            <div style={{ overflow: "hidden" }}>
               <motion.h2
-                animate={{ y: "30vh", skewY: 8 }}
+                animate={{ y: "13.5vh", skewY: 15 }}
                 whileInView={{ y: 0, skewY: 0 }}
-                transition={{ ease: "easeIn", duration: 0.5 }}
+                transition={{ ease: "easeIn", duration: 0.6 }}
               >
                 ARTICLES
               </motion.h2>
@@ -226,14 +219,14 @@ export default function Home() {
               <motion.h3
                 animate={{ y: 50, opacity: 0 }}
                 whileInView={{ y: 0, opacity: 1 }}
-                transition={{ duration: 0.5 }}
+                transition={{ duration: 0.6 }}
               >
                 (01)
               </motion.h3>
               <motion.span
                 animate={{ y: 50, opacity: 0 }}
                 whileInView={{ y: 0, opacity: 1 }}
-                transition={{ duration: 0.5 }}
+                transition={{ duration: 0.6 }}
               >
                 Unveiling the Future of Web Design: Trends to Watch in
                 Berlin&apos;s Digital Scene
@@ -250,14 +243,14 @@ export default function Home() {
               <motion.h3
                 animate={{ y: 50, opacity: 0 }}
                 whileInView={{ y: 0, opacity: 1 }}
-                transition={{ duration: 0.5 }}
+                transition={{ duration: 0.6 }}
               >
                 (02)
               </motion.h3>
               <motion.span
                 animate={{ y: 50, opacity: 0 }}
                 whileInView={{ y: 0, opacity: 1 }}
-                transition={{ duration: 0.5 }}
+                transition={{ duration: 0.6 }}
               >
                 Inside Strobe™: A Day in the Life of Berlin&apos;s Most
                 Innovative Creative Team
@@ -273,14 +266,14 @@ export default function Home() {
               <motion.h3
                 animate={{ y: 50, opacity: 0 }}
                 whileInView={{ y: 0, opacity: 1 }}
-                transition={{ duration: 0.5 }}
+                transition={{ duration: 0.6 }}
               >
                 (03)
               </motion.h3>
               <motion.span
                 animate={{ y: 50, opacity: 0 }}
                 whileInView={{ y: 0, opacity: 1 }}
-                transition={{ duration: 0.5 }}
+                transition={{ duration: 0.6 }}
               >
                 Sustainable Design: Strobe™&apos;s Approach to Eco-Friendly
                 Digital Solutions
@@ -296,14 +289,14 @@ export default function Home() {
               <motion.h3
                 animate={{ y: 50, opacity: 0 }}
                 whileInView={{ y: 0, opacity: 1 }}
-                transition={{ duration: 0.5 }}
+                transition={{ duration: 0.6 }}
               >
                 (04)
               </motion.h3>
               <motion.span
                 animate={{ y: 50, opacity: 0 }}
                 whileInView={{ y: 0, opacity: 1 }}
-                transition={{ duration: 0.5 }}
+                transition={{ duration: 0.6 }}
               >
                 Unveiling the Future of Web Design: Trends to Watch in
                 Berlin&apos;s Digital Scene
@@ -320,20 +313,20 @@ export default function Home() {
         <section className={styles.feedback_container}>
           <div className={styles.feedback_content}>
             <div>
-              <div>
+              <div style={{ overflow: "hidden" }}>
                 <motion.h2
-                  animate={{ y: "30vh", skewY: 8 }}
+                  animate={{ y: "21vh", skewY: 15 }}
                   whileInView={{ y: 0, skewY: 0 }}
-                  transition={{ ease: "easeIn", duration: 0.5 }}
+                  transition={{ ease: "easeIn", duration: 0.6 }}
                 >
                   HAPPY
                 </motion.h2>
               </div>
-              <div>
+              <div style={{ overflow: "hidden" }}>
                 <motion.h2
-                  animate={{ y: "30vh", skewY: 8 }}
+                  animate={{ y: "21vh", skewY: 15 }}
                   whileInView={{ y: 0, skewY: 0 }}
-                  transition={{ ease: "easeIn", duration: 0.5 }}
+                  transition={{ ease: "easeIn", duration: 0.6 }}
                 >
                   CLIENTS
                 </motion.h2>
@@ -386,39 +379,43 @@ export default function Home() {
             <motion.p
               animate={{ y: 100, opacity: 0, skewY: 5 }}
               whileInView={{ y: 0, opacity: 1, skewY: 0 }}
-              transition={{ duration: 0.7 }}
+              transition={{ duration: 0.6 }}
             >
               Be part of the innovation journey with Webrise. Our monthly
               insights showcase the cutting-edge trends, technologies, and
               creative strategies shaping the future. Stay informed, inspired,
               and ahead of the curve with Webrise
             </motion.p>
-            <motion.button
+            <motion.div
               animate={{ x: -50, opacity: 0 }}
               whileInView={{ x: 0, opacity: 1 }}
-              transition={{ duration: 0.5 }}
+              transition={{ duration: 0.6 }}
             >
-              Learn more
-            </motion.button>
+              <button>Learn more</button>
+            </motion.div>
           </div>
           <div className={styles.hire_overlay}></div>
         </section>
         <section className={styles.info_container}>
           <div className={styles.info_title}>
-            <motion.span
-              animate={{ y: "30vh", skewY: 8 }}
-              whileInView={{ y: 0, skewY: 0 }}
-              transition={{ ease: "easeIn", duration: 0.5 }}
-            >
-              YOU ASK
-            </motion.span>
-            <motion.span
-              animate={{ y: "30vh", skewY: 8 }}
-              whileInView={{ y: 0, skewY: 0 }}
-              transition={{ ease: "easeIn", duration: 0.5 }}
-            >
-              WE ANSWER
-            </motion.span>
+            <div style={{ overflow: "hidden" }}>
+              <motion.h3
+                animate={{ y: "14vh", skewY: 15 }}
+                whileInView={{ y: 0, skewY: 0 }}
+                transition={{ ease: "easeIn", duration: 0.6 }}
+              >
+                YOU ASK
+              </motion.h3>
+            </div>
+            <div style={{ overflow: "hidden" }}>
+              <motion.h3
+                animate={{ y: "14vh", skewY: 15 }}
+                whileInView={{ y: 0, skewY: 0 }}
+                transition={{ ease: "easeIn", duration: 0.6 }}
+              >
+                WE ANSWER
+              </motion.h3>
+            </div>
           </div>
           <div style={styles.info_accordion}>
             <Accordion />

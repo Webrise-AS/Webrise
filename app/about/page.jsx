@@ -58,7 +58,7 @@ export default function About() {
                 className={styles.image_wrapper}
                 initial={{ x: 50, opacity: 0 }}
                 animate={{ x: 0, opacity: 1 }}
-                transition={{ ease: "easeIn", duration: 0.7 }}
+                transition={{ ease: "easeIn", duration: 0.6 }}
               >
                 <Image
                   src={
@@ -72,7 +72,7 @@ export default function About() {
               <motion.span
                 initial={{ y: 50, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
-                transition={{ ease: "easeIn", duration: 0.7 }}
+                transition={{ ease: "easeIn", duration: 0.6 }}
               >
                 (About)
               </motion.span>
@@ -80,7 +80,7 @@ export default function About() {
             <motion.div
               initial={{ x: -50, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
-              transition={{ ease: "easeIn", duration: 0.7 }}
+              transition={{ ease: "easeIn", duration: 0.6 }}
             >
               <Image
                 src={
@@ -93,20 +93,24 @@ export default function About() {
             </motion.div>
           </div>
           <div className={styles.hero_section_bottom}>
-            <motion.h1
-              initial={{ y: 10, skewY: 3, opacity: 0 }}
-              animate={{ y: 0, skewY: 0, opacity: 1 }}
-              transition={{ ease: "easeIn", duration: 0.7 }}
-            >
-              DIGITAL
-            </motion.h1>
-            <motion.h2
-              animate={{ x: -100, opacity: 0 }}
-              whileInView={{ x: 0, opacity: 1 }}
-              transition={{ ease: "easeIn", duration: 0.7 }}
-            >
-              PIONEERS
-            </motion.h2>
+            <div style={{ overflow: "hidden" }}>
+              <motion.h1
+                initial={{ y: "30vh", skewY: 8 }}
+                animate={{ y: 0, skewY: 0 }}
+                transition={{ ease: "easeIn", duration: 0.6 }}
+              >
+                DIGITAL
+              </motion.h1>
+            </div>
+            <div style={{ overflow: "hidden" }}>
+              <motion.h2
+                animate={{ y: "30vh", skewY: 8 }}
+                whileInView={{ y: 0, skewY: 0 }}
+                transition={{ ease: "easeIn", duration: 0.6 }}
+              >
+                PIONEERS
+              </motion.h2>
+            </div>
           </div>
         </div>
 
@@ -115,7 +119,7 @@ export default function About() {
             <motion.p
               animate={{ y: 100, skewY: 10, opacity: 0 }}
               whileInView={{ y: 0, skewY: 0, opacity: 1 }}
-              transition={{ duration: 0.7 }}
+              transition={{ duration: 0.6 }}
             >
               Situated in the pulsating heart of Berlin, Webrise thrives on the
               island’s eclectic energy and rich cultural tapestry.
@@ -123,7 +127,7 @@ export default function About() {
             <motion.p
               animate={{ y: 100, skewY: 10, opacity: 0 }}
               whileInView={{ y: 0, skewY: 0, opacity: 1 }}
-              transition={{ duration: 0.7 }}
+              transition={{ duration: 0.6 }}
             >
               Our holistic, collaborative approach is tailored to navigate the
               challenges and opportunities of our era. Experience transformative
@@ -164,7 +168,7 @@ export default function About() {
               className={styles.section_info_image}
               animate={{ y: 50, opacity: 0, scale: 0.4 }}
               whileInView={{ y: 0, opacity: 1, scale: 1 }}
-              transition={{ duration: 0.7 }}
+              transition={{ ease: "easeIn", duration: 0.9 }}
             >
               <Image
                 src={
@@ -176,26 +180,37 @@ export default function About() {
               />
             </motion.div>
             <div className={styles.section_info_container}>
-              <motion.h2
-                animate={{ y: 50, opacity: 0, skewY: 5 }}
-                whileInView={{ y: 0, opacity: 1, skewY: 0 }}
-                transition={{ duration: 0.7 }}
-              >
-                OUR OFFICE IS FULL OF ENERGY
-              </motion.h2>
+              <div style={{ overflow: "hidden" }}>
+                <motion.h2
+                  animate={{ y: "14.6vh", skewY: 8 }}
+                  whileInView={{ y: 0, skewY: 0 }}
+                  transition={{ ease: "easeIn", duration: 0.6 }}
+                >
+                  OUR OFFICE IS
+                </motion.h2>
+              </div>
+              <div style={{ overflow: "hidden" }}>
+                <motion.h2
+                  animate={{ y: "14.6vh", skewY: 8 }}
+                  whileInView={{ y: 0, skewY: 0 }}
+                  transition={{ ease: "easeIn", duration: 0.6 }}
+                >
+                  FULL OF ENERGY
+                </motion.h2>
+              </div>
               <div className={styles.values_container}>
                 <div className={styles.single_value}>
                   <motion.h4
                     animate={{ y: 50, opacity: 0 }}
                     whileInView={{ y: 0, opacity: 1 }}
-                    transition={{ duration: 0.5 }}
+                    transition={{ duration: 0.6 }}
                   >
                     (01)
                   </motion.h4>
                   <motion.h3
                     animate={{ y: 50, opacity: 0 }}
                     whileInView={{ y: 0, opacity: 1 }}
-                    transition={{ duration: 0.5 }}
+                    transition={{ duration: 0.6 }}
                   >
                     Creatively Bold
                   </motion.h3>
@@ -204,14 +219,14 @@ export default function About() {
                   <motion.h4
                     animate={{ y: 50, opacity: 0 }}
                     whileInView={{ y: 0, opacity: 1 }}
-                    transition={{ duration: 0.5 }}
+                    transition={{ duration: 0.6 }}
                   >
                     (02)
                   </motion.h4>
                   <motion.h3
                     animate={{ y: 50, opacity: 0 }}
                     whileInView={{ y: 0, opacity: 1 }}
-                    transition={{ duration: 0.5 }}
+                    transition={{ duration: 0.6 }}
                   >
                     Digital Pioneers
                   </motion.h3>
@@ -220,14 +235,14 @@ export default function About() {
                   <motion.h4
                     animate={{ y: 50, opacity: 0 }}
                     whileInView={{ y: 0, opacity: 1 }}
-                    transition={{ duration: 0.5 }}
+                    transition={{ duration: 0.6 }}
                   >
                     (03)
                   </motion.h4>
                   <motion.h3
                     animate={{ y: 50, opacity: 0 }}
                     whileInView={{ y: 0, opacity: 1 }}
-                    transition={{ duration: 0.5 }}
+                    transition={{ duration: 0.6 }}
                   >
                     Strategic Thinkers
                   </motion.h3>
@@ -236,14 +251,14 @@ export default function About() {
                   <motion.h4
                     animate={{ y: 50, opacity: 0 }}
                     whileInView={{ y: 0, opacity: 1 }}
-                    transition={{ duration: 0.5 }}
+                    transition={{ duration: 0.6 }}
                   >
                     (04)
                   </motion.h4>
                   <motion.h3
                     animate={{ y: 50, opacity: 0 }}
                     whileInView={{ y: 0, opacity: 1 }}
-                    transition={{ duration: 0.5 }}
+                    transition={{ duration: 0.6 }}
                   >
                     User-Centric
                   </motion.h3>
@@ -252,14 +267,14 @@ export default function About() {
                   <motion.h4
                     animate={{ y: 50, opacity: 0 }}
                     whileInView={{ y: 0, opacity: 1 }}
-                    transition={{ duration: 0.5 }}
+                    transition={{ duration: 0.6 }}
                   >
                     (05)
                   </motion.h4>
                   <motion.h3
                     animate={{ y: 50, opacity: 0 }}
                     whileInView={{ y: 0, opacity: 1 }}
-                    transition={{ duration: 0.5 }}
+                    transition={{ duration: 0.6 }}
                   >
                     Design Savvy
                   </motion.h3>
@@ -275,22 +290,22 @@ export default function About() {
               <motion.p
                 animate={{ y: 100, opacity: 0, skewY: 5 }}
                 whileInView={{ y: 0, opacity: 1, skewY: 0 }}
-                transition={{ duration: 0.7 }}
+                transition={{ duration: 0.6 }}
               >
                 Be part of the innovation journey with Webrise. Our monthly
                 insights showcase the cutting-edge trends, technologies, and
                 creative strategies shaping the future. Stay informed, inspired,
                 and ahead of the curve with Webrise
               </motion.p>
-              <Link href={"http://localhost:3000/contact/"}>
-                <motion.button
-                  animate={{ x: -50, opacity: 0 }}
-                  whileInView={{ x: 0, opacity: 1 }}
-                  transition={{ duration: 0.5 }}
-                >
-                  Learn more
-                </motion.button>
-              </Link>
+              <motion.div
+                animate={{ x: -50, opacity: 0 }}
+                whileInView={{ x: 0, opacity: 1 }}
+                transition={{ duration: 0.6 }}
+              >
+                <Link href={"http://localhost:3000/contact/"}>
+                  <button>Learn more</button>
+                </Link>
+              </motion.div>
             </div>
             <div className={styles.about_talent_overlay}></div>
           </div>
