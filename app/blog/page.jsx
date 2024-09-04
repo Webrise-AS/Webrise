@@ -1,21 +1,24 @@
+"use client";
+import BlogData from "@/components/BlogData";
 import styles from "/_repos/webrise/styles/Home.module.scss";
 import Head from "next/head";
-import Image from "next/image";
-import Link from "next/link";
 import AnimatedCursor from "react-animated-cursor";
+import { motion } from "framer-motion";
+import { useEffect } from "react";
+import { Parallax } from "react-scroll-parallax";
+import Lenis from "lenis";
 
-export default async function Blog() {
-  async function getData() {
-    const res = await fetch("https://fakestoreapi.com/products?limit=10");
+export default function Blog() {
+  useEffect(() => {
+    const lenis = new Lenis();
 
-    if (!res.ok) {
-      throw new Error("Failed to fetch data");
+    function raf(time) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
     }
 
-    return res.json();
-  }
-  const data = await getData();
-
+    requestAnimationFrame(raf);
+  }, []);
   return (
     <>
       <Head>
@@ -61,41 +64,13 @@ export default async function Blog() {
       />
 
       <section className={styles.blog_container}>
-        <div className={styles.blog_title}>
-          <h1>NEWS & BLOG</h1>
-          <span>(Blog)</span>
-        </div>
-        <div className={styles.blog_content}>
-          <div className={styles.blog_cards_container}>
-            {data.slice(0, 8).map((card) => (
-              <Link
-                href={"http://localhost:3000/blog/" + card.id}
-                key={card.id}
-              >
-                <div className={styles.single_card}>
-                  <div className={styles.image_wrapper}>
-                    <Image
-                      src={card.image}
-                      width={500}
-                      height={700}
-                      alt={"image for the specified blog card"}
-                      loading="lazy"
-                    />
-                  </div>
-                  <h2>{card.price}</h2>
-                  <h3>{card.title}</h3>
-                </div>
-              </Link>
-            ))}
+        <Parallax speed={-8}>
+          <div className={styles.blog_title}>
+            <h1>NEWS & BLOG</h1>
+            <span>(Blog)</span>
           </div>
-          {data.length >= 6 ? (
-            <Link href={"http://localhost:3000/blog/end"}>
-              <span>NEXT</span>
-            </Link>
-          ) : (
-            <span className={styles.prev_btn}>NEXT</span>
-          )}
-        </div>
+        </Parallax>
+        <BlogData apiLength={"10"} />
       </section>
     </>
   );

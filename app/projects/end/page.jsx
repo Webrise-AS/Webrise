@@ -1,20 +1,23 @@
-import Link from "next/link";
+"use client";
 import styles from "/_repos/webrise/styles/Home.module.scss";
 import Head from "next/head";
-import Image from "next/image";
+import ProjectsDataEnd from "@/components/ProjectsDataEnd";
+import Lenis from "lenis";
+import { useEffect } from "react";
+import { Parallax } from "react-scroll-parallax";
+import { motion } from "framer-motion";
 
-export default async function ProjectsEnd() {
-  async function getData() {
-    const res = await fetch("https://fakestoreapi.com/products?limit=10");
+export default function ProjectsEnd() {
+  useEffect(() => {
+    const lenis = new Lenis();
 
-    if (!res.ok) {
-      throw new Error("Failed to fetch data");
+    function raf(time) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
     }
 
-    return res.json();
-  }
-  const data = await getData();
-
+    requestAnimationFrame(raf);
+  }, []);
   return (
     <>
       <Head>
@@ -29,37 +32,19 @@ export default async function ProjectsEnd() {
 
       <section className={styles.projects_container}>
         <div className={styles.projects_title}>
-          <h1>OUR WORK</h1>
-          <span>(Transformative digital solutions)</span>
-        </div>
-        <div className={styles.projects_content}>
-          <div className={styles.projects_cards_container}>
-            {data.slice(8, 10).map((card) => (
-              <Link
-                href={"http://localhost:3000/projects/" + card.id}
-                key={card.id}
+          <Parallax speed={-8.5}>
+            <div style={{ overflow: "hidden" }}>
+              <motion.h1
+                initial={{ y: "40vh", skewY: 10 }}
+                animate={{ y: 0, skewY: 0 }}
+                transition={{ ease: "easeIn", duration: 0.6 }}
               >
-                <div className={styles.single_card}>
-                  <div className={styles.image_wrapper}>
-                    <Image
-                      src={card.image}
-                      width={500}
-                      height={700}
-                      alt={"image for the specified blog card"}
-                      loading="lazy"
-                    />
-                  </div>
-                  <h2>{card.price}</h2>
-                  <h3>{card.title}</h3>
-                </div>
-              </Link>
-            ))}
-          </div>
-
-          <Link href={"http://localhost:3000/projects"}>
-            <span>PREVIOUS</span>
-          </Link>
+                OUR WORK
+              </motion.h1>
+            </div>
+          </Parallax>
         </div>
+        <ProjectsDataEnd apiLength={`10`} />
       </section>
     </>
   );
