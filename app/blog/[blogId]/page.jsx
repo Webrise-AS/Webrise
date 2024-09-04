@@ -4,6 +4,8 @@ import Image from "next/image";
 import Link from "next/link";
 import AnimatedCursor from "react-animated-cursor";
 import { getSingleData } from "@/app/helpers/page";
+import LenisScroll from "@/components/LenisScroll";
+import { motion } from "framer-motion";
 
 export default async function BlogDetails({ params }) {
   const id = Number(params.blogId);
@@ -68,6 +70,8 @@ export default async function BlogDetails({ params }) {
         ]}
       />
 
+      <LenisScroll />
+
       <section className={styles.blogDetails_container}>
         <div
           className={styles.blogDetails_hero_section}
@@ -76,8 +80,20 @@ export default async function BlogDetails({ params }) {
           }}
         >
           <div className={styles.hero_content}>
-            <h3>{blogData.price}</h3>
-            <h1>{blogData.title}</h1>
+            <h3
+              initial={{ y: "30vh", skewY: 15 }}
+              animate={{ y: 0, skewY: 0 }}
+              transition={{ ease: "easeIn", duration: 0.6 }}
+            >
+              {blogData.price}
+            </h3>
+            <h1
+              initial={{ y: "30vh", skewY: 15 }}
+              animate={{ y: 0, skewY: 0 }}
+              transition={{ ease: "easeIn", duration: 0.6 }}
+            >
+              {blogData.title}
+            </h1>
           </div>
           <div className={styles.hero_overlay}></div>
         </div>

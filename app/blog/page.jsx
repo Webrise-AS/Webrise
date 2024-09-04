@@ -64,13 +64,31 @@ export default function Blog() {
       />
 
       <section className={styles.blog_container}>
-        <Parallax speed={-8}>
+        <Parallax speed={-7}>
           <div className={styles.blog_title}>
-            <h1>NEWS & BLOG</h1>
-            <span>(Blog)</span>
+            <div style={{ overflow: "hidden" }}>
+              <motion.h1
+                initial={{ y: "41.5vh", skewY: 10 }}
+                animate={{ y: 0, skewY: 0 }}
+                transition={{ ease: "easeIn", duration: 0.6 }}
+              >
+                NEWS
+              </motion.h1>
+            </div>
+            <div style={{ overflow: "hidden" }}>
+              <motion.h1
+                initial={{ y: "41.5vh", skewY: 10 }}
+                animate={{ y: 0, skewY: 0 }}
+                transition={{ ease: "easeIn", duration: 0.6 }}
+              >
+                & BLOG
+              </motion.h1>
+            </div>
           </div>
         </Parallax>
-        <BlogData apiLength={"10"} />
+        <Parallax speed={0}>
+          <BlogData apiLength={"10"} />
+        </Parallax>
       </section>
     </>
   );

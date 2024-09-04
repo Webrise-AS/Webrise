@@ -1,9 +1,24 @@
+"use client";
 import BlogDataEnd from "@/components/BlogDataEnd";
 import styles from "/_repos/webrise/styles/Home.module.scss";
 import Head from "next/head";
 import AnimatedCursor from "react-animated-cursor";
+import { Parallax } from "react-scroll-parallax";
+import { motion } from "framer-motion";
+import Lenis from "lenis";
+import { useEffect } from "react";
 
 export default function BlogEnd() {
+  useEffect(() => {
+    const lenis = new Lenis();
+
+    function raf(time) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+
+    requestAnimationFrame(raf);
+  }, []);
   return (
     <>
       <Head>
@@ -49,11 +64,31 @@ export default function BlogEnd() {
       />
 
       <section className={styles.blog_container}>
-        <div className={styles.blog_title}>
-          <h1>NEWS & BLOG</h1>
-          <span>(Blog)</span>
-        </div>
-        <BlogDataEnd apiLength={"10"} />
+        <Parallax speed={-7}>
+          <div className={styles.blog_title}>
+            <div style={{ overflow: "hidden" }}>
+              <motion.h1
+                initial={{ y: "41.5vh", skewY: 10 }}
+                animate={{ y: 0, skewY: 0 }}
+                transition={{ ease: "easeIn", duration: 0.6 }}
+              >
+                NEWS
+              </motion.h1>
+            </div>
+            <div style={{ overflow: "hidden" }}>
+              <motion.h1
+                initial={{ y: "41.5vh", skewY: 10 }}
+                animate={{ y: 0, skewY: 0 }}
+                transition={{ ease: "easeIn", duration: 0.6 }}
+              >
+                & BLOG
+              </motion.h1>
+            </div>
+          </div>
+        </Parallax>
+        <Parallax speed={0}>
+          <BlogDataEnd apiLength={"10"} />
+        </Parallax>
       </section>
     </>
   );

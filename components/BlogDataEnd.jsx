@@ -19,28 +19,46 @@ export default async function BlogDataEnd({ apiLength }) {
   return (
     <>
       <div className={styles.blog_content}>
-        <div className={styles.blog_cards_container}>
-          {data.slice(8, 10).map((card) => (
-            <Link href={"http://localhost:3000/blog/" + card.id} key={card.id}>
-              <div className={styles.single_card}>
+        <motion.div
+          className={styles.blog_cards_container}
+          initial={{ y: "27vh" }}
+          animate={{ y: 0 }}
+          transition={{ ease: "easeIn", duration: 0.6 }}
+        >
+          {data.slice(8, 10).map((blog) => (
+            <Link href={"http://localhost:3000/blog/" + blog.id} key={blog.id}>
+              <motion.div
+                className={styles.single_card}
+                animate={{ y: "10vh", scale: 0.85 }}
+                whileInView={{ y: 0, scale: 1 }}
+                transition={{ ease: "easeIn", duration: 0.6 }}
+              >
                 <div className={styles.image_wrapper}>
                   <Image
-                    src={card.image}
+                    src={blog.image}
                     width={500}
                     height={700}
                     alt={"image for the specified blog card"}
                     loading="lazy"
                   />
                 </div>
-                <h2>{card.price}</h2>
-                <h3>{card.title}</h3>
-              </div>
+                <h2>{blog.price}</h2>
+                <h3>{blog.title}</h3>
+              </motion.div>
             </Link>
           ))}
+        </motion.div>
+        <div style={{ overflow: "hidden" }}>
+          <Link href={"http://localhost:3000/blog/"}>
+            <motion.h4
+              animate={{ y: "23.5vh", skewY: 15 }}
+              whileInView={{ y: 0, skewY: 0 }}
+              transition={{ ease: "easeIn", duration: 0.6 }}
+            >
+              PREVIOUS
+            </motion.h4>
+          </Link>
         </div>
-        <Link href={"http://localhost:3000/blog/"}>
-          <span className={styles.prev_button}>PREVIOUS</span>
-        </Link>
       </div>
     </>
   );

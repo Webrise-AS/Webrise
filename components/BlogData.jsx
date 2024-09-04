@@ -19,31 +19,58 @@ export default async function BlogData({ apiLength }) {
   return (
     <>
       <div className={styles.blog_content}>
-        <div className={styles.blog_cards_container}>
-          {data.slice(0, 8).map((card) => (
-            <Link href={"http://localhost:3000/blog/" + card.id} key={card.id}>
-              <div className={styles.single_card}>
+        <motion.div
+          className={styles.blog_cards_container}
+          initial={{ y: "30vh" }}
+          animate={{ y: 0 }}
+          transition={{ ease: "easeIn", duration: 0.6 }}
+        >
+          {data.slice(0, 8).map((blog) => (
+            <Link href={"http://localhost:3000/blog/" + blog.id} key={blog.id}>
+              <motion.div
+                className={styles.single_card}
+                animate={{ y: "10vh", scale: 0.85 }}
+                whileInView={{ y: 0, scale: 1 }}
+                transition={{ ease: "easeIn", duration: 0.6 }}
+              >
                 <div className={styles.image_wrapper}>
                   <Image
-                    src={card.image}
+                    src={blog.image}
                     width={500}
                     height={700}
                     alt={"image for the specified blog card"}
                     loading="lazy"
                   />
                 </div>
-                <h2>{card.price}</h2>
-                <h3>{card.title}</h3>
-              </div>
+                <h2>{blog.price}</h2>
+                <h3>{blog.title}</h3>
+              </motion.div>
             </Link>
           ))}
-        </div>
+        </motion.div>
         {data.length >= 6 ? (
-          <Link href={"http://localhost:3000/blog/end"}>
-            <span>NEXT</span>
-          </Link>
+          <div style={{ overflow: "hidden" }}>
+            <Link href={"http://localhost:3000/blog/end"}>
+              <motion.h4
+                animate={{ y: "20vh", skewY: 15 }}
+                whileInView={{ y: 0, skewY: 0 }}
+                transition={{ ease: "easeIn", duration: 0.6 }}
+              >
+                NEXT
+              </motion.h4>
+            </Link>
+          </div>
         ) : (
-          <span className={styles.prev_btn}>NEXT</span>
+          <div style={{ overflow: "hidden" }}>
+            <motion.h4
+              className={styles.prev_btn}
+              animate={{ y: "20vh", skewY: 15 }}
+              whileInView={{ y: 0, skewY: 0 }}
+              transition={{ ease: "easeIn", duration: 0.6 }}
+            >
+              NEXT
+            </motion.h4>
+          </div>
         )}
       </div>
     </>
