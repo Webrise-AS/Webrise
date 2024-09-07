@@ -103,6 +103,20 @@
 .blogDetails_container {
     height: fit-content;
 
+    .slide_in {
+        animation: slide_up;
+        animation-duration: 0.6s;
+    }
+
+    @keyframes slide_up {
+        from {
+            transform: translateY(33vh) skewY(15deg);
+        }
+        to {
+            transform: translateY(0) skewY(0deg);
+        }
+    }
+
     .blogDetails_hero_section {
         height: 82vh;
         width: 100%;
@@ -140,6 +154,21 @@
                 font-weight: 700;
                 line-height: 88%;
                 letter-spacing: -.04em;
+                animation-name: slide_in;
+            }
+
+            .slide_in {
+                animation: slide_up;
+                animation-duration: 0.6s;
+            }
+
+            @keyframes slide_up {
+                from {
+                    transform: translateY(33vh) skewY(15deg);
+                }
+                to {
+                    transform: translateY(0) skewY(0deg);
+                }
             }
         }
 
@@ -224,6 +253,7 @@
             font-weight: 700;
             font-size: 4.5rem;
             letter-spacing: -.04em;
+            animation-name: slide_in;
         }
 
         .related_cards_container {

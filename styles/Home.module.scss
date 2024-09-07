@@ -174,9 +174,9 @@
                 }
             }
     
-            .project_button:hover {
+            .project_button:hover, .project_button:focus {
                 @include hover_button_effects;
-                letter-spacing: .02em;
+                transform:translateY(-15%) translateX(4%);
             }
         }
 
@@ -538,12 +538,13 @@
                 font-weight: 500;
                 line-height: 140%;
                 letter-spacing: -.02em;
-                transition: ease-in-out 0.3s;
+                transition: transform 1000ms;
             }
             
-            button:hover {
+            button:hover, button:focus {
                 cursor: pointer;
-                scale: percentage($number: 1.08);
+                transform:translateY(-15%) translateX(4%);
+                transition: transform 250ms;
             }
         }
     }

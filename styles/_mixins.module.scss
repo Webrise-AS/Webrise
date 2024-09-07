@@ -26,10 +26,11 @@
     border-radius: 0.35rem;
     font-size: 0.95rem;
     font-weight: 600;
-    transition: ease-in-out 0.3s;
+    transition: transform 1000ms ;
 }
 
 @mixin hover_button_effects {
+    transform:translateY(-15%);
+    transition: transform 250ms;
     cursor: pointer;
-    scale: percentage($number: 1.07);
 }

@@ -4,8 +4,8 @@ import Image from "next/image";
 import Link from "next/link";
 import AnimatedCursor from "react-animated-cursor";
 import { getSingleData } from "@/app/helpers/page";
-import LenisScroll from "@/components/LenisScroll";
 import { motion } from "framer-motion";
+import LenisScroll from "@/components/LenisScroll";
 
 export default async function BlogDetails({ params }) {
   const id = Number(params.blogId);
@@ -80,20 +80,10 @@ export default async function BlogDetails({ params }) {
           }}
         >
           <div className={styles.hero_content}>
-            <h3
-              initial={{ y: "30vh", skewY: 15 }}
-              animate={{ y: 0, skewY: 0 }}
-              transition={{ ease: "easeIn", duration: 0.6 }}
-            >
-              {blogData.price}
-            </h3>
-            <h1
-              initial={{ y: "30vh", skewY: 15 }}
-              animate={{ y: 0, skewY: 0 }}
-              transition={{ ease: "easeIn", duration: 0.6 }}
-            >
-              {blogData.title}
-            </h1>
+            <h3>{blogData.price}</h3>
+            <div style={{ overflow: "hidden" }}>
+              <h1 className={styles.slide_in}>{blogData.title}</h1>
+            </div>
           </div>
           <div className={styles.hero_overlay}></div>
         </div>
@@ -123,7 +113,9 @@ export default async function BlogDetails({ params }) {
           </div>
         </div>
         <div className={styles.blogDetails_related_section}>
-          <span>RELATED</span>
+          <div style={{ overflow: "hidden" }}>
+            <span className={styles.slide_in}>RELATED</span>
+          </div>
           <div className={styles.related_cards_container}>
             {filterRelatedPosts(dataRelated, id).map((card) => (
               <Link

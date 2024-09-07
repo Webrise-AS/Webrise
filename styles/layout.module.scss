@@ -56,6 +56,73 @@
             @include buttons;
         }
 
+        button:hover, button:focus {
+            @include hover_button_effects;
+        }
+    }
+
+}
+
+.nav_dark_container {
+    height: 5.4rem;
+    width: 100%;
+    padding: 0 2.35rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    box-shadow: 0 0 0.1rem 0 rgba(0, 0, 0, 0.14);
+    background-color: $black-color;
+    color: $white-color;
+    z-index: 1001;
+
+    .nav_dark_logo {
+
+        span {
+            font-size: 2.188rem;
+            font-weight: 600;
+            letter-spacing: -.04rem;
+        }
+
+    }
+
+    .nav_dark_links {
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        column-gap: 2rem;
+
+        ul {
+            display: flex;
+            column-gap: 1.7rem;
+
+            li {
+                padding: 0.5rem 0;
+                font-size: 0.92rem;
+                font-weight: 500;
+                color: $white-color;
+                letter-spacing: .025rem;
+                line-height: 140%;
+            }
+            
+            li:hover {
+                cursor: pointer;
+                text-decoration: underline ;
+                text-decoration-thickness: 0.1rem;
+                text-decoration-color: $white-color;
+                text-underline-offset: 0.5rem;
+            }
+        }
+
+        button {
+            @include buttons;
+            background-color: $white-color;
+            color: $black-color;
+            border: none;
+        }
+
         button:hover {
             @include hover_button_effects;
         }
