@@ -10,6 +10,7 @@ import { Parallax } from "react-scroll-parallax";
 import Lenis from "lenis";
 import { useEffect } from "react";
 import { motion } from "framer-motion";
+import AnimatedCursor from "react-animated-cursor";
 
 const fetcher = (url) => fetch(url).then((res) => res.json());
 
@@ -49,6 +50,38 @@ export default function About() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+
+      <AnimatedCursor
+        innerSize={12}
+        outerSize={60}
+        innerScale={1.5}
+        outerScale={1.5}
+        outerAlpha={15}
+        hasBlendMode={true}
+        showSystemCursor={true}
+        outerStyle={{
+          mixBlendMode: "plus-lighter",
+          zIndex: "9999",
+        }}
+        innerStyle={{
+          borderRadius: "0px 10px 10px 10px",
+          zIndex: "9999",
+          backgroundColor: "#151515",
+        }}
+        clickables={[
+          "a",
+          'input[type="text"]',
+          'input[type="email"]',
+          'input[type="number"]',
+          'input[type="submit"]',
+          'input[type="image"]',
+          "label[for]",
+          "select",
+          "textarea",
+          "button",
+          ".link",
+        ]}
+      />
 
       <section className={styles.about_main_container}>
         <div className={styles.about_hero_section}>

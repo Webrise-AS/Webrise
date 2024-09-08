@@ -180,18 +180,13 @@ export default function Home() {
             </div>
           </div>
           <MediaIcons />
-          <motion.div
-            animate={{ opacity: 0, scale: 0.5, y: 100 }}
-            whileInView={{ opacity: 1, scale: 1, y: 0 }}
-            transition={{ ease: "easeIn", duration: 1 }}
-          >
-            <Image
-              src="https://placehold.jp/1318x350.png"
-              width={1318}
-              height={350}
-              alt=""
-            />
-          </motion.div>
+          <Image
+            className={styles.social_image}
+            src="https://placehold.jp/1318x350.png"
+            width={1318}
+            height={350}
+            alt="Image of something"
+          />
         </section>
         <section className={styles.article_container}>
           <div>

@@ -3,7 +3,6 @@ import { getSingleData } from "@/app/helpers/page";
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
 
 export default async function ProjectDetails({ params }) {
   const id = Number(params.projectId);
@@ -38,8 +37,12 @@ export default async function ProjectDetails({ params }) {
 
       <section className={styles.projectsDetails_container}>
         <div className={styles.projectsDetails_title}>
-          <span>{projectData.category}</span>
-          <h1>{projectData.title}</h1>
+          <div style={{ overflow: "hidden" }}>
+            <h6>{projectData.category}</h6>
+          </div>
+          <div style={{ overflow: "hidden" }}>
+            <h1>{projectData.title}</h1>
+          </div>
         </div>
         <div className={styles.projectsDetails_content}>
           <h3>{projectData.description}</h3>

@@ -103,17 +103,21 @@
 .blogDetails_container {
     height: fit-content;
 
-    .slide_in {
-        animation: slide_up;
-        animation-duration: 0.6s;
-    }
-
-    @keyframes slide_up {
+    @keyframes slide_up_text {
         from {
-            transform: translateY(33vh) skewY(15deg);
+            transform: translateY(35vh) skewY(15deg);
         }
         to {
             transform: translateY(0) skewY(0deg);
+        }
+    }
+
+    @keyframes slide_up_card {
+        from {
+            transform: translateY(10vh) scale(0.85) ;
+        }
+        to {
+            transform: translateY(0) scale(1);
         }
     }
 
@@ -154,22 +158,10 @@
                 font-weight: 700;
                 line-height: 88%;
                 letter-spacing: -.04em;
-                animation-name: slide_in;
+                animation: 0.6s slide_up_text;
             }
 
-            .slide_in {
-                animation: slide_up;
-                animation-duration: 0.6s;
-            }
-
-            @keyframes slide_up {
-                from {
-                    transform: translateY(33vh) skewY(15deg);
-                }
-                to {
-                    transform: translateY(0) skewY(0deg);
-                }
-            }
+            
         }
 
         .hero_overlay {
@@ -248,12 +240,15 @@
         margin: auto;
         padding: 4rem 0 7.5rem 0;
 
-        span {
+        h2 {
             line-height: 88%;
             font-weight: 700;
             font-size: 4.5rem;
             letter-spacing: -.04em;
-            animation-name: slide_in;
+            margin: 0;
+            animation: slide_up_text;
+            animation-timeline: view();
+            animation-range: entry 10%;
         }
 
         .related_cards_container {
@@ -268,6 +263,10 @@
                 width: 27.6rem;
                 padding-bottom: 2rem;
                 border-bottom: solid 1px $black-color;
+                animation: ease-in-out slide_up_card;
+                animation-timeline: view();
+                animation-range: entry -15% cover 20%;
+
 
                 .image_wrapper {
                     border-radius: 0.5rem;

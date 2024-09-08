@@ -4,7 +4,6 @@ import Image from "next/image";
 import Link from "next/link";
 import AnimatedCursor from "react-animated-cursor";
 import { getSingleData } from "@/app/helpers/page";
-import { motion } from "framer-motion";
 import LenisScroll from "@/components/LenisScroll";
 
 export default async function BlogDetails({ params }) {
@@ -82,7 +81,7 @@ export default async function BlogDetails({ params }) {
           <div className={styles.hero_content}>
             <h3>{blogData.price}</h3>
             <div style={{ overflow: "hidden" }}>
-              <h1 className={styles.slide_in}>{blogData.title}</h1>
+              <h1>{blogData.title}</h1>
             </div>
           </div>
           <div className={styles.hero_overlay}></div>
@@ -98,7 +97,7 @@ export default async function BlogDetails({ params }) {
               src={`${blogData.image}`}
               width={866}
               height={480}
-              alt={"image for the specified blog card"}
+              alt={"Image for the specified blog card"}
               loading="lazy"
             />
             <div className={styles.info_block}>
@@ -114,7 +113,7 @@ export default async function BlogDetails({ params }) {
         </div>
         <div className={styles.blogDetails_related_section}>
           <div style={{ overflow: "hidden" }}>
-            <span className={styles.slide_in}>RELATED</span>
+            <h2>RELATED</h2>
           </div>
           <div className={styles.related_cards_container}>
             {filterRelatedPosts(dataRelated, id).map((card) => (
