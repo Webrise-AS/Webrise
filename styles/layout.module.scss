@@ -23,6 +23,14 @@
 
     }
 
+    .isActive {
+        text-decoration: underline ;
+        text-decoration-thickness: 0.1rem;
+        text-decoration-color: $black-color;
+        text-underline-offset: 0.6rem;
+        text-decoration-style:wavy;
+    }
+
     .nav_links {
         
         display: flex;
@@ -48,7 +56,8 @@
                 text-decoration: underline ;
                 text-decoration-thickness: 0.1rem;
                 text-decoration-color: $black-color;
-                text-underline-offset: 0.5rem;
+                text-underline-offset: 0.6rem;
+                text-decoration-style:wavy;
             }
         }
 
@@ -87,6 +96,14 @@
 
     }
 
+    .isActive_dark {
+        text-decoration: underline ;
+        text-decoration-thickness: 0.1rem;
+        text-decoration-color: $white-color;
+        text-underline-offset: 0.6rem;
+        text-decoration-style:wavy;
+    }
+
     .nav_dark_links {
         
         display: flex;
@@ -112,7 +129,8 @@
                 text-decoration: underline ;
                 text-decoration-thickness: 0.1rem;
                 text-decoration-color: $white-color;
-                text-underline-offset: 0.5rem;
+                text-underline-offset: 0.6rem;
+                text-decoration-style:wavy;
             }
         }
 

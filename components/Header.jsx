@@ -1,11 +1,22 @@
+"use client";
 import React from "react";
 import styles from "@/styles/Home.module.scss";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
+
+const navLinks = [
+  { name: "Services", href: "/services", id: 1 },
+  { name: "Projects", href: "/projects", id: 2 },
+  { name: "Blog", href: "/blog", id: 3 },
+  { name: "About", href: "/about", id: 4 },
+  { name: "Contact", href: "/contact", id: 5 },
+];
 
 function Header({ color }) {
+  const pathname = usePathname();
   return (
     <>
-      {color === "dar" ? (
+      {color === "dark" ? (
         <div className={styles.nav_dark_container}>
           <div className={styles.nav_dark_logo}>
             <Link href={"/"}>
@@ -14,21 +25,18 @@ function Header({ color }) {
           </div>
           <div className={styles.nav_dark_links}>
             <ul>
-              <li>
-                <Link href={"/services"}>Services</Link>
-              </li>
-              <li>
-                <Link href={"/projects"}>Projects</Link>
-              </li>
-              <li>
-                <Link href={"/blog"}>Blog</Link>
-              </li>
-              <li>
-                <Link href={"/about"}>About</Link>
-              </li>
-              <li>
-                <Link href={"/contact"}>Contact</Link>
-              </li>
+              {navLinks.map((link) => {
+                const isActive = pathname.startsWith(link.href);
+
+                return (
+                  <li
+                    key={link.id}
+                    className={isActive ? styles.isActive_dark : ""}
+                  >
+                    <Link href={link.href}>{link.name}</Link>
+                  </li>
+                );
+              })}
             </ul>
             <Link href={"/contact"}>
               <button>Book a call</button>
@@ -44,21 +52,15 @@ function Header({ color }) {
           </div>
           <div className={styles.nav_links}>
             <ul>
-              <li>
-                <Link href={"/services"}>Services</Link>
-              </li>
-              <li>
-                <Link href={"/projects"}>Projects</Link>
-              </li>
-              <li>
-                <Link href={"/blog"}>Blog</Link>
-              </li>
-              <li>
-                <Link href={"/about"}>About</Link>
-              </li>
-              <li>
-                <Link href={"/contact"}>Contact</Link>
-              </li>
+              {navLinks.map((link) => {
+                const isActive = pathname.startsWith(link.href);
+
+                return (
+                  <li key={link.id} className={isActive ? styles.isActive : ""}>
+                    <Link href={link.href}>{link.name}</Link>
+                  </li>
+                );
+              })}
             </ul>
             <Link href={"/contact"}>
               <button>Book a call</button>
