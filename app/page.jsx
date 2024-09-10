@@ -6,13 +6,13 @@ import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 import { BsArrowUpRight } from "react-icons/bs";
 import Accordion from "@/components/accordion";
-import AnimatedCursor from "react-animated-cursor";
 import { motion, useScroll } from "framer-motion";
 import { useEffect, useRef } from "react";
 import Lenis from "lenis";
 import Gallery from "@/components/gallery";
 import Link from "next/link";
 import MediaIcons from "@/components/MediaIcons";
+import AnimateCursor from "@/components/AnimateCursor";
 
 export default function Home() {
   const [emblaRef] = useEmblaCarousel({ loop: true }, [
@@ -53,37 +53,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <AnimatedCursor
-        innerSize={12}
-        outerSize={60}
-        innerScale={1.5}
-        outerScale={1.5}
-        outerAlpha={15}
-        hasBlendMode={true}
-        showSystemCursor={true}
-        outerStyle={{
-          mixBlendMode: "plus-lighter",
-          zIndex: "9999",
-        }}
-        innerStyle={{
-          borderRadius: "0px 10px 10px 10px",
-          zIndex: "9999",
-          backgroundColor: "#151515",
-        }}
-        clickables={[
-          "a",
-          'input[type="text"]',
-          'input[type="email"]',
-          'input[type="number"]',
-          'input[type="submit"]',
-          'input[type="image"]',
-          "label[for]",
-          "select",
-          "textarea",
-          "button",
-          ".link",
-        ]}
-      />
+      <AnimateCursor />
 
       <div className={styles.home_container}>
         <section className={styles.hero_container}></section>

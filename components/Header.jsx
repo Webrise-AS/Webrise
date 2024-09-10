@@ -5,7 +5,7 @@ import Link from "next/link";
 function Header({ color }) {
   return (
     <>
-      {color === "dark" ? (
+      {color === "dar" ? (
         <div className={styles.nav_dark_container}>
           <div className={styles.nav_dark_logo}>
             <Link href={"/"}>

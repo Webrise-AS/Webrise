@@ -8,7 +8,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body>
         <Providers>
-          <Header color="" />
+          <Header color="dark" />
           {children}
           <Footer />
         </Providers>

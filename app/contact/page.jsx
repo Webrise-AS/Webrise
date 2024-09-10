@@ -1,13 +1,13 @@
 "use client";
 import Head from "next/head";
 import styles from "/_repos/webrise/styles/Home.module.scss";
-import AnimatedCursor from "react-animated-cursor";
 import Link from "next/link";
 import { BsArrowRightShort } from "react-icons/bs";
 import { Parallax } from "react-scroll-parallax";
 import Lenis from "lenis";
 import { useEffect } from "react";
 import { motion } from "framer-motion";
+import AnimateCursor from "@/components/AnimateCursor";
 
 export default function Contact() {
   useEffect(() => {
@@ -32,37 +32,8 @@ export default function Contact() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <AnimatedCursor
-        innerSize={12}
-        outerSize={60}
-        innerScale={1.5}
-        outerScale={1.5}
-        outerAlpha={15}
-        hasBlendMode={true}
-        showSystemCursor={false}
-        outerStyle={{
-          mixBlendMode: "plus-lighter",
-          zIndex: "9999",
-        }}
-        innerStyle={{
-          borderRadius: "0px 10px 10px 10px",
-          zIndex: "9999",
-          backgroundColor: "#151515",
-        }}
-        clickables={[
-          "a",
-          'input[type="text"]',
-          'input[type="email"]',
-          'input[type="number"]',
-          'input[type="submit"]',
-          'input[type="image"]',
-          "label[for]",
-          "select",
-          "textarea",
-          "button",
-          ".link",
-        ]}
-      />
+      <AnimateCursor />
+
       <Parallax speed={-8}>
         <section className={styles.contact_container}>
           <div className={styles.contact_content}>

@@ -6,6 +6,7 @@ import Lenis from "lenis";
 import { useEffect } from "react";
 import { Parallax } from "react-scroll-parallax";
 import { motion } from "framer-motion";
+import AnimateCursor from "@/components/AnimateCursor";
 
 export default function ProjectsEnd() {
   useEffect(() => {
@@ -29,6 +30,8 @@ export default function ProjectsEnd() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+
+      <AnimateCursor />
 
       <section className={styles.projects_container}>
         <div className={styles.projects_title}>

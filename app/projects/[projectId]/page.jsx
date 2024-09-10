@@ -1,3 +1,4 @@
+import AnimateCursor from "@/components/AnimateCursor";
 import styles from "/_repos/webrise/styles/Home.module.scss";
 import { getSingleData } from "@/app/helpers/page";
 import Head from "next/head";
@@ -34,6 +35,8 @@ export default async function ProjectDetails({ params }) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+
+      <AnimateCursor />
 
       <section className={styles.projectsDetails_container}>
         <div className={styles.projectsDetails_title}>
