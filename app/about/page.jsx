@@ -7,8 +7,6 @@ import useEmblaCarousel from "embla-carousel-react";
 import AutoScroll from "embla-carousel-auto-scroll";
 import useSWR from "swr";
 import { Parallax } from "react-scroll-parallax";
-import Lenis from "lenis";
-import { useEffect } from "react";
 import { motion } from "framer-motion";
 import AnimateCursor from "@/components/AnimateCursor";
 
@@ -27,17 +25,6 @@ export default function About() {
     "https://fakestoreapi.com/products?limit=10",
     fetcher
   );
-
-  useEffect(() => {
-    const lenis = new Lenis();
-
-    function raf(time) {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
-    }
-
-    requestAnimationFrame(raf);
-  }, []);
 
   return (
     <>

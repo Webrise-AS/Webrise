@@ -3,21 +3,13 @@ import styles from "../../styles/Home.module.scss";
 import Image from "next/image";
 import Head from "next/head";
 import Link from "next/link";
-import Lenis from "lenis";
-import { useEffect } from "react";
 import AnimateCursor from "@/components/AnimateCursor";
+import useEmblaCarousel from "embla-carousel-react";
 
 export default function Services() {
-  useEffect(() => {
-    const lenis = new Lenis();
-
-    function raf(time) {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
-    }
-
-    requestAnimationFrame(raf);
-  }, []);
+  const [emblaRef] = useEmblaCarousel({ loop: true, watchDrag: false }, [
+    AutoScroll({ speed: 2.5, direction: "backward" }),
+  ]);
 
   return (
     <>
@@ -35,9 +27,22 @@ export default function Services() {
 
       <section className={styles.services_container}>
         <div className={styles.services_hero_section}>
-          <div>
-            <span>(Services)</span>
-            <div className={styles.Services_hero_image_container}>
+          <div className={styles.hero_tittle_container}>
+            <div style={{ overflow: "hidden" }}>
+              <h1>WHAT</h1>
+            </div>
+            <div style={{ overflow: "hidden" }}>
+              <h2>WE</h2>
+            </div>
+            <div style={{ overflow: "hidden" }}>
+              <h2>DO</h2>
+            </div>
+          </div>
+          <div className={styles.hero_content_container}>
+            <div style={{ overflow: "hidden", textAlign: "end" }}>
+              <h4>(Services)</h4>
+            </div>
+            <div className={styles.hero_image_container}>
               <Image
                 src="https://assets-global.website-files.com/6606f0f658b42ca7220e3695/660723aa9b8b7fc64fc7bf9a_Cons-p-500.webp"
                 width={900}
@@ -46,12 +51,26 @@ export default function Services() {
               />
             </div>
           </div>
-          <h1>WHAT WE DO</h1>
+        </div>
+        <div className={styles.services_slider_section}>
+          <span>We got the tools for the job!</span>
+          <div className={styles.embla} ref={emblaRef}>
+            <div className={styles.embla__container}>
+              <div className={styles.embla__slide}>—</div>
+              <div className={styles.embla__slide}>Creative</div>
+              <div className={styles.embla__slide}>—</div>
+              <div className={styles.embla__slide}>Pioneers</div>
+              <div className={styles.embla__slide}>—</div>
+              <div className={styles.embla__slide}>Strategi</div>
+              <div className={styles.embla__slide}>—</div>
+              <div className={styles.embla__slide}>Bold</div>
+            </div>
+          </div>
         </div>
         <div className={styles.services_content_section}>
           <div className={styles.content_speciality_section}>
             <div>
-              <h2>Webdevelopment</h2>
+              <h3>Webdevelopment</h3>
               <p>
                 Adapting to Communication Styles: Digital communication varies
                 greatly from traditional methods. Couples need to adapt and
@@ -79,7 +98,7 @@ export default function Services() {
           </div>
           <div className={styles.content_speciality_section_two}>
             <div>
-              <h2>Søkemotormarkedsføring - SEM</h2>
+              <h3>Søkemotormarkedsføring - SEM</h3>
               <p>
                 Adapting to Communication Styles: Digital communication varies
                 greatly from traditional methods. Couples need to adapt and
@@ -107,7 +126,7 @@ export default function Services() {
           </div>
           <div className={styles.content_speciality_section}>
             <div>
-              <h2>Søkemotor­­optimalisering – SEO</h2>
+              <h3>Søkemotor­­optimalisering – SEO</h3>
               <p>
                 Adapting to Communication Styles: Digital communication varies
                 greatly from traditional methods. Couples need to adapt and

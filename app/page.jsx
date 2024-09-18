@@ -56,7 +56,14 @@ export default function Home() {
       <AnimateCursor />
 
       <div className={styles.home_container}>
-        <section className={styles.hero_container}></section>
+        <section className={styles.hero_container}>
+          <h1>MEMORABLE WEBSITES THAT SELL.</h1>
+          <p>
+            Want a website customers love? We build memorable websites for
+            brands like yours that earn more customers, outshine competitiors
+            and help recruit talent.
+          </p>
+        </section>
         <section className={styles.about_container}>
           <div className={styles.about_content_left}>
             <motion.div
@@ -92,7 +99,7 @@ export default function Home() {
             className={styles.project_button_container}
             animate={{ x: -50, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
-            transition={{ duration: 0.6 }}
+            transition={{ ease: "easeIn", duration: 0.6 }}
           >
             <Link href={"/projects"}>
               <button className={styles.project_button}>
@@ -150,13 +157,15 @@ export default function Home() {
             </div>
           </div>
           <MediaIcons />
-          <Image
-            className={styles.social_image}
-            src="https://placehold.jp/1318x350.png"
-            width={1318}
-            height={350}
-            alt="Image of something"
-          />
+          <div>
+            <Image
+              className={styles.social_image}
+              src="https://placehold.jp/1318x350.png"
+              width={1318}
+              height={350}
+              alt="Image of something"
+            />
+          </div>
         </section>
         <section className={styles.article_container}>
           <div>

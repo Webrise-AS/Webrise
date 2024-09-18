@@ -51,7 +51,7 @@ export default async function BlogDataEnd({ apiLength }) {
         <div style={{ overflow: "hidden" }}>
           <Link href={"http://localhost:3000/blog/"}>
             <motion.h4
-              animate={{ y: "23.5vh", skewY: 15 }}
+              animate={{ y: "24.5vh", skewY: 15 }}
               whileInView={{ y: 0, skewY: 0 }}
               transition={{ ease: "easeIn", duration: 0.6 }}
             >

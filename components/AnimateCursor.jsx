@@ -6,18 +6,18 @@ export default function AnimateCursor() {
     <>
       <AnimatedCursor
         innerSize={12}
-        outerSize={60}
+        outerSize={40}
         innerScale={1.5}
         outerScale={1.5}
         outerAlpha={15}
         hasBlendMode={true}
-        showSystemCursor={true}
+        showSystemCursor={false}
         outerStyle={{
           mixBlendMode: "plus-lighter",
           zIndex: "9999",
         }}
         innerStyle={{
-          borderRadius: "0px 10px 10px 10px",
+          borderRadius: "1rem",
           zIndex: "9999",
           backgroundColor: "#151515",
         }}

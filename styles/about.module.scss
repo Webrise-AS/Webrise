@@ -237,12 +237,13 @@
                 font-size: 1rem;
                 font-weight: 500;
                 letter-spacing: -.02em;
-                transition: ease-in-out 0.3s;
+                transition: transform 1000ms;
             }
 
             button:hover {
                 cursor: pointer;
-                scale: percentage($number: 1.08);
+                transform:translateY(-15%) translateX(4%);
+                transition: transform 250ms;
             }
         }
 

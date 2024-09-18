@@ -16,16 +16,6 @@
     flex-direction: column;
     padding: 1rem 0 0 0;
 
-    @keyframes slide_up_card {
-        from {
-            transform: translateY(10vh) scale(0.5) opacity(0) ;
-        }
-        to {
-            transform: translateY(0) scale(1) opacity(1) ;
-        }
-    }
-
-
     .hero_container {
         width: 95%;
         margin: auto;
@@ -45,7 +35,7 @@
             width: 30%;
 
             img {
-                border-radius: 0.5rem;
+                border-radius: 1vw;
             }
         }
 
@@ -215,88 +205,84 @@
 
         .icons_container {
             border: solid 2px $black-color;
-            border-radius: 0.5rem;
+            border-radius: 1vw;
             display: flex;
 
-                .neutral_link {
-                    display: grid;
-                    place-content: center;
-                    height: 10rem;
-                    width: 13rem;
-                    position: relative;
-                    transition: ease-in-out 850ms;
-    
-                    svg {
-                        transition: ease-in-out 0.35s;
-                        color: $black-color;
-                        font-size: 2.5rem;
-                    }
+            .neutral_link {
+                display: grid;
+                place-content: center;
+                height: 10rem;
+                width: 13rem;
+                position: relative;
+                transition: ease-in-out 850ms;
+
+                svg {
+                    transition: ease-in-out 0.35s;
+                    color: $black-color;
+                    font-size: 2.6rem;
+                    margin: 5rem;
                 }
-    
-                .neutral_link:nth-child(1) {
-                    border-radius: 0.5rem 0rem 0rem 0.5rem;
-                }
-    
-    
-                .neutral_link:nth-child(1):hover {
-                    transform: translate(-10%, -10%) scale(1);
-                    background-color: $black-color;
-                    transition: transform 250ms ease-in-out;
-                    border-radius: 0.5rem;
-                    
-                    svg {
-                        
-                        color: $white-color;
-                        scale: percentage($number: 1.25);
-                    }
-                }
-    
-                .neutral_link:nth-child(2) {
-                    display: grid;
-                    place-content: center;
-                    height: 10rem;
-                    width: 13rem;
-                    border-left:solid 2px $black-color;
-                    border-right:solid 2px $black-color;
-                    border-radius: 0;
-                }
-    
-                .neutral_link:nth-child(2):hover {
-                    transform: translate(0%, -10%) scale(1);
-                    background-color: $black-color;
-                    transition: transform 250ms ease-in-out;
-                    border-radius: 0.5rem;
-                    
-                    svg {
-                        color: $white-color;
-                        scale: percentage($number: 1.25);
-                    }
-                }
+            }
+
+            .neutral_link:nth-child(1) {
+                border-radius: 1vw 0rem 0rem 1vw;
+            }
+
+            .neutral_link:nth-child(1):hover {
+                transform: translate(-10%, -10%) scale(1);
+                background-color: $black-color;
+                transition: transform 250ms ease-in-out;
+                border-radius: 1vw;
                 
-                .neutral_link:nth-child(3) {
-                    border-radius: 0rem 0.5rem 0.5rem 0rem;
-                }
-    
-                .neutral_link:nth-child(3):hover {
-                    transform: translate(10%, -10%) scale(1);
-                    background-color: $black-color;
-                    transition: transform 250ms ease-in-out;
-                    border-radius: 0.5rem;
+                svg {
                     
-                    svg {
-                        color: $white-color;
-                        scale: percentage($number: 1.25);
-                    }
+                    color: $white-color;
+                    scale: percentage($number: 1.25);
                 }
+            }
+
+            .neutral_link:nth-child(2) {
+                display: grid;
+                place-content: center;
+                height: 10rem;
+                width: 13rem;
+                border-left:solid 2px $black-color;
+                border-right:solid 2px $black-color;
+                border-radius: 0;
+            }
+
+            .neutral_link:nth-child(2):hover {
+                transform: translate(0%, -10%) scale(1);
+                background-color: $black-color;
+                transition: transform 250ms ease-in-out;
+                border-radius: 1vw;
+                
+                svg {
+                    color: $white-color;
+                    scale: percentage($number: 1.25);
+                }
+            }
             
+            .neutral_link:nth-child(3) {
+                border-radius: 0rem 1vw 1vw 0rem;
+            }
+
+            .neutral_link:nth-child(3):hover {
+                transform: translate(10%, -10%) scale(1);
+                background-color: $black-color;
+                transition: transform 250ms ease-in-out;
+                border-radius: 1vw;
+                
+                svg {
+                    color: $white-color;
+                    scale: percentage($number: 1.25);
+                }
+            }
 
         }
 
         .social_image {
-            border-radius: 0.5rem;
-            animation: ease-in-out slide_up_card;
-            animation-timeline: view();
-            animation-range: entry -15% cover 20%;
+            border-radius: 1vw;
         }
     }
 
@@ -351,7 +337,7 @@
 
                 img {
                     display: none;
-                    border-radius: 0.5rem;
+                    border-radius: 1vw;
                     object-fit: cover;
                     margin: auto 0;
                     position:absolute;
@@ -404,7 +390,7 @@
 
                 img {
                     display: none;
-                    border-radius: 0.5rem;
+                    border-radius: 1vw;
                     object-fit: cover;
                     margin: auto 0;
                     position:absolute;
@@ -480,7 +466,7 @@
                     width: 46.875rem;
                     padding: 3rem;
                     margin-right: 3rem;
-                    border-radius: 0.5rem;
+                    border-radius: 1vw;
                     flex:0 0 auto;
                     min-width: 0;
                     max-width: 100%;
