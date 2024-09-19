@@ -17,10 +17,119 @@
     padding: 1rem 0 0 0;
 
     .hero_container {
+        height: 95dvh;
         width: 95%;
         margin: auto;
-        border: solid 1px red;
-        height: 90vh;
+        display: flex;
+        flex-direction: column;
+        row-gap: 0.1rem;
+        justify-content: space-between;
+
+        .hero_content {
+            height: 99%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            column-gap: 0.1rem;
+
+            .hero_textfield {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                border: solid blue;
+
+                h3 {
+                    font-size: 1rem;
+                    letter-spacing: -.0em;
+                    font-weight: 500;
+                    line-height: 140%;
+                    text-transform: capitalize;
+                    margin: 0 0 0.7rem 0;
+                    display: flex;
+                    align-items: center;
+
+                    svg {
+                        margin-left: 0.5rem;
+                        font-size: 1.5rem;
+                        color: rgb(0, 116, 205);
+                    }
+                }
+
+                h1,h2 {
+                font-size: 7.5rem;
+                font-weight: 700;
+                text-transform: uppercase;
+                margin: 0;
+                letter-spacing: -.08em;
+                line-height: 86%;
+                }
+
+                div {
+                    margin-top: 1rem;
+                    display: flex;
+                    flex-direction: column;
+                    row-gap: 1rem;
+                    border: solid  orange;
+
+                    p {
+                        font-size: 1.1rem;
+                        letter-spacing: -.0em;
+                        margin: 0;
+                        font-weight: 500;
+                        line-height: 100%;
+                    }
+
+                    ul {
+                        display: flex;
+                        flex-direction: column;
+                        margin: 0;
+                        padding: 0;
+                        
+                        li {
+                            display: flex;
+                            align-items: center;
+                            font-size: 1.05rem;
+                            letter-spacing: -.0em;
+                            margin: 0;
+                            font-weight: 500;
+                            line-height: 100%;
+                            text-transform: capitalize;
+
+                            svg {
+                                font-size: 1.8rem;
+                                color: mediumseagreen;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .hero_image_section {
+                border: solid  green;
+                width: 45%;
+            }
+        }
+
+        .hero_slider {
+            border: solid orchid;
+            .embla {
+                overflow: hidden;
+                .embla__container {
+                    display: flex;
+                    
+                    .embla__slide {
+                        text-align: center;
+                        margin-left: 1.8rem;
+                        font-size: 7.5rem;
+                        font-weight: 700;
+                        line-height: 86%;
+                        letter-spacing: -.08em;
+                        text-transform: uppercase;
+                        padding-right: 0.6rem;
+                    }
+                }
+            }
+        }
     }
 
     .about_container {

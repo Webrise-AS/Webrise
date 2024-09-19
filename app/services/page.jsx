@@ -5,6 +5,7 @@ import Head from "next/head";
 import Link from "next/link";
 import AnimateCursor from "@/components/AnimateCursor";
 import useEmblaCarousel from "embla-carousel-react";
+import AutoScroll from "embla-carousel-auto-scroll";
 
 export default function Services() {
   const [emblaRef] = useEmblaCarousel({ loop: true, watchDrag: false }, [
@@ -53,7 +54,7 @@ export default function Services() {
           </div>
         </div>
         <div className={styles.services_slider_section}>
-          <span>We got the tools for the job!</span>
+          <span>&quot;We got the right tools for the job!&quot;</span>
           <div className={styles.embla} ref={emblaRef}>
             <div className={styles.embla__container}>
               <div className={styles.embla__slide}>—</div>

@@ -1,18 +1,18 @@
 "use client";
-import Head from "next/head";
 import styles from "../styles/Home.module.scss";
+import Head from "next/head";
 import Image from "next/image";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
-import { BsArrowUpRight } from "react-icons/bs";
+import { BsArrowUpRight, BsCheck, BsPatchCheckFill } from "react-icons/bs";
 import Accordion from "@/components/accordion";
 import { motion, useScroll } from "framer-motion";
-import { useEffect, useRef } from "react";
-import Lenis from "lenis";
+import { useRef } from "react";
 import Gallery from "@/components/gallery";
 import Link from "next/link";
 import MediaIcons from "@/components/MediaIcons";
 import AnimateCursor from "@/components/AnimateCursor";
+import AutoScroll from "embla-carousel-auto-scroll";
 
 export default function Home() {
   const [emblaRef] = useEmblaCarousel({ loop: true }, [
@@ -24,16 +24,9 @@ export default function Home() {
     }),
   ]);
 
-  useEffect(() => {
-    const lenis = new Lenis();
-
-    function raf(time) {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
-    }
-
-    requestAnimationFrame(raf);
-  }, []);
+  const [emblaRef2] = useEmblaCarousel({ loop: true, watchDrag: false }, [
+    AutoScroll({ speed: 2.5, direction: "backward" }),
+  ]);
 
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
@@ -57,12 +50,56 @@ export default function Home() {
 
       <div className={styles.home_container}>
         <section className={styles.hero_container}>
-          <h1>MEMORABLE WEBSITES THAT SELL.</h1>
-          <p>
-            Want a website customers love? We build memorable websites for
-            brands like yours that earn more customers, outshine competitiors
-            and help recruit talent.
-          </p>
+          <div className={styles.hero_content}>
+            <div className={styles.hero_textfield}>
+              <h3>
+                customer satisfaction guarantee
+                <BsPatchCheckFill />
+              </h3>
+              <h1>MEMORABLE</h1>
+              <h2>WEBSITES</h2>
+              <h2>THAT SELL.</h2>
+              <div>
+                <p>
+                  Want a website customers love? We build memorable websites for
+                  brands like yours that:
+                </p>
+                <ul>
+                  <li>
+                    <BsCheck />
+                    earn more customers
+                  </li>
+                  <li>
+                    <BsCheck />
+                    sell more products
+                  </li>
+                  <li>
+                    <BsCheck />
+                    outshine competitiors
+                  </li>
+                  <li>
+                    <BsCheck />
+                    and recruit more talent
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div className={styles.hero_image_section}></div>
+          </div>
+          <div className={styles.hero_slider}>
+            <div className={styles.embla} ref={emblaRef2}>
+              <div className={styles.embla__container}>
+                <div className={styles.embla__slide}>—</div>
+                <div className={styles.embla__slide}>Creative</div>
+                <div className={styles.embla__slide}>—</div>
+                <div className={styles.embla__slide}>Pioneers</div>
+                <div className={styles.embla__slide}>—</div>
+                <div className={styles.embla__slide}>Strategi</div>
+                <div className={styles.embla__slide}>—</div>
+                <div className={styles.embla__slide}>Bold</div>
+              </div>
+            </div>
+          </div>
         </section>
         <section className={styles.about_container}>
           <div className={styles.about_content_left}>
