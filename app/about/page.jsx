@@ -9,6 +9,7 @@ import useSWR from "swr";
 import { Parallax } from "react-scroll-parallax";
 import { motion } from "framer-motion";
 import AnimateCursor from "@/components/AnimateCursor";
+import LenisScroll from "@/components/LenisScroll";
 
 const fetcher = (url) => fetch(url).then((res) => res.json());
 
@@ -39,6 +40,8 @@ export default function About() {
       </Head>
 
       <AnimateCursor />
+
+      <LenisScroll />
 
       <section className={styles.about_main_container}>
         <div className={styles.about_hero_section}>

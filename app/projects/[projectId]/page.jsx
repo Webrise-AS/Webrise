@@ -4,6 +4,7 @@ import { getSingleData } from "@/app/helpers/page";
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
+import LenisScroll from "@/components/LenisScroll";
 
 export default async function ProjectDetails({ params }) {
   const id = Number(params.projectId);
@@ -37,6 +38,8 @@ export default async function ProjectDetails({ params }) {
       </Head>
 
       <AnimateCursor />
+
+      <LenisScroll />
 
       <section className={styles.projectsDetails_container}>
         <div className={styles.projectsDetails_title}>

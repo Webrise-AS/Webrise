@@ -2,23 +2,12 @@
 import styles from "/_repos/webrise/styles/Home.module.scss";
 import Head from "next/head";
 import ProjectsDataEnd from "@/components/ProjectsDataEnd";
-import Lenis from "lenis";
-import { useEffect } from "react";
 import { Parallax } from "react-scroll-parallax";
 import { motion } from "framer-motion";
 import AnimateCursor from "@/components/AnimateCursor";
+import LenisScroll from "@/components/LenisScroll";
 
 export default function ProjectsEnd() {
-  useEffect(() => {
-    const lenis = new Lenis();
-
-    function raf(time) {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
-    }
-
-    requestAnimationFrame(raf);
-  }, []);
   return (
     <>
       <Head>
@@ -32,6 +21,8 @@ export default function ProjectsEnd() {
       </Head>
 
       <AnimateCursor />
+
+      <LenisScroll />
 
       <section className={styles.projects_container}>
         <div className={styles.projects_title}>

@@ -13,6 +13,8 @@ import Link from "next/link";
 import MediaIcons from "@/components/MediaIcons";
 import AnimateCursor from "@/components/AnimateCursor";
 import AutoScroll from "embla-carousel-auto-scroll";
+import { Typewriter, useTypewriter } from "react-simple-typewriter";
+import LenisScroll from "@/components/LenisScroll";
 
 export default function Home() {
   const [emblaRef] = useEmblaCarousel({ loop: true }, [
@@ -47,56 +49,135 @@ export default function Home() {
       </Head>
 
       <AnimateCursor />
+      <LenisScroll />
 
       <div className={styles.home_container}>
         <section className={styles.hero_container}>
           <div className={styles.hero_content}>
             <div className={styles.hero_textfield}>
-              <h3>
-                customer satisfaction guarantee
-                <BsPatchCheckFill />
-              </h3>
-              <h1>MEMORABLE</h1>
-              <h2>WEBSITES</h2>
-              <h2>THAT SELL.</h2>
-              <div>
-                <p>
-                  Want a website customers love? We build memorable websites for
-                  brands like yours that:
-                </p>
-                <ul>
-                  <li>
-                    <BsCheck />
-                    earn more customers
-                  </li>
-                  <li>
-                    <BsCheck />
-                    sell more products
-                  </li>
-                  <li>
-                    <BsCheck />
-                    outshine competitiors
-                  </li>
-                  <li>
-                    <BsCheck />
-                    and recruit more talent
-                  </li>
-                </ul>
+              <div style={{ overflow: "hidden" }}>
+                <motion.h3
+                  initial={{ y: "8.2vh", skewY: 5 }}
+                  animate={{ y: 0, skewY: 0 }}
+                  transition={{ ease: "easeIn", duration: 0.6 }}
+                >
+                  customer satisfaction guarantee
+                  <BsPatchCheckFill />
+                </motion.h3>
+              </div>
+              <div style={{ overflow: "hidden" }}>
+                <motion.h1
+                  initial={{ y: "22.5vh", skewY: 10 }}
+                  animate={{ y: 0, skewY: 0 }}
+                  transition={{ ease: "easeIn", duration: 0.6 }}
+                >
+                  MEMORABLE
+                </motion.h1>
+              </div>
+              <div style={{ overflow: "hidden" }}>
+                <motion.h2
+                  className={styles.hero_styler}
+                  initial={{ y: "22.5vh", skewY: 10 }}
+                  animate={{ y: 0, skewY: 0 }}
+                  transition={{ ease: "easeIn", duration: 0.6 }}
+                >
+                  <Typewriter
+                    words={["WEBSITES", "WEBRISE"]}
+                    loop={true}
+                    cursor
+                    cursorStyle="!"
+                    typeSpeed={80}
+                    deleteSpeed={80}
+                    delaySpeed={2500}
+                  />
+                </motion.h2>
+              </div>
+              <div style={{ overflow: "hidden" }}>
+                <motion.h2
+                  initial={{ y: "22.5vh", skewY: 10 }}
+                  animate={{ y: 0, skewY: 0 }}
+                  transition={{ ease: "easeIn", duration: 0.6 }}
+                >
+                  THAT SELL.
+                </motion.h2>
+              </div>
+              <div className={styles.subHero_group}>
+                <div style={{ overflow: "hidden" }}>
+                  <motion.p
+                    initial={{ y: "6.5vh" }}
+                    animate={{ y: 0 }}
+                    transition={{ ease: "easeIn", duration: 0.6 }}
+                  >
+                    Want a website that<span> customers love</span>? We build
+                    reliable, <span>highly functional</span> and of course multi
+                    device
+                    <span> responsive</span> websites
+                    <span> for brands like yours</span>.
+                  </motion.p>
+                </div>
+                <motion.div
+                  initial={{ y: "15.05vh" }}
+                  animate={{ y: 0 }}
+                  transition={{ ease: "easeIn", duration: 0.6 }}
+                >
+                  <ul>
+                    <li>
+                      <BsCheck />
+                      earn more customers
+                    </li>
+                    <li>
+                      <BsCheck />
+                      sell more products
+                    </li>
+                    <li>
+                      <BsCheck />
+                      outshine competitiors
+                    </li>
+                    <li>
+                      <BsCheck />
+                      and recruit more talent
+                    </li>
+                  </ul>
+                  <div className={styles.hero_action_buttons}>
+                    <Link href={"/contact"}>
+                      <button className={styles.hero_mainBtn}>
+                        Book a call
+                      </button>
+                    </Link>
+                    <Link href={"/projects"}>
+                      <button className={styles.hero_subBtn}>
+                        Our Portfolio
+                      </button>
+                    </Link>
+                  </div>
+                </motion.div>
               </div>
             </div>
-            <div className={styles.hero_image_section}></div>
+            <motion.div
+              className={styles.hero_image_section}
+              initial={{ x: 50, opacity: 0 }}
+              animate={{ x: 0, opacity: 1 }}
+              transition={{ ease: "easeIn", duration: 0.6 }}
+            >
+              <Image
+                src="https://placehold.jp/151515/ffffff/500x611.png"
+                width={450}
+                height={563.2}
+                alt="image of "
+              />
+            </motion.div>
           </div>
           <div className={styles.hero_slider}>
             <div className={styles.embla} ref={emblaRef2}>
               <div className={styles.embla__container}>
                 <div className={styles.embla__slide}>—</div>
-                <div className={styles.embla__slide}>Creative</div>
+                <div className={styles.embla__slide}>Google</div>
                 <div className={styles.embla__slide}>—</div>
-                <div className={styles.embla__slide}>Pioneers</div>
+                <div className={styles.embla__slide}>Apple</div>
                 <div className={styles.embla__slide}>—</div>
-                <div className={styles.embla__slide}>Strategi</div>
+                <div className={styles.embla__slide}>Microsoft</div>
                 <div className={styles.embla__slide}>—</div>
-                <div className={styles.embla__slide}>Bold</div>
+                <div className={styles.embla__slide}>meta</div>
               </div>
             </div>
           </div>

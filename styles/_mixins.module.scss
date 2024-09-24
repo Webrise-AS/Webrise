@@ -23,14 +23,15 @@
     width: 9rem;
     background-color: $black-color;
     color: $white-color;
-    border-radius: 0.35rem;
+    border-radius: 0.4rem;
     font-size: 0.95rem;
     font-weight: 600;
     transition: transform 1000ms;
+    font-style: oblique;
 }
 
 @mixin hover_button_effects {
     transform:translateY(-15%);
     transition: transform 250ms;
-    cursor: pointer;
+    opacity: 95%;
 }

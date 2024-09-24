@@ -4,22 +4,12 @@ import styles from "/_repos/webrise/styles/Home.module.scss";
 import Link from "next/link";
 import { BsArrowRightShort } from "react-icons/bs";
 import { Parallax } from "react-scroll-parallax";
-import Lenis from "lenis";
-import { useEffect } from "react";
+
 import { motion } from "framer-motion";
 import AnimateCursor from "@/components/AnimateCursor";
+import LenisScroll from "@/components/LenisScroll";
 
 export default function Contact() {
-  useEffect(() => {
-    const lenis = new Lenis();
-
-    function raf(time) {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
-    }
-
-    requestAnimationFrame(raf);
-  }, []);
   return (
     <>
       <Head>
@@ -33,6 +23,8 @@ export default function Contact() {
       </Head>
 
       <AnimateCursor />
+
+      <LenisScroll />
 
       <Parallax speed={-8}>
         <section className={styles.contact_container}>

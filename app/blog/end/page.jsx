@@ -4,21 +4,10 @@ import styles from "/_repos/webrise/styles/Home.module.scss";
 import Head from "next/head";
 import { Parallax } from "react-scroll-parallax";
 import { motion } from "framer-motion";
-import Lenis from "lenis";
-import { useEffect } from "react";
 import AnimateCursor from "@/components/AnimateCursor";
+import LenisScroll from "@/components/LenisScroll";
 
 export default function BlogEnd() {
-  useEffect(() => {
-    const lenis = new Lenis();
-
-    function raf(time) {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
-    }
-
-    requestAnimationFrame(raf);
-  }, []);
   return (
     <>
       <Head>
@@ -32,6 +21,8 @@ export default function BlogEnd() {
       </Head>
 
       <AnimateCursor />
+
+      <LenisScroll />
 
       <section className={styles.blog_container}>
         <Parallax speed={-7}>

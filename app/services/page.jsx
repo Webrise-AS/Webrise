@@ -6,6 +6,7 @@ import Link from "next/link";
 import AnimateCursor from "@/components/AnimateCursor";
 import useEmblaCarousel from "embla-carousel-react";
 import AutoScroll from "embla-carousel-auto-scroll";
+import LenisScroll from "@/components/LenisScroll";
 
 export default function Services() {
   const [emblaRef] = useEmblaCarousel({ loop: true, watchDrag: false }, [
@@ -25,6 +26,7 @@ export default function Services() {
       </Head>
 
       <AnimateCursor />
+      <LenisScroll />
 
       <section className={styles.services_container}>
         <div className={styles.services_hero_section}>
