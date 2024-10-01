@@ -1,10 +1,6 @@
 .nav_container {
     height: 5.4rem;
     width: 100%;
-    padding: 0 2.35rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     position: sticky;
     top: 0;
     box-shadow: 0 0 0.1rem 0 rgba(0, 0, 0, 0.14);
@@ -12,73 +8,85 @@
     opacity: 99.2%;
     color: $black-color;
     z-index: $high-index;
-
-    .nav_logo {
-
-        span {
-            font-size: 2.188rem;
-            font-weight: 600;
-            letter-spacing: -.04rem;
-        }
-
-    }
-
-    .isActive {
-        text-decoration: underline ;
-        text-decoration-thickness: 0.1rem;
-        text-decoration-color: $black-color;
-        text-underline-offset: 0.6rem;
-        text-decoration-style:wavy;
-    }
-
-    .nav_links {
-        
+    
+    .nav_content {
+        height: 100%;
+        width: 95%;
+        margin: auto;
         display: flex;
-        justify-content: center;
         align-items: center;
-        column-gap: 2rem;
+        justify-content: space-between;
 
-        ul {
+        .nav_logo {
+    
+            span {
+                font-size: 2.188rem;
+                font-weight: 600;
+                letter-spacing: -.04rem;
+            }
+    
+        }
+
+        .isActive {
+            text-decoration: underline ;
+            text-decoration-thickness: 0.1rem;
+            text-decoration-color: $black-color;
+            text-underline-offset: 0.6rem;
+            text-decoration-style:wavy;
+        }
+    
+        .nav_links {
             display: flex;
-            column-gap: 1.7rem;
-
-            li {
-                padding: 0.5rem 0;
-                font-size: 0.92rem;
-                font-weight: 500;
-                color: $black-color;
-                letter-spacing: .025rem;
-                line-height: 140%;
+            justify-content: center;
+            align-items: center;
+            column-gap: 2rem;
+    
+            ul {
+                display: flex;
+                column-gap: 1.7rem;
+    
+                li {
+                    padding: 0.5rem 0;
+                    font-size: 0.92rem;
+                    font-weight: 500;
+                    color: $black-color;
+                    letter-spacing: .025em;
+                    line-height: 140%;
+                }
+                
+                li:hover {
+                    cursor: pointer;
+                    text-decoration: underline ;
+                    text-decoration-thickness: 0.1rem;
+                    text-decoration-color: $black-color;
+                    text-underline-offset: 0.6rem;
+                    text-decoration-style:wavy;
+                }
             }
-            
-            li:hover {
-                cursor: pointer;
-                text-decoration: underline ;
-                text-decoration-thickness: 0.1rem;
-                text-decoration-color: $black-color;
-                text-underline-offset: 0.6rem;
-                text-decoration-style:wavy;
+    
+            button {
+                @include buttons;
+                border: none;
             }
-        }
+    
+            button:hover, button:focus {
+                @include hover_button_effects;
+            }
 
-        button {
-            @include buttons;
-        }
-
-        button:hover, button:focus {
-            @include hover_button_effects;
+            svg {
+                display: none;
+            }
         }
     }
 
+    .toggleMenu {
+    
+    }
 }
 
 .nav_dark_container {
     height: 5.4rem;
     width: 100%;
-    padding: 0 2.35rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     position: sticky;
     top: 0;
     box-shadow: 0 0 0.1rem 0 rgba(0, 0, 0, 0.14);
@@ -86,65 +94,76 @@
     color: $white-color;
     z-index: 1001;
 
-    .nav_dark_logo {
-
-        span {
-            font-size: 2.188rem;
-            font-weight: 600;
-            letter-spacing: -.04rem;
-        }
-
-    }
-
-    .isActive_dark {
-        text-decoration: underline ;
-        text-decoration-thickness: 0.1rem;
-        text-decoration-color: $white-color;
-        text-underline-offset: 0.6rem;
-        text-decoration-style:wavy;
-    }
-
-    .nav_dark_links {
-        
+    .nav_dark_content {
+        height: 100%;
+        width: 95%;
+        margin: auto;
         display: flex;
-        justify-content: center;
         align-items: center;
-        column-gap: 2rem;
+        justify-content: space-between;
+        
 
-        ul {
-            display: flex;
-            column-gap: 1.7rem;
-
-            li {
-                padding: 0.5rem 0;
-                font-size: 0.92rem;
-                font-weight: 500;
-                color: $white-color;
-                letter-spacing: .025rem;
-                line-height: 140%;
+        .nav_dark_logo {
+    
+            span {
+                font-size: 2.188rem;
+                font-weight: 600;
+                letter-spacing: -.04rem;
             }
+    
+        }
+    
+        .isActive_dark {
+            text-decoration: underline ;
+            text-decoration-thickness: 0.1rem;
+            text-decoration-color: $white-color;
+            text-underline-offset: 0.6rem;
+            text-decoration-style:wavy;
+        }
+    
+        .nav_dark_links {
             
-            li:hover {
-                cursor: pointer;
-                text-decoration: underline ;
-                text-decoration-thickness: 0.1rem;
-                text-decoration-color: $white-color;
-                text-underline-offset: 0.6rem;
-                text-decoration-style:wavy;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            column-gap: 2rem;
+    
+            ul {
+                display: flex;
+                column-gap: 1.7rem;
+    
+                li {
+                    padding: 0.5rem 0;
+                    font-size: 0.92rem;
+                    font-weight: 500;
+                    color: $white-color;
+                    letter-spacing: .025rem;
+                    line-height: 140%;
+                }
+                
+                li:hover {
+                    cursor: pointer;
+                    text-decoration: underline ;
+                    text-decoration-thickness: 0.1rem;
+                    text-decoration-color: $white-color;
+                    text-underline-offset: 0.6rem;
+                    text-decoration-style:wavy;
+                }
             }
-        }
-
-        button {
-            @include buttons;
-            background-color: $white-color;
-            color: $black-color;
-            border: none;
-        }
-
-        button:hover {
-            @include hover_button_effects;
+    
+            button {
+                @include buttons;
+                background-color: $white-color;
+                color: $black-color;
+                border: none;
+            }
+    
+            button:hover {
+                @include hover_button_effects;
+            }
         }
     }
+
 
 }
 
@@ -204,7 +223,7 @@
     justify-content: space-between;
     height: 50rem;
     width: 100%;
-    padding: 7rem 0 1rem 0;
+    padding: 5rem 0 1rem 0;
     background-color: $black-color;
     color: $white-color;
 
@@ -216,7 +235,7 @@
 
         .footer_top_links {
             display: flex;
-            column-gap: 5rem;
+            column-gap: 3rem;
 
             ul {
                 padding: 0;
@@ -282,7 +301,6 @@
                 letter-spacing: -1.5rem;
                 font-weight: 400;
                 text-transform: uppercase;
-                line-height: 16.6rem;
                 margin: 0;
             }
         }
@@ -301,6 +319,119 @@
 
 /* ----------------------------------------------------- Tablet -------------------------------------------- */
 @media (max-width: 1112px) {
+
+    .footer_container {
+        height: 35rem;
+        padding: 3rem 0;
+
+        .footer_top {
+            justify-content: space-between;
+            row-gap: 3rem;
+
+            .footer_top_newsletter {
+                svg {
+                    position: absolute;
+                    font-size: 2.2rem;
+                    right: 0.65rem;
+                }
+            }
+        }
+
+        .footer_bottom_logo {
+            height: fit-content !important;
+
+            h2 {
+                font-size: 12.3rem !important;
+            }
+        }
+    }
+
+    .nav_container {
+
+        .nav_content {
+
+            .nav_links {
+                column-gap: 1rem !important;
+
+                ul {
+                    display: none;
+                }
+
+                button {
+                    height: 2.55rem;
+                }
+
+                svg {
+                    display: block;
+                    font-size: 1.6rem;
+                }
+            }
+        }
+
+        .toggleMenu {
+            transform-origin: top;
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100dvh;
+            width: 100%;
+            background-color: $white-color;
+            color: $black-color;
+
+            .toggleMenu_content {
+                height: 100%;
+                width: 95%;
+                margin: auto;
+
+                .toggleMenu_nav {
+                    margin-top: 1.4rem;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    span {
+                        font-size: 2.188rem;
+                        font-weight: 600;
+                        letter-spacing: -.04rem;
+                    }
+
+                    svg {
+                        font-size: 1.6rem;
+                        margin-bottom: 0.1rem;
+                    }
+                }
+
+                .toggleMenu_links {
+                    height: 100%;
+                    width: 100%;
+                    
+                    ul {
+                        height: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        padding: 0;
+
+                        li {
+                            font-size: 3rem;
+                            font-weight: 500;
+                            letter-spacing: -.04em;
+                            line-height: 150%;
+                        }
+                    }
+                }
+
+                .isActive {
+                    text-decoration: underline ;
+                    text-decoration-thickness: 0.2rem;
+                    text-decoration-color: $black-color;
+                    text-underline-offset: 0.65rem;
+                    text-decoration-style:wavy;
+                }
+            }
+        }
+    }
 }
 
 /* ----------------------------------------------------- Mobile -------------------------------------------- */
