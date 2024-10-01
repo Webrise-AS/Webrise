@@ -13,7 +13,7 @@ import Link from "next/link";
 import MediaIcons from "@/components/MediaIcons";
 import AnimateCursor from "@/components/AnimateCursor";
 import AutoScroll from "embla-carousel-auto-scroll";
-import { Typewriter, useTypewriter } from "react-simple-typewriter";
+import { Typewriter } from "react-simple-typewriter";
 import LenisScroll from "@/components/LenisScroll";
 
 export default function Home() {
@@ -27,7 +27,7 @@ export default function Home() {
   ]);
 
   const [emblaRef2] = useEmblaCarousel({ loop: true, watchDrag: false }, [
-    AutoScroll({ speed: 2.5, direction: "backward" }),
+    AutoScroll({ speed: 2, direction: "backward" }),
   ]);
 
   const ref = useRef(null);
@@ -51,13 +51,13 @@ export default function Home() {
       <AnimateCursor />
       <LenisScroll />
 
-      <div className={styles.home_container}>
-        <section className={styles.hero_container}>
+      <section className={styles.home_container}>
+        <div className={styles.hero_container}>
           <div className={styles.hero_content}>
             <div className={styles.hero_textfield}>
               <div style={{ overflow: "hidden" }}>
                 <motion.h3
-                  initial={{ y: "8.2vh", skewY: 5 }}
+                  initial={{ y: "9vh", skewY: 5 }}
                   animate={{ y: 0, skewY: 0 }}
                   transition={{ ease: "easeIn", duration: 0.6 }}
                 >
@@ -67,7 +67,7 @@ export default function Home() {
               </div>
               <div style={{ overflow: "hidden" }}>
                 <motion.h1
-                  initial={{ y: "22.5vh", skewY: 10 }}
+                  initial={{ y: "23.5vh", skewY: 10 }}
                   animate={{ y: 0, skewY: 0 }}
                   transition={{ ease: "easeIn", duration: 0.6 }}
                 >
@@ -77,7 +77,7 @@ export default function Home() {
               <div style={{ overflow: "hidden" }}>
                 <motion.h2
                   className={styles.hero_styler}
-                  initial={{ y: "22.5vh", skewY: 10 }}
+                  initial={{ y: "23.2vh", skewY: 10 }}
                   animate={{ y: 0, skewY: 0 }}
                   transition={{ ease: "easeIn", duration: 0.6 }}
                 >
@@ -94,7 +94,7 @@ export default function Home() {
               </div>
               <div style={{ overflow: "hidden" }}>
                 <motion.h2
-                  initial={{ y: "22.5vh", skewY: 10 }}
+                  initial={{ y: "23.5vh", skewY: 10 }}
                   animate={{ y: 0, skewY: 0 }}
                   transition={{ ease: "easeIn", duration: 0.6 }}
                 >
@@ -104,8 +104,8 @@ export default function Home() {
               <div className={styles.subHero_group}>
                 <div style={{ overflow: "hidden" }}>
                   <motion.p
-                    initial={{ y: "6.5vh" }}
-                    animate={{ y: 0 }}
+                    initial={{ y: "9vh", skewY: 1 }}
+                    animate={{ y: 0, skewY: 0 }}
                     transition={{ ease: "easeIn", duration: 0.6 }}
                   >
                     Want a website that<span> customers love</span>? We build
@@ -162,7 +162,7 @@ export default function Home() {
               <Image
                 src="https://placehold.jp/151515/ffffff/500x611.png"
                 width={450}
-                height={563.2}
+                height={663.2}
                 alt="image of "
               />
             </motion.div>
@@ -170,18 +170,66 @@ export default function Home() {
           <div className={styles.hero_slider}>
             <div className={styles.embla} ref={emblaRef2}>
               <div className={styles.embla__container}>
-                <div className={styles.embla__slide}>—</div>
-                <div className={styles.embla__slide}>Google</div>
-                <div className={styles.embla__slide}>—</div>
-                <div className={styles.embla__slide}>Apple</div>
-                <div className={styles.embla__slide}>—</div>
-                <div className={styles.embla__slide}>Microsoft</div>
-                <div className={styles.embla__slide}>—</div>
-                <div className={styles.embla__slide}>meta</div>
+                <div className={styles.embla__slide}>
+                  <Image
+                    src="https://placehold.jp/151515/ffffff/200x60.png"
+                    width={200}
+                    height={60}
+                    alt="image of ...s logo"
+                  />
+                </div>
+                <div className={styles.embla__slide}>
+                  <Image
+                    src="https://placehold.jp/151515/ffffff/200x60.png"
+                    width={200}
+                    height={60}
+                    alt="image of ...s logo"
+                  />
+                </div>
+                <div className={styles.embla__slide}>
+                  <Image
+                    src="https://placehold.jp/151515/ffffff/200x60.png"
+                    width={200}
+                    height={60}
+                    alt="image of ...s logo"
+                  />
+                </div>
+                <div className={styles.embla__slide}>
+                  <Image
+                    src="https://placehold.jp/151515/ffffff/200x60.png"
+                    width={200}
+                    height={60}
+                    alt="image of ...s logo"
+                  />
+                </div>
+                <div className={styles.embla__slide}>
+                  <Image
+                    src="https://placehold.jp/151515/ffffff/200x60.png"
+                    width={200}
+                    height={60}
+                    alt="image of ...s logo"
+                  />
+                </div>
+                <div className={styles.embla__slide}>
+                  <Image
+                    src="https://placehold.jp/151515/ffffff/200x60.png"
+                    width={200}
+                    height={60}
+                    alt="image of ...s logo"
+                  />
+                </div>
+                <div className={styles.embla__slide}>
+                  <Image
+                    src="https://placehold.jp/151515/ffffff/200x60.png"
+                    width={200}
+                    height={60}
+                    alt="image of ...s logo"
+                  />
+                </div>
               </div>
             </div>
           </div>
-        </section>
+        </div>
         <section className={styles.about_container}>
           <div className={styles.about_content_left}>
             <motion.div
@@ -275,9 +323,8 @@ export default function Home() {
             </div>
           </div>
           <MediaIcons />
-          <div>
+          <div className={styles.social_image_container}>
             <Image
-              className={styles.social_image}
               src="https://placehold.jp/1318x350.png"
               width={1318}
               height={350}
@@ -289,7 +336,7 @@ export default function Home() {
           <div>
             <div style={{ overflow: "hidden" }}>
               <motion.h2
-                animate={{ y: "13.5vh", skewY: 15 }}
+                animate={{ y: "12vh", skewY: 15 }}
                 whileInView={{ y: 0, skewY: 0 }}
                 transition={{ ease: "easeIn", duration: 0.6 }}
               >
@@ -298,7 +345,7 @@ export default function Home() {
             </div>
             <div style={{ overflow: "hidden" }}>
               <motion.h2
-                animate={{ y: "13.5vh", skewY: 15 }}
+                animate={{ y: "12vh", skewY: 15 }}
                 whileInView={{ y: 0, skewY: 0 }}
                 transition={{ ease: "easeIn", duration: 0.6 }}
               >
@@ -407,7 +454,7 @@ export default function Home() {
             <div>
               <div style={{ overflow: "hidden" }}>
                 <motion.h2
-                  animate={{ y: "21vh", skewY: 15 }}
+                  animate={{ y: "20vh", skewY: 15 }}
                   whileInView={{ y: 0, skewY: 0 }}
                   transition={{ ease: "easeIn", duration: 0.6 }}
                 >
@@ -416,7 +463,7 @@ export default function Home() {
               </div>
               <div style={{ overflow: "hidden" }}>
                 <motion.h2
-                  animate={{ y: "21vh", skewY: 15 }}
+                  animate={{ y: "20vh", skewY: 15 }}
                   whileInView={{ y: 0, skewY: 0 }}
                   transition={{ ease: "easeIn", duration: 0.6 }}
                 >
@@ -492,7 +539,7 @@ export default function Home() {
           <div className={styles.info_title}>
             <div style={{ overflow: "hidden" }}>
               <motion.h3
-                animate={{ y: "14vh", skewY: 15 }}
+                animate={{ y: "13.3vh", skewY: 15 }}
                 whileInView={{ y: 0, skewY: 0 }}
                 transition={{ ease: "easeIn", duration: 0.6 }}
               >
@@ -501,7 +548,7 @@ export default function Home() {
             </div>
             <div style={{ overflow: "hidden" }}>
               <motion.h3
-                animate={{ y: "14vh", skewY: 15 }}
+                animate={{ y: "13.3vh", skewY: 15 }}
                 whileInView={{ y: 0, skewY: 0 }}
                 transition={{ ease: "easeIn", duration: 0.6 }}
               >
@@ -513,7 +560,7 @@ export default function Home() {
             <Accordion />
           </div>
         </section>
-      </div>
+      </section>
     </>
   );
 }

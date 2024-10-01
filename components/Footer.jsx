@@ -3,6 +3,7 @@ import React from "react";
 import styles from "@/styles/Home.module.scss";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import { BsArrowRightShort } from "react-icons/bs";
 
 function Footer() {
   return (
@@ -90,6 +91,7 @@ function Footer() {
           <div className={styles.footer_top_newsletter}>
             <p>Join our newsletter and get notified!</p>
             <input placeholder="Email" type="email"></input>
+            <BsArrowRightShort id="email" />
           </div>
         </div>
         <div className={styles.footer_bottom}>

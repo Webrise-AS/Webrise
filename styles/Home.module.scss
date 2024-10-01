@@ -12,6 +12,7 @@
     color: $black-color;
     background-color: $white-color;
     height: 100%;
+    width: initial;
     display: flex;
     flex-direction: column;
     padding: 1rem 0 0 0;
@@ -24,8 +25,9 @@
         flex-direction: column;
         row-gap: 0.5rem;
         justify-content: space-between;
-
+        
         .hero_content {
+            overflow: hidden;
             height: 99%;
             width: 100%;
             display: flex;
@@ -39,11 +41,11 @@
 
                 h3 {
                     font-size: 1rem;
-                    letter-spacing: -.0em;
+                    letter-spacing: .0em;
                     font-weight: 500;
                     line-height: 140%;
                     text-transform: capitalize;
-                    margin: 0 0 0.5rem 0.4rem;
+                    margin: 0 0 0.625rem 0.4rem;
                     display: flex;
                     align-items: center;
 
@@ -67,14 +69,15 @@
                 .hero_styler {
                     background-color: $black-color;
                     color: $white-color;
-                    border-radius: 0.5vw;
+                    border-radius:  0.5vw ;
                     width: fit-content;
                     padding: 0.5rem 1.9rem 0.5rem 0.5rem;
+                    margin-left: 0.4rem;
                 }
 
                 .subHero_group {
                     width: 95%;
-                    margin-top: 1.5rem;
+                    margin-top: 0.625rem;
                     display: flex;
                     flex-direction: column;
                     overflow: hidden;
@@ -84,7 +87,7 @@
                         letter-spacing: -.0em;
                         font-weight: 500;
                         line-height: 100%;
-                        margin: 0 0 0.7rem 0.4rem;
+                        margin: 0 0 0.625rem 0.4rem;
 
                         span {
                             font-weight: 700;
@@ -100,12 +103,12 @@
                             display: flex;
                             flex-direction: column;
                             margin: 0;
-                            padding: 0 0 0 0.35rem;
+                            padding: 0 0 0 0rem;
                             
                             li {
                                 display: flex;
                                 align-items: center;
-                                font-size: 1rem;
+                                font-size: 0.97rem;
                                 letter-spacing: -.0em;
                                 margin: 0;
                                 font-weight: 500;
@@ -161,7 +164,7 @@
             }
 
             .hero_image_section {
-                width: 55%;
+                width: 45%;
                 height: 38.5rem;
                 overflow: hidden;
 
@@ -174,21 +177,18 @@
         }
 
         .hero_slider {
-            border: solid $black-color;
+            margin-top: 2rem;
             .embla {
                 overflow: hidden;
                 .embla__container {
                     display: flex;
-                    
+
                     .embla__slide {
-                        text-align: center;
-                        margin-left: 1.8rem;
-                        font-size: 7.5rem;
-                        font-weight: 700;
-                        line-height: 86%;
-                        letter-spacing: -.08em;
-                        text-transform: uppercase;
-                        padding-right: 0.6rem;
+                        margin-right: 2.5rem;
+
+                        img {
+                            height: 100%;
+                        }
                     }
                 }
             }
@@ -453,8 +453,15 @@
 
         }
 
-        .social_image {
-            border-radius: 1vw;
+        .social_image_container {
+            height: 20rem;
+            overflow: hidden;
+
+            img {
+                height: 100%;
+                width: 100%;
+                border-radius: 1vw;
+            }
         }
     }
 
@@ -757,7 +764,18 @@
 }
 
 /* ----------------------------------------------------- Tablet -------------------------------------------- */
-@media (min-width: 768px) {}
+@media (max-width: 1112px) {
+
+    .home_container {
+
+        .info_container {
+            flex-direction: column;
+            justify-content: none;
+            padding: 6.5rem 0;
+            row-gap: 2rem;
+        }
+    }
+}
 
 /* ----------------------------------------------------- Mobile -------------------------------------------- */
-@media (min-width: 375px) {}
+@media (max-width: 767px) {}
