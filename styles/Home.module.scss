@@ -28,7 +28,7 @@
         
         .hero_content {
             overflow: hidden;
-            height: 99%;
+            height: 100%;
             width: 100%;
             display: flex;
             justify-content: space-between;
@@ -38,9 +38,10 @@
                 flex-direction: column;
                 justify-content: center;
                 width: 65%;
+                z-index: $base-index;
 
                 h3 {
-                    font-size: 1rem;
+                    font-size: clamp(0.875rem, 1.5vw + 1rem - 1rem, 1rem);
                     letter-spacing: .0em;
                     font-weight: 500;
                     line-height: 140%;
@@ -51,19 +52,19 @@
 
                     svg {
                         margin-left: 0.5rem;
-                        font-size: 1.5rem;
+                        font-size: clamp(1rem, 2.5vw + 1rem - 1rem, 1.5rem);
                         color: rgb(0, 116, 205);
                     }
                 }
 
                 h1,h2 {
-                font-size: 7.5rem;
-                font-weight: 700;
-                text-transform: uppercase;
-                margin: 0;
-                letter-spacing: -.08em;
-                line-height: 86%;
-                font-style: oblique;
+                    font-size: clamp(3.5rem, 10vw + 1rem - 1rem, 7.5rem);
+                    font-weight: 700;
+                    text-transform: uppercase;
+                    margin: 0;
+                    letter-spacing: -.08em;
+                    line-height: 86%;
+                    font-style: oblique;
                 }
 
                 .hero_styler {
@@ -83,7 +84,7 @@
                     overflow: hidden;
 
                     p {
-                        font-size: 1.1rem;
+                        font-size: clamp(0.9rem, 1.6vw + 1rem - 1rem, 1.1rem);
                         letter-spacing: -.0em;
                         font-weight: 500;
                         line-height: 100%;
@@ -108,7 +109,7 @@
                             li {
                                 display: flex;
                                 align-items: center;
-                                font-size: 0.97rem;
+                                font-size: clamp(0.875rem, 1vw + 1rem - 1rem, 0.97rem);
                                 letter-spacing: -.0em;
                                 margin: 0;
                                 font-weight: 500;
@@ -116,7 +117,7 @@
                                 text-transform: capitalize;
     
                                 svg {
-                                    font-size: 1.8rem;
+                                    font-size: clamp(1.5rem, 2.5vw + 1rem - 1rem, 1.8rem);
                                     color: rgb(37, 167, 96);
                                 }
                             }
@@ -128,16 +129,13 @@
                             border: none;
                             align-items: end;
 
-                            button {
-                                height: 4.2rem !important;
-                                width: 12.5rem !important;
-                                font-size: 1.07rem !important;
-                                text-transform: uppercase;
-                                font-style: oblique;
-                            }
-
                             .hero_mainBtn {
                                 @include buttons;
+                                height: 4.2rem ;
+                                width: 12.5rem ;
+                                font-size: clamp(0.875rem, 1.4vw + 1rem - 1rem, 1.07rem);
+                                text-transform: uppercase;
+                                font-style: oblique;
                             }
 
                             .hero_mainBtn:hover {
@@ -152,6 +150,11 @@
                                 font-size: 0.95rem;
                                 font-weight: 600;
                                 transition: transform 1000ms;
+                                height: 4.2rem ;
+                                width: 12.5rem ;
+                                font-size: clamp(0.875rem, 1.4vw + 1rem - 1rem, 1.07rem);
+                                text-transform: uppercase;
+                                font-style: oblique;
                             }
 
                             .hero_subBtn:hover {
@@ -167,6 +170,7 @@
                 width: 45%;
                 height: 38.5rem;
                 overflow: hidden;
+                z-index: $low-index;
 
                 img {
                     height: 100%;
@@ -196,9 +200,10 @@
     }
 
     .about_container {
-        height: 113vh;
+        height: fit-content;
         width: 95%;
         margin: auto;
+        padding: 7rem 0;
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -207,6 +212,9 @@
             width: 30%;
 
             img {
+                height: 100%;
+                width: 100%;
+                overflow: hidden;
                 border-radius: 1vw;
             }
         }
@@ -215,12 +223,11 @@
             width: 61.85%;
 
             p {
-                font-size: 3rem;
+                font-size: clamp(1rem, 4vw + 1rem - 1rem, 3rem);
                 font-weight: 600;
                 line-height: 1;
                 letter-spacing: -.04em;
                 margin: 0;
-                
 
                 span {
                     color: hsl(0 0% 50% / 0.2);
@@ -264,9 +271,8 @@
             }
 
             h2 {
-                height: 12.5rem;
                 width: fit-content;
-                font-size: 15rem;
+                font-size: clamp(3rem, 19.8vw + 1rem - 1rem, 15rem);
                 font-weight: 600;
                 text-transform: uppercase;
                 margin: 0;
@@ -278,10 +284,11 @@
 
         .project_gallery {
             height: 200vh;
+            width: 95%;
+            margin: auto;
             display: flex;
             flex-direction: row;
-            gap: 2vw;
-            padding: 2vw;
+            gap: clamp(0.5vw, 1.5vw, 2vw);
             box-sizing: border-box;
             overflow: hidden;
             z-index: $base-index;
@@ -291,8 +298,8 @@
                 height: 100%;
                 display: flex;
                 flex-direction: column;
-                gap: 2vw;
-                min-width: 15.625rem;
+                gap: clamp(0.5vw, 1.5vw, 2vw);
+                min-width: clamp(3rem, 15vw + 1rem - 1rem, 15.625rem);
                 position: relative;
 
                 .image_container {
@@ -764,9 +771,33 @@
 }
 
 /* ----------------------------------------------------- Tablet -------------------------------------------- */
-@media (max-width: 1112px) {
+@media (max-width: 1024px) {
 
     .home_container {
+
+        .hero_container {
+
+            .hero_action_buttons {
+                flex-direction: flex;
+                row-gap: 0.5rem;
+
+                button {
+                    height: 3.5rem !important;
+                    width: 9.5rem !important;
+                }
+            }
+
+            .hero_image_section {
+                height: 35rem !important;
+            }
+        }
+
+        .about_container {
+
+            .about_content_left {
+                width: 35%;
+            }
+        }
 
         .info_container {
             flex-direction: column;

@@ -4,6 +4,7 @@ import styles from "@/styles/Home.module.scss";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { BsArrowRightShort } from "react-icons/bs";
+import Image from "next/image";
 
 function Footer() {
   return (
@@ -16,7 +17,7 @@ function Footer() {
                 <motion.li
                   animate={{ y: 100, opacity: 0 }}
                   whileInView={{ y: 0, opacity: 1 }}
-                  transition={{ ease: "easeIn", duration: 0.5 }}
+                  transition={{ ease: "easeIn", duration: 0.6 }}
                 >
                   Services
                 </motion.li>
@@ -25,7 +26,7 @@ function Footer() {
                 <motion.li
                   animate={{ y: 100, opacity: 0 }}
                   whileInView={{ y: 0, opacity: 1 }}
-                  transition={{ ease: "easeIn", duration: 0.5 }}
+                  transition={{ ease: "easeIn", duration: 0.6 }}
                 >
                   Projects
                 </motion.li>
@@ -34,7 +35,7 @@ function Footer() {
                 <motion.li
                   animate={{ y: 100, opacity: 0 }}
                   whileInView={{ y: 0, opacity: 1 }}
-                  transition={{ ease: "easeIn", duration: 0.5 }}
+                  transition={{ ease: "easeIn", duration: 0.6 }}
                 >
                   Blog
                 </motion.li>
@@ -43,7 +44,7 @@ function Footer() {
                 <motion.li
                   animate={{ y: 100, opacity: 0 }}
                   whileInView={{ y: 0, opacity: 1 }}
-                  transition={{ ease: "easeIn", duration: 0.5 }}
+                  transition={{ ease: "easeIn", duration: 0.6 }}
                 >
                   About
                 </motion.li>
@@ -52,7 +53,7 @@ function Footer() {
                 <motion.li
                   animate={{ y: 100, opacity: 0 }}
                   whileInView={{ y: 0, opacity: 1 }}
-                  transition={{ ease: "easeIn", duration: 0.5 }}
+                  transition={{ ease: "easeIn", duration: 0.6 }}
                 >
                   Contact
                 </motion.li>
@@ -63,7 +64,7 @@ function Footer() {
                 <motion.li
                   animate={{ y: 100, opacity: 0 }}
                   whileInView={{ y: 0, opacity: 1 }}
-                  transition={{ ease: "easeIn", duration: 0.5 }}
+                  transition={{ ease: "easeIn", duration: 0.6 }}
                 >
                   Linkedin
                 </motion.li>
@@ -72,7 +73,7 @@ function Footer() {
                 <motion.li
                   animate={{ y: 100, opacity: 0 }}
                   whileInView={{ y: 0, opacity: 1 }}
-                  transition={{ ease: "easeIn", duration: 0.5 }}
+                  transition={{ ease: "easeIn", duration: 0.6 }}
                 >
                   Tiktok
                 </motion.li>
@@ -81,7 +82,7 @@ function Footer() {
                 <motion.li
                   animate={{ y: 100, opacity: 0 }}
                   whileInView={{ y: 0, opacity: 1 }}
-                  transition={{ ease: "easeIn", duration: 0.5 }}
+                  transition={{ ease: "easeIn", duration: 0.6 }}
                 >
                   Instagram
                 </motion.li>
@@ -95,32 +96,37 @@ function Footer() {
           </div>
         </div>
         <div className={styles.footer_bottom}>
-          <div className={styles.footer_bottom_logo}>
+          <div className={styles.footer_bottom_logo_container}>
             <Link href={"/"}>
-              <h2>Webrise</h2>
+              <Image
+                src="https://placehold.jp/https://placehold.jp/230/00000/ffffff/1370x260.png?text=WEBRISE"
+                width={1370}
+                height={260}
+                alt="image of the webrise logo"
+              />
             </Link>
           </div>
           <div className={styles.footer_bottom_info}>
             <motion.div
-              animate={{ y: 50, opacity: 0 }}
+              animate={{ y: 30, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
-              transition={{ ease: "easeIn", duration: 0.5 }}
+              transition={{ ease: "easeIn", duration: 0.6 }}
             >
               <Link href={"#"}>
                 <span>Privacy Policy</span>
               </Link>
             </motion.div>
             <motion.span
-              animate={{ y: 50, opacity: 0 }}
+              animate={{ y: 30, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
-              transition={{ ease: "easeIn", duration: 0.5 }}
+              transition={{ ease: "easeIn", duration: 0.6 }}
             >
               Design & Development by Webrise
             </motion.span>
             <motion.span
-              animate={{ y: 50, opacity: 0 }}
+              animate={{ y: 30, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
-              transition={{ ease: "easeIn", duration: 0.5 }}
+              transition={{ ease: "easeIn", duration: 0.6 }}
             >
               ©2024 Webrise
             </motion.span>

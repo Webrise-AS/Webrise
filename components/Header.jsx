@@ -102,8 +102,53 @@ function Header({ color }) {
               <Link href={"/contact"}>
                 <button>Book a call</button>
               </Link>
+              <BsList onClick={toggleMenu} />
             </div>
           </div>
+          <AnimatePresence>
+            {open && (
+              <motion.div
+                className={styles.toggleMenu_dark}
+                variants={menuVars}
+                initial="initial"
+                animate="animate"
+                exit="exit"
+              >
+                <div className={styles.toggleMenu_dark_content}>
+                  <div className={styles.toggleMenu_dark_nav}>
+                    <Link href={"/"}>
+                      <span onClick={toggleMenu}>WEBRISE</span>
+                    </Link>
+                    <BsList onClick={toggleMenu} />
+                  </div>
+                  <div className={styles.toggleMenu_dark_links}>
+                    <motion.ul
+                      variants={containerVars}
+                      initial="initial"
+                      animate="open"
+                      exit="initial"
+                    >
+                      {navLinks.map((link) => {
+                        const isActive = pathname.startsWith(link.href);
+
+                        return (
+                          <div key={link.id} style={{ overflow: "hidden" }}>
+                            <motion.li
+                              className={isActive ? styles.isActive_dark : ""}
+                              variants={linksVars}
+                              onClick={toggleMenu}
+                            >
+                              <Link href={link.href}>{link.name}</Link>
+                            </motion.li>
+                          </div>
+                        );
+                      })}
+                    </motion.ul>
+                  </div>
+                </div>
+              </motion.div>
+            )}
+          </AnimatePresence>
         </div>
       ) : (
         <div className={styles.nav_container}>
