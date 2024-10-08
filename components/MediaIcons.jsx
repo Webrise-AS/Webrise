@@ -1,4 +1,3 @@
-import React from "react";
 import styles from "../styles/Home.module.scss";
 import { BsLinkedin, BsTiktok, BsInstagram } from "react-icons/bs";
 import Link from "next/link";

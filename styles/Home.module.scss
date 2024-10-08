@@ -36,7 +36,6 @@
             .hero_textfield {
                 display: flex;
                 flex-direction: column;
-                justify-content: center;
                 width: 65%;
                 z-index: $base-index;
 
@@ -84,6 +83,8 @@
                     overflow: hidden;
 
                     p {
+                        
+                        width: 80%;
                         font-size: clamp(0.9rem, 1.6vw + 1rem - 1rem, 1.1rem);
                         letter-spacing: -.0em;
                         font-weight: 500;
@@ -327,8 +328,6 @@
                     top:-80%;
                 }
             }
-
-            
         }
 
         .project_button_container {
@@ -340,13 +339,15 @@
                 background-color: $white-color;
                 color: $black-color;
                 border: none;
-                width: 13.1rem;
-                height: 3.5rem;
-                font-size: 1.2rem;
+                height: fit-content;
+                width: fit-content;
+                text-align: center;
+                padding: 1.1rem 1.5rem;
+                font-size: clamp(0.875rem, 1.4vw + 1rem - 1rem, 1.2rem);
 
                 svg {
                     margin-left: 0.3rem;
-                    font-size: 1.25rem;
+                    font-size: clamp(0.875rem, 1.4vw + 1rem - 1rem, 1.25rem);
                     font-weight: 600;
                 }
             }
@@ -356,8 +357,6 @@
                 transform:translateY(-15%) translateX(4%);
             }
         }
-
-
     }
 
     .social_container {
@@ -374,12 +373,13 @@
         h2 {
             width: 56rem;
             margin: 0;
-            line-height: 93.2%;
+            line-height: clamp(0.93, 0.98, 1);
             letter-spacing: -.08em;
-            font-size: 7.5rem;
+            font-size: clamp(3.5rem, 10vw + 1rem - 1rem, 7.5rem);
             font-weight: 700;
             text-transform: uppercase;
             text-align: center;
+            
         }
 
         .icons_container {
@@ -390,16 +390,16 @@
             .neutral_link {
                 display: grid;
                 place-content: center;
-                height: 10rem;
-                width: 13rem;
+                height: clamp(5rem, 15vw + 1rem - 1rem, 10rem);
+                width: clamp(8rem, 20vw + 1rem - 1rem, 13rem);
                 position: relative;
                 transition: ease-in-out 850ms;
 
                 svg {
                     transition: ease-in-out 0.35s;
                     color: $black-color;
-                    font-size: 2.6rem;
-                    margin: 5rem;
+                    font-size: clamp(1.6rem, 4vw + 1rem - 1rem, 2.6rem);
+                    margin: calmp(3rem, 2.5vw, 5rem);
                 }
             }
 
@@ -423,8 +423,8 @@
             .neutral_link:nth-child(2) {
                 display: grid;
                 place-content: center;
-                height: 10rem;
-                width: 13rem;
+                height: clamp(5rem, 15vw + 1rem - 1rem, 10rem);
+                width: clamp(8rem, 20vw + 1rem - 1rem, 13rem);
                 border-left:solid 2px $black-color;
                 border-right:solid 2px $black-color;
                 border-radius: 0;
@@ -457,11 +457,10 @@
                     scale: percentage($number: 1.25);
                 }
             }
-
         }
 
         .social_image_container {
-            height: 20rem;
+            height:  clamp(5rem, 22vw + 1rem - 1rem, 20rem);
             overflow: hidden;
 
             img {
@@ -483,7 +482,7 @@
         h2 {
             width: fit-content;
             margin: 0;
-            font-size: 4.5rem;
+            font-size: clamp(2.5rem, 6vw + 1rem - 1rem, 4.5rem);
             font-weight: 700;
             letter-spacing: -.04em;
             line-height: 88%;
@@ -798,6 +797,8 @@
                 width: 35%;
             }
         }
+
+
 
         .info_container {
             flex-direction: column;
