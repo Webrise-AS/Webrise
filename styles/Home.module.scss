@@ -488,8 +488,6 @@
             line-height: 88%;
         }
         
-
-
         .article_content {
             display: flex;
             flex-direction: column;
@@ -502,9 +500,10 @@
                 display: flex;
                 justify-content: space-between;
                 padding: 2rem 0;
+                column-gap: clamp(0.5rem, 10.1vw + 1rem - 1rem, 9.1rem);
 
                 h3 {
-                    font-size: 1.25rem;
+                    font-size: clamp(0.875rem, 1.5vw + 1rem - 1rem, 1.25rem);
                     font-weight: 500;
                     margin: 0;
                     line-height: 140%;
@@ -512,12 +511,12 @@
                 }
 
                 span {
-                    width: 71.5rem;
-                    font-size: 3rem;
+                    width: clamp(100%, 50vw + 1rem - 1rem, 71.5rem);
+                    font-size: clamp(1.5rem, 4vw + 1rem - 1rem, 3rem);
                     font-weight: 600;
                     letter-spacing: -.04em;
                     line-height: 100%;
-                    margin-right: 3rem;
+                    margin-right: clamp(0rem, 3vw + 1rem - 1rem, 3rem);
                 }
 
                 img {
@@ -556,21 +555,23 @@
                 display: flex;
                 justify-content: space-between;
                 padding: 2rem 0;
+                column-gap: clamp(0.5rem, 9.7vw + 1rem - 1rem, 9.1rem);
 
                 h3 {
-                    font-size: 1.25rem;
+                    font-size: clamp(0.875rem, 1.5vw + 1rem - 1rem, 1.25rem);
                     font-weight: 500;
                     margin: 0;
+                    line-height: 140%;
+                    letter-spacing: -.03em;
                 }
 
                 span {
-                    width: 71.5rem;
-                    font-size: 3rem;
+                    width: clamp(100%, 50vw + 1rem - 1rem, 71.5rem);
+                    font-size: clamp(1.5rem, 4vw + 1rem - 1rem, 3rem);
                     font-weight: 600;
-                    letter-spacing: -0.1rem;
+                    letter-spacing: -.04em;
                     line-height: 100%;
-                    
-                    margin-right: 3rem;
+                    margin-right: clamp(0rem, 3vw + 1rem - 1rem, 3rem);
                 }
 
                 img {
@@ -600,7 +601,6 @@
                 }
             }
         }
-
     }
 
     .feedback_container {
@@ -627,15 +627,15 @@
             h2 {
                 padding-left: 2%;
                 margin: 0;
-                font-size: 7.5rem;
+                font-size: clamp(3.5rem, 8.2vw + 1rem - 1rem, 7.5rem);
                 font-weight: 700;
-                width: 28.5rem;
                 letter-spacing: -.08em;
                 line-height: 86%;
             }
 
             .embla {
-                width: 100%;
+                width: clamp(97%, 50vw + 1rem - 1rem, 100%);
+                margin: auto;
                 overflow: hidden;
             }
             
@@ -647,29 +647,30 @@
                     flex-direction: column;
                     align-items: center;
                     justify-content: center;
-                    height: 32.5rem;
-                    width: 46.875rem;
-                    padding: 3rem;
-                    margin-right: 3rem;
+                    height: clamp(16rem, 45vw + 1rem - 1rem, 32.5rem);
+                    width: clamp(19rem, 70vw + 1rem - 1rem, 46.875rem);
+                    padding: clamp(0.5rem, 4.5vw + 1rem - 1rem, 3rem);
+                    margin-right: clamp(0.5rem, 2.5vw + 1rem - 1rem, 3rem);
                     border-radius: 1vw;
+                    row-gap: clamp(1.1rem, 3.5vw + 1rem - 1rem, 3rem);
                     flex:0 0 auto;
                     min-width: 0;
                     max-width: 100%;
                     background-color: $white-color;
 
                     h3 {
-                        width: 92%;
-                        margin: 0 auto 3rem auto;
-                        font-size: 1.25rem;
+                        width: 100%;
+                        margin: 0;
+                        font-size: clamp(0.875rem, 1.8vw + 1rem - 1rem, 1.25rem);
                         font-weight: 500;
                         letter-spacing: -.03em;
                         line-height: 140%;
                     }
 
                     p {
-                        width: 92%;
-                        margin: 0 auto;
-                        font-size: 2.5rem;
+                        width: 100%;
+                        margin: 0 ;
+                        font-size: clamp(1.2rem, 3.5vw + 1rem - 1rem, 2.5rem);
                         font-weight: 600;
                         line-height: 100%;
                         letter-spacing: -.04em;
@@ -684,12 +685,12 @@
     .hire_container {
         background-color: $black-color;
         color: $white-color;
-        height: 145vh;
+        height: clamp(100dvh, 90vw + 1rem - 1rem, 145dvh);
         background-image: url('https://assets-global.website-files.com/6606f0f658b42ca7220e3695/660bfcae5749fee5cdae4952_Bg%20Text%20Video-poster-00001.jpg');
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
-        padding: 36.25rem 0rem 0rem 0rem;
+        padding-top: clamp(16rem, 45vw + 1rem - 1rem, 36.25rem);
         position: relative;
 
         .hire_overlay {
@@ -703,6 +704,7 @@
         }
 
         .hire_content {
+            height: 100%;
             width: 95%;
             margin: auto;
             display: flex;
@@ -714,7 +716,7 @@
             p {
                 width: 70%;
                 margin: 0;
-                font-size: 3rem;
+                font-size: clamp(1rem, 3.8vw + 1rem - 1rem, 3rem);
                 font-weight: 600;
                 line-height: 100%;
                 letter-spacing: -.04em;
@@ -769,7 +771,7 @@
 
 }
 
-/* ----------------------------------------------------- Tablet -------------------------------------------- */
+/* ----------------------------------------------------- Laptop -------------------------------------------- */
 @media (max-width: 1024px) {
 
     .home_container {
@@ -808,6 +810,9 @@
         }
     }
 }
+
+/* ----------------------------------------------------- Tablet -------------------------------------------- */
+@media (max-width: 1023px) {}
 
 /* ----------------------------------------------------- Mobile -------------------------------------------- */
 @media (max-width: 767px) {}
