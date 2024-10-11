@@ -714,9 +714,9 @@
             z-index: $base-index !important;
 
             p {
-                width: 70%;
+                width: clamp(18.3rem, 76vw + 1rem - 1rem, 60rem);
                 margin: 0;
-                font-size: clamp(1rem, 3.8vw + 1rem - 1rem, 3rem);
+                font-size: clamp(1.2rem, 3.8vw + 1rem - 1rem, 3rem);
                 font-weight: 600;
                 line-height: 100%;
                 letter-spacing: -.04em;
@@ -758,7 +758,7 @@
 
             h3 {
                 width: fit-content;
-                font-size: 4.5rem;
+                font-size: clamp(2.5rem, 6vw + 1rem - 1rem, 4.5rem);
                 font-weight: 700;
                 letter-spacing: -.04em;
                 line-height: 88%;
@@ -798,15 +798,6 @@
             .about_content_left {
                 width: 35%;
             }
-        }
-
-
-
-        .info_container {
-            flex-direction: column;
-            justify-content: none;
-            padding: 6.5rem 0;
-            row-gap: 2rem;
         }
     }
 }

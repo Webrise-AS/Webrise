@@ -1,22 +1,22 @@
 .contact_container {
-    height: 88vh;
+    height: auto;
     display: flex;
     width: 95%;
     margin: auto;
     justify-content: space-between;
-    padding: 8.5rem 0 4rem 0;
-    scroll-behavior: smooth;
-
+    padding-top: clamp(4.5rem, 20vw + 1rem - 1rem, 8.5rem);
+    padding-bottom: clamp(2rem, 10vw + 1rem - 1rem, 4rem);
+    
     .contact_content {
         display: flex;
         flex-direction: column;
+        row-gap: clamp(1rem, 15.4vw + 1rem - 1rem, 12rem);
         justify-content: space-between;
-        padding: 0.5rem 0 0 0;
 
         h3 {
             margin: 0;
             font-weight: 500;
-            font-size: 1.25rem;
+            font-size: clamp(1rem, 1.7vw + 1rem - 1rem, 1.25rem);
             line-height: 140%;
             letter-spacing: -.03em;
         }
@@ -35,11 +35,12 @@
 
                 svg {
                     transition: 0.35s ease-in-out;
+                    font-size: clamp(2rem, 3.5vw + 1rem - 1rem, 2.5rem);
                 }
 
                 h2 {
                     margin: 0;
-                    font-size: 1.5rem;
+                    font-size: clamp(1rem, 2vw + 1rem - 1rem, 1.5rem);
                     font-weight: 500;
                     line-height: 116%;
                     letter-spacing: -.02em;
@@ -56,14 +57,15 @@
     }
 
     .contact_tittle {
-        height: fit-content;
+        height: 100%;
         width: 49rem;
         padding-right: 0.23rem;
         overflow: hidden;
+        padding: 0 0 0.85rem 0; 
 
         h1 {
             text-align: right;
-            font-size: 15rem;
+            font-size: clamp(4rem, 20vw + 1rem - 1rem, 15rem);
             font-weight: 600;
             line-height: 83%;
             letter-spacing: -.08em;
@@ -77,4 +79,26 @@
 }
 
 /* ----------------------------------------------------- Mobile -------------------------------------------- */
-@media (max-width: 767px) {}
+@media (max-width: 700px) {
+    .contact_container {
+        height: auto;
+        flex-direction: column;
+        row-gap: 3rem;
+
+        .contact_tittle {
+            align-self: flex-end;
+            width: fit-content !important;
+        }
+
+        .contact_content {
+            width: fit-content;
+        }
+    }
+}
+
+@media (max-width: 426px) {
+    .contact_content {
+
+        row-gap: 1.5rem !important;
+    }
+}
