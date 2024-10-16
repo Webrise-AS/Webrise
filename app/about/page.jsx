@@ -40,7 +40,6 @@ export default function About() {
       </Head>
 
       <AnimateCursor />
-
       <LenisScroll />
 
       <section className={styles.about_main_container}>
@@ -71,6 +70,7 @@ export default function About() {
               </motion.span>
             </div>
             <motion.div
+              className={styles.image_wrapperTwo}
               initial={{ x: -50, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
               transition={{ ease: "easeIn", duration: 0.6 }}

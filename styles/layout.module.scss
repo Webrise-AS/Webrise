@@ -515,5 +515,19 @@
 
 /* ----------------------------------------------------- Mobile -------------------------------------------- */
 @media (max-width: 767px) {
-    
+    .nav_container {
+        .nav_links {
+            button {
+                display: none;
+            }
+        }
+    }
+
+    .nav_dark_container {
+        .nav_dark_links {
+            button {
+                display: none;
+            }
+        }
+    }
 }
