@@ -22,7 +22,6 @@ export default function Blog() {
       </Head>
 
       <AnimateCursor />
-
       <LenisScroll />
 
       <section className={styles.blog_container}>
@@ -38,13 +37,13 @@ export default function Blog() {
               </motion.h1>
             </div>
             <div style={{ overflow: "hidden" }}>
-              <motion.h1
+              <motion.h2
                 initial={{ y: "41.5vh", skewY: 10 }}
                 animate={{ y: 0, skewY: 0 }}
                 transition={{ ease: "easeIn", duration: 0.6 }}
               >
                 & BLOG
-              </motion.h1>
+              </motion.h2>
             </div>
           </div>
         </Parallax>

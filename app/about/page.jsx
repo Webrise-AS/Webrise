@@ -15,11 +15,11 @@ const fetcher = (url) => fetch(url).then((res) => res.json());
 
 export default function About() {
   const [emblaRef] = useEmblaCarousel({ watchDrag: false, loop: true }, [
-    AutoScroll({ speed: 1.5 }),
+    AutoScroll({ speed: 0.6 }),
   ]);
 
   const [emblaRef2] = useEmblaCarousel({ loop: true, watchDrag: false }, [
-    AutoScroll({ speed: 2.5, direction: "backward" }),
+    AutoScroll({ speed: 1.1, direction: "backward" }),
   ]);
 
   const { data } = useSWR(
