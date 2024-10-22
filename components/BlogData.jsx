@@ -51,25 +51,12 @@ export default async function BlogData({ apiLength }) {
         {data.length >= 6 ? (
           <div style={{ overflow: "hidden" }}>
             <Link href={"http://localhost:3000/blog/end"}>
-              <motion.h4
-                animate={{ y: "20vh", skewY: 15 }}
-                whileInView={{ y: 0, skewY: 0 }}
-                transition={{ ease: "easeIn", duration: 0.6 }}
-              >
-                NEXT
-              </motion.h4>
+              <h4>NEXT</h4>
             </Link>
           </div>
         ) : (
           <div style={{ overflow: "hidden" }}>
-            <motion.h4
-              className={styles.prev_btn}
-              animate={{ y: "20vh", skewY: 15 }}
-              whileInView={{ y: 0, skewY: 0 }}
-              transition={{ ease: "easeIn", duration: 0.6 }}
-            >
-              NEXT
-            </motion.h4>
+            <h4 className={styles.btn_effect}>NEXT</h4>
           </div>
         )}
       </div>

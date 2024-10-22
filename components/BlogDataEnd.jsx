@@ -50,13 +50,7 @@ export default async function BlogDataEnd({ apiLength }) {
         </motion.div>
         <div style={{ overflow: "hidden" }}>
           <Link href={"http://localhost:3000/blog/"}>
-            <motion.h4
-              animate={{ y: "24.5vh", skewY: 15 }}
-              whileInView={{ y: 0, skewY: 0 }}
-              transition={{ ease: "easeIn", duration: 0.6 }}
-            >
-              PREVIOUS
-            </motion.h4>
+            <h4 className={styles.prev_btn}>PREVIOUS</h4>
           </Link>
         </div>
       </div>

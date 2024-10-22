@@ -4,7 +4,6 @@ import styles from "/_repos/webrise/styles/Home.module.scss";
 import Head from "next/head";
 import { motion } from "framer-motion";
 import { Parallax } from "react-scroll-parallax";
-
 import AnimateCursor from "@/components/AnimateCursor";
 import LenisScroll from "@/components/LenisScroll";
 
