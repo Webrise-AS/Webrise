@@ -1,5 +1,5 @@
 "use client";
-import styles from "/_repos/webrise/styles/Home.module.scss";
+import styles from "../../../styles/Home.module.scss";
 import Head from "next/head";
 import ProjectsDataEnd from "@/components/ProjectsDataEnd";
 import { Parallax } from "react-scroll-parallax";

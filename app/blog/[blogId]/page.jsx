@@ -1,4 +1,4 @@
-import styles from "/_repos/webrise/styles/Home.module.scss";
+import styles from "../../../styles/Home.module.scss";
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
@@ -6,7 +6,8 @@ import { getSingleData } from "@/app/helpers/page";
 import LenisScroll from "@/components/LenisScroll";
 import AnimateCursor from "@/components/AnimateCursor";
 
-export default async function BlogDetails({ params }) {
+export default async function BlogDetails(props) {
+  const params = await props.params;
   const id = Number(params.blogId);
   const blogData = await getSingleData(id);
 
@@ -63,13 +64,15 @@ export default async function BlogDetails({ params }) {
               <h2>{blogData.title}</h2>
               <p>{blogData.description}</p>
             </div>
-            <Image
-              src={`${blogData.image}`}
-              width={866}
-              height={480}
-              alt={"Image for the specified blog card"}
-              loading="lazy"
-            />
+            <div className={styles.info_image_container}>
+              <Image
+                src={`${blogData.image}`}
+                width={866}
+                height={480}
+                alt={"Image for the specified blog card"}
+                loading="lazy"
+              />
+            </div>
             <div className={styles.info_block}>
               <h2>{blogData.title}</h2>
               <p>{blogData.description}</p>
@@ -101,8 +104,8 @@ export default async function BlogDetails({ params }) {
                       loading="lazy"
                     />
                   </div>
-                  <h2>{card.price}</h2>
-                  <h3>{card.title}</h3>
+                  <h3>{card.price}</h3>
+                  <h4>{card.title}</h4>
                 </div>
               </Link>
             ))}

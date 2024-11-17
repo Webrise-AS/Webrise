@@ -1,5 +1,5 @@
 .blog_container {
-    height: fit-content;
+    min-height: 100vh;
     width: 95%;
     margin: 3.5rem auto 7rem auto;
 
@@ -21,14 +21,13 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-
+        
         .blog_cards_container {
             width: 100%;
             display: flex;
-            column-gap: 1rem;
             flex-wrap: wrap;
             row-gap: 2rem;
-            
+            justify-content: space-between;
 
             .single_card {
                 width: clamp(11rem, 30vw + 1rem - 1rem, 27.6rem);
@@ -53,18 +52,18 @@
                     }
                 }
 
-                h2 {
-                    font-size: clamp(0.875rem, 2.8vw + 1rem - 1rem, 1.25rem);
+                h3 {
+                    font-size: clamp(0.875rem, 2.22vw + 1rem - 1rem, 1.25rem);
                     font-weight: 500;
                     margin: 1rem 0 0.2rem 0;
                     line-height: 140%;
                     letter-spacing: -.03em;
                 }
 
-                h3 {
+                h4 {
+                    font-size: clamp(1rem, 2.61vw + 1rem - 1rem, 1.5rem);
                     height: clamp(2.5rem, 9vw + 1rem - 1rem, 5.5rem);
                     margin: 0;
-                    font-size: clamp(1rem, 3.5vw + 1rem - 1rem, 1.5rem);
                     font-weight: 500;
                     line-height: 116%;
                     letter-spacing: -.02em;
@@ -72,7 +71,7 @@
             }
         }
 
-        h4 {
+        h5 {
             font-size: clamp(4.25rem, 14.5vw + 1rem - 1rem, 7.5rem);
             font-weight: 700;
             line-height: 86%;
@@ -82,7 +81,7 @@
             padding: 0.5rem 1rem 0.5rem 0.5rem;
         }
 
-        h4:hover {
+        h5:hover {
             scale: percentage($number: 1.025);
         }
 
@@ -184,12 +183,12 @@
 
         .blogDetails_info_content {
             height: fit-content;
-            width: 54.125rem;
+            width: 54.124rem;
             margin: auto;
             padding: 4.5rem 0 6.25rem 0; 
 
             h4 {
-                font-size: 1.5rem;
+                font-size: clamp(1rem, 3vw + 1rem - 1rem, 1.5rem);
                 font-weight: 500;
                 line-height: 116%;
                 letter-spacing: -.02em;
@@ -203,29 +202,34 @@
     
                 h2 {
                     margin: 0;
-                    font-size: 2.5rem;
+                    font-size: clamp(1.5rem, 5vw + 1rem - 1rem, 2.5rem);
                     font-weight: 600;
                     line-height: 100%;
                     letter-spacing: -.04em;
                 }
     
                 p {
-                    font-size: 1.25rem;
+                    font-size: clamp(0.875rem, 2.5vw + 1rem - 1rem, 1.25rem);
                     font-weight: 400;
                     line-height: 140%;
                 }
             }
-    
-            img {
-                border-radius: 0.5rem;
-                margin: 1.6rem 0 8.95rem 0;
-                background-repeat: no-repeat;
-                background-size: cover;
-                background-position: center;
+
+            .info_image_container {
+                img {
+                    height: 100%;
+                    width: 100%;
+                    border-radius: 0.5rem;
+                    margin: 1.6rem 0 clamp(3rem, 15vw + 1rem - 1rem, 8.95rem) 0;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    background-position: center;
+                }
             }
     
+    
             h5 {
-                font-size: 3rem;
+                font-size: clamp(2rem, 5.25vw + 1rem - 1rem, 3rem);
                 margin: 2.75rem 0 2.75rem 0;
                 font-weight: 600;
                 line-height: 100%;
@@ -244,7 +248,7 @@
         h2 {
             line-height: 88%;
             font-weight: 700;
-            font-size: 4.5rem;
+            font-size: clamp(2.5rem, 8vw + 1rem - 1rem, 4.5rem);
             letter-spacing: -.04em;
             margin: 0;
             animation: slide_up_text;
@@ -253,16 +257,16 @@
         }
 
         .related_cards_container {
-            margin-top: 4rem;
+            margin: 4rem 0 2rem 0;
             width: 100%;
             display: flex;
             flex-wrap: wrap;
-            column-gap: 1.5rem;
-            margin-bottom: 2rem;
+            justify-content: space-between;
+            row-gap: 2rem;
 
             .single_card {
-                width: 27.6rem;
-                padding-bottom: 2rem;
+                width: clamp(11rem, 30vw + 1rem - 1rem, 27.6rem);
+                padding-bottom: clamp(0.6rem, 1.5vw + 1rem - 1rem, 1rem);
                 border-bottom: solid 1px $black-color;
                 animation: ease-in-out slide_up_card;
                 animation-timeline: view();
@@ -272,7 +276,7 @@
                 .image_wrapper {
                     border-radius: 0.5rem;
                     width: 100%;
-                    height: 580px;
+                    height: clamp(18rem, 50vw + 1rem - 1rem, 36.25rem);
                     overflow: hidden;
 
                     img {
@@ -288,18 +292,18 @@
                 }
 
 
-                h2 {
-                    font-size: 1.25rem;
+                h3 {
+                    font-size: clamp(0.875rem, 2.22vw + 1rem - 1rem, 1.25rem);
                     font-weight: 500;
                     margin: 1rem 0 0.2rem 0;
                     line-height: 140%;
                     letter-spacing: -.03em;
                 }
 
-                h3 {
-                    height: 5.5rem;
+                h4 {
+                    font-size: clamp(1rem, 2.61vw + 1rem - 1rem, 1.5rem);
+                    height: clamp(2.5rem, 9vw + 1rem - 1rem, 5.5rem);
                     margin: 0;
-                    font-size: 1.5rem;
                     font-weight: 500;
                     line-height: 116%;
                     letter-spacing: -.02em;
@@ -316,8 +320,23 @@
     .blog_container {
 
         .single_card {
-            width: 21.70rem !important;
+            width: 21.7rem !important;
         }
+    }
+
+    .blogDetails_container {
+
+        .blogDetails_info_content {
+            width: 95% !important;
+            margin: auto !important;
+        }
+
+        .blogDetails_related_section {
+
+            .single_card {
+             width: 21.7rem !important;
+            }
+         }
     }
 }
 
@@ -339,6 +358,13 @@
                 font-size: 1rem !important;
             }
         }
+
+        .blogDetails_related_section {
+
+           .single_card {
+            width: 24.2rem !important;
+           }
+        }
     }
 }
 
@@ -350,6 +376,17 @@
             width: 21.15rem!important;
         }
     }
+
+    .blogDetails_container {
+
+        .blogDetails_related_section {
+
+            .single_card {
+                width: 21.17rem!important;
+            }
+        }
+
+    }
 }
 
 @media (max-width: 321px) {
@@ -359,5 +396,16 @@
         .single_card {
             width:17.9rem !important;
         }
+    }
+
+    .blogDetails_container {
+
+        .blogDetails_related_section {
+
+            .single_card {
+                width: 17.9rem!important;
+            }
+        }
+
     }
 }

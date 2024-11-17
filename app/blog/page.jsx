@@ -1,6 +1,6 @@
 "use client";
 import BlogData from "@/components/BlogData";
-import styles from "/_repos/webrise/styles/Home.module.scss";
+import styles from "../../styles/Home.module.scss";
 import Head from "next/head";
 import { motion } from "framer-motion";
 import { Parallax } from "react-scroll-parallax";

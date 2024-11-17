@@ -1,12 +1,13 @@
 import AnimateCursor from "@/components/AnimateCursor";
-import styles from "/_repos/webrise/styles/Home.module.scss";
+import styles from "../../../styles/Home.module.scss";
 import { getSingleData } from "@/app/helpers/page";
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import LenisScroll from "@/components/LenisScroll";
 
-export default async function ProjectDetails({ params }) {
+export default async function ProjectDetails(props) {
+  const params = await props.params;
   const id = Number(params.projectId);
   const projectData = await getSingleData(id);
 

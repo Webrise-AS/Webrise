@@ -1,5 +1,5 @@
 import Link from "next/link";
-import styles from "/_repos/webrise/styles/Home.module.scss";
+import styles from "../styles/Home.module.scss";
 import Image from "next/image";
 import { motion } from "framer-motion";
 
@@ -42,8 +42,8 @@ export default async function BlogData({ apiLength }) {
                     loading="lazy"
                   />
                 </div>
-                <h2>{blog.price}</h2>
-                <h3>{blog.title}</h3>
+                <h3>{blog.price}</h3>
+                <h4>{blog.title}</h4>
               </motion.div>
             </Link>
           ))}
@@ -51,12 +51,12 @@ export default async function BlogData({ apiLength }) {
         {data.length >= 6 ? (
           <div style={{ overflow: "hidden" }}>
             <Link href={"http://localhost:3000/blog/end"}>
-              <h4>NEXT</h4>
+              <h5>NEXT</h5>
             </Link>
           </div>
         ) : (
           <div style={{ overflow: "hidden" }}>
-            <h4 className={styles.btn_effect}>NEXT</h4>
+            <h5 className={styles.btn_effect}>NEXT</h5>
           </div>
         )}
       </div>

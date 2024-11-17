@@ -5,7 +5,7 @@ import Image from "next/image";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 import { BsArrowUpRight, BsCheck, BsPatchCheckFill } from "react-icons/bs";
-import Accordion from "@/components/accordion";
+import Accordion from "@/components/Accordion";
 import { motion, useScroll } from "framer-motion";
 import { useRef } from "react";
 import Gallery from "@/components/gallery";

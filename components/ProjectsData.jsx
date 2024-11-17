@@ -1,5 +1,5 @@
 import Link from "next/link";
-import styles from "/_repos/webrise/styles/Home.module.scss";
+import styles from "../styles/Home.module.scss";
 import Image from "next/image";
 import { motion } from "framer-motion";
 

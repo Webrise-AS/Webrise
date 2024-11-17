@@ -1,10 +1,9 @@
 "use client";
 import Head from "next/head";
-import styles from "/_repos/webrise/styles/Home.module.scss";
+import styles from "../../styles/Home.module.scss";
 import Link from "next/link";
 import { BsArrowRightShort } from "react-icons/bs";
 import { Parallax } from "react-scroll-parallax";
-
 import { motion } from "framer-motion";
 import AnimateCursor from "@/components/AnimateCursor";
 import LenisScroll from "@/components/LenisScroll";
