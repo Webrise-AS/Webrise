@@ -139,15 +139,15 @@
         justify-content: space-between;
         align-items: end;
         padding-bottom: 3rem;
-
+        
         div:nth-of-type(2) {
-            width: 65.3%;
+            width: clamp(20rem, 68.08vw + 1rem - 1rem, 55.15rem);
         }
 
         h1 {
             margin: 0;
             text-transform: uppercase;
-            font-size: 7.5rem;
+            font-size: clamp(2.6rem, 11.5vw + 1rem - 1rem, 7.5rem);
             font-weight: 600;
             line-height: 86%;
             letter-spacing: -.08em;
@@ -156,7 +156,7 @@
 
         h6 {
             margin: 0;
-            font-size: 1.5rem;
+            font-size: clamp(1rem, 3.5vw + 1rem - 1rem, 1.5rem);
             letter-spacing: -.02em;
             font-weight: 500;
             line-height: 116%;
@@ -166,12 +166,12 @@
     }
 
     .projectsDetails_content {
-        padding: 5rem 0 8rem 0;
-        width: 65.3%;
+        padding: clamp(3rem, 8vw + 1rem - 1rem, 5rem ) 0 clamp(4rem, 13.5vw + 1rem - 1rem, 8rem) 0;
+        width: clamp(20rem, 68.08vw + 1rem - 1rem, 55.15rem);
         margin-left: auto;
 
         h3 {
-            font-size: 2rem;
+            font-size: clamp(1.25rem, 4vw + 1rem - 1rem, 2rem);
             font-weight: 600;
             line-height: 100%;
             letter-spacing: -.04em;
@@ -179,7 +179,7 @@
         }
 
         img {
-            height: 54rem;
+            height: clamp(22rem, 80vw + 1rem - 1rem, 54rem);
             width: 100%;
             margin: 4rem 0;
             border-radius: 0.5rem;
@@ -187,7 +187,7 @@
 
         h2 {
             margin: 0 0 1.7rem 0;
-            font-size: 3rem;
+            font-size: clamp(2rem, 6vw + 1rem - 1rem, 3rem);
             font-weight: 600;
             line-height: 100%;
             letter-spacing: -.04em;
@@ -195,7 +195,7 @@
 
         p {
             margin: 0;
-            font-size: 1.25rem;
+            font-size: clamp(0.875rem, 2.5vw + 1rem - 1rem, 1.25rem);
             font-weight: 500;
             letter-spacing: -.01em;
             line-height: 140%;
@@ -203,13 +203,13 @@
 
         .duo_images {
             display: flex;
-            column-gap: 1.5rem;
+            justify-content: space-between;
             margin: 2rem 0 4rem 0;
 
             img {
                 margin: 0;
-                height: 31.25rem;
-                width: 50%;
+                height: clamp(12.6rem, 50vw + 1rem - 1rem, 31.25rem);
+                width: 49%;
             }
         }
 
@@ -234,14 +234,14 @@
 
     .projectsDetails_otherProjects_container {
         border-top: solid 1px $black-color;
-        padding: 9rem 0;
+        padding: clamp(3rem, 13.5vw + 1rem - 1rem, 9rem) 0;
         display: flex;
         flex-direction: column;
         row-gap: 2rem;
 
         span {
             width: 27%;
-            font-size: 4.5rem;
+            font-size: clamp(2.5rem, 8vw + 1rem - 1rem, 4.5rem);
             font-weight: 700;
             line-height: 100%;
             letter-spacing: -.04em;
@@ -249,10 +249,13 @@
 
         .otherProjects_content {
             display: flex;
-            column-gap: 1.5rem;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            column-gap: 2rem;
+            row-gap: 2rem;
 
             .single_project {
-                width: 20.34rem;
+                width: clamp(12rem, 20.98vw + 1rem - 1rem, 19.6rem);
                 height: fit-content;
                 animation: ease-in-out slide_up_card;
                 animation-timeline: view();
@@ -261,7 +264,7 @@
                 .image_wrapper {
                     border-radius: 0.5rem;
                     width: 100%;
-                    height: 25rem;
+                    height: clamp(18rem, 33vw + 1rem - 1rem, 25rem);
                     overflow: hidden;
 
                     img {
@@ -278,7 +281,7 @@
 
                 h4 {
                     margin: 1rem 0 0.2rem 0 ;
-                    font-size: 1.5rem;
+                    font-size: clamp(0.875rem, 2.22vw + 1rem - 1rem, 1.25rem);
                     font-weight: 500;
                     line-height: 116%;
                     letter-spacing: -.02em;
@@ -287,7 +290,7 @@
 
                 h5 {
                     margin: 0;
-                    font-size: 1.5rem;
+                    font-size: clamp(1rem, 2.61vw + 1rem - 1rem, 1.5rem);
                     font-weight: 500;
                     line-height: 116%;
                     letter-spacing: -.02em;
@@ -298,8 +301,72 @@
 }
 
 /* ----------------------------------------------------- Tablet -------------------------------------------- */
-@media (max-width: 1112px) {
+@media (max-width: 769px) {
+
+    .projectsDetails_container {
+
+        .projectsDetails_title {
+            flex-direction: column !important;
+            align-items: start !important;
+            row-gap: 2rem ;
+            
+                div {
+                    width: 100% !important;
+                }
+        }
+
+        .projectsDetails_content {
+            width: 100% !important;
+        }
+    }
+
+    .projectsDetails_otherProjects_container {
+
+        .single_project {
+            width: 21.25rem !important;
+        }
+    }
 }
 
 /* ----------------------------------------------------- Mobile -------------------------------------------- */
-@media (max-width: 767px) {}
+@media (max-width: 426px) {
+
+    .projectsDetails_container {
+
+        .projectsDetails_content {
+
+            .duo_images {
+                img {
+                    width: 48% !important;
+                }
+            }
+        }
+    }
+
+    .projectsDetails_otherProjects_container {
+
+        .single_project {
+            width: 24.2rem !important;
+        }
+    }
+}
+
+@media (max-width: 376px) {
+
+    .projectsDetails_otherProjects_container {
+
+        .single_project {
+            width: 21.17rem !important;
+        }
+    }
+}
+
+@media (max-width: 321px) {
+
+    .projectsDetails_otherProjects_container {
+
+        .single_project {
+            width: 17.9rem !important;
+        }
+    }
+}
