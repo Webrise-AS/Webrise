@@ -551,3 +551,17 @@
         }
     }
 }
+
+@media (max-width: 426px) {
+
+    .footer_container {
+        
+        .footer_top_newsletter {
+            
+            svg {
+                font-size: 2rem !important;
+                margin-top: 3.6rem !important;
+            }
+        }
+    }
+}

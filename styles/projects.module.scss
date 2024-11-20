@@ -4,7 +4,8 @@
     padding: 4.8rem 0;
 
     .projects_title {
-        width: 90%;
+        border: solid 1px red;
+        width: 95%;
         margin: auto auto 4.3rem auto;
         display: flex;
         flex-direction: column;
@@ -12,7 +13,7 @@
 
         h1 {
             margin: 0;
-            font-size: 15rem;
+            font-size: clamp(3.8rem, 19.21vw + 1rem - 1rem, 15rem);
             font-weight: 600;
             line-height: 83%;
             letter-spacing: -.08em;

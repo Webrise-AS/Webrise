@@ -1,7 +1,7 @@
 .blog_container {
     min-height: 100vh;
     width: 95%;
-    margin: 3.5rem auto 7rem auto;
+    margin: 2.5rem auto 7rem auto;
 
     .blog_title {
         display: flex;
@@ -10,7 +10,7 @@
 
         h1,h2 {
             margin: 0;
-            font-size: clamp(6.55rem, 22vw + 1rem - 1rem, 15rem);
+            font-size: clamp(6.55rem, 20vw + 1rem - 1rem, 15rem);
             font-weight: 600;
             line-height: 83%;
             letter-spacing: -.08em;
@@ -318,6 +318,11 @@
 @media (max-width: 769px) {
 
     .blog_container {
+        margin: 1.5rem auto 7rem auto;
+
+        .blog_title {
+            height: fit-content !important;
+        }
 
         .single_card {
             width: 21.7rem !important;
@@ -344,6 +349,10 @@
 @media (max-width: 426px) {
 
     .blog_container {
+
+        .blog_title {
+            width: 18rem !important;
+        }
 
         .single_card {
             width:24.2rem !important;

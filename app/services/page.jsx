@@ -87,7 +87,7 @@ export default function Services() {
                 with.
               </p>
               <Link href="/contact">
-                <button>Contact</button>
+                <button>Learn more</button>
               </Link>
             </div>
             <div className={styles.content_speciality_image}>
@@ -115,7 +115,7 @@ export default function Services() {
                 with.
               </p>
               <Link href="/contact">
-                <button>Contact</button>
+                <button>Learn more</button>
               </Link>
             </div>
             <div className={styles.content_speciality_image}>
@@ -143,7 +143,7 @@ export default function Services() {
                 with.
               </p>
               <Link href="/contact">
-                <button>Contact</button>
+                <button>Learn more</button>
               </Link>
             </div>
             <div className={styles.content_speciality_image}>
@@ -171,7 +171,7 @@ export default function Services() {
                 with.
               </p>
               <Link href="/contact">
-                <button>Contact</button>
+                <button>Learn more</button>
               </Link>
             </div>
             <div className={styles.content_speciality_image}>
