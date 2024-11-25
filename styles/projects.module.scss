@@ -1,19 +1,21 @@
 .projects_container {
+    height: fit-content;
     background-color: $black-color;
     color: $white-color;
     padding: 4.8rem 0;
 
     .projects_title {
-        border: solid 1px red;
+        height: fit-content;
         width: 95%;
         margin: auto auto 4.3rem auto;
         display: flex;
         flex-direction: column;
         align-items: center;
+        justify-content: center;
 
         h1 {
             margin: 0;
-            font-size: clamp(3.8rem, 19.21vw + 1rem - 1rem, 15rem);
+            font-size: clamp(5rem, 19.097vw + 1rem - 1rem, 15rem);
             font-weight: 600;
             line-height: 83%;
             letter-spacing: -.08em;
@@ -26,23 +28,22 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        row-gap: 10rem;
 
         .projects_cards_container {
             width: 100%;
-            display: flex;
-            flex-wrap: wrap;
-            row-gap: 5rem;
+            display: grid;
+            grid-template-columns: repeat(2, minmax(15rem, 1fr));
+            row-gap: 8rem;
             column-gap: 2rem;
-            margin-bottom: 2rem;
 
             .single_card {
-                width: 41.9rem;
-                height: 43.5rem;
+                height: 38rem;
 
                 .image_wrapper {
-                    border-radius: 0.5rem;
+                    border-radius: 1vw;
                     width: 100%;
-                    height: 36.25rem;
+                    height: 100%;
                     overflow: hidden;
 
                     img {
@@ -59,7 +60,7 @@
 
                 h2 {
                     margin: 1rem 0 0.2rem 0 ;
-                    font-size: 1.5rem;
+                    font-size: clamp(1rem, 2.5vw + 1rem - 1rem, 1.5rem);
                     font-weight: 500;
                     text-decoration:underline;
                     letter-spacing: -.02em;
@@ -68,7 +69,7 @@
 
                 h3 {
                     margin: 0;
-                    font-size: 1.5rem;
+                    font-size: clamp(1rem, 2.5vw + 1rem - 1rem, 1.5rem);
                     font-weight: 500;
                     letter-spacing: -.02em;
                     line-height: 116%;
@@ -77,7 +78,7 @@
         }
 
         h4 {
-            font-size: 7.5rem;
+            font-size: clamp(3.5rem, 12vw + 1rem - 1rem, 7.5rem);
             font-weight: 700;
             letter-spacing: -.08em;
             margin: 0;
@@ -249,25 +250,24 @@
         }
 
         .otherProjects_content {
-            display: flex;
-            flex-wrap: wrap;
+            display: grid;
+            grid-template-columns: repeat(4, minmax(13.43rem, 1fr));
             justify-content: space-between;
             column-gap: 2rem;
             row-gap: 2rem;
 
             .single_project {
-                width: clamp(12rem, 20.98vw + 1rem - 1rem, 19.6rem);
                 height: fit-content;
                 animation: ease-in-out slide_up_card;
                 animation-timeline: view();
                 animation-range: entry -15% cover 20%;
 
                 .image_wrapper {
-                    border-radius: 0.5rem;
-                    width: 100%;
                     height: clamp(18rem, 33vw + 1rem - 1rem, 25rem);
+                    width: 100%;
                     overflow: hidden;
-
+                    border-radius: 1vw;
+                    
                     img {
                         object-fit: cover;
                         height: 100%;
@@ -301,8 +301,27 @@
     }
 }
 
+/* ----------------------------------------------------- laptop -------------------------------------------- */
+@media (max-width: 1024px) {
+
+    .projects_container {
+
+        .single_card {
+            height: 32rem !important; 
+        }
+    }
+}
+
 /* ----------------------------------------------------- Tablet -------------------------------------------- */
 @media (max-width: 769px) {
+
+    .projects_container {
+        padding: 0 0 4.8rem 0 !important;
+
+        .single_card {
+            height: 25.5rem !important;
+        }
+    }
 
     .projectsDetails_container {
 
@@ -319,18 +338,40 @@
         .projectsDetails_content {
             width: 100% !important;
         }
-    }
 
-    .projectsDetails_otherProjects_container {
+        .projectsDetails_otherProjects_container {
 
-        .single_project {
-            width: 21.25rem !important;
+            .otherProjects_content {
+                grid-template-columns: repeat(2, minmax(10rem, 1fr) );
+            }
         }
     }
+
 }
 
 /* ----------------------------------------------------- Mobile -------------------------------------------- */
 @media (max-width: 426px) {
+
+    .projects_container {
+
+        .projects_title {
+
+            h1 {
+                font-size: 5.023rem !important;
+            }
+        }
+
+        .projects_content {
+
+            .projects_cards_container {
+                grid-template-columns: repeat(1, minmax(12rem, 1fr) );
+            }
+
+            .single_card {
+                height: 22.5rem !important;
+            }
+        }
+    }
 
     .projectsDetails_container {
 
@@ -342,32 +383,54 @@
                 }
             }
         }
-    }
 
-    .projectsDetails_otherProjects_container {
+        .projectsDetails_otherProjects_container {
 
-        .single_project {
-            width: 24.2rem !important;
+            .otherProjects_content {
+                grid-template-columns: repeat(1, minmax(10rem, 1fr) );
+            }
         }
     }
+
 }
 
 @media (max-width: 376px) {
 
-    .projectsDetails_otherProjects_container {
+    .projects_container {
 
-        .single_project {
-            width: 21.17rem !important;
+        .projects_title {
+
+            h1 {
+                font-size: 4.4rem !important;
+            }
         }
+
+        .projects_content {
+
+            .single_card {
+                height: 19rem !important;
+            }
+        }
+
     }
 }
 
 @media (max-width: 321px) {
 
-    .projectsDetails_otherProjects_container {
+    .projects_container {
 
-        .single_project {
-            width: 17.9rem !important;
+        .projects_title {
+
+            h1 {
+                font-size: 3.69rem !important;
+            }
+        }
+
+        .projects_content {
+
+            .single_card {
+                height: 17rem !important;
+            }
         }
     }
 }

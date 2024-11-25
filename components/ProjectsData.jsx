@@ -44,25 +44,12 @@ export default async function ProjectsData({ apiLength }) {
         {data.length >= 6 ? (
           <Link href={"http://localhost:3000/projects/end"}>
             <div style={{ overflow: "hidden" }}>
-              <motion.h4
-                animate={{ y: "25vh", skewY: 15 }}
-                whileInView={{ y: 0, skewY: 0 }}
-                transition={{ ease: "easeIn", duration: 0.6 }}
-              >
-                NEXT
-              </motion.h4>
+              <h4>NEXT</h4>
             </div>
           </Link>
         ) : (
           <div style={{ overflow: "hidden" }}>
-            <motion.h4
-              className={styles.prev_btn}
-              animate={{ y: "25vh", skewY: 15 }}
-              whileInView={{ y: 0, skewY: 0 }}
-              transition={{ ease: "easeIn", duration: 0.6 }}
-            >
-              NEXT
-            </motion.h4>
+            <h4 className={styles.prev_btn}>NEXT</h4>
           </div>
         )}
       </div>

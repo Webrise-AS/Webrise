@@ -23,20 +23,17 @@
         align-items: center;
         
         .blog_cards_container {
-            width: 100%;
-            display: flex;
-            flex-wrap: wrap;
-            row-gap: 2rem;
-            justify-content: space-between;
+            display: grid;
+            grid-template-columns: repeat(3, minmax(13rem, 1fr) );
+            row-gap: 3rem;
+            column-gap: 1.5rem;
 
             .single_card {
-                width: clamp(11rem, 30vw + 1rem - 1rem, 27.6rem);
                 padding-bottom: clamp(0.6rem, 1.5vw + 1rem - 1rem, 1rem);
                 border-bottom: solid 1px $black-color;
 
                 .image_wrapper {
                     border-radius: 0.5rem;
-                    width: 100%;
                     height: clamp(18rem, 50vw + 1rem - 1rem, 36.25rem);
                     overflow: hidden;
 
@@ -259,24 +256,21 @@
         .related_cards_container {
             margin: 4rem 0 2rem 0;
             width: 100%;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
+            display: grid;
+            grid-template-columns: repeat(3, minmax(13rem, 1fr) );
             row-gap: 2rem;
+            column-gap: 1rem;
 
             .single_card {
-                width: clamp(11rem, 30vw + 1rem - 1rem, 27.6rem);
                 padding-bottom: clamp(0.6rem, 1.5vw + 1rem - 1rem, 1rem);
                 border-bottom: solid 1px $black-color;
                 animation: ease-in-out slide_up_card;
                 animation-timeline: view();
                 animation-range: entry -15% cover 20%;
 
-
                 .image_wrapper {
-                    border-radius: 0.5rem;
-                    width: 100%;
                     height: clamp(18rem, 50vw + 1rem - 1rem, 36.25rem);
+                    border-radius: 0.5rem;
                     overflow: hidden;
 
                     img {
@@ -324,8 +318,11 @@
             height: fit-content !important;
         }
 
-        .single_card {
-            width: 21.7rem !important;
+        .blog_content {
+
+            .blog_cards_container {
+                grid-template-columns: repeat(2, minmax(13rem, 1fr) );
+            }
         }
     }
 
@@ -338,8 +335,8 @@
 
         .blogDetails_related_section {
 
-            .single_card {
-             width: 21.7rem !important;
+            .related_cards_container {
+                grid-template-columns: repeat(2, minmax(13rem, 1fr) );
             }
          }
     }
@@ -354,8 +351,11 @@
             width: 18rem !important;
         }
 
-        .single_card {
-            width:24.2rem !important;
+        .blog_content {
+
+            .blog_cards_container {
+                grid-template-columns: repeat(1, minmax(7rem, 1fr) );
+            }
         }
     }
 
@@ -370,9 +370,9 @@
 
         .blogDetails_related_section {
 
-           .single_card {
-            width: 24.2rem !important;
-           }
+            .related_cards_container {
+                grid-template-columns: repeat(1, minmax(7rem, 1fr) );
+            }
         }
     }
 }
@@ -415,6 +415,5 @@
                 width: 17.9rem!important;
             }
         }
-
     }
 }

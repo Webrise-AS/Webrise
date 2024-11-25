@@ -44,13 +44,7 @@ export default async function ProjectsDataEnd({ apiLength }) {
 
         <Link href={"http://localhost:3000/projects"}>
           <div style={{ overflow: "hidden" }}>
-            <motion.h4
-              animate={{ y: "30vh", skewY: 15 }}
-              whileInView={{ y: 0, skewY: 0 }}
-              transition={{ ease: "easeIn", duration: 0.6 }}
-            >
-              PREVIOUS
-            </motion.h4>
+            <h4>PREVIOUS</h4>
           </div>
         </Link>
       </div>
