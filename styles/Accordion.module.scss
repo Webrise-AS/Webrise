@@ -1,163 +1,289 @@
 
 .accordion_container {
-    height: fit-content;
-    width: fit-content;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    .accordion_content {
-        
-        .single_accordion {
-            width: clamp(15rem, 54.5vw + 1rem - 1rem, 50rem);
-            padding: clamp(0.5rem, 5vw + 1rem - 1rem, 2.5rem) 0;
-            border-top: solid 1px $black-color;
-            cursor: pointer;
+    
+    .single_accordion {
+        width: clamp(15rem, 54.5vw + 1rem - 1rem, 50rem);
+        padding: clamp(0.5rem, 5vw + 1rem - 1rem, 2.5rem) 0;
+        border-top: solid 1px $black-color;
+        cursor: pointer;
 
-            .single_accordion_tittle {
+        .single_accordion_title {
+            display: flex;
+            column-gap: 1.5rem;
+            align-items: center ;
+
+            span {
                 display: flex;
-                column-gap: 1.5rem;
-                align-items: center ;
-
-                span {
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    height: 3.15rem;
-                    width: 2.5rem;
-                    font-size: clamp(1.2rem, 4.5vw + 1rem - 1rem, 3rem);
-                    font-weight: 200;
-                    padding-bottom: 0.5rem;
-                    transition: all 10s cubic-bezier(0,1,0,1);
-                }
-
-                h2 {
-                    margin: 0;
-                    font-size: clamp(1rem, 3.5vw + 1rem - 1rem, 2.5rem);
-                    font-weight: 600;
-                    letter-spacing: -.04em;
-                    line-height: 100%;
-                }
+                align-items: center;
+                justify-content: center;
+                height: 3.15rem;
+                width: 2.5rem;
+                font-size: clamp(1.2rem, 4.493vw + 1rem - 1rem, 3rem);
+                font-weight: 200;
+                padding-bottom: 0.5rem;
+                transition: all 10s cubic-bezier(0,1,0,1);
             }
 
-            .single_accordion_content {
-                max-height: 0;
-                overflow: hidden;
-                transition: all 0.5s ease, opacity 0.5s ease;
-                opacity: 0;
-                margin-left: 4rem;
-                
-                p {
-                    width: 100%;
-                    font-size: clamp(0.875rem, 1.7vw + 1rem - 1rem, 1.25rem);
-                    font-weight: 500;
-                    line-height: 140%;
-                    margin: 0;
-                    letter-spacing: -.03em;
-                }
-            }
-            
-            .single_accordion_content_show {
-                height: auto;
-                max-height: 100rem;
-                margin-top: 1.75rem;
-                transition: all 3s cubic-bezier(0,1,0,1);
-                margin-left: 4rem;
-                
-                p {
-                    width: 100%;
-                    font-size: clamp(0.875rem, 1.7vw + 1rem - 1rem, 1.25rem);
-                    font-weight: 500;
-                    line-height: 140%;
-                    margin: 0;
-                    letter-spacing: -.03em;
-                }
+            h2 {
+                margin: 0;
+                font-size: clamp(1rem, 3.711vw + 1rem - 1rem, 2.5rem);
+                font-weight: 600;
+                letter-spacing: -.04em;
+                line-height: 100%;
             }
         }
 
-        .single_accordion_bottom {
-            width: clamp(15rem, 54.5vw + 1rem - 1rem, 50rem);
-            padding: clamp(0.5rem, 5vw + 1rem - 1rem, 2.5rem) 0;
-            border-top: solid 1px $black-color;
-            border-bottom: solid 1px $black-color;
-            cursor: pointer;
-
-            .single_accordion_tittle {
-               display: flex;
-               column-gap: 1.5rem;
-               align-items: center ;
-
-               span {
-                   display: flex;
-                   align-items: center;
-                   justify-content: center;
-                   height: 3.15rem;
-                   width: 2.5rem;
-                   font-size: clamp(1.2rem, 4.5vw + 1rem - 1rem, 3rem);
-                   font-weight: 200;
-                   padding-bottom: 0.5rem;
-                   transition: all 10s cubic-bezier(0,1,0,1);
-               }
-
-               h2 {
-                   margin: 0;
-                   font-size: clamp(1rem, 3.5vw + 1rem - 1rem, 2.5rem);
-                   font-weight: 600;
-                   letter-spacing: -.04em;
-                   line-height: 100%;
-               }
-           }
-
-           .single_accordion_content {
-               max-height: 0;
-               overflow: hidden;
-               transition: all 0.5s ease, opacity 0.5s ease;
-               opacity: 0;
-               margin-left: 4rem;
-               
-               p {
+        .single_accordion_content {
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.5s ease-in-out, opacity 0.5s ease;
+            opacity: 0;
+            margin-left: 4rem;
+            
+            p {
                 width: 100%;
-                font-size: clamp(0.875rem, 1.7vw + 1rem - 1rem, 1.25rem);
-                   font-weight: 500;
-                   line-height: 140%;
-                   margin: 0;
-                   letter-spacing: -.03em;
-               }
-           }
-
-           .single_accordion_content_show {
-               height: auto;
-               max-height: 100rem;
-               margin-top: 1.75rem;
-               transition: all 3s cubic-bezier(0,1,0,1);
-               margin-left: 4rem;
-
-               p {
+                font-size: clamp(1rem, 1.758vw + 1rem - 1rem, 1.25rem);
+                font-weight: 500;
+                line-height: 140%;
+                margin: 0;
+                letter-spacing: -.03em;
+            }
+        }
+        
+        .single_accordion_content_show {
+            height: auto;
+            max-height: 100rem;
+            margin-top: 1.75rem;
+            transition: all 3s cubic-bezier(0,1,0,1);
+            margin-left: 4rem;
+            
+            p {
                 width: 100%;
-                font-size: clamp(0.875rem, 1.7vw + 1rem - 1rem, 1.25rem);
-                   font-weight: 500;
-                   line-height: 140%;
-                   margin: 0;
-                   letter-spacing: -.03em;
-               }
-           }
-       }
+                font-size: clamp(1rem, 1.758vw + 1rem - 1rem, 1.25rem);
+                font-weight: 500;
+                line-height: 140%;
+                margin: 0;
+                letter-spacing: -.03em;
+            }
+        }
+    }
+
+    .single_accordion_bottom {
+        width: clamp(15rem, 54.5vw + 1rem - 1rem, 50rem);
+        padding: clamp(0.5rem, 5vw + 1rem - 1rem, 2.5rem) 0;
+        border-top: solid 1px $black-color;
+        border-bottom: solid 1px $black-color;
+        cursor: pointer;
+
+        .single_accordion_title {
+            display: flex;
+            column-gap: 1.5rem;
+            align-items: center ;
+
+            span {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 3.15rem;
+                width: 2.5rem;
+                font-size: clamp(1.2rem, 4.493vw + 1rem - 1rem, 3rem);
+                font-weight: 200;
+                padding-bottom: 0.5rem;
+                transition: all 10s cubic-bezier(0,1,0,1);
+            }
+
+            h2 {
+                margin: 0;
+                font-size: clamp(1rem, 3.711vw + 1rem - 1rem, 2.5rem);
+                font-weight: 600;
+                letter-spacing: -.04em;
+                line-height: 100%;
+            }
+        }
+
+        .single_accordion_content {
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.5s ease-in-out, opacity 0.5s ease;
+            opacity: 0;
+            margin-left: 4rem;
+
+            p {
+                width: 100%;
+                font-size: clamp(1rem, 1.758vw + 1rem - 1rem, 1.25rem);
+                font-weight: 500;
+                line-height: 140%;
+                margin: 0;
+                letter-spacing: -.03em;
+            }
+        }
+
+        .single_accordion_content_show {
+            height: auto;
+            max-height: 100rem;
+            margin-top: 1.75rem;
+            transition: all 3s cubic-bezier(0,1,0,1);
+            margin-left: 4rem;
+
+            p {
+                width: 100%;
+                font-size: clamp(1rem, 1.758vw + 1rem - 1rem, 1.25rem);
+                font-weight: 500;
+                line-height: 140%;
+                margin: 0;
+                letter-spacing: -.03em;
+            }
+        }
     }
 }
 
+/* ----------------------------------------------------- laptop -------------------------------------------- */
+@media (max-width: 1025px) {}
+
 /* ----------------------------------------------------- Tablet -------------------------------------------- */
-@media (max-width: 1112px) {
+@media (max-width: 769px) {
 
-    // .accordion_container {
-    //     width: fit-content;   
+    .accordion_container {
+
+        .single_accordion, .single_accordion_bottom {
+            width: 100% !important;
+            padding: 2rem 0 !important;
         
-    //     .single_accordion_content {
+            .single_accordion_title {
+                column-gap: 1rem !important;
 
-    //         p {
-    //             width: 40rem;
-    //         }
-    //     }
-    // }
+                span {
+                    font-size: 2.5rem !important;
+                }
+
+                h2 {
+                    font-size: 2rem !important;
+                }
+            }
+
+            .single_accordion_content, .single_accordion_content_show {
+                margin-left: 3.48rem !important;
+
+                p {
+                    font-size: 1.063rem !important;
+                }
+            }
+
+            .single_accordion_content_show {
+                margin-top: 0.65rem !important;
+            }
+        }
+    }
 }
 
 /* ----------------------------------------------------- Mobile -------------------------------------------- */
-@media (max-width: 767px) {}
+@media (max-width: 426px) {
+
+    .accordion_container {
+        
+        .single_accordion, .single_accordion_bottom {
+            padding: 1.5rem 0 !important;
+            
+            .single_accordion_title {
+                column-gap: .75rem !important;
+                
+                span {
+                    height: fit-content;
+                    width: 1.2rem !important;
+                    font-size: 2.25rem !important;
+                }
+                
+                h2 {
+                    width: 100% !important;
+                    font-size: 1.75rem !important;
+                }
+            }
+
+            .single_accordion_content, .single_accordion_content_show {
+                margin-left: 1.82rem !important;
+
+                p {
+                    font-size: 1.031rem !important;
+                }
+            }
+
+            .single_accordion_content_show {
+                margin-top: 0.2rem !important;
+            }
+        }
+    }
+}
+
+@media (max-width: 376px) {
+
+    .accordion_container {
+        
+        .single_accordion, .single_accordion_bottom {
+            padding: 1.4rem 0 !important;
+            
+            .single_accordion_title {
+                column-gap: .65rem !important;
+                
+                span {
+                    height: fit-content;
+                    width: 1.2rem !important;
+                    font-size: 2.125rem !important;
+                }
+                
+                h2 {
+                    width: 100% !important;
+                    font-size: 1.625rem !important;
+                }
+            }
+
+            .single_accordion_content, .single_accordion_content_show {
+                margin-left: 1.86rem !important;
+
+                p {
+                    font-size: 1rem !important;
+                }
+            }
+
+            .single_accordion_content_show {
+                margin-top: 0rem !important;
+            }
+        }
+    }
+}
+
+@media (max-width: 321px) {
+
+    .accordion_container {
+        
+        .single_accordion, .single_accordion_bottom {
+            padding: 1.3rem 0 !important;
+            
+            .single_accordion_title {
+                column-gap: .5rem !important;
+                
+                span {
+                    height: fit-content;
+                    width: 1rem !important;
+                    font-size: 1.875rem !important;
+                }
+                
+                h2 {
+                    width: 100% !important;
+                    font-size: 1.5rem !important;
+                }
+            }
+
+            .single_accordion_content, .single_accordion_content_show {
+                margin-left: 1.45rem !important;
+
+                p {
+                    font-size: .875rem !important;
+                }
+            }
+
+            .single_accordion_content_show {
+                margin-top: 0rem !important;
+            }
+        }
+    }
+}

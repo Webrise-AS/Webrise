@@ -758,21 +758,18 @@
 
             h3 {
                 width: fit-content;
-                font-size: clamp(2.5rem, 6vw + 1rem - 1rem, 4.5rem);
+                font-size: clamp(2.5rem, 6.836vw + 1rem - 1rem, 4.5rem);
                 font-weight: 700;
                 letter-spacing: -.04em;
                 line-height: 88%;
                 margin: 0;
             }
         }
-
     }
-
-
 }
 
 /* ----------------------------------------------------- Laptop -------------------------------------------- */
-@media (max-width: 1024px) {
+@media (max-width: 1025px) {
 
     .home_container {
 
@@ -803,7 +800,62 @@
 }
 
 /* ----------------------------------------------------- Tablet -------------------------------------------- */
-@media (max-width: 1023px) {}
+@media (max-width: 769px) {
+
+    .info_container {
+        flex-direction: column;
+        row-gap: 2rem;
+
+        .info_title {
+
+            h3 {
+                font-size: 4rem !important;
+            }
+        }
+    }
+}
 
 /* ----------------------------------------------------- Mobile -------------------------------------------- */
-@media (max-width: 767px) {}
+@media (max-width: 426px) {
+    
+    .info_container {
+        padding: 8rem 0rem !important;
+        row-gap: 1.5rem !important;
+
+        .info_title {
+
+            h3 {
+                font-size: 3.125rem !important;
+            }
+        }
+    }
+}
+
+@media (max-width: 376px) {
+    
+    .info_container {
+        row-gap: 1.25rem !important;
+
+        .info_title {
+
+            h3 {
+                font-size: 2.813rem !important;
+            }
+        }
+    }
+}
+
+@media (max-width: 321px) {
+    
+    .info_container {
+        padding: 7rem 0rem !important;
+        row-gap: 1rem !important;
+
+        .info_title {
+
+            h3 {
+                font-size: 2.5rem !important;
+            }
+        }
+    }
+}

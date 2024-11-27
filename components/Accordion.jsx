@@ -14,45 +14,43 @@ function Accordion() {
 
   return (
     <div className={styles.accordion_container}>
-      <div className={styles.accordion_content}>
-        {data.map((info, i) => (
+      {data.map((info, i) => (
+        <div
+          className={
+            info.id != 4
+              ? styles.single_accordion
+              : styles.single_accordion_bottom
+          }
+          key={info.id}
+          onClick={() => toggle(i)}
+        >
+          <div className={styles.single_accordion_title}>
+            <motion.span
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ ease: "easeIn", transition: 0.6 }}
+            >
+              {selected === i ? "-" : "+"}
+            </motion.span>
+            <motion.h2
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ ease: "easeIn", transition: 0.6 }}
+            >
+              {info.question}
+            </motion.h2>
+          </div>
           <div
             className={
-              info.id != 4
-                ? styles.single_accordion
-                : styles.single_accordion_bottom
+              selected === i
+                ? styles.single_accordion_content_show
+                : styles.single_accordion_content
             }
-            key={info.id}
-            onClick={() => toggle(i)}
           >
-            <div className={styles.single_accordion_tittle}>
-              <motion.span
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                transition={{ ease: "easeIn", transition: 0.6 }}
-              >
-                {selected === i ? "-" : "+"}
-              </motion.span>
-              <motion.h2
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                transition={{ ease: "easeIn", transition: 0.6 }}
-              >
-                {info.question}
-              </motion.h2>
-            </div>
-            <div
-              className={
-                selected === i
-                  ? styles.single_accordion_content_show
-                  : styles.single_accordion_content
-              }
-            >
-              <p>{info.answer}</p>
-            </div>
+            <p>{info.answer}</p>
           </div>
-        ))}
-      </div>
+        </div>
+      ))}
     </div>
   );
 }
