@@ -482,7 +482,7 @@
         h2 {
             width: fit-content;
             margin: 0;
-            font-size: clamp(2.5rem, 6vw + 1rem - 1rem, 4.5rem);
+            font-size: clamp(2.5rem, 7.032vw + 1rem - 1rem, 4.5rem);
             font-weight: 700;
             letter-spacing: -.04em;
             line-height: 88%;
@@ -503,7 +503,7 @@
                 column-gap: clamp(0.5rem, 10.1vw + 1rem - 1rem, 9.1rem);
 
                 h3 {
-                    font-size: clamp(0.875rem, 1.5vw + 1rem - 1rem, 1.25rem);
+                    font-size: clamp(0.875rem, 1.954vw + 1rem - 1rem, 1.25rem);
                     font-weight: 500;
                     margin: 0;
                     line-height: 140%;
@@ -512,7 +512,7 @@
 
                 span {
                     width: clamp(100%, 50vw + 1rem - 1rem, 71.5rem);
-                    font-size: clamp(1.5rem, 4vw + 1rem - 1rem, 3rem);
+                    font-size: clamp(1.5rem, 4.688vw + 1rem - 1rem, 3rem);
                     font-weight: 600;
                     letter-spacing: -.04em;
                     line-height: 100%;
@@ -558,7 +558,7 @@
                 column-gap: clamp(0.5rem, 9.7vw + 1rem - 1rem, 9.1rem);
 
                 h3 {
-                    font-size: clamp(0.875rem, 1.5vw + 1rem - 1rem, 1.25rem);
+                    font-size: clamp(0.875rem, 1.954vw + 1rem - 1rem, 1.25rem);
                     font-weight: 500;
                     margin: 0;
                     line-height: 140%;
@@ -567,7 +567,7 @@
 
                 span {
                     width: clamp(100%, 50vw + 1rem - 1rem, 71.5rem);
-                    font-size: clamp(1.5rem, 4vw + 1rem - 1rem, 3rem);
+                    font-size: clamp(1.5rem, 4.688vw + 1rem - 1rem, 3rem);
                     font-weight: 600;
                     letter-spacing: -.04em;
                     line-height: 100%;
@@ -817,6 +817,28 @@
 /* ----------------------------------------------------- Tablet -------------------------------------------- */
 @media (max-width: 769px) {
 
+    .article_container {
+        row-gap: 3rem !important;
+
+        h2 {
+            font-size: 3.875rem !important;
+        }
+
+        .article_content {
+
+            .article_content_top, .article_content_bottom {
+
+                h3 {
+                    font-size: 1.25rem !important;
+                }
+
+                span {
+                    font-size: 2.5rem !important;
+                }
+            }
+        }
+    }
+
     .feedback_container {
         padding: 5rem 0 !important;
 
@@ -862,6 +884,28 @@
 /* ----------------------------------------------------- Mobile -------------------------------------------- */
 @media (max-width: 426px) {
 
+    .article_container {
+        row-gap: 2.5rem !important;
+
+        h2 {
+            font-size: 3.125rem !important;
+        }
+
+        .article_content {
+
+            .article_content_top, .article_content_bottom {
+
+                h3 {
+                    font-size: 1rem !important;
+                }
+
+                span {
+                    font-size: 2rem !important;
+                }
+            }
+        }
+    }
+
     .feedback_container {
         padding: 4rem 0 !important;
 
@@ -904,6 +948,28 @@
 }
 
 @media (max-width: 376px) {
+
+    .article_container {
+        row-gap: 2rem !important;
+
+        h2 {
+            font-size: 2.5rem !important;
+        }
+
+        .article_content {
+
+            .article_content_top, .article_content_bottom {
+
+                h3 {
+                    font-size: 1rem !important;
+                }
+
+                span {
+                    font-size: 2rem !important;
+                }
+            }
+        }
+    }
 
     .feedback_container {
         padding: 3.5rem 0 !important;
