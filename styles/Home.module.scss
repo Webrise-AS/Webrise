@@ -690,7 +690,7 @@
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
-        padding-top: clamp(16rem, 45vw + 1rem - 1rem, 36.25rem);
+        padding-top: 32rem;
         position: relative;
 
         .hire_overlay {
@@ -716,23 +716,22 @@
             p {
                 width: clamp(18.3rem, 76vw + 1rem - 1rem, 60rem);
                 margin: 0;
-                font-size: clamp(1.2rem, 3.8vw + 1rem - 1rem, 3rem);
+                font-size: clamp(1.563rem, 4.688vw + 1rem - 1rem, 3rem);
                 font-weight: 600;
                 line-height: 100%;
                 letter-spacing: -.04em;
             }
 
             button {
-                width: 7rem;
-                height: 2.5rem;
+                width: 9.5%;
+                height: 3rem;
                 background: transparent;
                 color: $white-color;
                 border: solid 0.08rem $white-color;
                 border-radius: 0.4rem;
-                font-size: 1rem;
+                font-size: 1.05rem;
                 font-weight: 500;
                 line-height: 140%;
-                letter-spacing: -.02em;
                 transition: transform 1000ms;
             }
             
@@ -796,6 +795,21 @@
                 width: 35%;
             }
         }
+
+        .hire_container {
+            padding-top: 25.5rem ;
+    
+            .hire_content {
+    
+                p {
+                    width: 100% ;
+                }
+    
+                button {
+                    width: 13.25%;
+                }
+            }
+        }
     }
 }
 
@@ -810,6 +824,23 @@
 
             h3 {
                 font-size: 4rem !important;
+            }
+        }
+    }
+
+    .hire_container {
+        padding-top: 18.5rem !important;
+
+        .hire_content {
+
+            p {
+                font-size: 2.25rem !important;
+            }
+
+            button {
+                height: 2.75rem !important;
+                width: 15.75% !important;
+                font-size: 1rem !important;
             }
         }
     }
@@ -829,6 +860,22 @@
             }
         }
     }
+
+    .hire_container {
+        padding-top: 16rem !important;
+
+        .hire_content {
+
+            p {
+                font-size: 1.625rem !important;
+            }
+
+            button {
+                height: 2.45rem !important;
+                width: 27.75% !important;
+            }
+        }
+    }
 }
 
 @media (max-width: 376px) {
@@ -840,6 +887,22 @@
 
             h3 {
                 font-size: 2.813rem !important;
+            }
+        }   
+    }
+
+    .hire_container {
+        padding-top: 14.75rem !important;
+
+        .hire_content {
+
+            p {
+                font-size: 1.563rem !important;
+            }
+
+            button {
+                height: 2.35rem !important;
+                width: 31% !important;
             }
         }
     }
@@ -855,6 +918,22 @@
 
             h3 {
                 font-size: 2.5rem !important;
+            }
+        }
+    }
+
+    .hire_container {
+        padding-top: 13.75rem !important;
+
+        .hire_content {
+
+            p {
+                font-size: 1.5rem !important;
+            }
+
+            button {
+                height: 2.15rem !important;
+                width: 35.5% !important;
             }
         }
     }
