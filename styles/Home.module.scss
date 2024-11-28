@@ -605,6 +605,7 @@
 
     .feedback_container {
         height: 100%;
+        width: 100%;
         background-color: $primary-color;
         color: $black-color;
         padding: 10rem 0;
@@ -622,20 +623,17 @@
                         overflow: visible;
                     }
                 }
-            
 
             h2 {
-                padding-left: 2%;
-                margin: 0;
-                font-size: clamp(3.5rem, 8.2vw + 1rem - 1rem, 7.5rem);
+                width: 95%;
+                margin: 0 auto;
+                font-size: clamp(3.5rem, 11.524vw + 1rem - 1rem, 7.5rem);
                 font-weight: 700;
                 letter-spacing: -.08em;
                 line-height: 86%;
             }
 
             .embla {
-                width: clamp(97%, 50vw + 1rem - 1rem, 100%);
-                margin: auto;
                 overflow: hidden;
             }
             
@@ -661,7 +659,7 @@
                     h3 {
                         width: 100%;
                         margin: 0;
-                        font-size: clamp(0.875rem, 1.8vw + 1rem - 1rem, 1.25rem);
+                        font-size: clamp(0.875rem, 1.954vw + 1rem - 1rem, 1.25rem);
                         font-weight: 500;
                         letter-spacing: -.03em;
                         line-height: 140%;
@@ -670,7 +668,7 @@
                     p {
                         width: 100%;
                         margin: 0 ;
-                        font-size: clamp(1.2rem, 3.5vw + 1rem - 1rem, 2.5rem);
+                        font-size: clamp(1.2rem, 3.91vw + 1rem - 1rem, 2.5rem);
                         font-weight: 600;
                         line-height: 100%;
                         letter-spacing: -.04em;
@@ -679,7 +677,6 @@
             }
             
         }
-
     }
 
     .hire_container {
@@ -796,6 +793,10 @@
             }
         }
 
+        .feedback_container {
+            padding: 8rem 0;
+        }
+
         .hire_container {
             padding-top: 25.5rem ;
     
@@ -816,14 +817,14 @@
 /* ----------------------------------------------------- Tablet -------------------------------------------- */
 @media (max-width: 769px) {
 
-    .info_container {
-        flex-direction: column;
-        row-gap: 2rem;
+    .feedback_container {
+        padding: 5rem 0 !important;
 
-        .info_title {
+        .feedback_content {
+            row-gap: 3rem !important;
 
-            h3 {
-                font-size: 4rem !important;
+            h2 {
+                font-size: 4.5rem !important;
             }
         }
     }
@@ -844,23 +845,35 @@
             }
         }
     }
-}
 
-/* ----------------------------------------------------- Mobile -------------------------------------------- */
-@media (max-width: 426px) {
-    
     .info_container {
-        padding: 8rem 0rem !important;
-        row-gap: 1.5rem !important;
+        flex-direction: column;
+        row-gap: 2rem;
 
         .info_title {
 
             h3 {
-                font-size: 3.125rem !important;
+                font-size: 4rem !important;
             }
         }
     }
+}
 
+/* ----------------------------------------------------- Mobile -------------------------------------------- */
+@media (max-width: 426px) {
+
+    .feedback_container {
+        padding: 4rem 0 !important;
+
+        .feedback_content {
+            row-gap: 2.5rem !important;
+
+            h2 {
+                font-size: 3.438rem !important;
+            }
+        }
+    }
+    
     .hire_container {
         padding-top: 16rem !important;
 
@@ -876,21 +889,34 @@
             }
         }
     }
-}
 
-@media (max-width: 376px) {
-    
     .info_container {
-        row-gap: 1.25rem !important;
+        padding: 8rem 0rem !important;
+        row-gap: 1.5rem !important;
 
         .info_title {
 
             h3 {
-                font-size: 2.813rem !important;
+                font-size: 3.125rem !important;
             }
-        }   
+        }
     }
+}
 
+@media (max-width: 376px) {
+
+    .feedback_container {
+        padding: 3.5rem 0 !important;
+
+        .feedback_content {
+            row-gap: 2.25rem !important;
+
+            h2 {
+                font-size: 3.125rem !important;
+            }
+        }
+    }
+    
     .hire_container {
         padding-top: 14.75rem !important;
 
@@ -906,22 +932,38 @@
             }
         }
     }
-}
 
-@media (max-width: 321px) {
-    
     .info_container {
-        padding: 7rem 0rem !important;
-        row-gap: 1rem !important;
+        row-gap: 1.25rem !important;
 
         .info_title {
 
             h3 {
-                font-size: 2.5rem !important;
+                font-size: 2.813rem !important;
+            }
+        }   
+    }
+}
+
+@media (max-width: 321px) {
+
+    .feedback_container {
+        padding: 3.25rem 0 !important;
+
+        .feedback_content {
+            row-gap: 1.5rem !important;
+
+            h2 {
+                font-size: 2.813rem !important;
+            }
+
+            .embla__container {
+                width: 93%;
+                margin: auto;
             }
         }
     }
-
+    
     .hire_container {
         padding-top: 13.75rem !important;
 
@@ -934,6 +976,18 @@
             button {
                 height: 2.15rem !important;
                 width: 35.5% !important;
+            }
+        }
+    }
+
+    .info_container {
+        padding: 7rem 0rem !important;
+        row-gap: 1rem !important;
+
+        .info_title {
+
+            h3 {
+                font-size: 2.5rem !important;
             }
         }
     }
