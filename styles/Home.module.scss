@@ -212,12 +212,17 @@
         .about_content_left {
             width: 30%;
 
-            img {
-                height: 100%;
-                width: 100%;
-                overflow: hidden;
-                border-radius: 1vw;
+            .image_container {
+                height: 30rem;
+
+                img {
+                    height: 100%;
+                    width: 100%;
+                    overflow: hidden;
+                    border-radius: 1vw;
+                }
             }
+
         }
 
         .about_content_right {
@@ -801,8 +806,16 @@
 
         .about_container {
 
+            .about_content_right {
+                width: 59% ;
+            }
+
             .about_content_left {
                 width: 35%;
+
+                .image_container {
+                    height: 32.55rem !important;
+                }
             }
         }
 

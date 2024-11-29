@@ -235,6 +235,7 @@ export default function Home() {
             <motion.div
               ref={ref}
               style={{ scale: scrollYProgress, opacity: scrollYProgress }}
+              className={styles.image_container}
             >
               <Image
                 src="https://placehold.jp/400x450.png"
