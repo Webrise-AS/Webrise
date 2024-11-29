@@ -371,12 +371,14 @@ export default function Home() {
                 Berlin&apos;s Digital Scene
               </motion.span>
 
-              <Image
-                src="https://placehold.jp/204x306.png"
-                width={204}
-                height={306}
-                alt=""
-              />
+              <div className={styles.image_container}>
+                <Image
+                  src="https://placehold.jp/204x306.png"
+                  width={204}
+                  height={306}
+                  alt=""
+                />
+              </div>
             </div>
             <div className={styles.article_content_bottom}>
               <motion.h3
@@ -394,12 +396,14 @@ export default function Home() {
                 Inside Strobe™: A Day in the Life of Berlin&apos;s Most
                 Innovative Creative Team
               </motion.span>
-              <Image
-                src="https://placehold.jp/204x306.png"
-                width={204}
-                height={306}
-                alt=""
-              />
+              <div className={styles.image_container}>
+                <Image
+                  src="https://placehold.jp/204x306.png"
+                  width={204}
+                  height={306}
+                  alt=""
+                />
+              </div>
             </div>
             <div className={styles.article_content_bottom}>
               <motion.h3
@@ -417,12 +421,14 @@ export default function Home() {
                 Sustainable Design: Strobe™&apos;s Approach to Eco-Friendly
                 Digital Solutions
               </motion.span>
-              <Image
-                src="https://placehold.jp/204x306.png"
-                width={204}
-                height={306}
-                alt=""
-              />
+              <div className={styles.image_container}>
+                <Image
+                  src="https://placehold.jp/204x306.png"
+                  width={204}
+                  height={306}
+                  alt=""
+                />
+              </div>
             </div>
             <div className={styles.article_content_bottom}>
               <motion.h3
@@ -440,12 +446,14 @@ export default function Home() {
                 Unveiling the Future of Web Design: Trends to Watch in
                 Berlin&apos;s Digital Scene
               </motion.span>
-              <Image
-                src="https://placehold.jp/204x306.png"
-                width={204}
-                height={306}
-                alt=""
-              />
+              <div className={styles.image_container}>
+                <Image
+                  src="https://placehold.jp/204x306.png"
+                  width={204}
+                  height={306}
+                  alt=""
+                />
+              </div>
             </div>
           </div>
         </section>
