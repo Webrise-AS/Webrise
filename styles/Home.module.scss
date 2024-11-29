@@ -362,7 +362,7 @@
     .social_container {
         height: fit-content;
         width: 95%;
-        padding: 5rem 0 0 0 ;
+        padding: 10rem 0 0 0 ;
         margin: auto;
         display: flex;
         flex-direction: column;
@@ -830,7 +830,28 @@
 /* ----------------------------------------------------- Tablet -------------------------------------------- */
 @media (max-width: 769px) {
 
+    .about_container {
+        padding: 5rem 0 !important;
+
+        .about_content_left {
+            display: none !important;
+        }
+
+        .about_content_right {
+            width: 85% !important;
+
+            p {
+                font-size: 2.35rem !important;
+            }
+        }
+    }
+
+    .project_container {
+        padding: 5rem 0 !important;
+    }
+
     .social_container {
+        padding: 5rem 0 0 0 !important;
 
         h2 {
             font-size: 4.5rem !important;
@@ -922,6 +943,17 @@
 
 /* ----------------------------------------------------- Mobile -------------------------------------------- */
 @media (max-width: 426px) {
+
+    .about_container {
+
+        .about_content_right {
+            width: 100% !important;
+
+            p {
+                font-size: 1.75rem !important;
+            }
+        }
+    }
 
     .social_container {
 
