@@ -27,6 +27,7 @@
         justify-content: space-between;
         
         .hero_content {
+            position: relative;
             overflow: hidden;
             height: 100%;
             width: 100%;
@@ -83,7 +84,6 @@
                     overflow: hidden;
 
                     p {
-                        
                         width: 80%;
                         font-size: clamp(0.9rem, 1.6vw + 1rem - 1rem, 1.1rem);
                         letter-spacing: -.0em;
@@ -789,18 +789,35 @@
 
         .hero_container {
 
-            .hero_action_buttons {
-                flex-direction: flex;
-                row-gap: 0.5rem;
+            .hero_content {
 
-                button {
-                    height: 3.5rem !important;
-                    width: 9.5rem !important;
+                .hero_textfield {
+
+                    .subHero_group {
+
+                        p {
+                            width: 100%;
+                        }
+                    }
+
+                    .hero_action_buttons {
+                        flex-direction: flex;
+                        row-gap: 0.5rem;
+        
+                        button {
+                            height: 3.5rem !important;
+                            width: 9.5rem !important;
+                        }
+                    }
                 }
-            }
 
-            .hero_image_section {
-                height: 35rem !important;
+                .hero_image_section {
+                    position: absolute ;
+                    height: 30.35rem ;
+                    width: 21.5rem ;
+                    top: 0;
+                    right: 0;
+                }
             }
         }
 
@@ -843,6 +860,39 @@
 /* ----------------------------------------------------- Tablet -------------------------------------------- */
 @media (max-width: 769px) {
 
+    .hero_container {
+
+        .hero_content {
+            
+
+            .hero_textfield {
+                width: 100% !important;
+                
+                .subHero_group {
+                
+                    width: 62% !important;
+
+                    div {
+
+                        .hero_action_buttons {
+                            flex-direction: column;
+
+                            .hero_mainBtn, .hero_subBtn {
+                                height: 3.15rem !important;
+                                width: 9rem !important;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .hero_image_section {
+                height: 25.05rem !important;
+                width: 15.5rem !important;
+            }
+        }
+    }
+
     .about_container {
         padding: 5rem 0 !important;
 
@@ -851,10 +901,10 @@
         }
 
         .about_content_right {
-            width: 85% !important;
+            width: 100% !important;
 
             p {
-                font-size: 2.35rem !important;
+                font-size: 2.5rem !important;
             }
         }
     }
@@ -865,9 +915,10 @@
 
     .social_container {
         padding: 5rem 0 0 0 !important;
-
+        
         h2 {
             font-size: 4.5rem !important;
+            width: 40rem !important;
         }
     }
 
@@ -963,7 +1014,7 @@
             width: 100% !important;
 
             p {
-                font-size: 1.75rem !important;
+                font-size: 2rem !important;
             }
         }
     }
@@ -972,6 +1023,7 @@
 
         h2 {
             font-size: 3.125rem !important;
+            width: 23rem !important;
         }
 
         .icons_container {
@@ -1084,6 +1136,7 @@
 
         h2 {
             font-size: 2.813rem !important;
+            width: 21rem !important;
         }
 
         .icons_container {
@@ -1163,6 +1216,7 @@
 
         h2 {
             font-size: 2.45rem !important;
+            width: 18.5rem !important;
         }
 
         .icons_container {
