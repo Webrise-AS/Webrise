@@ -70,21 +70,21 @@
                 .hero_styler {
                     background-color: $black-color;
                     color: $white-color;
-                    border-radius:  0.5vw ;
+                    border-radius:  0.75vw ;
                     width: fit-content;
                     padding: 0.5rem 1.9rem 0.5rem 0.5rem;
                     margin-left: 0.4rem;
                 }
 
                 .subHero_group {
-                    width: 95%;
-                    margin-top: 0.625rem;
+                    width: 87%;
+                    margin-top: 1rem;
                     display: flex;
                     flex-direction: column;
                     overflow: hidden;
 
                     p {
-                        width: 80%;
+                        width: 100%;
                         font-size: clamp(0.9rem, 1.6vw + 1rem - 1rem, 1.1rem);
                         letter-spacing: -.0em;
                         font-weight: 500;
@@ -105,13 +105,13 @@
                             display: flex;
                             flex-direction: column;
                             margin: 0;
-                            padding: 0 0 0 0rem;
+                            padding: 0rem;
                             
                             li {
                                 display: flex;
                                 align-items: center;
                                 font-size: clamp(0.875rem, 1vw + 1rem - 1rem, 0.97rem);
-                                letter-spacing: -.0em;
+                                letter-spacing: 0em;
                                 margin: 0;
                                 font-weight: 500;
                                 line-height: 100%;
@@ -126,6 +126,7 @@
 
                         .hero_action_buttons {
                             display: flex;
+                            flex-direction: row-reverse;
                             column-gap: 1rem;
                             border: none;
                             align-items: end;
@@ -163,7 +164,6 @@
                             }
                         }
                     }
-
                 }
             }
 
@@ -792,29 +792,26 @@
             .hero_content {
 
                 .hero_textfield {
-
+                    
                     .subHero_group {
-
-                        p {
-                            width: 100%;
-                        }
+                        width: 95.3%;
                     }
 
                     .hero_action_buttons {
-                        flex-direction: flex;
+                        flex-direction: row-reverse;
                         row-gap: 0.5rem;
         
                         button {
-                            height: 3.5rem !important;
-                            width: 9.5rem !important;
+                            height: 4.15rem !important;
+                            width: 10.25rem !important;
                         }
                     }
                 }
 
                 .hero_image_section {
                     position: absolute ;
-                    height: 30.35rem ;
-                    width: 21.5rem ;
+                    height: 29.7rem ;
+                    width: 21rem ;
                     top: 0;
                     right: 0;
                 }
@@ -863,23 +860,26 @@
     .hero_container {
 
         .hero_content {
-            
 
             .hero_textfield {
                 width: 100% !important;
                 
                 .subHero_group {
-                
-                    width: 62% !important;
+                    width: 63% !important;
 
                     div {
+                        align-items: end;
 
                         .hero_action_buttons {
-                            flex-direction: column;
+                            flex-direction: column !important;
 
                             .hero_mainBtn, .hero_subBtn {
                                 height: 3.15rem !important;
-                                width: 9rem !important;
+                                width: 9.75rem !important;
+                            }
+
+                            .hero_mainBtn:hover, .hero_subBtn:hover {
+                                transform: unset !important;
                             }
                         }
                     }
@@ -887,8 +887,8 @@
             }
 
             .hero_image_section {
-                height: 25.05rem !important;
-                width: 15.5rem !important;
+                height: 26.4rem !important;
+                width: 15rem !important;
             }
         }
     }
@@ -1007,6 +1007,67 @@
 
 /* ----------------------------------------------------- Mobile -------------------------------------------- */
 @media (max-width: 426px) {
+
+    .hero_container {
+        
+        .hero_content {
+
+            .hero_textfield {
+                
+                h1, h2 {
+                    font-style: normal ;
+                    font-size: 4.15rem !important;
+                }
+
+                h3 {
+                    margin-left: 0rem !important;
+                }
+
+                .hero_styler {
+                    margin-left: 0 !important;
+                    padding: 0.5rem 1.8rem 0.5rem 0.5rem !important;
+                }
+
+                .subHero_group {
+                    width: 100% !important;
+                    
+                    p {
+                        width: fit-content !important;
+                        margin: 0 0 0.625rem 0rem !important;
+                    }
+
+                    div {
+                        flex-direction: column;
+                        row-gap: 1rem;
+                        align-items: start;
+
+                        ul {
+                            flex-direction: row !important;
+                            flex-wrap: wrap;
+                            column-gap: 0.5rem;
+
+                            li:nth-child(2) {
+                                margin-left: 0.2rem !important;
+                            }
+                        }
+
+                        .hero_action_buttons {
+                            flex-direction: row-reverse !important;
+                            
+                            .hero_mainBtn, .hero_subBtn {
+                                height: 3.3rem !important;
+                                width: 11.55rem !important;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .hero_image_section {
+                display: none !important;
+            }
+        }
+    }
 
     .about_container {
 
@@ -1132,6 +1193,45 @@
 
 @media (max-width: 376px) {
 
+    .hero_container {
+
+        .hero_content {
+            .hero_textfield {
+                
+                h1, h2 {
+                    font-size: 3.64rem !important;
+                }
+
+                .hero_styler {
+                    padding: 0.5rem 1.45rem 0.5rem 0.5rem !important;
+                }
+
+                .subHero_group {
+
+                    div {
+                        
+                        ul {
+                            flex-direction: row !important;
+                            flex-wrap: wrap;
+                            column-gap: 0.5rem;
+
+                            li:nth-child(2) {
+                                margin-left: 0rem !important;
+                            }
+                        }
+
+                        .hero_action_buttons {
+                            
+                            .hero_mainBtn, .hero_subBtn {
+                                width: 10.09rem !important;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
     .social_container {
 
         h2 {
@@ -1211,6 +1311,35 @@
 }
 
 @media (max-width: 321px) {
+
+    .hero_container {
+
+        .hero_content {
+            .hero_textfield {
+                
+                h1, h2 {
+                    font-size: 3.071rem !important;
+                }
+
+                .hero_styler {
+                    padding: 0.5rem 1.2rem 0.5rem 0.5rem !important;
+                }
+
+                .subHero_group {
+
+                    div {
+
+                        .hero_action_buttons {
+                            
+                            .hero_mainBtn, .hero_subBtn {
+                                width: 8.45rem !important;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 
     .social_container {
 

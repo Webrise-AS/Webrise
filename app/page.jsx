@@ -135,7 +135,7 @@ export default function Home() {
                     </li>
                     <li>
                       <BsCheck />
-                      and recruit more talent
+                      recruit more talent
                     </li>
                   </ul>
                   <div className={styles.hero_action_buttons}>
