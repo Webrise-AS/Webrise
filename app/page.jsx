@@ -52,7 +52,7 @@ export default function Home() {
       <LenisScroll />
 
       <section className={styles.home_container}>
-        <div className={styles.hero_container}>
+        <section className={styles.hero_container}>
           <div className={styles.hero_content}>
             <div className={styles.hero_textfield}>
               <div style={{ overflow: "hidden" }}>
@@ -229,7 +229,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-        </div>
+        </section>
         <section className={styles.about_container}>
           <div className={styles.about_content_left}>
             <motion.div

@@ -38,7 +38,7 @@ export default function Gallery() {
     <>
       <Parallax speed={-4.3}>
         <div className={styles.project_hero_textfield}>
-          <div>
+          <div style={{ overflow: "hidden" }}>
             <motion.h2
               animate={{ y: "30vh", skewY: 10 }}
               whileInView={{ y: 0, skewY: 0 }}
@@ -47,7 +47,7 @@ export default function Gallery() {
               Recent
             </motion.h2>
           </div>
-          <div>
+          <div style={{ overflow: "hidden" }}>
             <motion.h2
               animate={{ y: "30vh", skewY: 10 }}
               whileInView={{ y: 0, skewY: 0 }}
