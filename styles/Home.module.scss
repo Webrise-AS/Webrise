@@ -141,7 +141,7 @@
                                 background-color: transparent;
                                 border: solid 0.1rem $black-color;
                                 color: $black-color;
-                                border-radius: 0.4rem;
+                                border-radius: 0.5vw;
                                 font-weight: 600;
                                 transition: transform 1000ms;
                                 height: 4.25rem;
@@ -224,7 +224,7 @@
             width: 61.85%;
 
             p {
-                font-size: clamp(1rem, 4vw + 1rem - 1rem, 3rem);
+                font-size: clamp(1rem, 4.01vw + 1rem - 1rem, 3rem);
                 font-weight: 600;
                 line-height: 1;
                 letter-spacing: -.04em;
@@ -333,17 +333,17 @@
                 @include buttons;
                 background-color: $white-color;
                 color: $black-color;
+                height: 3.7rem;
+                width: 12.15rem;
                 border: none;
-                height: fit-content;
-                width: fit-content;
-                text-align: center;
-                padding: 1.1rem 1.5rem;
-                font-size: clamp(0.875rem, 1.4vw + 1rem - 1rem, 1.2rem);
+                display: inline-flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 1rem;
 
                 svg {
-                    margin-left: 0.3rem;
-                    font-size: clamp(0.875rem, 1.4vw + 1rem - 1rem, 1.25rem);
-                    font-weight: 600;
+                    margin: 0 0 0.25rem 0.4rem;
+                    font-size: clamp(0.875rem, 1.4vw + 1rem - 1rem, 1.15rem);
                 }
             }
     
@@ -619,23 +619,16 @@
         padding: 10rem 0;
         
         .feedback_content {
-            width: 100%;
             margin: auto;
             display: flex;
             flex-direction: column;
+            width: 100%;
             row-gap: 5rem;
-
-                div {
-                    
-                    div {
-                        overflow: visible;
-                    }
-                }
 
             h2 {
                 width: 95%;
                 margin: 0 auto;
-                font-size: clamp(3.5rem, 11.524vw + 1rem - 1rem, 7.5rem);
+                font-size: clamp(3.5rem, 11.719vw + 1rem - 1rem, 7.5rem);
                 font-weight: 700;
                 letter-spacing: -.08em;
                 line-height: 86%;
@@ -733,10 +726,9 @@
                 background: transparent;
                 color: $white-color;
                 border: solid 0.08rem $white-color;
-                border-radius: 0.4rem;
-                font-size: 1.05rem;
+                border-radius: 0.5vw;
+                font-size: 1rem;
                 font-weight: 500;
-                line-height: 140%;
                 transition: transform 1000ms;
             }
             
@@ -762,7 +754,7 @@
 
             h3 {
                 width: fit-content;
-                font-size: clamp(2.5rem, 6.836vw + 1rem - 1rem, 4.5rem);
+                font-size: clamp(2.5rem, 7.032vw + 1rem - 1rem, 4.5rem);
                 font-weight: 700;
                 letter-spacing: -.04em;
                 line-height: 88%;
@@ -778,9 +770,7 @@
     .home_container {
 
         .hero_container {
-
             .hero_content {
-
                 .hero_textfield {
                     width: 64.4%;
                     
@@ -789,8 +779,8 @@
                     }
 
                     .hero_action_buttons {
-
                         .hero_mainBtn, .hero_subBtn {
+                            height: 4rem !important;
                             width: 10.9rem !important;
                         }
                     }
@@ -807,16 +797,15 @@
         }
 
         .about_container {
-
             .about_content_right {
-                width: 59% ;
+                width: 64% ;
             }
 
             .about_content_left {
-                width: 35%;
+                width: 32%;
 
                 .image_container {
-                    height: 32.55rem !important;
+                    height: 30rem !important;
                 }
             }
         }
@@ -884,7 +873,7 @@
                             flex-direction: row-reverse !important;
 
                             .hero_mainBtn, .hero_subBtn {
-                                height: 3.75rem !important;
+                                height: 3.5rem !important;
                                 width: 11.5rem !important;
                             }
 

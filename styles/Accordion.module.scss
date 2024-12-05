@@ -5,7 +5,7 @@
         width: clamp(15rem, 54.5vw + 1rem - 1rem, 50rem);
         padding: clamp(0.5rem, 5vw + 1rem - 1rem, 2.5rem) 0;
         border-top: solid 1px $black-color;
-        cursor: pointer;
+        
 
         .single_accordion_title {
             display: flex;
@@ -26,7 +26,7 @@
 
             h2 {
                 margin: 0;
-                font-size: clamp(1rem, 3.711vw + 1rem - 1rem, 2.5rem);
+                font-size: clamp(1rem, 3.907vw + 1rem - 1rem, 2.5rem);
                 font-weight: 600;
                 letter-spacing: -.04em;
                 line-height: 100%;
@@ -42,7 +42,7 @@
             
             p {
                 width: 100%;
-                font-size: clamp(1rem, 1.758vw + 1rem - 1rem, 1.25rem);
+                font-size: clamp(1rem, 1.9532vw + 1rem - 1rem, 1.25rem);
                 font-weight: 500;
                 line-height: 140%;
                 margin: 0;
@@ -59,7 +59,7 @@
             
             p {
                 width: 100%;
-                font-size: clamp(1rem, 1.758vw + 1rem - 1rem, 1.25rem);
+                font-size: clamp(1rem, 1.9532vw + 1rem - 1rem, 1.25rem);
                 font-weight: 500;
                 line-height: 140%;
                 margin: 0;
@@ -73,7 +73,7 @@
         padding: clamp(0.5rem, 5vw + 1rem - 1rem, 2.5rem) 0;
         border-top: solid 1px $black-color;
         border-bottom: solid 1px $black-color;
-        cursor: pointer;
+        
 
         .single_accordion_title {
             display: flex;
@@ -94,7 +94,7 @@
 
             h2 {
                 margin: 0;
-                font-size: clamp(1rem, 3.711vw + 1rem - 1rem, 2.5rem);
+                font-size: clamp(1rem, 3.907vw + 1rem - 1rem, 2.5rem);
                 font-weight: 600;
                 letter-spacing: -.04em;
                 line-height: 100%;
@@ -110,7 +110,7 @@
 
             p {
                 width: 100%;
-                font-size: clamp(1rem, 1.758vw + 1rem - 1rem, 1.25rem);
+                font-size: clamp(1rem, 1.9532vw + 1rem - 1rem, 1.25rem);
                 font-weight: 500;
                 line-height: 140%;
                 margin: 0;
@@ -127,7 +127,7 @@
 
             p {
                 width: 100%;
-                font-size: clamp(1rem, 1.758vw + 1rem - 1rem, 1.25rem);
+                font-size: clamp(1rem, 1.9532vw + 1rem - 1rem, 1.25rem);
                 font-weight: 500;
                 line-height: 140%;
                 margin: 0;

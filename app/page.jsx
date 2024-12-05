@@ -463,7 +463,7 @@ export default function Home() {
             <div>
               <div style={{ overflow: "hidden" }}>
                 <motion.h2
-                  animate={{ y: "20vh", skewY: 15 }}
+                  animate={{ y: "35vh", skewY: 20 }}
                   whileInView={{ y: 0, skewY: 0 }}
                   transition={{ ease: "easeIn", duration: 0.6 }}
                 >
@@ -472,7 +472,7 @@ export default function Home() {
               </div>
               <div style={{ overflow: "hidden" }}>
                 <motion.h2
-                  animate={{ y: "20vh", skewY: 15 }}
+                  animate={{ y: "35vh", skewY: 20 }}
                   whileInView={{ y: 0, skewY: 0 }}
                   transition={{ ease: "easeIn", duration: 0.6 }}
                 >
