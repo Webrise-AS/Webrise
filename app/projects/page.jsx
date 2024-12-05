@@ -29,7 +29,7 @@ export default function Projects() {
           <Parallax speed={-8.5}>
             <div style={{ overflow: "hidden" }}>
               <motion.h1
-                initial={{ y: "40vh", skewY: 10 }}
+                initial={{ y: "39.2vh", skewY: 10 }}
                 animate={{ y: 0, skewY: 0 }}
                 transition={{ ease: "easeIn", duration: 0.6 }}
               >
