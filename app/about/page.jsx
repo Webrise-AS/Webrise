@@ -5,13 +5,63 @@ import Head from "next/head";
 import Link from "next/link";
 import useEmblaCarousel from "embla-carousel-react";
 import AutoScroll from "embla-carousel-auto-scroll";
-import useSWR from "swr";
 import { Parallax } from "react-scroll-parallax";
 import { motion } from "framer-motion";
 import AnimateCursor from "@/components/AnimateCursor";
 import LenisScroll from "@/components/LenisScroll";
 
-const fetcher = (url) => fetch(url).then((res) => res.json());
+const aboutPage_data = {
+  heroSection: {
+    imageOne: `https://assets-global.website-files.com/6606f0f658b42ca7220e3695/660723aa9b8b7fc64fc7bf9a_Cons-p-500.webp`,
+    imageTwo: `https://assets-global.website-files.com/6606f0f658b42ca7220e3695/660723aa97aa99be5469fa63_About%20-%20Image-p-500.webp`,
+  },
+
+  sliderSection: {
+    images: [
+      {
+        imageurl: `https://assets-global.website-files.com/6606f0f658b42ca7220e3695/660723ae3249ebd3269d6cbd_Article%20Thumbnail%20%234-p-500.webp`,
+      },
+      {
+        imageurl: `https://assets-global.website-files.com/6606f0f658b42ca7220e3695/660723b0d22851c240393ce9_Article%20Thumbnail%20%238-p-500.webp`,
+      },
+      {
+        imageurl: `https://assets-global.website-files.com/6606f0f658b42ca7220e3695/660723ac1b0450ddc211d109_Article%20Image%20%234-p-800.webp`,
+      },
+      {
+        imageurl: `https://assets-global.website-files.com/6606f0f658b42ca7220e3695/660723b097aa99be5469fe1a_Article%20Thumbnail%20%239-p-800.webp`,
+      },
+      {
+        imageurl: `https://assets-global.website-files.com/6606f0f658b42ca7220e3695/660723b3e10d6cd0f0ca10f6_Camera-p-800.webp`,
+      },
+    ],
+  },
+
+  infoSection: {
+    image: `https://assets-global.website-files.com/6606f0f658b42ca7220e3695/660723ab81a3f7d07a7a97d1_Testimonial.webp`,
+    values: [
+      {
+        number: "(01)",
+        title: "Creatively Bold",
+      },
+      {
+        number: "(02)",
+        title: "Digital Pioneers",
+      },
+      {
+        number: "(03)",
+        title: "Strategic Thinkers",
+      },
+      {
+        number: "(04)",
+        title: "User-Centric",
+      },
+      {
+        number: "(05)",
+        title: "Design Savvy",
+      },
+    ],
+  },
+};
 
 export default function About() {
   const [emblaRef] = useEmblaCarousel({ watchDrag: false, loop: true }, [
@@ -21,11 +71,6 @@ export default function About() {
   const [emblaRef2] = useEmblaCarousel({ loop: true, watchDrag: false }, [
     AutoScroll({ speed: 1.1, direction: "backward" }),
   ]);
-
-  const { data } = useSWR(
-    "https://fakestoreapi.com/products?limit=10",
-    fetcher
-  );
 
   return (
     <>
@@ -53,9 +98,7 @@ export default function About() {
                 transition={{ ease: "easeIn", duration: 0.6 }}
               >
                 <Image
-                  src={
-                    "https://assets-global.website-files.com/6606f0f658b42ca7220e3695/660723aa9b8b7fc64fc7bf9a_Cons-p-500.webp"
-                  }
+                  src={aboutPage_data.heroSection.imageOne}
                   width={299}
                   height={160}
                   alt={"image of a woman in an office useing a pc for work"}
@@ -76,9 +119,7 @@ export default function About() {
               transition={{ ease: "easeIn", duration: 0.6 }}
             >
               <Image
-                src={
-                  "https://assets-global.website-files.com/6606f0f658b42ca7220e3695/660723aa97aa99be5469fa63_About%20-%20Image-p-500.webp"
-                }
+                src={aboutPage_data.heroSection.imageTwo}
                 width={310}
                 height={454}
                 alt={"image of a woman in an office useing a pc for work"}
@@ -130,17 +171,16 @@ export default function About() {
           <div className={styles.content_section_sliders}>
             <div className={styles.embla} ref={emblaRef}>
               <div className={styles.embla__container}>
-                {data &&
-                  data.map((slide) => (
-                    <div key={slide.id} className={styles.embla__slide}>
-                      <Image
-                        src={slide.image}
-                        width={640}
-                        height={880}
-                        alt={slide.title}
-                      />
-                    </div>
-                  ))}
+                {aboutPage_data.sliderSection.images.map((slide, i) => (
+                  <div key={i} className={styles.embla__slide}>
+                    <Image
+                      src={slide.imageurl}
+                      width={640}
+                      height={880}
+                      alt="image desplaying one of our project"
+                    />
+                  </div>
+                ))}
               </div>
             </div>
             <div className={styles.embla} ref={emblaRef2}>
@@ -164,9 +204,7 @@ export default function About() {
               transition={{ ease: "easeIn", duration: 0.9 }}
             >
               <Image
-                src={
-                  "https://assets-global.website-files.com/6606f0f658b42ca7220e3695/660723ab81a3f7d07a7a97d1_Testimonial.webp"
-                }
+                src={aboutPage_data.infoSection.image}
                 width={640}
                 height={880}
                 alt={"image of a woman in an office useing a pc for work"}
@@ -192,86 +230,24 @@ export default function About() {
                 </motion.h2>
               </div>
               <div className={styles.values_container}>
-                <div className={styles.single_value}>
-                  <motion.h4
-                    animate={{ y: 50, opacity: 0 }}
-                    whileInView={{ y: 0, opacity: 1 }}
-                    transition={{ duration: 0.6 }}
-                  >
-                    (01)
-                  </motion.h4>
-                  <motion.h3
-                    animate={{ y: 50, opacity: 0 }}
-                    whileInView={{ y: 0, opacity: 1 }}
-                    transition={{ duration: 0.6 }}
-                  >
-                    Creatively Bold
-                  </motion.h3>
-                </div>
-                <div className={styles.single_value}>
-                  <motion.h4
-                    animate={{ y: 50, opacity: 0 }}
-                    whileInView={{ y: 0, opacity: 1 }}
-                    transition={{ duration: 0.6 }}
-                  >
-                    (02)
-                  </motion.h4>
-                  <motion.h3
-                    animate={{ y: 50, opacity: 0 }}
-                    whileInView={{ y: 0, opacity: 1 }}
-                    transition={{ duration: 0.6 }}
-                  >
-                    Digital Pioneers
-                  </motion.h3>
-                </div>
-                <div className={styles.single_value}>
-                  <motion.h4
-                    animate={{ y: 50, opacity: 0 }}
-                    whileInView={{ y: 0, opacity: 1 }}
-                    transition={{ duration: 0.6 }}
-                  >
-                    (03)
-                  </motion.h4>
-                  <motion.h3
-                    animate={{ y: 50, opacity: 0 }}
-                    whileInView={{ y: 0, opacity: 1 }}
-                    transition={{ duration: 0.6 }}
-                  >
-                    Strategic Thinkers
-                  </motion.h3>
-                </div>
-                <div className={styles.single_value}>
-                  <motion.h4
-                    animate={{ y: 50, opacity: 0 }}
-                    whileInView={{ y: 0, opacity: 1 }}
-                    transition={{ duration: 0.6 }}
-                  >
-                    (04)
-                  </motion.h4>
-                  <motion.h3
-                    animate={{ y: 50, opacity: 0 }}
-                    whileInView={{ y: 0, opacity: 1 }}
-                    transition={{ duration: 0.6 }}
-                  >
-                    User-Centric
-                  </motion.h3>
-                </div>
-                <div className={styles.single_value}>
-                  <motion.h4
-                    animate={{ y: 50, opacity: 0 }}
-                    whileInView={{ y: 0, opacity: 1 }}
-                    transition={{ duration: 0.6 }}
-                  >
-                    (05)
-                  </motion.h4>
-                  <motion.h3
-                    animate={{ y: 50, opacity: 0 }}
-                    whileInView={{ y: 0, opacity: 1 }}
-                    transition={{ duration: 0.6 }}
-                  >
-                    Design Savvy
-                  </motion.h3>
-                </div>
+                {aboutPage_data.infoSection.values.map((value, i) => (
+                  <div className={styles.single_value} key={i}>
+                    <motion.h4
+                      animate={{ y: 50, opacity: 0 }}
+                      whileInView={{ y: 0, opacity: 1 }}
+                      transition={{ duration: 0.6 }}
+                    >
+                      {value.number}
+                    </motion.h4>
+                    <motion.h3
+                      animate={{ y: 50, opacity: 0 }}
+                      whileInView={{ y: 0, opacity: 1 }}
+                      transition={{ duration: 0.6 }}
+                    >
+                      {value.title}
+                    </motion.h3>
+                  </div>
+                ))}
               </div>
             </div>
           </div>

@@ -145,66 +145,16 @@
         flex-direction: column;
         row-gap: 5rem;
         padding: 1rem 0;
+
+        div:nth-child(1), div:nth-child(3) {
+            flex-direction: row-reverse;
+        }
         
         .content_speciality_section {
             display: flex;
-            flex-direction: row-reverse;
             justify-content: space-between;
             column-gap: 2.5rem;
             
-            div:first-child {
-                width: clamp(18rem, 55vw + 1rem - 1rem, 44.5rem);
-                display: flex;
-                flex-direction: column;
-                align-self: flex-end;
-                background-color: $primary-color;
-                padding: 1rem;
-                border-radius: 97% 3% 34% 66% / 57% 30% 70% 43%;
-
-                h3 {
-                    margin:  0;
-                    font-size: clamp(1.3rem, 3.5vw + 1rem - 1rem, 2.5rem);
-                    font-weight: 600;
-                    line-height: 100%;
-                    letter-spacing: -.02em;
-                }
-
-                p {
-                    margin: 1.2rem 0 2.2rem 0;
-                    font-size: clamp(0.875rem, 2.5vw + 1rem - 1rem, 1.25rem);
-                    font-weight: 400;
-                    line-height: 140%
-                }
-
-                button {
-                    @include buttons;
-                }
-
-                button:hover {
-                    @include hover_button_effects;
-                }
-            }
-
-            .content_speciality_image {
-                height: clamp(25rem, 52.5vw + 1rem - 1rem, 40rem);
-                width: clamp(15rem, 45vw + 1rem - 1rem, 37.5rem);
-                overflow: hidden;
-
-                img {
-                    height: 100%;
-                    width: 100%;
-                    object-fit: cover;
-                    border-radius: 1vw;
-                }
-            }
-        }
-
-        .content_speciality_section_two {
-            display: flex;
-            flex-direction:reverse;
-            justify-content: space-between;
-            column-gap: 2.5rem;
-
             div:first-child {
                 width: clamp(18rem, 55vw + 1rem - 1rem, 44.5rem);
                 display: flex;
@@ -293,19 +243,6 @@
                 width: 100% !important;
             }
         }
-
-        .content_speciality_section_two {
-            flex-direction: column-reverse !important;
-            row-gap: 2rem;
-
-            div:first-child {
-                width: 100% !important;
-            }
-
-            .content_speciality_image {
-                width: 100% !important;
-            }
-        }
     }
 
     .services_slider_section {
@@ -332,19 +269,6 @@
     .services_content_section {
 
         .content_speciality_section {
-            flex-direction: column-reverse !important;
-            row-gap: 1.5rem !important;
-
-            div:first-child {
-                width: 100% !important;
-            }
-
-            .content_speciality_image {
-                width: 100% !important;
-            }
-        }
-
-        .content_speciality_section_two {
             flex-direction: column-reverse !important;
             row-gap: 1.5rem !important;
 

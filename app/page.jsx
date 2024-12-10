@@ -16,6 +16,38 @@ import AutoScroll from "embla-carousel-auto-scroll";
 import { Typewriter } from "react-simple-typewriter";
 import LenisScroll from "@/components/LenisScroll";
 
+const Feedback_data = [
+  {
+    id: 1,
+    client: `Lena M. – Founder of Caffeine Coders`,
+    review: `The creativity of Webrise is unmatched. They&apos;ve
+      crafted an online experience that captures the essence of
+      our kitchen&apos;s innovation. It&apos;s not just our pasta
+      that&apos;s artful now—our digital platform is too!`,
+  },
+
+  {
+    id: 2,
+    client: `Marco G. – Head Chef at Pasta Palette`,
+    review: `Strobe™ transformed our digital presence with a stunning website that not only looks sleek but functions like a dream. Our site now truly reflects the vibrant energy of our coding café in Berlin.`,
+  },
+
+  {
+    id: 3,
+    client: `Lena M. – Founder of Caffeine Coders`,
+    review: `The creativity of Webrise is unmatched. They&apos;ve
+      crafted an online experience that captures the essence of
+      our kitchen&apos;s innovation. It&apos;s not just our pasta
+      that&apos;s artful now—our digital platform is too!`,
+  },
+
+  {
+    id: 4,
+    client: `Marco G. – Head Chef at Pasta Palette`,
+    review: `Strobe™ transformed our digital presence with a stunning website that not only looks sleek but functions like a dream. Our site now truly reflects the vibrant energy of our coding café in Berlin.`,
+  },
+];
+
 export default function Home() {
   const [emblaRef] = useEmblaCarousel({ loop: true }, [
     Autoplay({
@@ -482,42 +514,12 @@ export default function Home() {
             </div>
             <div className={styles.embla} ref={emblaRef}>
               <div className={styles.embla__container}>
-                <div className={styles.embla__slide}>
-                  <h3>Lena M. – Founder of Caffeine Coders</h3>
-                  <p>
-                    &quot;Webrise transformed our digital presence with a
-                    stunning website that not only looks sleek but functions
-                    like a dream. Our site now truly reflects the vibrant energy
-                    of our coding café in Berlin.&quot;
-                  </p>
-                </div>
-                <div className={styles.embla__slide}>
-                  <h3>Marco G. – Head Chef at Pasta Palette</h3>
-                  <p>
-                    &quot;The creativity of Webrise is unmatched. They&apos;ve
-                    crafted an online experience that captures the essence of
-                    our kitchen&apos;s innovation. It&apos;s not just our pasta
-                    that&apos;s artful now—our digital platform is too!&quot;
-                  </p>
-                </div>
-                <div className={styles.embla__slide}>
-                  <h3>Lena M. – Founder of Caffeine Coders</h3>
-                  <p>
-                    &quot;Webrise transformed our digital presence with a
-                    stunning website that not only looks sleek but functions
-                    like a dream. Our site now truly reflects the vibrant energy
-                    of our coding café in Berlin.&quot;
-                  </p>
-                </div>
-                <div className={styles.embla__slide}>
-                  <h3>Marco G. – Head Chef at Pasta Palette</h3>
-                  <p>
-                    &quot;The creativity of Webrise is unmatched. They&apos;ve
-                    crafted an online experience that captures the essence of
-                    our kitchen&apos;s innovation. It&apos;s not just our pasta
-                    that&apos;s artful now—our digital platform is too!&quot;
-                  </p>
-                </div>
+                {Feedback_data.map((info, i) => (
+                  <div className={styles.embla__slide} key={i}>
+                    <h3>{info.client}</h3>
+                    <p>{info.review}</p>
+                  </div>
+                ))}
               </div>
             </div>
           </div>
