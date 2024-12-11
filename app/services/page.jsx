@@ -16,19 +16,43 @@ const servicesPage_data = {
   sliderSection: {
     images: [
       {
-        imageurl: `https://assets-global.website-files.com/6606f0f658b42ca7220e3695/660723ae3249ebd3269d6cbd_Article%20Thumbnail%20%234-p-500.webp`,
+        imageurl: `/Images/services/tech-stack/nextjs.svg`,
       },
+
       {
-        imageurl: `https://assets-global.website-files.com/6606f0f658b42ca7220e3695/660723b0d22851c240393ce9_Article%20Thumbnail%20%238-p-500.webp`,
+        imageurl: `/Images/services/tech-stack/react.svg`,
       },
+
       {
-        imageurl: `https://assets-global.website-files.com/6606f0f658b42ca7220e3695/660723ac1b0450ddc211d109_Article%20Image%20%234-p-800.webp`,
+        imageurl: `/Images/services/tech-stack/supabase.svg`,
       },
+
       {
-        imageurl: `https://assets-global.website-files.com/6606f0f658b42ca7220e3695/660723b097aa99be5469fe1a_Article%20Thumbnail%20%239-p-800.webp`,
+        imageurl: `/Images/services/tech-stack/medusa.svg`,
       },
+
       {
-        imageurl: `https://assets-global.website-files.com/6606f0f658b42ca7220e3695/660723b3e10d6cd0f0ca10f6_Camera-p-800.webp`,
+        imageurl: `/Images/services/tech-stack/typescript.svg`,
+      },
+
+      {
+        imageurl: `/Images/services/tech-stack/payload.svg`,
+      },
+
+      {
+        imageurl: `/Images/services/tech-stack/vercel.svg`,
+      },
+
+      {
+        imageurl: `/Images/services/tech-stack/tailwindcss.svg`,
+      },
+
+      {
+        imageurl: `/Images/services/tech-stack/sass.svg`,
+      },
+
+      {
+        imageurl: `/Images/services/tech-stack/wordpress.svg`,
       },
     ],
   },
@@ -108,7 +132,7 @@ const servicesPage_data = {
 
 export default function Services() {
   const [emblaRef] = useEmblaCarousel({ loop: true, watchDrag: false }, [
-    AutoScroll({ speed: 2.5, direction: "backward" }),
+    AutoScroll({ speed: 2, direction: "backward" }),
   ]);
 
   return (
@@ -158,14 +182,16 @@ export default function Services() {
           <span>&quot;We got the right tools for the job!&quot;</span>
           <div className={styles.embla} ref={emblaRef}>
             <div className={styles.embla__container}>
-              <div className={styles.embla__slide}>—</div>
-              <div className={styles.embla__slide}>Creative</div>
-              <div className={styles.embla__slide}>—</div>
-              <div className={styles.embla__slide}>Pioneers</div>
-              <div className={styles.embla__slide}>—</div>
-              <div className={styles.embla__slide}>Strategi</div>
-              <div className={styles.embla__slide}>—</div>
-              <div className={styles.embla__slide}>Bold</div>
+              {servicesPage_data.sliderSection.images.map((image, i) => (
+                <div className={styles.embla__slide} key={i}>
+                  <Image
+                    src={image.imageurl}
+                    height={200}
+                    width={200}
+                    alt="Logo of one of the tech stacks that we use"
+                  />
+                </div>
+              ))}
             </div>
           </div>
         </div>

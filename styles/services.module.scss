@@ -105,10 +105,10 @@
         display: flex;
         align-items: center;
         margin-bottom: 5rem;
-        padding: 0.5rem;
-        color: $white-color;
-        background-color: $black-color;
-        border-radius: 1vw;
+        padding: 1rem;
+        color: $black-color;
+        background-color: $primary-color;
+        border-radius: 0.5vw 0.5vw 0.5vw 0vw;
 
         span {
             width: 27.7rem;
@@ -122,18 +122,19 @@
 
         .embla {
             overflow: hidden;
+
             .embla__container {
                 display: flex;
-                
+
                 .embla__slide {
-                    text-align: center;
-                    margin-left: 1.8rem;
-                    font-size: 7.5rem;
-                    font-weight: 700;
-                    line-height: 86%;
-                    letter-spacing: -.08em;
-                    text-transform: uppercase;
-                    padding-right: 0.6rem;
+                    height: 3.3rem;
+                    margin-left: 5rem;
+
+                    img {
+                        height: 100%;
+                        width: fit-content;
+                        border-radius: 0.5vw;
+                    }
                 }
             }
         }
@@ -250,6 +251,10 @@
         span {
             width: 39rem !important ;
         }
+
+        .embla__slide {
+            height: 2.8rem !important;
+        }
     }
 
     .services_hero_section {
@@ -283,7 +288,6 @@
     }
 
     .services_hero_section {
-        
         min-height: 40dvh !important;
 
         .hero_image_container {
@@ -300,6 +304,11 @@
 
         span {
             min-width: 6.8rem !important ;
+        }
+
+        .embla__slide {
+            height: 2rem !important;
+            margin-left: 3rem !important;
         }
     }
 }
