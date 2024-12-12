@@ -21,7 +21,6 @@ export default function ProjectsEnd() {
       </Head>
 
       <AnimateCursor />
-
       <LenisScroll />
 
       <section className={styles.projects_container}>
@@ -38,7 +37,7 @@ export default function ProjectsEnd() {
             </div>
           </Parallax>
         </div>
-        <ProjectsDataEnd apiLength={`10`} />
+        <ProjectsDataEnd />
       </section>
     </>
   );

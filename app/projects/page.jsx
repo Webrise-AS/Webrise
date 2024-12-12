@@ -38,7 +38,7 @@ export default function Projects() {
             </div>
           </Parallax>
         </div>
-        <ProjectsData apiLength={"10"} />
+        <ProjectsData />
       </section>
     </>
   );
