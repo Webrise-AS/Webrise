@@ -1,9 +1,9 @@
-import AnimateCursor from "@/components/AnimateCursor";
 import styles from "../../../styles/Home.module.scss";
-import { getSingleData } from "@/app/helpers/page";
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
+import { getSingleData } from "@/app/helpers/page";
+import AnimateCursor from "@/components/AnimateCursor";
 import LenisScroll from "@/components/LenisScroll";
 
 export default async function ProjectDetails(props) {
@@ -57,7 +57,7 @@ export default async function ProjectDetails(props) {
             src={projectData.image}
             width={864}
             height={864}
-            alt={"image for the specified blog card"}
+            alt={"Image desplaying the before side of the clients site"}
             loading="lazy"
           />
           <h2>Challenge</h2>
@@ -67,14 +67,18 @@ export default async function ProjectDetails(props) {
               src={projectData.image}
               width={500}
               height={500}
-              alt={"image for the specified blog card"}
+              alt={
+                "Image desplaying the challenge we faced while working on the project"
+              }
               loading="lazy"
             />
             <Image
               src={projectData.image}
               width={500}
               height={500}
-              alt={"image for the specified blog card"}
+              alt={
+                "Image desplaying the challenge we faced while working on the project"
+              }
               loading="lazy"
             />
           </div>
@@ -84,7 +88,7 @@ export default async function ProjectDetails(props) {
             src={projectData.image}
             width={864}
             height={864}
-            alt={"image for the specified blog card"}
+            alt={"Image desplaying the strategy of the project"}
             loading="lazy"
             className={styles.single_image}
           />
@@ -96,14 +100,14 @@ export default async function ProjectDetails(props) {
                 src={projectData.image}
                 width={500}
                 height={500}
-                alt={"image for the specified blog card"}
+                alt={"Image desplaying the final result of the project"}
                 loading="lazy"
               />
               <Image
                 src={projectData.image}
                 width={500}
                 height={500}
-                alt={"image for the specified blog card"}
+                alt={"Image desplaying the final result of the project"}
                 loading="lazy"
               />
             </div>
@@ -111,7 +115,7 @@ export default async function ProjectDetails(props) {
               src={projectData.image}
               width={864}
               height={864}
-              alt={"image for the specified blog card"}
+              alt={"Image desplaying the final result of the project"}
               loading="lazy"
               className={styles.single_image}
             />
@@ -131,7 +135,7 @@ export default async function ProjectDetails(props) {
                       src={card.image}
                       width={500}
                       height={700}
-                      alt={"image for the specified blog card"}
+                      alt={"Image desplaying one of our other projects"}
                       loading="lazy"
                     />
                   </div>

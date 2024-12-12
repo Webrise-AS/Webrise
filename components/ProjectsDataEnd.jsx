@@ -1,7 +1,6 @@
 import Link from "next/link";
 import styles from "../styles/Home.module.scss";
 import Image from "next/image";
-import { motion } from "framer-motion";
 
 export default async function ProjectsDataEnd({ apiLength }) {
   async function getMoreData() {

@@ -2,6 +2,16 @@ import Link from "next/link";
 import styles from "../styles/Home.module.scss";
 import Image from "next/image";
 
+const projectsPage_data = [
+  {
+    id: 1,
+    brand: "Project 1",
+    slogan: "Slogan for project 1",
+    image: "https://placehold.jp/640x700.png",
+    intro: "Intro for project 1",
+  },
+];
+
 export default async function ProjectsData({ apiLength }) {
   async function getData() {
     const res = await fetch(
@@ -15,6 +25,7 @@ export default async function ProjectsData({ apiLength }) {
     return res.json();
   }
   const data = await getData();
+
   return (
     <>
       <div className={styles.projects_content}>

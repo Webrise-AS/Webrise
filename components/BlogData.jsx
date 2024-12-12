@@ -15,6 +15,7 @@ export default async function BlogData({ apiLength }) {
 
     return res.json();
   }
+
   const data = await getData();
   return (
     <>

@@ -16,37 +16,146 @@ import AutoScroll from "embla-carousel-auto-scroll";
 import { Typewriter } from "react-simple-typewriter";
 import LenisScroll from "@/components/LenisScroll";
 
-const Feedback_data = [
-  {
-    id: 1,
-    client: `Lena M. – Founder of Caffeine Coders`,
-    review: `The creativity of Webrise is unmatched. They&apos;ve
-      crafted an online experience that captures the essence of
-      our kitchen&apos;s innovation. It&apos;s not just our pasta
-      that&apos;s artful now—our digital platform is too!`,
+const homePage_data = {
+  heroSection: {
+    imageurl: `https://placehold.jp/151515/ffffff/500x611.png`,
+    imageAlt: `image of ...`,
+
+    brandSlider: [
+      {
+        imageurl: `https://placehold.jp/151515/ffffff/200x60.png`,
+      },
+      {
+        imageurl: `https://placehold.jp/151515/ffffff/200x61.png`,
+      },
+      {
+        imageurl: `https://placehold.jp/151515/ffffff/200x62.png`,
+      },
+      {
+        imageurl: `https://placehold.jp/151515/ffffff/200x63.png`,
+      },
+      {
+        imageurl: `https://placehold.jp/151515/ffffff/200x64.png`,
+      },
+      {
+        imageurl: `https://placehold.jp/151515/ffffff/200x65.png`,
+      },
+      {
+        imageurl: `https://placehold.jp/151515/ffffff/200x66.png`,
+      },
+    ],
   },
 
-  {
-    id: 2,
-    client: `Marco G. – Head Chef at Pasta Palette`,
-    review: `Strobe™ transformed our digital presence with a stunning website that not only looks sleek but functions like a dream. Our site now truly reflects the vibrant energy of our coding café in Berlin.`,
+  aboutSection: {
+    imageurl: `https://placehold.jp/400x450.png`,
+    imageAlt: `image of about of...`,
   },
 
-  {
-    id: 3,
-    client: `Lena M. – Founder of Caffeine Coders`,
-    review: `The creativity of Webrise is unmatched. They&apos;ve
-      crafted an online experience that captures the essence of
-      our kitchen&apos;s innovation. It&apos;s not just our pasta
-      that&apos;s artful now—our digital platform is too!`,
+  socialSection: {
+    imageurl: `https://placehold.jp/1318x350.png`,
+    imageAlt: `image of social of...`,
   },
 
-  {
-    id: 4,
-    client: `Marco G. – Head Chef at Pasta Palette`,
-    review: `Strobe™ transformed our digital presence with a stunning website that not only looks sleek but functions like a dream. Our site now truly reflects the vibrant energy of our coding café in Berlin.`,
+  articleSection: [
+    {
+      title: `Unveiling the Future of Web Design: Trends to Watch in Berlin's Digital Scene`,
+      subtittle: "(01)",
+      imageurl: `https://placehold.jp/204x306.png`,
+      imageAlt: `image related to the article`,
+    },
+    {
+      title: `Inside Webrise™: A Day in the Life of Berlin's Most Innovative Creative Team`,
+      subtittle: "(02)",
+      imageurl: `https://placehold.jp/204x306.png`,
+      imageAlt: `image related to the article`,
+    },
+    {
+      title: `Sustainable Design: Webrise™'s Approach to Eco-Friendly Digital Solutions`,
+      subtittle: "(03)",
+      imageurl: `https://placehold.jp/204x306.png`,
+      imageAlt: `image related to the article`,
+    },
+    {
+      title: `Unveiling the Future of Web Design: Trends to Watch in Berlin's Digital Scene`,
+      subtittle: "(04)",
+      imageurl: `https://placehold.jp/204x306.png`,
+      imageAlt: `image related to the article`,
+    },
+  ],
+
+  feedbackSection: [
+    {
+      id: 1,
+      client: `Lena M. – Founder of Caffeine Coders`,
+      review: `The creativity of Webrise is unmatched. They've
+        crafted an online experience that captures the essence of
+        our kitchen's innovation. It's not just our pasta
+        that's artful now—our digital platform is too!`,
+    },
+
+    {
+      id: 2,
+      client: `Marco G. – Head Chef at Pasta Palette`,
+      review: `Strobe™ transformed our digital presence with a stunning website that not only
+        looks sleek but functions like a dream. Our site now truly reflects the vibrant
+        energy of our coding café in Berlin.`,
+    },
+
+    {
+      id: 3,
+      client: `Linda M. – Founder of Caffeine Coders`,
+      review: `The creativity of Webrise is unmatched. They've
+        crafted an online experience that captures the essence of
+        our kitchen's innovation. It's not just our pasta
+        that's artful now—our digital platform is too!`,
+    },
+
+    {
+      id: 4,
+      client: `Abel Y. – Head Chef at Pasta Palette`,
+      review: `Strobe™ transformed our digital presence with a stunning website that not only
+        looks sleek but functions like a dream. Our site now truly reflects the vibrant
+        energy of our coding café in Berlin.`,
+    },
+  ],
+
+  infoSection: {
+    accordion: [
+      {
+        id: 1,
+        question: "What sets Webrise apart?",
+        answer: `Webrise™ stands out through our unique fusion of Berlin's artistic heritage
+          with modern digital innovation. Our approach is not just about creating visually
+          stunning designs; it's about delivering functional, user-centered experiences
+          that drive results and embody the vibrant spirit of our city.`,
+      },
+      {
+        id: 2,
+        question: "How does Webrise ensure trends?",
+        answer: `Webrise™ stands out through our unique fusion of Berlin's artistic heritage
+          with modern digital innovation. Our approach is not just about creating visually
+          stunning designs; it's about delivering functional, user-centered experiences
+          that drive results and embody the vibrant spirit of our city.`,
+      },
+      {
+        id: 3,
+        question: "Can Webrise help my brand?",
+        answer: `Webrise™ stands out through our unique fusion of Berlin's artistic heritage
+          with modern digital innovation. Our approach is not just about creating visually
+          stunning designs; it's about delivering functional, user-centered experiences
+          that drive results and embody the vibrant spirit of our city.`,
+      },
+      {
+        id: 4,
+        question: "What is the process?",
+        answer: `Webrise™ stands out through our unique fusion of Berlin's artistic heritage
+          with modern digital innovation. Our approach is not just about creating visually
+          stunning designs; it's about delivering functional, user-centered experiences
+          that drive results and embody the vibrant spirit of our city.`,
+      },
+    ],
   },
-];
+};
 
 export default function Home() {
   const [emblaRef] = useEmblaCarousel({ loop: true }, [
@@ -192,72 +301,26 @@ export default function Home() {
               transition={{ ease: "easeIn", duration: 0.6 }}
             >
               <Image
-                src="https://placehold.jp/151515/ffffff/500x611.png"
+                src={homePage_data.heroSection.imageurl}
                 width={450}
                 height={663.2}
-                alt="image of "
+                alt={homePage_data.heroSection.imageAlt}
               />
             </motion.div>
           </div>
           <div className={styles.hero_slider}>
             <div className={styles.embla} ref={emblaRef2}>
               <div className={styles.embla__container}>
-                <div className={styles.embla__slide}>
-                  <Image
-                    src="https://placehold.jp/151515/ffffff/200x60.png"
-                    width={200}
-                    height={60}
-                    alt="image of ...s logo"
-                  />
-                </div>
-                <div className={styles.embla__slide}>
-                  <Image
-                    src="https://placehold.jp/151515/ffffff/200x60.png"
-                    width={200}
-                    height={60}
-                    alt="image of ...s logo"
-                  />
-                </div>
-                <div className={styles.embla__slide}>
-                  <Image
-                    src="https://placehold.jp/151515/ffffff/200x60.png"
-                    width={200}
-                    height={60}
-                    alt="image of ...s logo"
-                  />
-                </div>
-                <div className={styles.embla__slide}>
-                  <Image
-                    src="https://placehold.jp/151515/ffffff/200x60.png"
-                    width={200}
-                    height={60}
-                    alt="image of ...s logo"
-                  />
-                </div>
-                <div className={styles.embla__slide}>
-                  <Image
-                    src="https://placehold.jp/151515/ffffff/200x60.png"
-                    width={200}
-                    height={60}
-                    alt="image of ...s logo"
-                  />
-                </div>
-                <div className={styles.embla__slide}>
-                  <Image
-                    src="https://placehold.jp/151515/ffffff/200x60.png"
-                    width={200}
-                    height={60}
-                    alt="image of ...s logo"
-                  />
-                </div>
-                <div className={styles.embla__slide}>
-                  <Image
-                    src="https://placehold.jp/151515/ffffff/200x60.png"
-                    width={200}
-                    height={60}
-                    alt="image of ...s logo"
-                  />
-                </div>
+                {homePage_data.heroSection.brandSlider.map((slider, i) => (
+                  <div className={styles.embla__slide} key={i}>
+                    <Image
+                      src={slider.imageurl}
+                      width={200}
+                      height={60}
+                      alt="image of one of our clients logo"
+                    />
+                  </div>
+                ))}
               </div>
             </div>
           </div>
@@ -270,10 +333,10 @@ export default function Home() {
               className={styles.image_container}
             >
               <Image
-                src="https://placehold.jp/400x450.png"
+                src={homePage_data.aboutSection.imageurl}
                 width={400}
                 height={450}
-                alt=""
+                alt={homePage_data.aboutSection.imageAlt}
               />
             </motion.div>
           </div>
@@ -358,10 +421,10 @@ export default function Home() {
           <MediaIcons />
           <div className={styles.social_image_container}>
             <Image
-              src="https://placehold.jp/1318x350.png"
+              src={homePage_data.socialSection.imageurl}
               width={1318}
               height={350}
-              alt="Image of something"
+              alt={homePage_data.socialSection.imageAlt}
             />
           </div>
         </section>
@@ -387,107 +450,32 @@ export default function Home() {
             </div>
           </div>
           <div className={styles.article_content}>
-            <div className={styles.article_content_top}>
-              <motion.h3
-                animate={{ y: 50, opacity: 0 }}
-                whileInView={{ y: 0, opacity: 1 }}
-                transition={{ duration: 0.6 }}
-              >
-                (01)
-              </motion.h3>
-              <motion.span
-                animate={{ y: 50, opacity: 0 }}
-                whileInView={{ y: 0, opacity: 1 }}
-                transition={{ duration: 0.6 }}
-              >
-                Unveiling the Future of Web Design: Trends to Watch in
-                Berlin&apos;s Digital Scene
-              </motion.span>
-
-              <div className={styles.image_container}>
-                <Image
-                  src="https://placehold.jp/204x306.png"
-                  width={204}
-                  height={306}
-                  alt=""
-                />
+            {homePage_data.articleSection.map((article, i) => (
+              <div className={styles.single_article} key={i}>
+                <motion.h3
+                  animate={{ y: 50, opacity: 0 }}
+                  whileInView={{ y: 0, opacity: 1 }}
+                  transition={{ duration: 0.6 }}
+                >
+                  {article.subtittle}
+                </motion.h3>
+                <motion.span
+                  animate={{ y: 50, opacity: 0 }}
+                  whileInView={{ y: 0, opacity: 1 }}
+                  transition={{ duration: 0.6 }}
+                >
+                  {article.title}
+                </motion.span>
+                <div className={styles.image_container}>
+                  <Image
+                    src={article.imageurl}
+                    width={204}
+                    height={306}
+                    alt={article.imageAlt}
+                  />
+                </div>
               </div>
-            </div>
-            <div className={styles.article_content_bottom}>
-              <motion.h3
-                animate={{ y: 50, opacity: 0 }}
-                whileInView={{ y: 0, opacity: 1 }}
-                transition={{ duration: 0.6 }}
-              >
-                (02)
-              </motion.h3>
-              <motion.span
-                animate={{ y: 50, opacity: 0 }}
-                whileInView={{ y: 0, opacity: 1 }}
-                transition={{ duration: 0.6 }}
-              >
-                Inside Strobe™: A Day in the Life of Berlin&apos;s Most
-                Innovative Creative Team
-              </motion.span>
-              <div className={styles.image_container}>
-                <Image
-                  src="https://placehold.jp/204x306.png"
-                  width={204}
-                  height={306}
-                  alt=""
-                />
-              </div>
-            </div>
-            <div className={styles.article_content_bottom}>
-              <motion.h3
-                animate={{ y: 50, opacity: 0 }}
-                whileInView={{ y: 0, opacity: 1 }}
-                transition={{ duration: 0.6 }}
-              >
-                (03)
-              </motion.h3>
-              <motion.span
-                animate={{ y: 50, opacity: 0 }}
-                whileInView={{ y: 0, opacity: 1 }}
-                transition={{ duration: 0.6 }}
-              >
-                Sustainable Design: Strobe™&apos;s Approach to Eco-Friendly
-                Digital Solutions
-              </motion.span>
-              <div className={styles.image_container}>
-                <Image
-                  src="https://placehold.jp/204x306.png"
-                  width={204}
-                  height={306}
-                  alt=""
-                />
-              </div>
-            </div>
-            <div className={styles.article_content_bottom}>
-              <motion.h3
-                animate={{ y: 50, opacity: 0 }}
-                whileInView={{ y: 0, opacity: 1 }}
-                transition={{ duration: 0.6 }}
-              >
-                (04)
-              </motion.h3>
-              <motion.span
-                animate={{ y: 50, opacity: 0 }}
-                whileInView={{ y: 0, opacity: 1 }}
-                transition={{ duration: 0.6 }}
-              >
-                Unveiling the Future of Web Design: Trends to Watch in
-                Berlin&apos;s Digital Scene
-              </motion.span>
-              <div className={styles.image_container}>
-                <Image
-                  src="https://placehold.jp/204x306.png"
-                  width={204}
-                  height={306}
-                  alt=""
-                />
-              </div>
-            </div>
+            ))}
           </div>
         </section>
         <section className={styles.feedback_container}>
@@ -514,7 +502,7 @@ export default function Home() {
             </div>
             <div className={styles.embla} ref={emblaRef}>
               <div className={styles.embla__container}>
-                {Feedback_data.map((info, i) => (
+                {homePage_data.feedbackSection.map((info, i) => (
                   <div className={styles.embla__slide} key={i}>
                     <h3>{info.client}</h3>
                     <p>{info.review}</p>
@@ -568,7 +556,7 @@ export default function Home() {
             </div>
           </div>
           <div style={styles.info_accordion}>
-            <Accordion />
+            <Accordion data={homePage_data.infoSection.accordion} />
           </div>
         </section>
       </section>

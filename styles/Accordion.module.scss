@@ -1,16 +1,22 @@
-
 .accordion_container {
+    div:nth-child(1), div:nth-child(2), div:nth-child(3) {
+        border-top: solid 1px $black-color;
+    }
+
+    div:nth-child(4) {
+        border-top: solid 1px $black-color;
+        border-bottom: solid 1px $black-color;
+    }
     
     .single_accordion {
         width: clamp(15rem, 54.5vw + 1rem - 1rem, 50rem);
         padding: clamp(0.5rem, 5vw + 1rem - 1rem, 2.5rem) 0;
-        border-top: solid 1px $black-color;
-        
 
         .single_accordion_title {
             display: flex;
             column-gap: 1.5rem;
             align-items: center ;
+            border: none;
 
             span {
                 display: flex;
@@ -39,6 +45,7 @@
             transition: all 0.5s ease-in-out, opacity 0.5s ease;
             opacity: 0;
             margin-left: 4rem;
+            border: none;
             
             p {
                 width: 100%;
@@ -56,75 +63,8 @@
             margin-top: 1.75rem;
             transition: all 3s cubic-bezier(0,1,0,1);
             margin-left: 4rem;
+            border: none;
             
-            p {
-                width: 100%;
-                font-size: clamp(1rem, 1.9532vw + 1rem - 1rem, 1.25rem);
-                font-weight: 500;
-                line-height: 140%;
-                margin: 0;
-                letter-spacing: -.03em;
-            }
-        }
-    }
-
-    .single_accordion_bottom {
-        width: clamp(15rem, 54.5vw + 1rem - 1rem, 50rem);
-        padding: clamp(0.5rem, 5vw + 1rem - 1rem, 2.5rem) 0;
-        border-top: solid 1px $black-color;
-        border-bottom: solid 1px $black-color;
-        
-
-        .single_accordion_title {
-            display: flex;
-            column-gap: 1.5rem;
-            align-items: center ;
-
-            span {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                height: 3.15rem;
-                width: 2.5rem;
-                font-size: clamp(1.2rem, 4.493vw + 1rem - 1rem, 3rem);
-                font-weight: 200;
-                padding-bottom: 0.5rem;
-                transition: all 10s cubic-bezier(0,1,0,1);
-            }
-
-            h2 {
-                margin: 0;
-                font-size: clamp(1rem, 3.907vw + 1rem - 1rem, 2.5rem);
-                font-weight: 600;
-                letter-spacing: -.04em;
-                line-height: 100%;
-            }
-        }
-
-        .single_accordion_content {
-            max-height: 0;
-            overflow: hidden;
-            transition: all 0.5s ease-in-out, opacity 0.5s ease;
-            opacity: 0;
-            margin-left: 4rem;
-
-            p {
-                width: 100%;
-                font-size: clamp(1rem, 1.9532vw + 1rem - 1rem, 1.25rem);
-                font-weight: 500;
-                line-height: 140%;
-                margin: 0;
-                letter-spacing: -.03em;
-            }
-        }
-
-        .single_accordion_content_show {
-            height: auto;
-            max-height: 100rem;
-            margin-top: 1.75rem;
-            transition: all 3s cubic-bezier(0,1,0,1);
-            margin-left: 4rem;
-
             p {
                 width: 100%;
                 font-size: clamp(1rem, 1.9532vw + 1rem - 1rem, 1.25rem);
@@ -142,10 +82,8 @@
 
 /* ----------------------------------------------------- Tablet -------------------------------------------- */
 @media (max-width: 769px) {
-
     .accordion_container {
-
-        .single_accordion, .single_accordion_bottom {
+        .single_accordion {
             width: 100% !important;
             padding: 2rem 0 !important;
         
@@ -178,10 +116,8 @@
 
 /* ----------------------------------------------------- Mobile -------------------------------------------- */
 @media (max-width: 426px) {
-
-    .accordion_container {
-        
-        .single_accordion, .single_accordion_bottom {
+    .accordion_container { 
+        .single_accordion{
             padding: 1.5rem 0 !important;
             
             .single_accordion_title {
@@ -215,10 +151,8 @@
 }
 
 @media (max-width: 376px) {
-
     .accordion_container {
-        
-        .single_accordion, .single_accordion_bottom {
+        .single_accordion {
             padding: 1.4rem 0 !important;
             
             .single_accordion_title {
@@ -252,10 +186,8 @@
 }
 
 @media (max-width: 321px) {
-
     .accordion_container {
-        
-        .single_accordion, .single_accordion_bottom {
+        .single_accordion {
             padding: 1.3rem 0 !important;
             
             .single_accordion_title {
