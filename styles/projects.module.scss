@@ -184,7 +184,7 @@
             height: clamp(22rem, 80vw + 1rem - 1rem, 54rem);
             width: 100%;
             margin: 4rem 0;
-            border-radius: 0.5rem;
+            border-radius: 1vw;
         }
 
         h2 {
@@ -219,17 +219,18 @@
             margin-top: 2rem;
         }
 
-        .result_images {
-            display: flex;
-            flex-direction: column;
-            row-gap: 0;
+        .result_images_container {
+            margin-top: 2rem;
+            display: grid;
+            grid-gap: 1rem;
+            grid-template-columns: repeat(auto-fit, minmax(286.5px, 1fr));
 
-            .duo_images {
-                margin-bottom: 0;
-            }
+            .result_images {
 
-            .single_image {
-                margin: 2rem 0 0 0;
+                img {
+                    margin: 0;
+                    height: clamp(12.6rem, 50vw + 1rem - 1rem, 31.25rem);
+                }
             }
         }
     }

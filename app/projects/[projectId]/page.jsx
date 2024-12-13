@@ -1,9 +1,9 @@
 import styles from "../../../styles/Home.module.scss";
 import Head from "next/head";
 import Image from "next/image";
-import Link from "next/link";
 import AnimateCursor from "@/components/AnimateCursor";
 import LenisScroll from "@/components/LenisScroll";
+import Link from "next/link";
 
 const projectsPage_data = [
   {
@@ -56,6 +56,9 @@ const projectsPage_data = [
         },
         {
           imageurl: `https://cdn.prod.website-files.com/6606f0f658b42ca7220e36c3/6609a7598dae61ccc0191f22_Article%20Image%20%233.png`,
+        },
+        {
+          imageurl: `https://cdn.prod.website-files.com/6606f0f658b42ca7220e36c3/6609a65bb576d554df639bb3_Article%20Thumbnail%20%239-p-500.png`,
         },
       ],
     },
@@ -111,6 +114,9 @@ const projectsPage_data = [
         {
           imageurl: `https://cdn.prod.website-files.com/6606f0f658b42ca7220e36c3/6609a7598dae61ccc0191f22_Article%20Image%20%233.png`,
         },
+        {
+          imageurl: `https://cdn.prod.website-files.com/6606f0f658b42ca7220e36c3/6609a65bb576d554df639bb3_Article%20Thumbnail%20%239-p-500.png`,
+        },
       ],
     },
   },
@@ -164,6 +170,9 @@ const projectsPage_data = [
         },
         {
           imageurl: `https://cdn.prod.website-files.com/6606f0f658b42ca7220e36c3/6609a7598dae61ccc0191f22_Article%20Image%20%233.png`,
+        },
+        {
+          imageurl: `https://cdn.prod.website-files.com/6606f0f658b42ca7220e36c3/6609a65bb576d554df639bb3_Article%20Thumbnail%20%239-p-500.png`,
         },
       ],
     },
@@ -219,6 +228,9 @@ const projectsPage_data = [
         {
           imageurl: `https://cdn.prod.website-files.com/6606f0f658b42ca7220e36c3/6609a7598dae61ccc0191f22_Article%20Image%20%233.png`,
         },
+        {
+          imageurl: `https://cdn.prod.website-files.com/6606f0f658b42ca7220e36c3/6609a65bb576d554df639bb3_Article%20Thumbnail%20%239-p-500.png`,
+        },
       ],
     },
   },
@@ -272,6 +284,9 @@ const projectsPage_data = [
         },
         {
           imageurl: `https://cdn.prod.website-files.com/6606f0f658b42ca7220e36c3/6609a7598dae61ccc0191f22_Article%20Image%20%233.png`,
+        },
+        {
+          imageurl: `https://cdn.prod.website-files.com/6606f0f658b42ca7220e36c3/6609a65bb576d554df639bb3_Article%20Thumbnail%20%239-p-500.png`,
         },
       ],
     },
@@ -327,6 +342,9 @@ const projectsPage_data = [
         {
           imageurl: `https://cdn.prod.website-files.com/6606f0f658b42ca7220e36c3/6609a7598dae61ccc0191f22_Article%20Image%20%233.png`,
         },
+        {
+          imageurl: `https://cdn.prod.website-files.com/6606f0f658b42ca7220e36c3/6609a65bb576d554df639bb3_Article%20Thumbnail%20%239-p-500.png`,
+        },
       ],
     },
   },
@@ -380,6 +398,9 @@ const projectsPage_data = [
         },
         {
           imageurl: `https://cdn.prod.website-files.com/6606f0f658b42ca7220e36c3/6609a7598dae61ccc0191f22_Article%20Image%20%233.png`,
+        },
+        {
+          imageurl: `https://cdn.prod.website-files.com/6606f0f658b42ca7220e36c3/6609a65bb576d554df639bb3_Article%20Thumbnail%20%239-p-500.png`,
         },
       ],
     },
@@ -435,6 +456,9 @@ const projectsPage_data = [
         {
           imageurl: `https://cdn.prod.website-files.com/6606f0f658b42ca7220e36c3/6609a7598dae61ccc0191f22_Article%20Image%20%233.png`,
         },
+        {
+          imageurl: `https://cdn.prod.website-files.com/6606f0f658b42ca7220e36c3/6609a65bb576d554df639bb3_Article%20Thumbnail%20%239-p-500.png`,
+        },
       ],
     },
   },
@@ -488,6 +512,9 @@ const projectsPage_data = [
         },
         {
           imageurl: `https://cdn.prod.website-files.com/6606f0f658b42ca7220e36c3/6609a7598dae61ccc0191f22_Article%20Image%20%233.png`,
+        },
+        {
+          imageurl: `https://cdn.prod.website-files.com/6606f0f658b42ca7220e36c3/6609a65bb576d554df639bb3_Article%20Thumbnail%20%239-p-500.png`,
         },
       ],
     },
@@ -543,6 +570,9 @@ const projectsPage_data = [
         {
           imageurl: `https://cdn.prod.website-files.com/6606f0f658b42ca7220e36c3/6609a7598dae61ccc0191f22_Article%20Image%20%233.png`,
         },
+        {
+          imageurl: `https://cdn.prod.website-files.com/6606f0f658b42ca7220e36c3/6609a65bb576d554df639bb3_Article%20Thumbnail%20%239-p-500.png`,
+        },
       ],
     },
   },
@@ -551,33 +581,21 @@ const projectsPage_data = [
 export default async function ProjectDetails(props) {
   const params = await props.params;
   const id = Number(params.projectId);
-  function filterdata(dataToFilter, id) {
-    return dataToFilter.filter((item) => item.id === id);
+
+  function filterProjects(dataToFilter, prop) {
+    return dataToFilter.filter((item) => item.id === prop);
+  }
+  function filterOtherProjects(dataToFilter, id) {
+    return dataToFilter.filter((item) => item.id != id).slice(0, 4);
   }
 
-  const filteredData = filterdata(projectsPage_data, id);
-
-  // const project = await getSingleData(id);
-
-  // async function getOtherProjectsData() {
-  //   const res = await fetch("https://fakestoreapi.com/products?limit=10");
-
-  //   if (!res.ok) {
-  //     throw new Error("Failed to fetch data");
-  //   }
-
-  //   return res.json();
-  // }
-  // const OtherProjectsData = await getOtherProjectsData();
-
-  // function filterOtherProjects(dataToFilter, id) {
-  //   return dataToFilter.filter((item) => item.id != id).slice(0, 4);
-  // }
+  const singleProject = filterProjects(projectsPage_data, id);
+  const OtherProjectsData = filterOtherProjects(projectsPage_data, id);
 
   return (
     <>
       <Head>
-        <title>works | Webrise</title>
+        <title>{singleProject[0].brandName} | Webrise</title>
         <meta
           name="description"
           content="This is the browse page for the Bits & bots online game store"
@@ -589,72 +607,66 @@ export default async function ProjectDetails(props) {
       <AnimateCursor />
       <LenisScroll />
 
-      {filteredData.map((project) => {
-        {
-          console.log(id, "id");
-          console.log(project.id, "data");
-          <section className={styles.projectsDetails_container}>
-            <div className={styles.projectsDetails_title}>
-              <div style={{ overflow: "hidden" }}>
-                <h6>{project.brandName}</h6>
-              </div>
-              <div style={{ overflow: "hidden" }}>
-                <h1>{project.slogan}</h1>
-              </div>
-            </div>
-            <div className={styles.projectsDetails_content}>
-              <h3>{project.clientVision.description}</h3>
+      <section className={styles.projectsDetails_container}>
+        <div className={styles.projectsDetails_title}>
+          <div style={{ overflow: "hidden" }}>
+            <h6>{singleProject[0].brandName}</h6>
+          </div>
+          <div style={{ overflow: "hidden" }}>
+            <h1>{singleProject[0].slogan}</h1>
+          </div>
+        </div>
+        <div className={styles.projectsDetails_content}>
+          <h3>{singleProject[0].clientVision.description}</h3>
+          <Image
+            src={singleProject[0].clientVision.imageurl}
+            width={864}
+            height={864}
+            alt={"Image desplaying the before side of the clients site"}
+          />
+          <h2>Challenges</h2>
+          <p>{singleProject[0].projectChallenges.description}</p>
+          <div className={styles.duo_images}>
+            {singleProject[0].projectChallenges.images.map((image, i) => (
               <Image
-                src={project.clientVision.imageurl}
-                width={864}
-                height={864}
-                alt={"Image desplaying the before side of the clients site"}
+                src={image.imageurl}
+                width={500}
+                height={500}
+                alt={
+                  "Image desplaying the challenge we faced while working on the project"
+                }
                 loading="lazy"
+                key={i}
               />
-              <h2>Challenge</h2>
-              <p>{project.projectChallenges.description}</p>
-              <div className={styles.duo_images}>
-                {project.projectChallenges.images.map((image, i) => (
-                  <Image
-                    src={image.imageurl}
-                    width={500}
-                    height={500}
-                    alt={
-                      "Image desplaying the challenge we faced while working on the project"
-                    }
-                    loading="lazy"
-                    key={i}
-                  />
-                ))}
+            ))}
+          </div>
+          <h2>Strategy</h2>
+          <p>{singleProject[0].projectStrategy.description}</p>
+          <Image
+            src={singleProject[0].projectStrategy.imageurl}
+            width={864}
+            height={864}
+            alt={"Image desplaying the strategy of the project"}
+            loading="lazy"
+            className={styles.single_image}
+          />
+          <h2>Result</h2>
+          <p>{singleProject[0].projectResults.description}</p>
+          <div className={styles.result_images_container}>
+            {singleProject[0].projectResults.images.map((image, i) => (
+              <div className={styles.result_images} key={i}>
+                <Image
+                  src={image.imageurl}
+                  width={500}
+                  height={500}
+                  alt={"Image desplaying the final result of the project"}
+                  loading="lazy"
+                />
               </div>
-              <h2>Strategy</h2>
-              <p>{project.projectStrategy.description}</p>
-              <Image
-                src={project.projectStrategy.imageurl}
-                width={864}
-                height={864}
-                alt={"Image desplaying the strategy of the project"}
-                loading="lazy"
-                className={styles.single_image}
-              />
-              <h2>Result</h2>
-              <p>{project.projectResults.description}</p>
-              <div className={styles.result_images}>
-                {project.projectResults.images.map((image, i) => (
-                  <div className={styles.duo_images} key={i}>
-                    <Image
-                      src={image.imageurl}
-                      width={500}
-                      height={500}
-                      alt={"Image desplaying the final result of the project"}
-                      loading="lazy"
-                    />
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* <div className={styles.projectsDetails_otherProjects_container}>
+            ))}
+          </div>
+        </div>
+        <div className={styles.projectsDetails_otherProjects_container}>
           <span>OTHER PROJECTS</span>
           <div className={styles.otherProjects_content}>
             {filterOtherProjects(OtherProjectsData, id).map((card) => (
@@ -672,16 +684,14 @@ export default async function ProjectDetails(props) {
                       loading="lazy"
                     />
                   </div>
-                  <h4>{card.price}</h4>
-                  <h5>{card.title}</h5>
+                  <h4>{card.brandName}</h4>
+                  <h5>{card.slogan}</h5>
                 </div>
               </Link>
             ))}
           </div>
-        </div> */}
-          </section>;
-        }
-      })}
+        </div>
+      </section>
     </>
   );
 }
