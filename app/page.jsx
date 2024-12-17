@@ -58,24 +58,28 @@ const homePage_data = {
 
   articleSection: [
     {
+      id: 1,
       title: `Unveiling the Future of Web Design: Trends to Watch in Berlin's Digital Scene`,
       subtittle: "(01)",
       imageurl: `https://placehold.jp/204x306.png`,
       imageAlt: `image related to the article`,
     },
     {
+      id: 2,
       title: `Inside Webrise™: A Day in the Life of Berlin's Most Innovative Creative Team`,
       subtittle: "(02)",
       imageurl: `https://placehold.jp/204x306.png`,
       imageAlt: `image related to the article`,
     },
     {
+      id: 3,
       title: `Sustainable Design: Webrise™'s Approach to Eco-Friendly Digital Solutions`,
       subtittle: "(03)",
       imageurl: `https://placehold.jp/204x306.png`,
       imageAlt: `image related to the article`,
     },
     {
+      id: 4,
       title: `Unveiling the Future of Web Design: Trends to Watch in Berlin's Digital Scene`,
       subtittle: "(04)",
       imageurl: `https://placehold.jp/204x306.png`,
@@ -450,31 +454,33 @@ export default function Home() {
             </div>
           </div>
           <div className={styles.article_content}>
-            {homePage_data.articleSection.map((article, i) => (
-              <div className={styles.single_article} key={i}>
-                <motion.h3
-                  animate={{ y: 50, opacity: 0 }}
-                  whileInView={{ y: 0, opacity: 1 }}
-                  transition={{ duration: 0.6 }}
-                >
-                  {article.subtittle}
-                </motion.h3>
-                <motion.span
-                  animate={{ y: 50, opacity: 0 }}
-                  whileInView={{ y: 0, opacity: 1 }}
-                  transition={{ duration: 0.6 }}
-                >
-                  {article.title}
-                </motion.span>
-                <div className={styles.image_container}>
-                  <Image
-                    src={article.imageurl}
-                    width={204}
-                    height={306}
-                    alt={article.imageAlt}
-                  />
+            {homePage_data.articleSection.map((article) => (
+              <Link key={article.id} href={"/blog/" + article.id}>
+                <div className={styles.single_article}>
+                  <motion.h3
+                    animate={{ y: 50, opacity: 0 }}
+                    whileInView={{ y: 0, opacity: 1 }}
+                    transition={{ duration: 0.6 }}
+                  >
+                    {article.subtittle}
+                  </motion.h3>
+                  <motion.span
+                    animate={{ y: 50, opacity: 0 }}
+                    whileInView={{ y: 0, opacity: 1 }}
+                    transition={{ duration: 0.6 }}
+                  >
+                    {article.title}
+                  </motion.span>
+                  <div className={styles.image_container}>
+                    <Image
+                      src={article.imageurl}
+                      width={204}
+                      height={306}
+                      alt={article.imageAlt}
+                    />
+                  </div>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
         </section>

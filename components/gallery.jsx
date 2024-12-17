@@ -595,6 +595,8 @@ const projectsPage_data = [
   },
 ];
 
+const dataWeWant = projectsPage_data.slice(0, 3);
+
 export default function Gallery() {
   const container = useRef(null);
   const { height } = useDimensions();
@@ -603,10 +605,10 @@ export default function Gallery() {
     offset: ["start end", "end start"],
   });
 
-  const y = useTransform(scrollYProgress, [0, 1], [0, height * 2]);
+  const y = useTransform(scrollYProgress, [0, 1], [0, height * 2.3]);
   const y2 = useTransform(scrollYProgress, [0, 1], [0, height * 3.3]);
   const y3 = useTransform(scrollYProgress, [0, 1], [0, height * 1.25]);
-  const y4 = useTransform(scrollYProgress, [0, 1], [0, height * 3.1]);
+  const y4 = useTransform(scrollYProgress, [0, 1], [0, height * 2.9]);
 
   return (
     <>
@@ -632,6 +634,7 @@ export default function Gallery() {
           </div>
         </div>
       </Parallax>
+
       <div ref={container} className={styles.project_gallery}>
         <Column images={[images[0], images[1], images[2]]} y={y} />
         <Column images={[images[3], images[4], images[5]]} y={y2} />
@@ -645,7 +648,7 @@ export default function Gallery() {
 const Column = ({ images, y = 0 }) => {
   return (
     <motion.div style={{ y }} className={styles.gallery_content}>
-      {projectsPage_data.map((project) => {
+      {dataWeWant.map((project) => {
         return (
           <div key={project.id} className={styles.image_container}>
             <Link href={"http://localhost:3000/projects/" + project.id}>

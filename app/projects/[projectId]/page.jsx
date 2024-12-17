@@ -669,7 +669,7 @@ export default async function ProjectDetails(props) {
         <div className={styles.projectsDetails_otherProjects_container}>
           <span>OTHER PROJECTS</span>
           <div className={styles.otherProjects_content}>
-            {filterOtherProjects(OtherProjectsData, id).map((card) => (
+            {OtherProjectsData.map((card) => (
               <Link
                 href={"http://localhost:3000/projects/" + card.id}
                 key={card.id}
