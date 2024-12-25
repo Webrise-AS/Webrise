@@ -7,21 +7,6 @@ import { Parallax } from "react-scroll-parallax";
 import useDimensions from "@/app/hooks/useDimension";
 import Link from "next/link";
 
-const images = [
-  "https://placehold.jp/640x701.png",
-  "https://placehold.jp/640x702.png",
-  "https://placehold.jp/640x703.png",
-  "https://placehold.jp/640x704.png",
-  "https://placehold.jp/640x705.png",
-  "https://placehold.jp/640x706.png",
-  "https://placehold.jp/640x707.png",
-  "https://placehold.jp/640x708.png",
-  "https://placehold.jp/640x709.png",
-  "https://placehold.jp/640x710.png",
-  "https://placehold.jp/640x711.png",
-  "https://placehold.jp/640x712.png",
-];
-
 const projectsPage_data = [
   {
     id: 1,
@@ -595,8 +580,6 @@ const projectsPage_data = [
   },
 ];
 
-const dataWeWant = projectsPage_data.slice(0, 3);
-
 export default function Gallery() {
   const container = useRef(null);
   const { height } = useDimensions();
@@ -636,23 +619,23 @@ export default function Gallery() {
       </Parallax>
 
       <div ref={container} className={styles.project_gallery}>
-        <Column images={[images[0], images[1], images[2]]} y={y} />
-        <Column images={[images[3], images[4], images[5]]} y={y2} />
-        <Column images={[images[6], images[7], images[8]]} y={y3} />
-        <Column images={[images[9], images[0], images[1]]} y={y4} />
+        <Column length={3} y={y} />
+        <Column length={3} y={y2} />
+        <Column length={3} y={y3} />
+        <Column length={3} y={y4} />
       </div>
     </>
   );
 }
 
-const Column = ({ images, y = 0 }) => {
+const Column = ({ length, y = 0 }) => {
   return (
     <motion.div style={{ y }} className={styles.gallery_content}>
-      {dataWeWant.map((project) => {
+      {projectsPage_data.slice(0, 3).map(({ id, image }) => {
         return (
-          <div key={project.id} className={styles.image_container}>
-            <Link href={"http://localhost:3000/projects/" + project.id}>
-              <Image src={project.image} alt="Image of the project" fill />
+          <div key={id} className={styles.image_container}>
+            <Link href={"http://localhost:3000/projects/" + id}>
+              <Image src={image} alt="Image of the project" fill />
             </Link>
           </div>
         );

@@ -14,10 +14,10 @@ function Accordion({ data }) {
 
   return (
     <div className={styles.accordion_container}>
-      {data.map((info, i) => (
+      {data.map(({ id, question, answer }, i) => (
         <div
           className={styles.single_accordion}
-          key={info.id}
+          key={id}
           onClick={() => toggle(i)}
         >
           <div className={styles.single_accordion_title}>
@@ -33,7 +33,7 @@ function Accordion({ data }) {
               whileInView={{ opacity: 1 }}
               transition={{ ease: "easeIn", transition: 0.6 }}
             >
-              {info.question}
+              {question}
             </motion.h2>
           </div>
           <div
@@ -43,7 +43,7 @@ function Accordion({ data }) {
                 : styles.single_accordion_content
             }
           >
-            <p>{info.answer}</p>
+            <p>{answer}</p>
           </div>
         </div>
       ))}

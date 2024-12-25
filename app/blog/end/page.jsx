@@ -478,31 +478,30 @@ export default function BlogEnd() {
               animate={{ y: 0 }}
               transition={{ ease: "easeIn", duration: 0.6 }}
             >
-              {blogPage_data.slice(8, 10).map((blog) => (
-                <Link
-                  href={"http://localhost:3000/blog/" + blog.id}
-                  key={blog.id}
-                >
-                  <motion.div
-                    className={styles.single_card}
-                    animate={{ y: "10vh", scale: 0.85 }}
-                    whileInView={{ y: 0, scale: 1 }}
-                    transition={{ ease: "easeIn", duration: 0.6 }}
-                  >
-                    <div className={styles.image_wrapper}>
-                      <Image
-                        src={blog.heroImage}
-                        width={500}
-                        height={700}
-                        alt={"image for the specified blog card"}
-                        loading="lazy"
-                      />
-                    </div>
-                    <h3>{blog.date}</h3>
-                    <h4>{blog.slogan}</h4>
-                  </motion.div>
-                </Link>
-              ))}
+              {blogPage_data
+                .slice(8, 10)
+                .map(({ id, heroImage, date, slogan }) => (
+                  <Link href={"http://localhost:3000/blog/" + id} key={id}>
+                    <motion.div
+                      className={styles.single_card}
+                      animate={{ y: "10vh", scale: 0.85 }}
+                      whileInView={{ y: 0, scale: 1 }}
+                      transition={{ ease: "easeIn", duration: 0.6 }}
+                    >
+                      <div className={styles.image_wrapper}>
+                        <Image
+                          src={heroImage}
+                          width={500}
+                          height={700}
+                          alt={"image for the specified blog card"}
+                          loading="lazy"
+                        />
+                      </div>
+                      <h3>{date}</h3>
+                      <h4>{slogan}</h4>
+                    </motion.div>
+                  </Link>
+                ))}
             </motion.div>
             <div style={{ overflow: "hidden" }}>
               <Link href={"http://localhost:3000/blog/"}>

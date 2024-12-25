@@ -47,7 +47,7 @@ const homePage_data = {
   },
 
   aboutSection: {
-    imageurl: `https://placehold.jp/400x450.png`,
+    imageurl: `https://cdn.prod.website-files.com/6606f0f658b42ca7220e36c3/6609a61bf5ced39c23f99a20_Article%20Thumbnail%20%237-p-500.png`,
     imageAlt: `image of about of...`,
   },
 
@@ -433,55 +433,55 @@ export default function Home() {
           </div>
         </section>
         <section className={styles.article_container}>
-          <div>
-            <div style={{ overflow: "hidden" }}>
-              <motion.h2
-                animate={{ y: "12vh", skewY: 15 }}
-                whileInView={{ y: 0, skewY: 0 }}
-                transition={{ ease: "easeIn", duration: 0.6 }}
-              >
-                LATEST
-              </motion.h2>
-            </div>
-            <div style={{ overflow: "hidden" }}>
-              <motion.h2
-                animate={{ y: "12vh", skewY: 15 }}
-                whileInView={{ y: 0, skewY: 0 }}
-                transition={{ ease: "easeIn", duration: 0.6 }}
-              >
-                ARTICLES
-              </motion.h2>
-            </div>
+          <div style={{ overflow: "hidden" }}>
+            <motion.h2
+              animate={{ y: "12vh", skewY: 15 }}
+              whileInView={{ y: 0, skewY: 0 }}
+              transition={{ ease: "easeIn", duration: 0.6 }}
+            >
+              LATEST
+            </motion.h2>
+          </div>
+          <div style={{ overflow: "hidden" }}>
+            <motion.h2
+              animate={{ y: "12vh", skewY: 15 }}
+              whileInView={{ y: 0, skewY: 0 }}
+              transition={{ ease: "easeIn", duration: 0.6 }}
+            >
+              ARTICLES
+            </motion.h2>
           </div>
           <div className={styles.article_content}>
-            {homePage_data.articleSection.map((article) => (
-              <Link key={article.id} href={"/blog/" + article.id}>
-                <div className={styles.single_article}>
-                  <motion.h3
-                    animate={{ y: 50, opacity: 0 }}
-                    whileInView={{ y: 0, opacity: 1 }}
-                    transition={{ duration: 0.6 }}
-                  >
-                    {article.subtittle}
-                  </motion.h3>
-                  <motion.span
-                    animate={{ y: 50, opacity: 0 }}
-                    whileInView={{ y: 0, opacity: 1 }}
-                    transition={{ duration: 0.6 }}
-                  >
-                    {article.title}
-                  </motion.span>
-                  <div className={styles.image_container}>
-                    <Image
-                      src={article.imageurl}
-                      width={204}
-                      height={306}
-                      alt={article.imageAlt}
-                    />
+            {homePage_data.articleSection.map(
+              ({ id, subtittle, title, imageurl, imageAlt }) => (
+                <Link key={id} href={"/blog/" + id}>
+                  <div className={styles.single_article}>
+                    <motion.h3
+                      animate={{ y: 50, opacity: 0 }}
+                      whileInView={{ y: 0, opacity: 1 }}
+                      transition={{ duration: 0.6 }}
+                    >
+                      {subtittle}
+                    </motion.h3>
+                    <motion.span
+                      animate={{ y: 50, opacity: 0 }}
+                      whileInView={{ y: 0, opacity: 1 }}
+                      transition={{ duration: 0.6 }}
+                    >
+                      {title}
+                    </motion.span>
+                    <div className={styles.image_container}>
+                      <Image
+                        src={imageurl}
+                        width={204}
+                        height={306}
+                        alt={imageAlt}
+                      />
+                    </div>
                   </div>
-                </div>
-              </Link>
-            ))}
+                </Link>
+              )
+            )}
           </div>
         </section>
         <section className={styles.feedback_container}>
@@ -508,10 +508,10 @@ export default function Home() {
             </div>
             <div className={styles.embla} ref={emblaRef}>
               <div className={styles.embla__container}>
-                {homePage_data.feedbackSection.map((info, i) => (
-                  <div className={styles.embla__slide} key={i}>
-                    <h3>{info.client}</h3>
-                    <p>{info.review}</p>
+                {homePage_data.feedbackSection.map(({ id, client, review }) => (
+                  <div className={styles.embla__slide} key={id}>
+                    <h3>{client}</h3>
+                    <p>{review}</p>
                   </div>
                 ))}
               </div>

@@ -503,23 +503,20 @@ export default async function BlogDetails(props) {
             <h2>RELATED</h2>
           </div>
           <div className={styles.related_cards_container}>
-            {OtherArticlesData.map((card) => (
-              <Link
-                href={"http://localhost:3000/blog/" + card.id}
-                key={card.id}
-              >
+            {OtherArticlesData.map(({ id, heroImage, date, slogan }) => (
+              <Link href={"http://localhost:3000/blog/" + id} key={id}>
                 <div className={styles.single_card}>
                   <div className={styles.image_wrapper}>
                     <Image
-                      src={card.heroImage}
+                      src={heroImage}
                       width={500}
                       height={700}
                       alt={"image for the specified blog card"}
                       loading="lazy"
                     />
                   </div>
-                  <h3>{card.date}</h3>
-                  <h4>{card.slogan}</h4>
+                  <h3>{date}</h3>
+                  <h4>{slogan}</h4>
                 </div>
               </Link>
             ))}

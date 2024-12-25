@@ -86,15 +86,15 @@ function Header({ color }) {
             </div>
             <div className={styles.nav_dark_links}>
               <ul>
-                {navLinks.map((link) => {
-                  const isActive = pathname.startsWith(link.href);
+                {navLinks.map(({ id, href, name }) => {
+                  const isActive = pathname.startsWith(href);
 
                   return (
                     <li
-                      key={link.id}
+                      key={id}
                       className={isActive ? styles.isActive_dark : ""}
                     >
-                      <Link href={link.href}>{link.name}</Link>
+                      <Link href={href}>{name}</Link>
                     </li>
                   );
                 })}
@@ -128,17 +128,17 @@ function Header({ color }) {
                       animate="open"
                       exit="initial"
                     >
-                      {navLinks.map((link) => {
-                        const isActive = pathname.startsWith(link.href);
+                      {navLinks.map(({ id, href, name }) => {
+                        const isActive = pathname.startsWith(href);
 
                         return (
-                          <div key={link.id} style={{ overflow: "hidden" }}>
+                          <div key={id} style={{ overflow: "hidden" }}>
                             <motion.li
                               className={isActive ? styles.isActive_dark : ""}
                               variants={linksVars}
                               onClick={toggleMenu}
                             >
-                              <Link href={link.href}>{link.name}</Link>
+                              <Link href={href}>{name}</Link>
                             </motion.li>
                           </div>
                         );
@@ -160,15 +160,12 @@ function Header({ color }) {
             </div>
             <div className={styles.nav_links}>
               <ul>
-                {navLinks.map((link) => {
-                  const isActive = pathname.startsWith(link.href);
+                {navLinks.map(({ id, href, name }) => {
+                  const isActive = pathname.startsWith(href);
 
                   return (
-                    <li
-                      key={link.id}
-                      className={isActive ? styles.isActive : ""}
-                    >
-                      <Link href={link.href}>{link.name}</Link>
+                    <li key={id} className={isActive ? styles.isActive : ""}>
+                      <Link href={href}>{name}</Link>
                     </li>
                   );
                 })}
@@ -202,17 +199,17 @@ function Header({ color }) {
                       animate="open"
                       exit="initial"
                     >
-                      {navLinks.map((link) => {
-                        const isActive = pathname.startsWith(link.href);
+                      {navLinks.map(({ id, href, name }) => {
+                        const isActive = pathname.startsWith(href);
 
                         return (
-                          <div key={link.id} style={{ overflow: "hidden" }}>
+                          <div key={id} style={{ overflow: "hidden" }}>
                             <motion.li
                               className={isActive ? styles.isActive : ""}
                               variants={linksVars}
                               onClick={toggleMenu}
                             >
-                              <Link href={link.href}>{link.name}</Link>
+                              <Link href={href}>{name}</Link>
                             </motion.li>
                           </div>
                         );

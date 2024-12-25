@@ -22,7 +22,6 @@ export default function Contact() {
       </Head>
 
       <AnimateCursor />
-
       <LenisScroll />
 
       <Parallax speed={-8}>

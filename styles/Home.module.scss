@@ -472,7 +472,6 @@
         margin: 10rem auto;
         display: flex;
         flex-direction: column;
-        row-gap: 6rem;
 
         h2 {
             width: fit-content;
@@ -484,10 +483,11 @@
         }
         
         .article_content {
+            margin-top: 5rem;
             display: flex;
             flex-direction: column;
 
-            div:nth-child(1) {
+            div:nth-of-type(1) {
                 border-top: 1px solid $black-color;
                 border-bottom: 1px solid $black-color;
             }
@@ -552,6 +552,7 @@
                 .image_container {
                     display:inline-block;
                     transform: rotate(-9deg) ;
+                    z-index: $low-index;
                 }
             }
         }
@@ -892,15 +893,12 @@
     }
 
     .article_container {
-        row-gap: 3rem !important;
-
         h2 {
             font-size: 3.875rem !important;
         }
 
         .article_content {
-
-            .article_content_top, .article_content_bottom {
+            .single_article {
                 justify-content: space-around !important;
                 column-gap: 2.5rem !important;
                 
@@ -922,7 +920,7 @@
                 }
             }
 
-            .article_content_top:hover, .article_content_bottom:hover {
+            .single_article:hover{
                 cursor: unset !important;
 
                 .image_container {
@@ -1033,7 +1031,6 @@
     }
 
     .project_container {
-
         .project_hero_textfield {
 
             h2 {
@@ -1042,6 +1039,7 @@
         }
 
         .project_gallery {
+            width: 100% !important;
 
             .gallery_content:nth-child(2), .gallery_content:nth-child(1) {
                 display: none;
@@ -1092,15 +1090,13 @@
     }
 
     .article_container {
-        row-gap: 2.5rem !important;
-
         h2 {
             font-size: 3.125rem !important;
         }
 
         .article_content {
-            
-            .article_content_top, .article_content_bottom {
+            margin-top: 3rem !important;
+            .single_article{
                 flex-direction: column !important;
                 row-gap: 1.5rem;
 
@@ -1230,16 +1226,12 @@
     }
 
     .article_container {
-        row-gap: 2rem !important;
-
         h2 {
             font-size: 2.5rem !important;
         }
 
         .article_content {
-
-            .article_content_top, .article_content_bottom {
-
+            .single_article{
                 h3 {
                     font-size: 1rem !important;
                 }

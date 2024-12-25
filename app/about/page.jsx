@@ -171,16 +171,18 @@ export default function About() {
           <div className={styles.content_section_sliders}>
             <div className={styles.embla} ref={emblaRef}>
               <div className={styles.embla__container}>
-                {aboutPage_data.sliderSection.images.map((slide, i) => (
-                  <div key={i} className={styles.embla__slide}>
-                    <Image
-                      src={slide.imageurl}
-                      width={640}
-                      height={880}
-                      alt="image desplaying one of our project"
-                    />
-                  </div>
-                ))}
+                {aboutPage_data.sliderSection.images.map(
+                  ({ imageurl }, index) => (
+                    <div key={index} className={styles.embla__slide}>
+                      <Image
+                        src={imageurl}
+                        width={640}
+                        height={880}
+                        alt="image desplaying one of our project"
+                      />
+                    </div>
+                  )
+                )}
               </div>
             </div>
             <div className={styles.embla} ref={emblaRef2}>
@@ -230,24 +232,26 @@ export default function About() {
                 </motion.h2>
               </div>
               <div className={styles.values_container}>
-                {aboutPage_data.infoSection.values.map((value, i) => (
-                  <div className={styles.single_value} key={i}>
-                    <motion.h4
-                      animate={{ y: 50, opacity: 0 }}
-                      whileInView={{ y: 0, opacity: 1 }}
-                      transition={{ duration: 0.6 }}
-                    >
-                      {value.number}
-                    </motion.h4>
-                    <motion.h3
-                      animate={{ y: 50, opacity: 0 }}
-                      whileInView={{ y: 0, opacity: 1 }}
-                      transition={{ duration: 0.6 }}
-                    >
-                      {value.title}
-                    </motion.h3>
-                  </div>
-                ))}
+                {aboutPage_data.infoSection.values.map(
+                  ({ number, title }, index) => (
+                    <div className={styles.single_value} key={index}>
+                      <motion.h4
+                        animate={{ y: 50, opacity: 0 }}
+                        whileInView={{ y: 0, opacity: 1 }}
+                        transition={{ duration: 0.6 }}
+                      >
+                        {number}
+                      </motion.h4>
+                      <motion.h3
+                        animate={{ y: 50, opacity: 0 }}
+                        whileInView={{ y: 0, opacity: 1 }}
+                        transition={{ duration: 0.6 }}
+                      >
+                        {title}
+                      </motion.h3>
+                    </div>
+                  )
+                )}
               </div>
             </div>
           </div>

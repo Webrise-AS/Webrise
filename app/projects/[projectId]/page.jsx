@@ -669,23 +669,20 @@ export default async function ProjectDetails(props) {
         <div className={styles.projectsDetails_otherProjects_container}>
           <span>OTHER PROJECTS</span>
           <div className={styles.otherProjects_content}>
-            {OtherProjectsData.map((card) => (
-              <Link
-                href={"http://localhost:3000/projects/" + card.id}
-                key={card.id}
-              >
+            {OtherProjectsData.map(({ id, image, brandName, slogan }) => (
+              <Link href={"http://localhost:3000/projects/" + id} key={id}>
                 <div className={styles.single_project}>
                   <div className={styles.image_wrapper}>
                     <Image
-                      src={card.image}
+                      src={image}
                       width={500}
                       height={700}
                       alt={"Image desplaying one of our other projects"}
                       loading="lazy"
                     />
                   </div>
-                  <h4>{card.brandName}</h4>
-                  <h5>{card.slogan}</h5>
+                  <h4>{brandName}</h4>
+                  <h5>{slogan}</h5>
                 </div>
               </Link>
             ))}

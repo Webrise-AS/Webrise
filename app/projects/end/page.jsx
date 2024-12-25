@@ -613,28 +613,26 @@ export default function ProjectsEnd() {
         </div>
         <div className={styles.projects_content}>
           <div className={styles.projects_cards_container}>
-            {projectsPage_data.slice(8, 10).map((project) => (
-              <Link
-                href={"http://localhost:3000/projects/" + project.id}
-                key={project.id}
-              >
-                <div className={styles.single_card}>
-                  <div className={styles.image_wrapper}>
-                    <Image
-                      src={project.image}
-                      width={500}
-                      height={700}
-                      alt={"image for the specified blog card"}
-                      loading="lazy"
-                    />
+            {projectsPage_data
+              .slice(8, 10)
+              .map(({ id, image, brandName, slogan }) => (
+                <Link href={"http://localhost:3000/projects/" + id} key={id}>
+                  <div className={styles.single_card}>
+                    <div className={styles.image_wrapper}>
+                      <Image
+                        src={image}
+                        width={500}
+                        height={700}
+                        alt={"image for the specified blog card"}
+                        loading="lazy"
+                      />
+                    </div>
+                    <h2>{brandName}</h2>
+                    <h3>{slogan}</h3>
                   </div>
-                  <h2>{project.brandName}</h2>
-                  <h3>{project.slogan}</h3>
-                </div>
-              </Link>
-            ))}
+                </Link>
+              ))}
           </div>
-
           <Link href={"http://localhost:3000/projects"}>
             <div style={{ overflow: "hidden" }}>
               <h4>PREVIOUS</h4>
