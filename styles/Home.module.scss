@@ -17,6 +17,11 @@
     flex-direction: column;
     padding: 1rem 0 0 0;
 
+    @keyframes zoom_effect {
+        from { opacity: 0; transform: scale(0.1) rotate(0);}
+        to { opacity: 1; transform: scale(1) rotate(-10deg) }
+    }
+
     .hero_container {
         height: fit-content;
         width: 95%;
@@ -302,12 +307,21 @@
                     height: 30rem;
                     position: relative;
                     overflow: hidden;
+                    border-radius: 1vw;
                     
                     img {
                         border-radius: 1vw;
                         height: 100%;
                         width: 100%;
                         object-fit: cover;
+                        transition: transform .55s ease;
+                    }
+                }
+
+                .image_container:hover {
+
+                    img {
+                        transform: scale(1.1);
                     }
                 }
 
@@ -552,7 +566,8 @@
     
                     .image_container {
                         display:inline-block;
-                        transform: rotate(-9deg) ;
+                        animation: ease-in-out zoom_effect 0.4s; 
+                        transform: rotate(-10deg);
                         z-index: $low-index;
                     }
                 }

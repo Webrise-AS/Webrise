@@ -143,6 +143,7 @@ export const database = {
       ],
     },
   },
+
   servicesPage_data: {
     heroSection: {
       imageurl: `https://assets-global.website-files.com/6606f0f658b42ca7220e3695/660723aa9b8b7fc64fc7bf9a_Cons-p-500.webp`,
@@ -264,6 +265,7 @@ export const database = {
       ],
     },
   },
+
   projectsPage_data: [
     {
       id: 1,
@@ -836,6 +838,7 @@ export const database = {
       },
     },
   ],
+
   blogPage_data: [
     {
       id: 1,
@@ -1258,6 +1261,7 @@ export const database = {
       },
     },
   ],
+
   aboutPage_data: {
     heroSection: {
       imageOne: `https://assets-global.website-files.com/6606f0f658b42ca7220e3695/660723aa9b8b7fc64fc7bf9a_Cons-p-500.webp`,
