@@ -9,59 +9,9 @@ import { Parallax } from "react-scroll-parallax";
 import { motion } from "framer-motion";
 import AnimateCursor from "@/components/AnimateCursor";
 import LenisScroll from "@/components/LenisScroll";
+import { database } from "../utils/database";
 
-const aboutPage_data = {
-  heroSection: {
-    imageOne: `https://assets-global.website-files.com/6606f0f658b42ca7220e3695/660723aa9b8b7fc64fc7bf9a_Cons-p-500.webp`,
-    imageTwo: `https://assets-global.website-files.com/6606f0f658b42ca7220e3695/660723aa97aa99be5469fa63_About%20-%20Image-p-500.webp`,
-  },
-
-  sliderSection: {
-    images: [
-      {
-        imageurl: `https://assets-global.website-files.com/6606f0f658b42ca7220e3695/660723ae3249ebd3269d6cbd_Article%20Thumbnail%20%234-p-500.webp`,
-      },
-      {
-        imageurl: `https://assets-global.website-files.com/6606f0f658b42ca7220e3695/660723b0d22851c240393ce9_Article%20Thumbnail%20%238-p-500.webp`,
-      },
-      {
-        imageurl: `https://assets-global.website-files.com/6606f0f658b42ca7220e3695/660723ac1b0450ddc211d109_Article%20Image%20%234-p-800.webp`,
-      },
-      {
-        imageurl: `https://assets-global.website-files.com/6606f0f658b42ca7220e3695/660723b097aa99be5469fe1a_Article%20Thumbnail%20%239-p-800.webp`,
-      },
-      {
-        imageurl: `https://assets-global.website-files.com/6606f0f658b42ca7220e3695/660723b3e10d6cd0f0ca10f6_Camera-p-800.webp`,
-      },
-    ],
-  },
-
-  infoSection: {
-    image: `https://assets-global.website-files.com/6606f0f658b42ca7220e3695/660723ab81a3f7d07a7a97d1_Testimonial.webp`,
-    values: [
-      {
-        number: "(01)",
-        title: "Creatively Bold",
-      },
-      {
-        number: "(02)",
-        title: "Digital Pioneers",
-      },
-      {
-        number: "(03)",
-        title: "Strategic Thinkers",
-      },
-      {
-        number: "(04)",
-        title: "User-Centric",
-      },
-      {
-        number: "(05)",
-        title: "Design Savvy",
-      },
-    ],
-  },
-};
+const aboutPage_data = database.aboutPage_data;
 
 export default function About() {
   const [emblaRef] = useEmblaCarousel({ watchDrag: false, loop: true }, [
