@@ -19,7 +19,7 @@ export default function AnimateCursor() {
         innerStyle={{
           borderRadius: "1rem",
           zIndex: "9999",
-          backgroundColor: "#151515",
+          backgroundColor: "#fcd535",
         }}
         clickables={[
           "a",
