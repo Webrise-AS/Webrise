@@ -34,7 +34,7 @@
                 border-bottom: solid 1px $black-color;
 
                 .image_wrapper {
-                    border-radius: 0.5rem;
+                    border-radius: 1vw;
                     height: clamp(18rem, 50vw + 1rem - 1rem, 36.25rem);
                     overflow: hidden;
 
@@ -275,7 +275,7 @@
 
                 .image_wrapper {
                     height: clamp(18rem, 50vw + 1rem - 1rem, 36.25rem);
-                    border-radius: 0.5rem;
+                    border-radius: 1vw;
                     overflow: hidden;
 
                     img {

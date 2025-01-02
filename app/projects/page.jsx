@@ -42,12 +42,22 @@ export default function Projects() {
           </Parallax>
         </div>
         <div className={styles.projects_content}>
-          <div className={styles.projects_cards_container}>
+          <motion.div
+            className={styles.projects_cards_container}
+            initial={{ y: "30vh" }}
+            animate={{ y: 0 }}
+            transition={{ ease: "easeIn", duration: 0.6 }}
+          >
             {projectsPage_data
               .slice(0, 8)
               .map(({ id, image, brandName, slogan }) => (
                 <Link href={"http://localhost:3000/projects/" + id} key={id}>
-                  <div className={styles.single_card}>
+                  <motion.div
+                    className={styles.single_card}
+                    animate={{ y: "10vh", scale: 0.95 }}
+                    whileInView={{ y: 0, scale: 1 }}
+                    transition={{ ease: "easeIn", duration: 0.6 }}
+                  >
                     <div className={styles.image_wrapper}>
                       <Image
                         src={image}
@@ -59,10 +69,10 @@ export default function Projects() {
                     </div>
                     <h2>{brandName}</h2>
                     <h3>{slogan}</h3>
-                  </div>
+                  </motion.div>
                 </Link>
               ))}
-          </div>
+          </motion.div>
           {projectsPage_data.length >= 8 ? (
             <Link href={"http://localhost:3000/projects/end"}>
               <div style={{ overflow: "hidden" }}>

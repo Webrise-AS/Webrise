@@ -9,8 +9,6 @@ export default function RootLayout({ children }) {
   let headerType = "light";
   const pathname = usePathname();
 
-  console.log(pathname);
-
   // Check if the current route is the projects page
   const isProjectsPage =
     pathname === "/projects" ||

@@ -64,7 +64,7 @@ export default function Blog() {
                   <Link href={"http://localhost:3000/blog/" + id} key={id}>
                     <motion.div
                       className={styles.single_card}
-                      animate={{ y: "10vh", scale: 0.85 }}
+                      animate={{ y: "10vh", scale: 0.95 }}
                       whileInView={{ y: 0, scale: 1 }}
                       transition={{ ease: "easeIn", duration: 0.6 }}
                     >
