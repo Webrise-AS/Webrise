@@ -643,3 +643,82 @@ const Column = ({ length, y = 0 }) => {
     </motion.div>
   );
 };
+
+// return (
+//   <>
+//     <Parallax speed={-4.3}>
+//       <div className={styles.project_hero_textfield}>
+//         <div style={{ overflow: "hidden" }}>
+//           <motion.h2
+//             animate={{ y: "30vh", skewY: 10 }}
+//             whileInView={{ y: 0, skewY: 0 }}
+//             transition={{ ease: "easeIn", duration: 0.6 }}
+//           >
+//             Recent
+//           </motion.h2>
+//         </div>
+//         <div style={{ overflow: "hidden" }}>
+//           <motion.h2
+//             animate={{ y: "30vh", skewY: 10 }}
+//             whileInView={{ y: 0, skewY: 0 }}
+//             transition={{ ease: "easeIn", duration: 0.6 }}
+//           >
+//             Projects
+//           </motion.h2>
+//         </div>
+//       </div>
+//     </Parallax>
+
+//     <div ref={container} className={styles.project_gallery}>
+//       <Column
+//         projectsPage_data={[
+//           projectsPage_data[1],
+//           projectsPage_data[2],
+//           projectsPage_data[3],
+//         ]}
+//         y={y}
+//       />
+//       <Column
+//         projectsPage_data={[
+//           projectsPage_data[4],
+//           projectsPage_data[5],
+//           projectsPage_data[6],
+//         ]}
+//         y={y2}
+//       />
+//       <Column
+//         projectsPage_data={[
+//           projectsPage_data[7],
+//           projectsPage_data[8],
+//           projectsPage_data[9],
+//         ]}
+//         y={y3}
+//       />
+//       <Column
+//         projectsPage_data={[
+//           projectsPage_data[10],
+//           projectsPage_data[2],
+//           projectsPage_data[1],
+//         ]}
+//         y={y4}
+//       />
+//     </div>
+//   </>
+// );
+// }
+
+// const Column = ({ projectsPage_data, y = 0 }) => {
+// return (
+//   <motion.div style={{ y }} className={styles.gallery_content}>
+//     {projectsPage_data.map(({ id, image }) => {
+//       return (
+//         <div key={id} className={styles.image_container}>
+//           <Link href={"http://localhost:3000/projects/" + id}>
+//             <Image src={image} alt="Image of the project" fill />
+//           </Link>
+//         </div>
+//       );
+//     })}
+//   </motion.div>
+// );
+// };

@@ -30,7 +30,7 @@ export default function Home() {
   ]);
 
   const [emblaRef2] = useEmblaCarousel({ loop: true, watchDrag: false }, [
-    AutoScroll({ speed: 2, direction: "backward" }),
+    AutoScroll({ speed: 1.2, direction: "backward" }),
   ]);
 
   const ref = useRef(null);
@@ -179,7 +179,7 @@ export default function Home() {
                       src={slider.imageurl}
                       width={200}
                       height={60}
-                      alt="image of one of our clients logo"
+                      alt="image of one of clients logo"
                     />
                   </div>
                 ))}

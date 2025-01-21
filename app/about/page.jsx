@@ -149,19 +149,14 @@ export default function About() {
             </div>
           </div>
           <div className={styles.content_section_info}>
-            <motion.div
-              className={styles.section_info_image}
-              animate={{ y: 50, opacity: 0, scale: 0.4 }}
-              whileInView={{ y: 0, opacity: 1, scale: 1 }}
-              transition={{ ease: "easeIn", duration: 0.9 }}
-            >
+            <div className={styles.section_info_image}>
               <Image
                 src={aboutPage_data.infoSection.image}
                 width={640}
                 height={880}
                 alt={"image of a woman in an office useing a pc for work"}
               />
-            </motion.div>
+            </div>
             <div className={styles.section_info_container}>
               <div style={{ overflow: "hidden" }}>
                 <motion.h2

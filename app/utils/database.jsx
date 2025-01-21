@@ -6,25 +6,25 @@ export const database = {
 
       brandSlider: [
         {
-          imageurl: `https://placehold.jp/151515/ffffff/200x60.png`,
+          imageurl: `/Images/home/slider/google.svg`,
         },
         {
-          imageurl: `https://placehold.jp/151515/ffffff/200x61.png`,
+          imageurl: `/Images/home/slider/microsoft.svg`,
         },
         {
-          imageurl: `https://placehold.jp/151515/ffffff/200x62.png`,
+          imageurl: `/Images/home/slider/linkedin.svg`,
         },
         {
-          imageurl: `https://placehold.jp/151515/ffffff/200x63.png`,
+          imageurl: `/Images/home/slider/netflix.svg`,
         },
         {
-          imageurl: `https://placehold.jp/151515/ffffff/200x64.png`,
+          imageurl: `/Images/home/slider/youtube.svg`,
         },
         {
-          imageurl: `https://placehold.jp/151515/ffffff/200x65.png`,
+          imageurl: `/Images/home/slider/adobe.svg`,
         },
         {
-          imageurl: `https://placehold.jp/151515/ffffff/200x66.png`,
+          imageurl: `/Images/home/slider/amazon.svg`,
         },
       ],
     },
@@ -154,17 +154,12 @@ export const database = {
         {
           imageurl: `/Images/services/tech-stack/nextjs.svg`,
         },
-
-        {
-          imageurl: `/Images/services/tech-stack/react.svg`,
-        },
-
         {
           imageurl: `/Images/services/tech-stack/supabase.svg`,
         },
 
         {
-          imageurl: `/Images/services/tech-stack/medusa.svg`,
+          imageurl: `/Images/services/tech-stack/medusa.png`,
         },
 
         {
@@ -188,7 +183,7 @@ export const database = {
         },
 
         {
-          imageurl: `/Images/services/tech-stack/wordpress.svg`,
+          imageurl: `/Images/services/tech-stack/wordpress.png`,
         },
       ],
     },

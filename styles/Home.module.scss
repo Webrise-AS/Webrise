@@ -182,17 +182,16 @@
 
             .embla {
                 overflow: hidden;
-
+                
                 .embla__container {
                     display: flex;
-
+                    
                     .embla__slide {
-                        height: 4.35rem;
+                        height: 3rem;
                         margin-right: 2.5rem;
 
                         img {
                             height: 100%;
-                            border-radius: 0.5vw;
                         }
                     }
                 }
