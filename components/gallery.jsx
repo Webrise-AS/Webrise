@@ -634,7 +634,12 @@ const Column = ({ length, y = 0 }) => {
       {projectsPage_data.slice(0, 3).map(({ id, image }) => {
         return (
           <div key={id} className={styles.image_container}>
-            <Link href={"http://localhost:3000/projects/" + id}>
+            <Link
+              href={
+                "http://localhost:3000/projects/" + id ||
+                "https://wwebrise.netlify.app/projects/" + id
+              }
+            >
               <Image src={image} alt="Image of the project" fill />
             </Link>
           </div>
