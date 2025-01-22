@@ -92,7 +92,7 @@ export default function About() {
                 whileInView={{ y: 0, skewY: 0 }}
                 transition={{ ease: "easeIn", duration: 0.6 }}
               >
-                PIONEERS
+                EXPERTS.
               </motion.h2>
             </div>
           </div>
@@ -138,13 +138,13 @@ export default function About() {
             <div className={styles.embla} ref={emblaRef2}>
               <div className={styles.embla__container}>
                 <div className={styles.embla__slide2}>—</div>
-                <div className={styles.embla__slide2}>Creative</div>
+                <div className={styles.embla__slide2}>Design</div>
                 <div className={styles.embla__slide2}>—</div>
-                <div className={styles.embla__slide2}>Pioneers</div>
+                <div className={styles.embla__slide2}>Develop</div>
                 <div className={styles.embla__slide2}>—</div>
-                <div className={styles.embla__slide2}>Strategi</div>
+                <div className={styles.embla__slide2}>Optimize</div>
                 <div className={styles.embla__slide2}>—</div>
-                <div className={styles.embla__slide2}>Bold</div>
+                <div className={styles.embla__slide2}>Host</div>
               </div>
             </div>
           </div>
@@ -164,18 +164,16 @@ export default function About() {
                   whileInView={{ y: 0, skewY: 0 }}
                   transition={{ ease: "easeIn", duration: 0.6 }}
                 >
-                  OUR OFFICE IS
+                  OUR CORE VALUES
                 </motion.h2>
               </div>
-              <div style={{ overflow: "hidden" }}>
+              {/* <div style={{ overflow: "hidden" }}>
                 <motion.h2
                   animate={{ y: "14.6vh", skewY: 8 }}
                   whileInView={{ y: 0, skewY: 0 }}
                   transition={{ ease: "easeIn", duration: 0.6 }}
-                >
-                  FULL OF ENERGY
-                </motion.h2>
-              </div>
+                ></motion.h2>
+              </div> */}
               <div className={styles.values_container}>
                 {aboutPage_data.infoSection.values.map(
                   ({ number, title }, index) => (

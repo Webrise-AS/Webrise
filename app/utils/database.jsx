@@ -1288,23 +1288,23 @@ export const database = {
       values: [
         {
           number: "(01)",
-          title: "Creatively Bold",
+          title: "Innovation",
         },
         {
           number: "(02)",
-          title: "Digital Pioneers",
+          title: "Client Success",
         },
         {
           number: "(03)",
-          title: "Strategic Thinkers",
+          title: "Quality",
         },
         {
           number: "(04)",
-          title: "User-Centric",
+          title: "Integrity",
         },
         {
           number: "(05)",
-          title: "Design Savvy",
+          title: "Adaptability",
         },
       ],
     },
