@@ -79,7 +79,7 @@ export default function About() {
           <div className={styles.hero_section_bottom}>
             <div style={{ overflow: "hidden" }}>
               <motion.h1
-                initial={{ y: "30vh", skewY: 8 }}
+                initial={{ y: "100%", skewY: 15 }}
                 animate={{ y: 0, skewY: 0 }}
                 transition={{ ease: "easeIn", duration: 0.6 }}
               >
@@ -88,7 +88,7 @@ export default function About() {
             </div>
             <div style={{ overflow: "hidden" }}>
               <motion.h2
-                animate={{ y: "30vh", skewY: 8 }}
+                animate={{ y: "100%", skewY: 15 }}
                 whileInView={{ y: 0, skewY: 0 }}
                 transition={{ ease: "easeIn", duration: 0.6 }}
               >

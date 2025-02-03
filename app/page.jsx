@@ -60,7 +60,7 @@ export default function Home() {
             <div className={styles.hero_textfield}>
               <div style={{ overflow: "hidden" }}>
                 <motion.h3
-                  initial={{ y: "9vh", skewY: 5 }}
+                  initial={{ y: "9.85vh", skewY: 5 }}
                   animate={{ y: 0, skewY: 0 }}
                   transition={{ ease: "easeIn", duration: 0.6 }}
                 >
@@ -70,7 +70,7 @@ export default function Home() {
               </div>
               <div style={{ overflow: "hidden" }}>
                 <motion.h1
-                  initial={{ y: "23.5vh", skewY: 10 }}
+                  initial={{ y: "160%", skewY: 10 }}
                   animate={{ y: 0, skewY: 0 }}
                   transition={{ ease: "easeIn", duration: 0.6 }}
                 >
@@ -80,7 +80,7 @@ export default function Home() {
               <div style={{ overflow: "hidden" }}>
                 <motion.h2
                   className={styles.hero_styler}
-                  initial={{ y: "23.2vh", skewY: 10 }}
+                  initial={{ y: "160%", skewY: 10 }}
                   animate={{ y: 0, skewY: 0 }}
                   transition={{ ease: "easeIn", duration: 0.6 }}
                 >
@@ -97,7 +97,7 @@ export default function Home() {
               </div>
               <div style={{ overflow: "hidden" }}>
                 <motion.h2
-                  initial={{ y: "23.5vh", skewY: 10 }}
+                  initial={{ y: "160%", skewY: 10 }}
                   animate={{ y: 0, skewY: 0 }}
                   transition={{ ease: "easeIn", duration: 0.6 }}
                 >
@@ -236,7 +236,7 @@ export default function Home() {
           <div>
             <div style={{ overflow: "hidden" }}>
               <motion.h2
-                animate={{ y: "24.5vh", skewY: 15 }}
+                animate={{ y: "100%", skewY: 15 }}
                 whileInView={{ y: 0, skewY: 0 }}
                 transition={{ ease: "easeIn", duration: 0.6 }}
               >
@@ -245,7 +245,7 @@ export default function Home() {
             </div>
             <div style={{ overflow: "hidden" }}>
               <motion.h2
-                animate={{ y: "24.5vh", skewY: 15 }}
+                animate={{ y: "100%", skewY: 15 }}
                 whileInView={{ y: 0, skewY: 0 }}
                 transition={{ ease: "easeIn", duration: 0.6 }}
               >
@@ -254,7 +254,7 @@ export default function Home() {
             </div>
             <div style={{ overflow: "hidden" }}>
               <motion.h2
-                animate={{ y: "24.5vh", skewY: 15 }}
+                animate={{ y: "100%", skewY: 15 }}
                 whileInView={{ y: 0, skewY: 0 }}
                 transition={{ ease: "easeIn", duration: 0.6 }}
               >
@@ -263,7 +263,7 @@ export default function Home() {
             </div>
             <div style={{ overflow: "hidden" }}>
               <motion.h2
-                animate={{ y: "24.5vh", skewY: 15 }}
+                animate={{ y: "100%", skewY: 15 }}
                 whileInView={{ y: 0, skewY: 0 }}
                 transition={{ ease: "easeIn", duration: 0.6 }}
               >
@@ -272,7 +272,7 @@ export default function Home() {
             </div>
             <div style={{ overflow: "hidden" }}>
               <motion.h2
-                animate={{ y: "24.5vh", skewY: 15 }}
+                animate={{ y: "100%", skewY: 15 }}
                 whileInView={{ y: 0, skewY: 0 }}
                 transition={{ ease: "easeIn", duration: 0.6 }}
               >
@@ -293,7 +293,7 @@ export default function Home() {
         <section className={styles.article_container}>
           <div style={{ overflow: "hidden" }}>
             <motion.h2
-              animate={{ y: "12vh", skewY: 15 }}
+              animate={{ y: "100%", skewY: 15 }}
               whileInView={{ y: 0, skewY: 0 }}
               transition={{ ease: "easeIn", duration: 0.6 }}
             >
@@ -302,7 +302,7 @@ export default function Home() {
           </div>
           <div style={{ overflow: "hidden" }}>
             <motion.h2
-              animate={{ y: "12vh", skewY: 15 }}
+              animate={{ y: "100%", skewY: 15 }}
               whileInView={{ y: 0, skewY: 0 }}
               transition={{ ease: "easeIn", duration: 0.6 }}
             >
@@ -347,7 +347,7 @@ export default function Home() {
             <div>
               <div style={{ overflow: "hidden" }}>
                 <motion.h2
-                  animate={{ y: "35vh", skewY: 20 }}
+                  animate={{ y: "100%", skewY: 10 }}
                   whileInView={{ y: 0, skewY: 0 }}
                   transition={{ ease: "easeIn", duration: 0.6 }}
                 >
@@ -356,7 +356,7 @@ export default function Home() {
               </div>
               <div style={{ overflow: "hidden" }}>
                 <motion.h2
-                  animate={{ y: "35vh", skewY: 20 }}
+                  animate={{ y: "100%", skewY: 10 }}
                   whileInView={{ y: 0, skewY: 0 }}
                   transition={{ ease: "easeIn", duration: 0.6 }}
                 >
@@ -402,7 +402,7 @@ export default function Home() {
           <div className={styles.info_title}>
             <div style={{ overflow: "hidden" }}>
               <motion.h3
-                animate={{ y: "13.3vh", skewY: 15 }}
+                animate={{ y: "100%", skewY: 15 }}
                 whileInView={{ y: 0, skewY: 0 }}
                 transition={{ ease: "easeIn", duration: 0.6 }}
               >
@@ -411,7 +411,7 @@ export default function Home() {
             </div>
             <div style={{ overflow: "hidden" }}>
               <motion.h3
-                animate={{ y: "13.3vh", skewY: 15 }}
+                animate={{ y: "100%", skewY: 15 }}
                 whileInView={{ y: 0, skewY: 0 }}
                 transition={{ ease: "easeIn", duration: 0.6 }}
               >

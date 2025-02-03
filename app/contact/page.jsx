@@ -94,7 +94,7 @@ export default function Contact() {
           <div className={styles.contact_tittle}>
             <div style={{ overflow: "hidden" }}>
               <motion.h1
-                initial={{ y: "40vh", skewY: 8 }}
+                initial={{ y: "132%", skewY: 12 }}
                 animate={{ y: 0, skewY: 0 }}
                 transition={{ ease: "easeIn", duration: 0.6 }}
               >
@@ -103,7 +103,7 @@ export default function Contact() {
             </div>
             <div style={{ overflow: "hidden" }}>
               <motion.h1
-                initial={{ y: "40vh", skewY: 8 }}
+                initial={{ y: "132%", skewY: 12 }}
                 animate={{ y: 0, skewY: 0 }}
                 transition={{ ease: "easeIn", duration: 0.6 }}
               >

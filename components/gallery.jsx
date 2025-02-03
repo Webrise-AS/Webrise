@@ -599,7 +599,7 @@ export default function Gallery() {
         <div className={styles.project_hero_textfield}>
           <div style={{ overflow: "hidden" }}>
             <motion.h2
-              animate={{ y: "30vh", skewY: 10 }}
+              animate={{ y: "100%", skewY: 10 }}
               whileInView={{ y: 0, skewY: 0 }}
               transition={{ ease: "easeIn", duration: 0.6 }}
             >
@@ -608,7 +608,7 @@ export default function Gallery() {
           </div>
           <div style={{ overflow: "hidden" }}>
             <motion.h2
-              animate={{ y: "30vh", skewY: 10 }}
+              animate={{ y: "100%", skewY: 10 }}
               whileInView={{ y: 0, skewY: 0 }}
               transition={{ ease: "easeIn", duration: 0.6 }}
             >
