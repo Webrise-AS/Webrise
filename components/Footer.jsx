@@ -14,78 +14,30 @@ function Footer() {
           <div className={styles.footer_top_links}>
             <ul>
               <Link href={"/services"}>
-                <motion.li
-                  animate={{ y: 100, opacity: 0 }}
-                  whileInView={{ y: 0, opacity: 1 }}
-                  transition={{ ease: "easeIn", duration: 0.6 }}
-                >
-                  Services
-                </motion.li>
+                <li>Services</li>
               </Link>
               <Link href={"/projects"}>
-                <motion.li
-                  animate={{ y: 100, opacity: 0 }}
-                  whileInView={{ y: 0, opacity: 1 }}
-                  transition={{ ease: "easeIn", duration: 0.6 }}
-                >
-                  Projects
-                </motion.li>
+                <li>Projects</li>
               </Link>
               <Link href={"/blog"}>
-                <motion.li
-                  animate={{ y: 100, opacity: 0 }}
-                  whileInView={{ y: 0, opacity: 1 }}
-                  transition={{ ease: "easeIn", duration: 0.6 }}
-                >
-                  Blog
-                </motion.li>
+                <li>Blog</li>
               </Link>
               <Link href={"/about"}>
-                <motion.li
-                  animate={{ y: 100, opacity: 0 }}
-                  whileInView={{ y: 0, opacity: 1 }}
-                  transition={{ ease: "easeIn", duration: 0.6 }}
-                >
-                  About
-                </motion.li>
+                <li>About</li>
               </Link>
               <Link href={"/contact"}>
-                <motion.li
-                  animate={{ y: 100, opacity: 0 }}
-                  whileInView={{ y: 0, opacity: 1 }}
-                  transition={{ ease: "easeIn", duration: 0.6 }}
-                >
-                  Contact
-                </motion.li>
+                <li>Contact</li>
               </Link>
             </ul>
             <ul>
               <Link href={"#"}>
-                <motion.li
-                  animate={{ y: 100, opacity: 0 }}
-                  whileInView={{ y: 0, opacity: 1 }}
-                  transition={{ ease: "easeIn", duration: 0.6 }}
-                >
-                  Linkedin
-                </motion.li>
+                <li>Linkedin</li>
               </Link>
               <Link href={"#"}>
-                <motion.li
-                  animate={{ y: 100, opacity: 0 }}
-                  whileInView={{ y: 0, opacity: 1 }}
-                  transition={{ ease: "easeIn", duration: 0.6 }}
-                >
-                  Tiktok
-                </motion.li>
+                <li>Tiktok</li>
               </Link>
               <Link href={"#"}>
-                <motion.li
-                  animate={{ y: 100, opacity: 0 }}
-                  whileInView={{ y: 0, opacity: 1 }}
-                  transition={{ ease: "easeIn", duration: 0.6 }}
-                >
-                  Instagram
-                </motion.li>
+                <li>Instagram</li>
               </Link>
             </ul>
           </div>
