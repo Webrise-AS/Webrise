@@ -171,7 +171,7 @@ export default function Home() {
             </motion.div>
           </div>
           <div className={styles.hero_slider}>
-            <h2>Meet our clients</h2>
+            <p>Meet our clients</p>
             <div className={styles.embla} ref={emblaRef2}>
               <div className={styles.embla__container}>
                 {homePage_data.heroSection.brandSlider.map((slider, i) => (

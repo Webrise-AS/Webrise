@@ -167,7 +167,7 @@
         }
 
         .hero_overlay {
-            margin-top: 5.4rem;
+            margin-top: 5rem;
             height: 82vh;
             background-color: rgba(0, 0, 0, .5);
             position: absolute;
@@ -200,7 +200,7 @@
             .info_block {
                 display: flex;
                 flex-direction: column;
-                row-gap: 1.75rem;
+                row-gap: 0.5rem;
     
                 h2 {
                     margin: 0;
@@ -238,7 +238,6 @@
                 letter-spacing: -.04em;
             }
         }
-
     }
 
     .blogDetails_related_section {
@@ -388,6 +387,10 @@
                     width: 95% !important;
                     margin: 0 auto !important;
                 }
+            }
+
+            .hero_overlay {
+                margin-top: 4rem !important;
             }
         }
 

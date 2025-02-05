@@ -383,6 +383,10 @@
                     width: 48% !important;
                 }
             }
+
+            .result_images_container {
+                grid-template-columns: repeat(2, minmax(10rem, 1fr) );
+            }
         }
 
         .projectsDetails_otherProjects_container {

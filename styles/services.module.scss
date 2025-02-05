@@ -7,7 +7,7 @@
 
     @keyframes slide_up_header {
         from {
-            transform: translateY(40vh) skewY(15deg);
+            transform: translateY(170%) skewY(12deg);
         }
         to {
             transform: translateY(0) skewY(0deg);
@@ -25,7 +25,7 @@
 
     @keyframes slide_in_card {
         from {
-            transform: translateY(43vh) scale(0.7);
+            transform: translateY(100%) scale(0.7);
         }
         to {
             transform: translateY(0) scale(1);
@@ -38,7 +38,6 @@
         display: flex;
         flex-direction: row-reverse;
         justify-content: space-between;
-        margin-bottom: 7rem;
 
         .hero_tittle_container {
             width: 100%;
@@ -102,43 +101,10 @@
         }
     }
 
-    .services_slider_section {
-        display: flex;
-        align-items: center;
-        margin-bottom: 5rem;
-        padding: 1rem;
-        color: $white-color;
-        background-color: $black-color;
-        border-radius: 0.5vw;
-
-        span {
-            width: 32rem;
-            min-width: 6.1rem;
-            font-size: clamp(1.05rem, 2.7vw + 1rem - 1rem, 1.9rem);
-            font-weight: 600;
-            letter-spacing: -.02em;
-            line-height: 100%;
-            font-style: oblique;
-        }
-
-        .embla {
-            overflow: hidden;
-
-            .embla__container {
-                display: flex;
-
-                .embla__slide {
-                    height: 2.8rem;
-                    margin-left: 5rem;
-
-                    img {
-                        height: 100%;
-                        width: fit-content;
-                        border-radius: 0.5vw;
-                    }
-                }
-            }
-        }
+    .services_opener_paragraph {
+        margin: 7rem 0 10rem 0;
+        text-align: center;
+        font-size: clamp(1.25rem, 3.5vw + 1rem - 1rem, 2rem);
     }
 
     .services_content_section {
@@ -203,6 +169,46 @@
             }
         }
     }
+
+    .services_slider_section {
+        display: flex;
+        align-items: center;
+        margin-top: 5rem;
+        padding: 1rem;
+        color: $white-color;
+        background-color: $black-color;
+        border-radius: 0.5vw;
+
+        span {
+            width: 32rem;
+            min-width: 6.1rem;
+            font-size: clamp(1.05rem, 2.7vw + 1rem - 1rem, 1.9rem);
+            font-weight: 600;
+            letter-spacing: -.02em;
+            line-height: 100%;
+            font-style: oblique;
+        }
+
+        .embla {
+            overflow: hidden;
+
+            .embla__container {
+                display: flex;
+
+                .embla__slide {
+                    height: 2.8rem;
+                    margin-left: 5rem;
+
+                    img {
+                        height: 100%;
+                        width: fit-content;
+                        border-radius: 0.5vw;
+                    }
+                }
+            }
+        }
+    }
+
 }
 
 
@@ -271,46 +277,59 @@
 /* ----------------------------------------------------- Mobile -------------------------------------------- */
 @media (max-width: 426px) {
 
-    .services_content_section {
+    .services_container {
+        padding: 1rem 0 3.5rem 0 !important;
 
-        .content_speciality_section {
-            flex-direction: column-reverse !important;
-            row-gap: 1.5rem !important;
-
-            div:first-child {
-                width: 100% !important;
+        .services_content_section {
+    
+            .content_speciality_section {
+                flex-direction: column-reverse !important;
+                row-gap: 1.5rem !important;
+    
+                button {
+                    width: 100% !important;
+                }
+    
+                div:first-child {
+                    width: 100% !important;
+                }
+    
+                .content_speciality_image {
+                    width: 100% !important;
+                }
             }
+        }
+    
+        .services_hero_section {
+            min-height: 40dvh !important;
+    
+            .hero_image_container {
+                height: 13.15rem !important;
+                width: 24.15rem !important;
+    
+                img {
+                    border-radius: 1vw !important;
+                }
+            }
+        }
 
-            .content_speciality_image {
-                width: 100% !important;
+        .services_opener_paragraph {
+            margin: 4.5rem 0 6rem 0 !important;
+        }
+    
+        .services_slider_section {
+    
+            span {
+                min-width: 6.8rem !important ;
+            }
+    
+            .embla__slide {
+                height: 2rem !important;
+                margin-left: 3rem !important;
             }
         }
     }
 
-    .services_hero_section {
-        min-height: 40dvh !important;
-
-        .hero_image_container {
-            height: 13.15rem !important;
-            width: 24.15rem !important;
-
-            img {
-                border-radius: 1vw !important;
-            }
-        }
-    }
-
-    .services_slider_section {
-
-        span {
-            min-width: 6.8rem !important ;
-        }
-
-        .embla__slide {
-            height: 2rem !important;
-            margin-left: 3rem !important;
-        }
-    }
 }
 
 @media (max-width: 376px) {

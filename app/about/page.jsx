@@ -88,8 +88,8 @@ export default function About() {
             </div>
             <div style={{ overflow: "hidden" }}>
               <motion.h2
-                animate={{ y: "100%", skewY: 15 }}
-                whileInView={{ y: 0, skewY: 0 }}
+                initial={{ y: "175%", skewY: 15 }}
+                animate={{ y: 0, skewY: 0 }}
                 transition={{ ease: "easeIn", duration: 0.6 }}
               >
                 EXPERTS.
@@ -160,20 +160,13 @@ export default function About() {
             <div className={styles.section_info_container}>
               <div style={{ overflow: "hidden" }}>
                 <motion.h2
-                  animate={{ y: "14.6vh", skewY: 8 }}
+                  animate={{ y: "140%", skewY: 10 }}
                   whileInView={{ y: 0, skewY: 0 }}
                   transition={{ ease: "easeIn", duration: 0.6 }}
                 >
                   OUR CORE VALUES
                 </motion.h2>
               </div>
-              {/* <div style={{ overflow: "hidden" }}>
-                <motion.h2
-                  animate={{ y: "14.6vh", skewY: 8 }}
-                  whileInView={{ y: 0, skewY: 0 }}
-                  transition={{ ease: "easeIn", duration: 0.6 }}
-                ></motion.h2>
-              </div> */}
               <div className={styles.values_container}>
                 {aboutPage_data.infoSection.values.map(
                   ({ number, title }, index) => (

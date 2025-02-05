@@ -59,25 +59,11 @@ export default function Services() {
           </div>
         </div>
 
-        <div className={styles.services_slider_section}>
-          <span>&quot;We got the right tools for the job!&quot;</span>
-          <div className={styles.embla} ref={emblaRef}>
-            <div className={styles.embla__container}>
-              {servicesPage_data.sliderSection.images.map(
-                ({ imageurl }, index) => (
-                  <div className={styles.embla__slide} key={index}>
-                    <Image
-                      src={imageurl}
-                      height={200}
-                      width={200}
-                      alt="Logo of one of the tech stacks that we use"
-                    />
-                  </div>
-                )
-              )}
-            </div>
-          </div>
-        </div>
+        <p className={styles.services_opener_paragraph}>
+          our monthly insights showcase the cutting-edge trends, technologies,
+          and creative strategies shaping the future. Stay informed and
+          inspired.
+        </p>
 
         <div className={styles.services_content_section}>
           {servicesPage_data.contentSection.specialities.map(
@@ -96,6 +82,26 @@ export default function Services() {
               </div>
             )
           )}
+        </div>
+
+        <div className={styles.services_slider_section}>
+          <span>&quot;We got the right tools for the job!&quot;</span>
+          <div className={styles.embla} ref={emblaRef}>
+            <div className={styles.embla__container}>
+              {servicesPage_data.sliderSection.images.map(
+                ({ imageurl }, index) => (
+                  <div className={styles.embla__slide} key={index}>
+                    <Image
+                      src={imageurl}
+                      height={200}
+                      width={200}
+                      alt="Logo of one of the tech stacks that we use"
+                    />
+                  </div>
+                )
+              )}
+            </div>
+          </div>
         </div>
       </section>
     </>

@@ -1,5 +1,5 @@
 .contact_container {
-    height: auto;
+    height: 90dvh;
     display: flex;
     width: 95%;
     margin: auto;
@@ -12,7 +12,8 @@
         flex-direction: column;
         row-gap: clamp(1rem, 15.4vw + 1rem - 1rem, 12rem);
         justify-content: space-between;
-
+        margin-bottom: 1.7rem;
+        
         h3 {
             margin: 0;
             font-weight: 500;
@@ -20,7 +21,7 @@
             line-height: 140%;
             letter-spacing: -.03em;
         }
-
+        
         ul {
             display: flex;
             flex-direction: column;
@@ -37,7 +38,7 @@
                     transition: 0.35s ease-in-out;
                     font-size: clamp(2rem, 3.5vw + 1rem - 1rem, 2.5rem);
                 }
-
+                
                 h2 {
                     margin: 0;
                     font-size: clamp(1rem, 2vw + 1rem - 1rem, 1.5rem);
@@ -55,9 +56,9 @@
             }
         }
     }
-
+    
     .contact_tittle {
-        height: 100%;
+        height: fit-content;
         width: 49rem;
         padding-right: 0.23rem;
         overflow: hidden;
@@ -74,12 +75,12 @@
     }
 }
 
-/* ----------------------------------------------------- Tablet -------------------------------------------- */
-@media (max-width: 1112px) {
+/* ----------------------------------------------------- Laptop -------------------------------------------- */
+@media (max-width: 1025px) {
 }
 
-/* ----------------------------------------------------- Mobile -------------------------------------------- */
-@media (max-width: 700px) {
+/* ----------------------------------------------------- Tablet -------------------------------------------- */
+@media (max-width: 769px) {
     .contact_container {
         height: auto;
         flex-direction: column;
@@ -96,9 +97,19 @@
     }
 }
 
-@media (max-width: 426px) {
-    .contact_content {
+/* ----------------------------------------------------- Mobile -------------------------------------------- */
 
-        row-gap: 1.5rem !important;
+@media (max-width: 426px) {
+
+    .contact_container {
+        justify-content: center;
+        height: 86dvh !important;
+        padding: 5rem 0 0 0 !important;
+        align-content: end;
+
+        .contact_content {
+            margin: 0 !important;
+            row-gap: 1.5rem !important;
+        }
     }
 }

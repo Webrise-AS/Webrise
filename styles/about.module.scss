@@ -82,7 +82,7 @@
     }
 
     .about_content_section {
-        padding: 7.5rem 0 0 0;
+        padding: 7rem 0 0 0;
         height: fit-content;
 
         .content_section_story {
@@ -289,6 +289,10 @@
 /* ----------------------------------------------------- Mobile -------------------------------------------- */
 @media (max-width: 426px) {
     .about_main_container {
+
+        .about_content_section {
+            padding: 2.5rem 0 0 0 !important;
+        }
 
         .content_section_story {
         
