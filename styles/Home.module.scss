@@ -506,78 +506,70 @@
             margin-top: 5rem;
             display: flex;
             flex-direction: column;
+            border-bottom: solid 1px $black-color;
 
-            a {
-                div:nth-child(1), div:nth-child(2), div:nth-child(3) {
-                    border-top: 1px solid $black-color;
-                }
-    
-                div:nth-child(4) {
-                    border-top: 1px solid $black-color;
-                    border-bottom: 1px solid $black-color;
+            .single_article {
+                border-top: solid 1px $black-color;
+                position: relative;
+                color: $quaternary-color;
+                display: flex;
+                justify-content: space-between;
+                padding: 2rem 0;
+                column-gap: clamp(0.5rem, 10.1vw + 1rem - 1rem, 9.1rem);
+
+                h3 {
+                    font-size: clamp(0.875rem, 1.954vw + 1rem - 1rem, 1.25rem);
+                    font-weight: 500;
+                    margin: 0;
+                    line-height: 140%;
+                    letter-spacing: -.03em;
                 }
 
-                .single_article {
-                    position: relative;
-                    color: $quaternary-color;
-                    display: flex;
-                    justify-content: space-between;
-                    padding: 2rem 0;
-                    column-gap: clamp(0.5rem, 10.1vw + 1rem - 1rem, 9.1rem);
-    
-                    h3 {
-                        font-size: clamp(0.875rem, 1.954vw + 1rem - 1rem, 1.25rem);
-                        font-weight: 500;
-                        margin: 0;
-                        line-height: 140%;
-                        letter-spacing: -.03em;
-                    }
-    
-                    span {
-                        width: clamp(100%, 50vw + 1rem - 1rem, 71.5rem);
-                        font-size: clamp(1.5rem, 4.688vw + 1rem - 1rem, 3rem);
-                        font-weight: 600;
-                        letter-spacing: -.04em;
-                        line-height: 100%;
-                        margin-right: clamp(0rem, 3vw + 1rem - 1rem, 3rem);
-                    }
-    
-                    .image_container {
-                        display: none;
-                        height: 19rem;
-                        width: 13rem;
-                        object-fit: cover;
-                        margin: auto 0;
-                        position:absolute;
-                        top: 0%;
-                        bottom: 0%;
-                        left: auto;
-                        right: 6.25rem;
-                        backdrop-filter: blur(1rem);
-                        border: none;
-    
-                        img {
-                            height: 100%;
-                            width: 100%;
-                            border-radius: 1vw;
-                        }
-                    }
+                span {
+                    width: clamp(100%, 50vw + 1rem - 1rem, 71.5rem);
+                    font-size: clamp(1.5rem, 4.688vw + 1rem - 1rem, 3rem);
+                    font-weight: 600;
+                    letter-spacing: -.04em;
+                    line-height: 100%;
+                    margin-right: clamp(0rem, 3vw + 1rem - 1rem, 3rem);
                 }
-    
-                .single_article:hover {
-                    h3,span {
-                        transition: 0.4s;
-                        color: $black-color;
-                    }
-    
-                    .image_container {
-                        display:inline-block;
-                        animation: ease-in-out zoom_effect 0.425s; 
-                        transform: rotate(-10deg);
-                        z-index: $low-index;
+
+                .image_container {
+                    display: none;
+                    height: 19rem;
+                    width: 13rem;
+                    object-fit: cover;
+                    margin: auto 0;
+                    position:absolute;
+                    top: 0%;
+                    bottom: 0%;
+                    left: auto;
+                    right: 6.25rem;
+                    backdrop-filter: blur(1rem);
+                    border: none;
+
+                    img {
+                        height: 100%;
+                        width: 100%;
+                        border-radius: 1vw;
                     }
                 }
             }
+
+            .single_article:hover {
+                h3,span {
+                    transition: 0.4s;
+                    color: $black-color;
+                }
+
+                .image_container {
+                    display:inline-block;
+                    animation: ease-in-out zoom_effect 0.425s; 
+                    transform: rotate(-10deg);
+                    z-index: $low-index;
+                }
+            }
+            
         }
     }
 
