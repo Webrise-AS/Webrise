@@ -51,7 +51,7 @@ function Footer() {
           <div className={styles.footer_bottom_logo_container}>
             <Link href={"/"}>
               <Image
-                src="https://placehold.jp/https://placehold.jp/230/00000/ffffff/1370x260.png?text=WEBRISE"
+                src="/logoDark.png"
                 width={1370}
                 height={260}
                 alt="image of the webrise logo"

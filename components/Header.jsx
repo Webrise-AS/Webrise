@@ -5,6 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { BsList } from "react-icons/bs";
 import { AnimatePresence, motion } from "framer-motion";
+import Image from "next/image";
 
 const navLinks = [
   { name: "Services", href: "/services", id: 1 },
@@ -81,7 +82,7 @@ function Header({ color }) {
           <div className={styles.nav_dark_content}>
             <div className={styles.nav_dark_logo}>
               <Link href={"/"}>
-                <span>WEBRISE</span>
+                <Image src="/logoDark.png" width={140} height={30} alt="logo" />
               </Link>
             </div>
             <div className={styles.nav_dark_links}>
@@ -155,7 +156,12 @@ function Header({ color }) {
           <div className={styles.nav_content}>
             <div className={styles.nav_logo}>
               <Link href={"/"}>
-                <span>WEBRISE</span>
+                <Image
+                  src="/logoLight.png"
+                  width={140}
+                  height={30}
+                  alt="logo"
+                />
               </Link>
             </div>
             <div className={styles.nav_links}>

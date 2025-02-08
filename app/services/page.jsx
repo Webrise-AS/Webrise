@@ -60,9 +60,9 @@ export default function Services() {
         </div>
 
         <p className={styles.services_opener_paragraph}>
-          our monthly insights showcase the cutting-edge trends, technologies,
-          and creative strategies shaping the future. Stay informed and
-          inspired.
+          We specialise in creating tailored websites for your unique needs,
+          that includes <span>design</span>, <span>development</span>,
+          <span> hosting</span> and <span>on-site SEO</span>.
         </p>
 
         <div className={styles.services_content_section}>
@@ -85,7 +85,7 @@ export default function Services() {
         </div>
 
         <div className={styles.services_slider_section}>
-          <span>&quot;We got the right tools for the job!&quot;</span>
+          <p>We got the right tools for the job!</p>
           <div className={styles.embla} ref={emblaRef}>
             <div className={styles.embla__container}>
               {servicesPage_data.sliderSection.images.map(
