@@ -554,10 +554,18 @@
 
     .nav_container {
         height: 4rem !important;
+
+        .nav_logo {
+            height: 1.2rem !important;
+        }
     }
 
     .nav_dark_container {
         height: 4rem !important;
+
+        .nav_dark_logo {
+            height: 1.2rem !important;
+        }
     }
 
     .footer_container {

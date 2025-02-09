@@ -61,8 +61,8 @@ export default function Services() {
 
         <p className={styles.services_opener_paragraph}>
           We specialise in creating tailored websites for your unique needs,
-          that includes <span>design</span>, <span>development</span>,
-          <span> hosting</span> and <span>on-site SEO</span>.
+          that includes <span>Design</span>, <span>Development</span>,
+          <span> Hosting</span> and <span>On-site SEO</span>.
         </p>
 
         <div className={styles.services_content_section}>
