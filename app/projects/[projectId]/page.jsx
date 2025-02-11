@@ -100,7 +100,7 @@ export default async function ProjectDetails(props) {
           <span>OTHER PROJECTS</span>
           <div className={styles.otherProjects_content}>
             {OtherProjectsData.map(({ id, image, brandName, slogan }) => (
-              <Link href={"http://localhost:3000/projects/" + id} key={id}>
+              <Link href={"/projects/" + id} key={id}>
                 <div className={styles.single_project}>
                   <div className={styles.image_wrapper}>
                     <Image
