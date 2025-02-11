@@ -394,7 +394,9 @@ export default function Home() {
               whileInView={{ x: 0, opacity: 1 }}
               transition={{ duration: 0.6 }}
             >
-              <button>Learn more</button>
+              <Link href={"/contact"}>
+                <button>Learn more</button>
+              </Link>
             </motion.div>
           </div>
           <div className={styles.hire_overlay}></div>

@@ -84,7 +84,7 @@ export default async function BlogDetails(props) {
           </div>
           <div className={styles.related_cards_container}>
             {OtherArticlesData.map(({ id, heroImage, date, slogan }) => (
-              <Link href={"http://localhost:3000/blog/" + id} key={id}>
+              <Link href={"/blog/" + id} key={id}>
                 <div className={styles.single_card}>
                   <div className={styles.image_wrapper}>
                     <Image

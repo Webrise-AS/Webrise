@@ -51,7 +51,7 @@ export default function Projects() {
             {projectsPage_data
               .slice(0, 8)
               .map(({ id, image, brandName, slogan }) => (
-                <Link href={"http://localhost:3000/projects/" + id} key={id}>
+                <Link href={"/projects/" + id} key={id}>
                   <motion.div
                     className={styles.single_card}
                     animate={{ y: "10vh", scale: 0.95 }}
@@ -74,7 +74,7 @@ export default function Projects() {
               ))}
           </motion.div>
           {projectsPage_data.length >= 8 ? (
-            <Link href={"http://localhost:3000/projects/end"}>
+            <Link href={"/projects/end"}>
               <div style={{ overflow: "hidden" }}>
                 <h4>NEXT</h4>
               </div>

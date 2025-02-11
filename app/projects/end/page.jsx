@@ -46,7 +46,7 @@ export default function ProjectsEnd() {
             {projectsPage_data
               .slice(8, 10)
               .map(({ id, image, brandName, slogan }) => (
-                <Link href={"http://localhost:3000/projects/" + id} key={id}>
+                <Link href={"/projects/" + id} key={id}>
                   <div className={styles.single_card}>
                     <div className={styles.image_wrapper}>
                       <Image
@@ -63,7 +63,7 @@ export default function ProjectsEnd() {
                 </Link>
               ))}
           </div>
-          <Link href={"http://localhost:3000/projects"}>
+          <Link href={"/projects"}>
             <div style={{ overflow: "hidden" }}>
               <h4>PREVIOUS</h4>
             </div>

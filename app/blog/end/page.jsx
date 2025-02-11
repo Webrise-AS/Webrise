@@ -61,7 +61,7 @@ export default function BlogEnd() {
               {blogPage_data
                 .slice(8, 10)
                 .map(({ id, heroImage, date, slogan }) => (
-                  <Link href={"http://localhost:3000/blog/" + id} key={id}>
+                  <Link href={"/blog/" + id} key={id}>
                     <motion.div
                       className={styles.single_card}
                       animate={{ y: "10vh", scale: 0.85 }}
@@ -84,7 +84,7 @@ export default function BlogEnd() {
                 ))}
             </motion.div>
             <div style={{ overflow: "hidden" }}>
-              <Link href={"http://localhost:3000/blog/"}>
+              <Link href={"/blog/"}>
                 <h5 className={styles.prev_btn}>PREVIOUS</h5>
               </Link>
             </div>

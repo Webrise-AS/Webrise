@@ -61,7 +61,7 @@ export default function Blog() {
               {blogPage_data
                 .slice(0, 8)
                 .map(({ id, heroImage, date, slogan }) => (
-                  <Link href={"http://localhost:3000/blog/" + id} key={id}>
+                  <Link href={"/blog/" + id} key={id}>
                     <motion.div
                       className={styles.single_card}
                       animate={{ y: "10vh", scale: 0.95 }}
@@ -85,7 +85,7 @@ export default function Blog() {
             </motion.div>
             {blogPage_data.length >= 6 ? (
               <div style={{ overflow: "hidden" }}>
-                <Link href={"http://localhost:3000/blog/end"}>
+                <Link href={"/blog/end"}>
                   <h5>NEXT</h5>
                 </Link>
               </div>
