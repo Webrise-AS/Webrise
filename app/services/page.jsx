@@ -13,7 +13,7 @@ const servicesPage_data = database.servicesPage_data;
 
 export default function Services() {
   const [emblaRef] = useEmblaCarousel({ loop: true, watchDrag: false }, [
-    AutoScroll({ speed: 2, direction: "backward" }),
+    AutoScroll({ speed: 1.25, direction: "backward" }),
   ]);
 
   return (
@@ -60,8 +60,8 @@ export default function Services() {
         </div>
 
         <p className={styles.services_opener_paragraph}>
-          We specialise in creating tailored websites for your unique needs,
-          that includes <span>Design</span>, <span>Development</span>,
+          We specialize in creating tailored websites for your unique needs,
+          which includes <span>Design</span>, <span>Development</span>,
           <span> Hosting</span> and <span>On-site SEO</span>.
         </p>
 

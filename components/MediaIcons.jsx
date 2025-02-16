@@ -6,7 +6,12 @@ export default function MediaIcons() {
   return (
     <>
       <div className={styles.icons_container}>
-        <LinkBox Icon={BsLinkedin} href={"#"} />
+        <LinkBox
+          Icon={BsLinkedin}
+          href={
+            "https://www.linkedin.com/company/webrise-no/?viewAsMember=true"
+          }
+        />
         <LinkBox Icon={BsTiktok} href={"#"} />
         <LinkBox Icon={BsInstagram} href={"#"} />
       </div>
