@@ -46,7 +46,7 @@
 
             h1 {
                 margin: 0;
-                font-size: clamp(5.313rem, 20vw + 1rem - 1rem, 15rem);
+                font-size: clamp(6.313rem, 20vw + 1rem - 1rem, 15rem);
                 font-weight: 600;
                 letter-spacing: -.08em;
                 line-height: 83%;
@@ -56,7 +56,7 @@
 
             h2 {
                 margin: 0;
-                font-size: clamp(5.313rem, 20vw + 1rem - 1rem, 15rem);
+                font-size: clamp(6.313rem, 20vw + 1rem - 1rem, 15rem);
                 font-weight: 600;
                 letter-spacing: -.08em;
                 line-height: 83%;
@@ -326,7 +326,6 @@
                     }
                 }
             }
-    
         }
 
         .services_opener_paragraph {
@@ -342,25 +341,18 @@
     
                 div:first-child {
                     width: 100% !important;
-                    padding: 0 !important;
-
-                    h3, p {
-                        padding: 0rem 1rem 0 1rem !important;
-                    }
 
                     a {
-                    width: 100% !important;
-
-                    button {
                         width: 100% !important;
-                        border-radius: 0 !important;
+
+                        button {
+                            width: 100% !important;
+                        }
                     }
-                }
                 }
     
                 .content_speciality_image {
                     width: 100% !important;
-                    margin-bottom: 1rem;
 
                     img {
                         border-radius: 0 !important;
@@ -388,6 +380,16 @@
 
     .services_hero_section {
 
+        .hero_tittle_container {
+            h1 {
+                font-size: 5.75rem !important;
+            }
+
+            h2 {
+                font-size: 5.75rem !important;
+            }
+        }
+
         .hero_image_container {
             height: 11rem !important;
         }
@@ -397,6 +399,17 @@
 @media (max-width: 321px) {
 
     .services_hero_section {
+
+        .hero_tittle_container {
+            h1 {
+                font-size: 5.313rem !important;
+            }
+
+            h2 {
+                font-size: 5.313rem !important;
+            }
+        }
+
         .hero_image_container {
             height: 5rem !important;
         }
