@@ -142,7 +142,7 @@
             left: 0;
             right: 0;
             bottom: 6%;
-
+            
             h3 {
                 font-size: 1.25rem;
                 font-weight: 500;
@@ -150,9 +150,9 @@
                 line-height: 140%;
                 letter-spacing: -.03em;
             }
-
+            
             h1 {
-                height: fit-content;
+                height: 15.5rem;
                 width: 60rem;
                 text-align: center;
                 margin: 0;
@@ -161,11 +161,10 @@
                 line-height: 1;
                 letter-spacing: -.04em;
                 animation: 0.6s slide_up_text;
-                overflow: visible;
             }
             
         }
-
+        
         .hero_overlay {
             margin-top: 5rem;
             height: 82vh;
@@ -187,33 +186,35 @@
             height: fit-content;
             width: 54.124rem;
             margin: auto;
-            padding: 4.5rem 0 6.25rem 0; 
+            padding: 5rem 0; 
 
             h4 {
-                font-size: clamp(1rem, 3vw + 1rem - 1rem, 1.5rem);
+                font-size: clamp(1.25rem, 4vw + 1rem - 1rem, 2rem);
                 font-weight: 500;
-                line-height: 116%;
-                letter-spacing: -.02em;
-                margin-bottom: 5rem;
+                line-height: 112%;
+                letter-spacing: -.04em;
+                margin: 0 0 5rem 0;
             }
     
             .info_block {
                 display: flex;
                 flex-direction: column;
-                row-gap: 0.5rem;
+                row-gap: 1rem;
     
                 h2 {
                     margin: 0;
-                    font-size: clamp(1.5rem, 5vw + 1rem - 1rem, 2.5rem);
+                    font-size: clamp(1.7rem, 4.6vw + 1rem - 1rem, 2.5rem);
                     font-weight: 600;
                     line-height: 100%;
                     letter-spacing: -.04em;
                 }
     
                 p {
+                    margin: 0;
                     font-size: clamp(1rem, 2.5vw + 1rem - 1rem, 1.25rem);
                     font-weight: 400;
-                    line-height: 140%;
+                    letter-spacing: -.02em;
+                    line-height: 135%;
                 }
             }
 
@@ -258,7 +259,7 @@
         }
 
         .related_cards_container {
-            margin: 4rem 0 2rem 0;
+            margin: 2.5rem 0 2rem 0;
             width: 100%;
             display: grid;
             grid-template-columns: repeat(3, minmax(13rem, 1fr) );
@@ -377,6 +378,14 @@
 
     .blogDetails_container {
 
+        .blogDetails_info_content {
+            padding: 2.75rem 0 2rem 0 !important;
+
+            h4 {
+                margin: 0 0 4rem 0 !important;
+            }
+        }
+
         .blogDetails_hero_section {
             .hero_content {
                 h3 {
@@ -393,7 +402,6 @@
                 margin-top: 4rem !important;
             }
         }
-
 
         .blogDetails_related_section {
             .related_cards_container {
