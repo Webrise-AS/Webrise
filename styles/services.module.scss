@@ -1,7 +1,5 @@
 .services_container {
-    padding: 1rem 0 10rem 0;
-    width: 95%;
-    margin: auto;
+    padding: 1.5rem 0 5rem 0;
     min-height: fit-content;
     position: relative;
 
@@ -34,16 +32,17 @@
 
     .services_hero_section {
         min-height: 83.35dvh;
-        
+        width: 95%;
+        margin: auto;
         display: flex;
         flex-direction: row-reverse;
         justify-content: space-between;
 
         .hero_tittle_container {
-            width: 50%;
+            min-width: 90%;
             position: absolute;
-            top: 1rem;
-            left: 0;
+            top: 1.5rem;
+            left: 2%;
 
             h1 {
                 margin: 0;
@@ -102,9 +101,10 @@
     }
 
     .services_opener_paragraph {
-        margin: 7rem 0 10rem 0;
+        width: 95%;
+        margin: 7rem auto 10rem auto;
         text-align: center;
-        font-size: clamp(1.25rem, 3.5vw + 1rem - 1rem, 2rem);
+        font-size: clamp(1.25rem, 3vw + 1rem - 1rem, 2rem);
 
         span {
             font-weight: 600;
@@ -112,12 +112,14 @@
     }
 
     .services_content_section {
+        width: 95%;
+        margin: auto;
         height: auto;
         display: flex;
         flex-direction: column;
         row-gap: 5rem;
         padding: 1rem 0;
-
+        
         div:nth-child(1), div:nth-child(3) {
             flex-direction: row-reverse;
         }
@@ -132,8 +134,7 @@
                 display: flex;
                 flex-direction: column;
                 align-self: flex-end;
-                padding: 1rem;
-                border-radius: 97% 3% 34% 66% / 57% 30% 70% 43%;
+                padding: 1rem ;
 
                 h3 {
                     margin:  0;
@@ -144,23 +145,28 @@
                 }
 
                 p {
-                    margin: 1.2rem 0 2.2rem 0;
-                    font-size: clamp(0.875rem, 2.5vw + 1rem - 1rem, 1.25rem);
+                    margin: 1rem 0 2rem 0;
+                    font-size: clamp(1rem, 2.5vw + 1rem - 1rem, 1.25rem);
                     font-weight: 400;
-                    line-height: 140%
+                    letter-spacing: -.015em;
+                    line-height: 135%
                 }
 
-                button {
-                    @include buttons;
-                }
+                a {
+                    width: fit-content;
 
-                button:hover {
-                    @include hover_button_effects;
+                    button {
+                        @include buttons;
+                    }
+    
+                    button:hover {
+                        @include hover_button_effects;
+                    }
                 }
             }
 
             .content_speciality_image {
-                height: clamp(25rem, 52.5vw + 1rem - 1rem, 37.5rem);
+                height: clamp(22.5rem, 52.5vw + 1rem - 1rem, 37.5rem);
                 width: clamp(15rem, 45vw + 1rem - 1rem, 37.5rem);
                 overflow: hidden;
 
@@ -175,9 +181,10 @@
     }
 
     .services_slider_section {
+        width: 95%;
+        margin: 5rem auto 0 auto;
         display: flex;
         flex-direction: column;
-        margin-top: 5rem;
 
         p {
             text-align: center;
@@ -209,24 +216,31 @@
 
 }
 
-
-
 /* ----------------------------------------------------- laptop -------------------------------------------- */
 @media (max-width: 1025px) {
-
-    .services_slider_section {
-
-        span {
-            width: 38.5rem !important ;
-        }
-    }
 
     .services_hero_section {
         min-height: 81dvh !important;
         
         .hero_image_container {
-            height: 14.1rem !important;
-            width: 16.5rem !important;
+            height: 14.25rem !important;
+            width: 24rem !important;
+        }
+    }
+
+    .services_opener_paragraph {
+        width: 89% !important;
+    }
+
+    .services_content_section {      
+        .content_speciality_section {
+            column-gap: 2rem !important;
+        }
+    }
+
+    .services_slider_section {
+        span {
+            width: 38.5rem !important ;
         }
     }
 
@@ -234,39 +248,53 @@
 /* ----------------------------------------------------- Tablet -------------------------------------------- */
 @media (max-width: 769px) {
 
-    .services_content_section {
+    .services_container {
 
-        .content_speciality_section {
-            flex-direction: column-reverse !important;
-            row-gap: 2rem;
-
-            div:first-child {
-                width: 100% !important;
-            }
-
-            .content_speciality_image {
-                width: 100% !important;
+        .services_hero_section {
+            min-height: 60.7dvh !important;
+    
+            .hero_image_container {
+                height: 10.5rem !important;
+                width: 17.5rem !important;
             }
         }
-    }
-
-    .services_slider_section {
-
-        span {
-            width: 39rem !important ;
+    
+        .services_opener_paragraph {
+            margin: 7rem auto 4rem auto !important;
         }
-
-        .embla__slide {
-            height: 2.8rem !important;
+    
+        .services_content_section {
+            
+            .content_speciality_section {
+                flex-direction: column-reverse !important;
+                row-gap: 2rem;
+                
+                div:first-child {
+                    width: 100% !important;
+                }
+    
+                .content_speciality_image {
+                    width: 100% !important;
+                }
+            }
         }
-    }
-
-    .services_hero_section {
-        min-height: 60.7dvh !important;
-
-        .hero_image_container {
-            height: 10.1rem !important;
-            width: 13.1rem !important;
+    
+        .services_slider_section {
+            width: 100% !important;
+            margin: 3rem auto 0rem auto !important;
+    
+            span {
+                width: 39rem !important ;
+            }
+    
+            .embla {
+                border-radius: 0 !important;
+    
+                .embla__slide {
+                    height: 2.8rem !important;
+                }
+            }
+    
         }
     }
 
@@ -278,41 +306,67 @@
     .services_container {
         padding: 1rem 0 3.5rem 0 !important;
 
-        .services_content_section {
+        .services_hero_section {
+            width: 100% !important;
+            min-height: 40dvh !important;
+
+            .hero_content_container {
+
+                h4 {
+                    width: 95% !important;
+                    margin: auto !important;
+                }
+
+                .hero_image_container {
+                    height: 13.15rem !important;
+                    min-width: 25.55rem !important;
+        
+                    img {
+                        border-radius: 0vw !important;
+                    }
+                }
+            }
     
+        }
+
+        .services_opener_paragraph {
+            margin: 2.5rem auto 4rem auto !important;
+        }
+
+        .services_content_section {
+            width: 100% !important;
+            
             .content_speciality_section {
                 flex-direction: column-reverse !important;
-                row-gap: 1.5rem !important;
-    
-                button {
-                    width: 100% !important;
-                }
+                row-gap: 1.5rem !important;    
     
                 div:first-child {
                     width: 100% !important;
+                    padding: 0 !important;
+
+                    h3, p {
+                        padding: 0rem 1rem 0 1rem !important;
+                    }
+
+                    a {
+                    width: 100% !important;
+
+                    button {
+                        width: 100% !important;
+                        border-radius: 0 !important;
+                    }
+                }
                 }
     
                 .content_speciality_image {
                     width: 100% !important;
-                }
-            }
-        }
-    
-        .services_hero_section {
-            min-height: 40dvh !important;
-    
-            .hero_image_container {
-                height: 13.15rem !important;
-                width: 24.15rem !important;
-    
-                img {
-                    border-radius: 1vw !important;
-                }
-            }
-        }
+                    margin-bottom: 1rem;
 
-        .services_opener_paragraph {
-            margin: 4.5rem 0 6rem 0 !important;
+                    img {
+                        border-radius: 0 !important;
+                    }
+                }
+            }
         }
     
         .services_slider_section {
@@ -335,8 +389,7 @@
     .services_hero_section {
 
         .hero_image_container {
-            height: 12.18rem !important;
-            width: 21.18rem !important;
+            height: 11rem !important;
         }
     }
 }
@@ -345,8 +398,11 @@
 
     .services_hero_section {
         .hero_image_container {
-            height: 10.5rem !important;
-            width: 17.89rem !important;
+            height: 5rem !important;
         }
+    }
+
+    .services_opener_paragraph {
+        width: 99% !important;
     }
 }
