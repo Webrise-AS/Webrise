@@ -186,7 +186,7 @@
                         border-bottom: solid 1px $black-color;;
 
                         h3 {
-                            font-size: clamp(1.65rem, 4.5vw + 1rem - 1rem, 3rem);
+                            font-size: clamp(1.65rem, 4.25vw + 1rem - 1rem, 3rem);
                             font-weight: 600;
                             line-height: 100%;
                             letter-spacing: -.04em;
@@ -194,7 +194,7 @@
                         }
 
                         h4 {
-                            font-size: clamp(0.875rem, 1.8vw + 1rem - 1rem, 1.25rem);
+                            font-size: clamp(0.875rem, 1.7vw + 1rem - 1rem, 1.25rem);
                             font-weight: 500;
                             line-height: 140%;
                             letter-spacing: -.03em;
@@ -269,20 +269,46 @@
     }
 }
 
+/* ----------------------------------------------------- Laptop -------------------------------------------- */
+@media (max-width: 1025px) {
+    
+    .about_main_container {
+
+        .hero_section_bottom {
+            margin-top: 1.12rem;
+        }
+
+        .content_section_info {
+            column-gap: 5rem !important;
+        }
+    }
+}
+
 /* ----------------------------------------------------- Tablet -------------------------------------------- */
 @media (max-width: 768px) {
     .about_main_container {
-        .content_section_info {
-            flex-direction: column;
 
-            .section_info_image {
-                width: 100% !important;
-            }
+        .hero_section_bottom {
+            margin-top: 0 !important;
+        }
 
-            .section_info_container {
-                width: 100% !important;
+        .about_content_section {
+            padding: 4.5rem 0 0 0 !important;
+
+            .content_section_info {
+                flex-direction: column;
+    
+                .section_info_image {
+                    height: 32rem ;
+                    width: 100% !important;
+                }
+    
+                .section_info_container {
+                    width: 100% !important;
+                }
             }
         }
+
     }
 }
 
@@ -292,13 +318,17 @@
 
         .about_content_section {
             padding: 2.5rem 0 0 0 !important;
-        }
 
-        .content_section_story {
-        
-            p {
-            width: 100% !important;
+            .section_info_image {
+                height: 25rem !important;
+            }
+
+            .content_section_story {
+                p {
+                    width: 100% !important;
+                }
             }
         }
+
     }
 }

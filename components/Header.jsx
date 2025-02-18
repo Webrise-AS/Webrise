@@ -117,9 +117,17 @@ function Header({ color }) {
               >
                 <div className={styles.toggleMenu_dark_content}>
                   <div className={styles.toggleMenu_dark_nav}>
-                    <Link href={"/"}>
-                      <span onClick={toggleMenu}>WEBRISE</span>
-                    </Link>
+                    <div className={styles.toggleMenu_dark_logo}>
+                      <Link href={"/"}>
+                        <Image
+                          src="/logoDark.png"
+                          width={140}
+                          height={30}
+                          alt="logo"
+                          onClick={toggleMenu}
+                        />
+                      </Link>
+                    </div>
                     <BsList onClick={toggleMenu} />
                   </div>
                   <div className={styles.toggleMenu_dark_links}>
@@ -193,9 +201,17 @@ function Header({ color }) {
               >
                 <div className={styles.toggleMenu_content}>
                   <div className={styles.toggleMenu_nav}>
-                    <Link href={"/"}>
-                      <span onClick={toggleMenu}>WEBRISE</span>
-                    </Link>
+                    <div className={styles.toggleMenu_logo}>
+                      <Link href={"/"}>
+                        <Image
+                          src="/logoLight.png"
+                          width={140}
+                          height={30}
+                          alt="logo"
+                          onClick={toggleMenu}
+                        />
+                      </Link>
+                    </div>
                     <BsList onClick={toggleMenu} />
                   </div>
                   <div className={styles.toggleMenu_links}>

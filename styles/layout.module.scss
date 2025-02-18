@@ -18,7 +18,7 @@
         justify-content: space-between;
 
         .nav_logo {
-            height: 1.6rem;
+            height: 1.2rem;
 
             img {
                 height: 100%;
@@ -74,6 +74,30 @@
 
             svg {
                 display: none;
+            }
+        }
+    }
+
+    .toggleMenu {
+        .toggleMenu_content {
+
+            .toggleMenu_nav {
+                .toggleMenu_logo {
+                    height: 1.2rem;
+
+                    img {
+                        height: 100%;
+                        width: 100%;
+                    }
+                }
+            }
+
+            .toggleMenu_links {
+                min-height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding-bottom: 3rem;
             }
         }
     }
@@ -162,7 +186,29 @@
         }
     }
 
+    .toggleMenu_dark {
+        .toggleMenu_dark_content {
 
+            .toggleMenu_dark_nav {
+                .toggleMenu_dark_logo {
+                    height: 1.2rem;
+
+                    img {
+                        height: 100%;
+                        width: 100%;
+                    }
+                }
+            }
+
+            .toggleMenu_dark_links {
+                min-height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding-bottom: 3rem;
+            }
+        }
+    }
 }
 
 .loader_container {

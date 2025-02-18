@@ -5,7 +5,6 @@ import Head from "next/head";
 import Link from "next/link";
 import useEmblaCarousel from "embla-carousel-react";
 import AutoScroll from "embla-carousel-auto-scroll";
-import { Parallax } from "react-scroll-parallax";
 import { motion } from "framer-motion";
 import AnimateCursor from "@/components/AnimateCursor";
 import LenisScroll from "@/components/LenisScroll";
@@ -79,7 +78,7 @@ export default function About() {
           <div className={styles.hero_section_bottom}>
             <div style={{ overflow: "hidden" }}>
               <motion.h1
-                initial={{ y: "100%", skewY: 15 }}
+                initial={{ y: "132%", skewY: 15 }}
                 animate={{ y: 0, skewY: 0 }}
                 transition={{ ease: "easeIn", duration: 0.6 }}
               >
@@ -88,7 +87,7 @@ export default function About() {
             </div>
             <div style={{ overflow: "hidden" }}>
               <motion.h2
-                initial={{ y: "175%", skewY: 15 }}
+                initial={{ y: "185%", skewY: 15 }}
                 animate={{ y: 0, skewY: 0 }}
                 transition={{ ease: "easeIn", duration: 0.6 }}
               >
@@ -158,15 +157,7 @@ export default function About() {
               />
             </div>
             <div className={styles.section_info_container}>
-              <div style={{ overflow: "hidden" }}>
-                <motion.h2
-                  animate={{ y: "140%", skewY: 10 }}
-                  whileInView={{ y: 0, skewY: 0 }}
-                  transition={{ ease: "easeIn", duration: 0.6 }}
-                >
-                  OUR CORE VALUES
-                </motion.h2>
-              </div>
+              <h2>OUR CORE VALUES</h2>
               <div className={styles.values_container}>
                 {aboutPage_data.infoSection.values.map(
                   ({ number, title }, index) => (
@@ -193,32 +184,30 @@ export default function About() {
           </div>
         </div>
 
-        <Parallax speed={-5}>
-          <div className={styles.about_talent_section}>
-            <div>
-              <motion.p
-                animate={{ y: 100, opacity: 0, skewY: 5 }}
-                whileInView={{ y: 0, opacity: 1, skewY: 0 }}
-                transition={{ duration: 0.6 }}
-              >
-                Be part of the innovation journey with Webrise. Our monthly
-                insights showcase the cutting-edge trends, technologies, and
-                creative strategies shaping the future. Stay informed, inspired,
-                and ahead of the curve with Webrise
-              </motion.p>
-              <motion.div
-                animate={{ x: -50, opacity: 0 }}
-                whileInView={{ x: 0, opacity: 1 }}
-                transition={{ duration: 0.6 }}
-              >
-                <Link href={"http://localhost:3000/contact/"}>
-                  <button>Learn more</button>
-                </Link>
-              </motion.div>
-            </div>
-            <div className={styles.about_talent_overlay}></div>
+        <div className={styles.about_talent_section}>
+          <div>
+            <motion.p
+              animate={{ y: 100, opacity: 0, skewY: 5 }}
+              whileInView={{ y: 0, opacity: 1, skewY: 0 }}
+              transition={{ duration: 0.6 }}
+            >
+              Be part of the innovation journey with Webrise. Our monthly
+              insights showcase the cutting-edge trends, technologies, and
+              creative strategies shaping the future. Stay informed, inspired,
+              and ahead of the curve with Webrise
+            </motion.p>
+            <motion.div
+              animate={{ x: -50, opacity: 0 }}
+              whileInView={{ x: 0, opacity: 1 }}
+              transition={{ duration: 0.6 }}
+            >
+              <Link href={"http://localhost:3000/contact/"}>
+                <button>Learn more</button>
+              </Link>
+            </motion.div>
           </div>
-        </Parallax>
+          <div className={styles.about_talent_overlay}></div>
+        </div>
       </section>
     </>
   );

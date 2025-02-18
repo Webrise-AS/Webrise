@@ -6,9 +6,9 @@ export default function AnimateCursor() {
     <>
       <AnimatedCursor
         innerSize={12}
-        outerSize={40}
-        innerScale={1.5}
-        outerScale={1.5}
+        outerSize={30}
+        innerScale={1.15}
+        outerScale={1.35}
         outerAlpha={15}
         hasBlendMode={true}
         showSystemCursor={false}
