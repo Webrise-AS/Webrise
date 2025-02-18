@@ -9,6 +9,7 @@ import { motion } from "framer-motion";
 import AnimateCursor from "@/components/AnimateCursor";
 import LenisScroll from "@/components/LenisScroll";
 import { database } from "../utils/database";
+import Talent from "@/components/Talent";
 
 const aboutPage_data = database.aboutPage_data;
 
@@ -183,31 +184,7 @@ export default function About() {
             </div>
           </div>
         </div>
-
-        <div className={styles.about_talent_section}>
-          <div>
-            <motion.p
-              animate={{ y: 100, opacity: 0, skewY: 5 }}
-              whileInView={{ y: 0, opacity: 1, skewY: 0 }}
-              transition={{ duration: 0.6 }}
-            >
-              Be part of the innovation journey with Webrise. Our monthly
-              insights showcase the cutting-edge trends, technologies, and
-              creative strategies shaping the future. Stay informed, inspired,
-              and ahead of the curve with Webrise
-            </motion.p>
-            <motion.div
-              animate={{ x: -50, opacity: 0 }}
-              whileInView={{ x: 0, opacity: 1 }}
-              transition={{ duration: 0.6 }}
-            >
-              <Link href={"http://localhost:3000/contact/"}>
-                <button>Learn more</button>
-              </Link>
-            </motion.div>
-          </div>
-          <div className={styles.about_talent_overlay}></div>
-        </div>
+        <Talent />
       </section>
     </>
   );

@@ -7,6 +7,7 @@
 @import "projects.module.scss";
 @import "services.module.scss";
 @import "Accordion.module.scss";
+@import "Talent.module.scss";
 
 .home_container {
     color: $black-color;
@@ -643,66 +644,6 @@
         }
     }
 
-    .hire_container {
-        background-color: $black-color;
-        color: $white-color;
-        height: clamp(100dvh, 90vw + 1rem - 1rem, 145dvh);
-        background-image: url('https://assets-global.website-files.com/6606f0f658b42ca7220e3695/660bfcae5749fee5cdae4952_Bg%20Text%20Video-poster-00001.jpg');
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        padding-top: 32rem;
-        position: relative;
-
-        .hire_overlay {
-            background-color: rgba(0, 0, 0, .05);
-            position: absolute;
-            top: 0%;
-            bottom: 0%;
-            left: 0%;
-            right: 0%;
-            z-index: $low-index;
-        }
-
-        .hire_content {
-            height: 100%;
-            width: 95%;
-            margin: auto;
-            display: flex;
-            flex-direction: column;
-            row-gap: 2rem;
-            position: inherit;
-            z-index: $base-index !important;
-
-            p {
-                width: clamp(18.3rem, 76vw + 1rem - 1rem, 60rem);
-                margin: 0;
-                font-size: clamp(1.563rem, 4.688vw + 1rem - 1rem, 3rem);
-                font-weight: 600;
-                line-height: 100%;
-                letter-spacing: -.04em;
-            }
-
-            button {
-                width: 9.5%;
-                height: 3rem;
-                background: transparent;
-                color: $white-color;
-                border: solid 0.08rem $white-color;
-                border-radius: 0.5vw;
-                font-size: 1rem;
-                font-weight: 500;
-                transition: transform 1000ms;
-            }
-            
-            button:hover, button:focus {
-                cursor: pointer;
-                transform:translateY(-15%) translateX(4%);
-                transition: transform 250ms;
-            }
-        }
-    }
-
     .info_container {
         height: auto;
         width: 95%;
@@ -775,21 +716,6 @@
 
         .feedback_container {
             padding: 8rem 0;
-        }
-
-        .hire_container {
-            padding-top: 25.5rem ;
-    
-            .hire_content {
-    
-                p {
-                    width: 100% ;
-                }
-    
-                button {
-                    width: 13.25%;
-                }
-            }
         }
     }
 }
@@ -954,23 +880,6 @@
 
             h2 {
                 font-size: 4.5rem !important;
-            }
-        }
-    }
-
-    .hire_container {
-        padding-top: 18.5rem !important;
-
-        .hire_content {
-
-            p {
-                font-size: 2.25rem !important;
-            }
-
-            button {
-                height: 2.75rem !important;
-                width: 15.75% !important;
-                font-size: 1rem !important;
             }
         }
     }
@@ -1171,22 +1080,6 @@
             }
         }
         
-        .hire_container {
-            padding-top: 16rem !important;
-    
-            .hire_content {
-    
-                p {
-                    font-size: 1.625rem !important;
-                }
-    
-                button {
-                    height: 2.45rem !important;
-                    width: 27.75% !important;
-                }
-            }
-        }
-    
         .info_container {
             padding: 8rem 0rem !important;
             row-gap: 1.5rem !important;
@@ -1299,22 +1192,6 @@
         }
     }
     
-    .hire_container {
-        padding-top: 14.75rem !important;
-
-        .hire_content {
-
-            p {
-                font-size: 1.563rem !important;
-            }
-
-            button {
-                height: 2.35rem !important;
-                width: 31% !important;
-            }
-        }
-    }
-
     .info_container {
         row-gap: 1.25rem !important;
 
@@ -1401,22 +1278,6 @@
         }
     }
     
-    .hire_container {
-        padding-top: 13.75rem !important;
-
-        .hire_content {
-
-            p {
-                font-size: 1.5rem !important;
-            }
-
-            button {
-                height: 2.15rem !important;
-                width: 35.5% !important;
-            }
-        }
-    }
-
     .info_container {
         padding: 7rem 0rem !important;
         row-gap: 1rem !important;

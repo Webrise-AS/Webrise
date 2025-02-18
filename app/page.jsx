@@ -16,6 +16,7 @@ import { Typewriter } from "react-simple-typewriter";
 import AnimateCursor from "@/components/AnimateCursor";
 import LenisScroll from "@/components/LenisScroll";
 import { database } from "@/app/utils/database";
+import Talent from "@/components/Talent";
 
 const homePage_data = database.homePage_data;
 
@@ -378,30 +379,7 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section className={styles.hire_container}>
-          <div className={styles.hire_content}>
-            <motion.p
-              animate={{ y: 100, opacity: 0, skewY: 5 }}
-              whileInView={{ y: 0, opacity: 1, skewY: 0 }}
-              transition={{ duration: 0.6 }}
-            >
-              Be part of the innovation journey with Webrise. Our monthly
-              insights showcase the cutting-edge trends, technologies, and
-              creative strategies shaping the future. Stay informed, inspired,
-              and ahead of the curve with Webrise
-            </motion.p>
-            <motion.div
-              animate={{ x: -50, opacity: 0 }}
-              whileInView={{ x: 0, opacity: 1 }}
-              transition={{ duration: 0.6 }}
-            >
-              <Link href={"/contact"}>
-                <button>Learn more</button>
-              </Link>
-            </motion.div>
-          </div>
-          <div className={styles.hire_overlay}></div>
-        </section>
+        <Talent />
         <section className={styles.info_container}>
           <div className={styles.info_title}>
             <div style={{ overflow: "hidden" }}>
