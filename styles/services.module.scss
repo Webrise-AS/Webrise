@@ -138,7 +138,7 @@
 
                 h3 {
                     margin:  0;
-                    font-size: clamp(1.3rem, 3.5vw + 1rem - 1rem, 2.5rem);
+                    font-size: clamp(1.7rem, 4.6vw + 1rem - 1rem, 2.5rem);
                     font-weight: 600;
                     line-height: 100%;
                     letter-spacing: -.02em;
@@ -333,29 +333,23 @@
         }
 
         .services_content_section {
-            width: 100% !important;
             
             .content_speciality_section {
-                flex-direction: column-reverse !important;
-                row-gap: 1.5rem !important;    
     
                 div:first-child {
-                    width: 100% !important;
+                    padding: 0;
 
+                    h3, p {
+                        padding: 0 1rem;
+                    }
+                    
                     a {
                         width: 100% !important;
 
                         button {
+                            height: 3rem !important;
                             width: 100% !important;
                         }
-                    }
-                }
-    
-                .content_speciality_image {
-                    width: 100% !important;
-
-                    img {
-                        border-radius: 0 !important;
                     }
                 }
             }

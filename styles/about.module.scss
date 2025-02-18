@@ -184,7 +184,7 @@
                         column-gap: clamp(2rem, 5.5vw + 1rem - 1rem, 5rem);
                         padding: 2rem 0;
                         border-bottom: solid 1px $black-color;;
-                        
+
                         h3 {
                             font-size: clamp(1.65rem, 4.25vw + 1rem - 1rem, 3rem);
                             font-weight: 600;
@@ -192,7 +192,7 @@
                             letter-spacing: -.04em;
                             margin: 0;
                         }
-                        
+
                         h4 {
                             font-size: clamp(0.875rem, 1.7vw + 1rem - 1rem, 1.25rem);
                             font-weight: 500;
@@ -257,24 +257,9 @@
         .about_content_section {
             padding: 2.5rem 0 0 0 !important;
 
-            .content_section_info {
-                width: 100% !important;
-
-                .section_info_image {
-                    width: 100% !important;
-                    height: 25rem !important;
-
-                    img {
-                        border-radius: 0 !important;
-                    }
-                }
-
-                .section_info_container {
-                    width: 95% !important;
-                    margin: auto;
-                }
+            .section_info_image {
+                height: 25rem !important;
             }
-
 
             .content_section_story {
                 p {
