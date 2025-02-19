@@ -491,7 +491,8 @@
     .article_container {
         height: fit-content;
         width: 95%;
-        margin: 10rem auto;
+        margin: auto;
+        padding: 10rem 0;
         display: flex;
         flex-direction: column;
 
@@ -648,7 +649,7 @@
         height: auto;
         width: 95%;
         margin: auto;
-        padding: 12.5rem 0;
+        padding: 10rem 0;
         display: flex;
         justify-content: space-between;
 
@@ -780,10 +781,22 @@
         }
 
         .hero_slider {
+            margin: 4rem 0 5rem 0 !important;
 
-            .embla__slide {
-                height: 3.3rem !important;
+            p {
+                font-size: 1.7rem !important;
+                margin-bottom: 2rem !important;
             }
+
+            .embla {
+                .embla__container {
+                    .embla__slide { 
+                        height: 1.75rem !important;
+                        margin-right: 2rem !important;
+                    }
+                }
+            }
+
         }
     }
 
@@ -835,6 +848,8 @@
     }
 
     .article_container {
+        padding: 10rem 0 5rem 0 !important;
+
         h2 {
             font-size: 3.875rem !important;
         }
@@ -885,6 +900,7 @@
     }
 
     .info_container {
+        padding: 5rem 0 !important;
         flex-direction: column;
         row-gap: 2rem;
 
@@ -901,7 +917,6 @@
 @media (max-width: 426px) {
 
     .home_container {
-        padding: 1.5rem 0 !important;
 
         .hero_container {
             .hero_content {
@@ -1075,13 +1090,12 @@
                 row-gap: 2.5rem !important;
     
                 h2 {
-                    font-size: 3.438rem !important;
+                    font-size: 3.125rem !important;
                 }
             }
         }
         
         .info_container {
-            padding: 8rem 0rem !important;
             row-gap: 1.5rem !important;
     
             .info_title {
@@ -1185,10 +1199,6 @@
 
         .feedback_content {
             row-gap: 2.25rem !important;
-
-            h2 {
-                font-size: 3.125rem !important;
-            }
         }
     }
     
@@ -1267,10 +1277,6 @@
         .feedback_content {
             row-gap: 1.5rem !important;
 
-            h2 {
-                font-size: 2.813rem !important;
-            }
-
             .embla__container {
                 width: 93%;
                 margin: auto;
@@ -1279,12 +1285,12 @@
     }
     
     .info_container {
-        padding: 7rem 0rem !important;
         row-gap: 1rem !important;
 
         .info_title {
 
             h3 {
+                width: 100% !important;
                 font-size: 2.5rem !important;
             }
         }

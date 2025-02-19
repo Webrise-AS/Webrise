@@ -207,10 +207,9 @@ export default function Home() {
           <div className={styles.about_content_right}>
             <p>
               <span>
-                At Webrise, we are a dedicated web debdevelopment agency
-                comprised of a team of creative professionals committed to
-                helping your business thrive in the ever-changing digital
-                landscape.
+                At Webrise, we are a dedicated web development agency comprised
+                of a team of creative professionals committed to helping your
+                business thrive in the ever-changing digital landscape.
                 <br />
                 <br />
                 Our mission is to design and develop visually stunning and
@@ -350,7 +349,7 @@ export default function Home() {
             <div>
               <div style={{ overflow: "hidden" }}>
                 <motion.h2
-                  animate={{ y: "175%", skewY: 11 }}
+                  animate={{ y: "153%", skewY: 9 }}
                   whileInView={{ y: 0, skewY: 0 }}
                   transition={{ ease: "easeIn", duration: 0.6 }}
                 >
@@ -359,7 +358,7 @@ export default function Home() {
               </div>
               <div style={{ overflow: "hidden" }}>
                 <motion.h2
-                  animate={{ y: "175%", skewY: 11 }}
+                  animate={{ y: "153%", skewY: 9 }}
                   whileInView={{ y: 0, skewY: 0 }}
                   transition={{ ease: "easeIn", duration: 0.6 }}
                 >

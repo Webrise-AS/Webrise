@@ -274,15 +274,18 @@
     .footer_top {
         height: 100%;
         width: 95%;
-        margin: 0 auto 2rem auto;
+        margin: 0 auto;
         display: flex;
         justify-content: space-between;
-
+        
         .footer_top_links {
             display: flex;
-            column-gap: 3rem;
+            column-gap: 2.5rem;
 
             ul {
+                display: flex;
+                flex-direction: column;
+                row-gap: 0.15rem;
                 padding: 0;
                 margin: 0;
 
@@ -302,6 +305,7 @@
                 @include footer_text_links;
                 width: 14rem;
                 margin: 0;
+                
             }
 
             input {
@@ -333,10 +337,10 @@
         margin: 0 auto;
         display: flex;
         flex-direction: column;
-        row-gap: 1rem;
 
         .footer_bottom_logo_container {
             height: 20rem;
+            margin: 1.5rem auto;
 
             img {
                 height: 100%;
@@ -346,7 +350,7 @@
         }
 
         .footer_bottom_info {
-            margin-top: 2rem;
+            
             display: flex;
             justify-content: space-between;
 
@@ -359,7 +363,7 @@
 }
 
 /* ----------------------------------------------------- Laptop -------------------------------------------- */
-@media (max-width: 1023px) {
+@media (max-width: 1024px) {
 
     .footer_container {
         padding: 3rem 0;
@@ -378,7 +382,7 @@
         }
 
         .footer_bottom_logo_container {
-            height: 16rem !important;
+            height: 16rem ;
         }
     }
 
@@ -558,7 +562,7 @@
 }
 
 /* ----------------------------------------------------- Tablet -------------------------------------------- */
-@media (max-width: 767px) {
+@media (max-width: 769px) {
 
     .nav_container {
         .nav_links {
@@ -583,14 +587,18 @@
 
             .footer_top_newsletter {
                 width: 100%;
+
+                svg {
+                    margin-top: 4.3rem !important;
+                    right: 0.9rem !important;
+                }
             }
         }
 
         .footer_bottom {
-
             .footer_bottom_info {
                 flex-direction: column;
-                row-gap: 0.25rem;
+                row-gap: 0.15rem;
             }
         }
     }
@@ -616,14 +624,21 @@
     }
 
     .footer_container {
-        
-        .footer_top_newsletter {
-            
-            svg {
-                font-size: 2rem !important;
-                margin-top: 3.6rem !important;
-            }
-        } 
+        padding: 2.3rem 0 0.5rem 0 !important;
+
+        .footer_top {
+            row-gap: 2.3rem !important;
+
+            .footer_top_newsletter {
+                
+                svg {
+                    font-size: 2rem !important;
+                    margin-top: 3.65rem !important;
+                    right: 0.32rem !important;
+                }
+            } 
+        }
+
 
         .footer_bottom_logo_container {
             height: 7rem !important;
