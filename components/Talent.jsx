@@ -18,8 +18,8 @@ export default function Talent() {
             the curve with Webrise
           </motion.p>
           <motion.div
-            animate={{ x: -50, opacity: 0 }}
-            whileInView={{ x: 0, opacity: 1 }}
+            animate={{ y: 100, opacity: 0, skewY: 5 }}
+            whileInView={{ y: 0, opacity: 1, skewY: 0 }}
             transition={{ duration: 0.6 }}
           >
             <Link href={"/contact"}>
