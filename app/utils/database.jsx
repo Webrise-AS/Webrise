@@ -83,7 +83,7 @@ export const database = {
       {
         id: 2,
         client: `Marco G. – Head Chef at Pasta Palette`,
-        review: `Strobe™ transformed our digital presence with a stunning website that not only
+        review: `Webrise transformed our digital presence with a stunning website that not only
               looks sleek but functions like a dream. Our site now truly reflects the vibrant
               energy of our coding café in Berlin.`,
       },
@@ -100,7 +100,7 @@ export const database = {
       {
         id: 4,
         client: `Abel Y. – Head Chef at Pasta Palette`,
-        review: `Strobe™ transformed our digital presence with a stunning website that not only
+        review: `Webrise transformed our digital presence with a stunning website that not only
               looks sleek but functions like a dream. Our site now truly reflects the vibrant
               energy of our coding café in Berlin.`,
       },
@@ -269,7 +269,7 @@ export const database = {
       image: `https://cdn.prod.website-files.com/6606f0f658b42ca7220e36c3/6609a7e55e9084457b17f3ec_Article%20Image%20%236-p-500.png`,
 
       clientVision: {
-        description: `Sweet Lorens approached Strobe™ with a vision to position their brand as a top contender
+        description: `Sweet Lorens approached Webrise with a vision to position their brand as a top contender
           in the gourmet cookie market. They wanted their brand to evoke warmth, happiness, and the magic
           of childhood dreams, all while emphasizing the quality and uniqueness of their product.`,
         imageurl: `https://cdn.prod.website-files.com/6606f0f658b42ca7220e36c3/6609a7598dae61ccc0191f22_Article%20Image%20%233.png`,
@@ -326,7 +326,7 @@ export const database = {
       image: `https://cdn.prod.website-files.com/6606f0f658b42ca7220e36c3/6609a7598dae61ccc0191f22_Article%20Image%20%233.png`,
 
       clientVision: {
-        description: `Sweet Lorens approached Strobe™ with a vision to position their brand as a top contender
+        description: `Sweet Lorens approached Webrise with a vision to position their brand as a top contender
           in the gourmet cookie market. They wanted their brand to evoke warmth, happiness, and the magic
           of childhood dreams, all while emphasizing the quality and uniqueness of their product.`,
         imageurl: `https://cdn.prod.website-files.com/6606f0f658b42ca7220e36c3/6609a7598dae61ccc0191f22_Article%20Image%20%233.png`,
@@ -383,7 +383,7 @@ export const database = {
       image: `https://cdn.prod.website-files.com/6606f0f658b42ca7220e36c3/6609a5bbceb2ea2527a6dab2_Article%20Thumbnail%20%233-p-500.png`,
 
       clientVision: {
-        description: `Sweet Lorens approached Strobe™ with a vision to position their brand as a top contender
+        description: `Sweet Lorens approached Webrise with a vision to position their brand as a top contender
           in the gourmet cookie market. They wanted their brand to evoke warmth, happiness, and the magic
           of childhood dreams, all while emphasizing the quality and uniqueness of their product.`,
         imageurl: `https://cdn.prod.website-files.com/6606f0f658b42ca7220e36c3/6609a5bbceb2ea2527a6dab2_Article%20Thumbnail%20%233-p-500.png`,
@@ -440,7 +440,7 @@ export const database = {
       image: `https://cdn.prod.website-files.com/6606f0f658b42ca7220e36c3/6609a5a48ff0887dc1fe2bd6_Article%20Thumbnail%20%232-p-500.png`,
 
       clientVision: {
-        description: `Sweet Lorens approached Strobe™ with a vision to position their brand as a top contender
+        description: `Sweet Lorens approached Webrise with a vision to position their brand as a top contender
           in the gourmet cookie market. They wanted their brand to evoke warmth, happiness, and the magic
           of childhood dreams, all while emphasizing the quality and uniqueness of their product.`,
         imageurl: `https://cdn.prod.website-files.com/6606f0f658b42ca7220e36c3/6609a5a48ff0887dc1fe2bd6_Article%20Thumbnail%20%232-p-500.png`,
@@ -497,7 +497,7 @@ export const database = {
       image: `https://cdn.prod.website-files.com/6606f0f658b42ca7220e36c3/6609a61bf5ced39c23f99a20_Article%20Thumbnail%20%237-p-500.png`,
 
       clientVision: {
-        description: `Sweet Lorens approached Strobe™ with a vision to position their brand as a top contender
+        description: `Sweet Lorens approached Webrise with a vision to position their brand as a top contender
           in the gourmet cookie market. They wanted their brand to evoke warmth, happiness, and the magic
           of childhood dreams, all while emphasizing the quality and uniqueness of their product.`,
         imageurl: `https://cdn.prod.website-files.com/6606f0f658b42ca7220e36c3/6609a61bf5ced39c23f99a20_Article%20Thumbnail%20%237-p-500.png`,
@@ -554,7 +554,7 @@ export const database = {
       image: `https://cdn.prod.website-files.com/6606f0f658b42ca7220e36c3/6609a5f1b576d554df6331e4_Article%20Thumbnail%20%235-p-500.png`,
 
       clientVision: {
-        description: `Sweet Lorens approached Strobe™ with a vision to position their brand as a top contender
+        description: `Sweet Lorens approached Webrise with a vision to position their brand as a top contender
           in the gourmet cookie market. They wanted their brand to evoke warmth, happiness, and the magic
           of childhood dreams, all while emphasizing the quality and uniqueness of their product.`,
         imageurl: `https://cdn.prod.website-files.com/6606f0f658b42ca7220e36c3/6609a5f1b576d554df6331e4_Article%20Thumbnail%20%235-p-500.png`,
@@ -611,7 +611,7 @@ export const database = {
       image: `https://cdn.prod.website-files.com/6606f0f658b42ca7220e36c3/6609a7e55e9084457b17f3ec_Article%20Image%20%236-p-500.png`,
 
       clientVision: {
-        description: `Sweet Lorens approached Strobe™ with a vision to position their brand as a top contender
+        description: `Sweet Lorens approached Webrise with a vision to position their brand as a top contender
           in the gourmet cookie market. They wanted their brand to evoke warmth, happiness, and the magic
           of childhood dreams, all while emphasizing the quality and uniqueness of their product.`,
         imageurl: `https://cdn.prod.website-files.com/6606f0f658b42ca7220e36c3/6609a7598dae61ccc0191f22_Article%20Image%20%233.png`,
@@ -668,7 +668,7 @@ export const database = {
       image: `https://cdn.prod.website-files.com/6606f0f658b42ca7220e36c3/6609a7598dae61ccc0191f22_Article%20Image%20%233.png`,
 
       clientVision: {
-        description: `Sweet Lorens approached Strobe™ with a vision to position their brand as a top contender
+        description: `Sweet Lorens approached Webrise with a vision to position their brand as a top contender
           in the gourmet cookie market. They wanted their brand to evoke warmth, happiness, and the magic
           of childhood dreams, all while emphasizing the quality and uniqueness of their product.`,
         imageurl: `https://cdn.prod.website-files.com/6606f0f658b42ca7220e36c3/6609a7598dae61ccc0191f22_Article%20Image%20%233.png`,
@@ -725,7 +725,7 @@ export const database = {
       image: `https://cdn.prod.website-files.com/6606f0f658b42ca7220e36c3/6609a5bbceb2ea2527a6dab2_Article%20Thumbnail%20%233-p-500.png`,
 
       clientVision: {
-        description: `Sweet Lorens approached Strobe™ with a vision to position their brand as a top contender
+        description: `Sweet Lorens approached Webrise with a vision to position their brand as a top contender
           in the gourmet cookie market. They wanted their brand to evoke warmth, happiness, and the magic
           of childhood dreams, all while emphasizing the quality and uniqueness of their product.`,
         imageurl: `https://cdn.prod.website-files.com/6606f0f658b42ca7220e36c3/6609a5bbceb2ea2527a6dab2_Article%20Thumbnail%20%233-p-500.png`,
@@ -782,7 +782,7 @@ export const database = {
       image: `https://cdn.prod.website-files.com/6606f0f658b42ca7220e36c3/6609a5a48ff0887dc1fe2bd6_Article%20Thumbnail%20%232-p-500.png`,
 
       clientVision: {
-        description: `Sweet Lorens approached Strobe™ with a vision to position their brand as a top contender
+        description: `Sweet Lorens approached Webrise with a vision to position their brand as a top contender
           in the gourmet cookie market. They wanted their brand to evoke warmth, happiness, and the magic
           of childhood dreams, all while emphasizing the quality and uniqueness of their product.`,
         imageurl: `https://cdn.prod.website-files.com/6606f0f658b42ca7220e36c3/6609a5a48ff0887dc1fe2bd6_Article%20Thumbnail%20%232-p-500.png`,
@@ -922,7 +922,7 @@ export const database = {
     {
       id: 3,
       date: `july 21, 2024`,
-      slogan: `Sustainable Design: Strobe™'s Approach to Eco-Friendly Digital Solutions`,
+      slogan: `Sustainable Design: Webrise's Approach to Eco-Friendly Digital Solutions`,
       intro: `In an era where digital technology and social media are integral parts of our daily lives,
         modern couples face unique challenges. This article explores how couples can navigate relationships
         in the digital age, striking a balance between the online world and their personal connection.`,
@@ -1006,7 +1006,7 @@ export const database = {
     {
       id: 5,
       date: `April 13, 2024`,
-      slogan: `Inside Strobe™: A Day in the Life of Berlin's Most Innovative Creative Team`,
+      slogan: `Inside Webrise: A Day in the Life of Berlin's Most Innovative Creative Team`,
       intro: `In an era where digital technology and social media are integral parts of our daily lives,
         modern couples face unique challenges. This article explores how couples can navigate relationships
         in the digital age, striking a balance between the online world and their personal connection.`,
@@ -1048,7 +1048,7 @@ export const database = {
     {
       id: 6,
       date: `April 13, 2024`,
-      slogan: `Sustainable Design: Strobe™'s Approach to Eco-Friendly Digital Solutions`,
+      slogan: `Sustainable Design: Webrise's Approach to Eco-Friendly Digital Solutions`,
       intro: `In an era where digital technology and social media are integral parts of our daily lives,
         modern couples face unique challenges. This article explores how couples can navigate relationships
         in the digital age, striking a balance between the online world and their personal connection.`,
@@ -1132,7 +1132,7 @@ export const database = {
     {
       id: 8,
       date: `April 13, 2024`,
-      slogan: `Inside Strobe™: A Day in the Life of Berlin's Most Innovative Creative Team`,
+      slogan: `Inside Webrise: A Day in the Life of Berlin's Most Innovative Creative Team`,
       intro: `In an era where digital technology and social media are integral parts of our daily lives,
         modern couples face unique challenges. This article explores how couples can navigate relationships
         in the digital age, striking a balance between the online world and their personal connection.`,
@@ -1174,7 +1174,7 @@ export const database = {
     {
       id: 9,
       date: `April 13, 2024`,
-      slogan: `Sustainable design: Strobe™'s approach to eco-friendly digital solutions`,
+      slogan: `Sustainable design: Webrise's approach to eco-friendly digital solutions`,
       intro: `In an era where digital technology and social media are integral parts of our daily lives,
         modern couples face unique challenges. This article explores how couples can navigate relationships
         in the digital age, striking a balance between the online world and their personal connection.`,
@@ -1216,7 +1216,7 @@ export const database = {
     {
       id: 10,
       date: `April 13, 2024`,
-      slogan: `Inside Strobe™: A day in the life of Berlin's most innovative creative team`,
+      slogan: `Inside Webrise: A day in the life of Berlin's most innovative creative team`,
       intro: `In an era where digital technology and social media are integral parts of our daily lives,
         modern couples face unique challenges. This article explores how couples can navigate relationships
         in the digital age, striking a balance between the online world and their personal connection.`,
