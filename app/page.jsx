@@ -31,7 +31,7 @@ export default function Home() {
   ]);
 
   const [emblaRef2] = useEmblaCarousel({ loop: true, watchDrag: false }, [
-    AutoScroll({ speed: 1.2, direction: "backward" }),
+    AutoScroll({ speed: 0.75, direction: "backward" }),
   ]);
 
   const ref = useRef(null);

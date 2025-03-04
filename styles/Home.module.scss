@@ -192,10 +192,9 @@
             
             .embla {
                 overflow: hidden;
-                
+
                 .embla__container {
                     display: flex;
-                    
                     .embla__slide {
                         height: 1.75rem;
                         margin-right: 2.5rem;
@@ -1012,11 +1011,28 @@
                 margin-top: 4.5rem !important;
 
                 p {
-                    margin-bottom: 2rem !important;
+                    font-size: 1.5rem !important;
+                    margin-bottom: 1.5rem !important;
                 }
 
-                .embla__slide {
-                    height: 2.5rem !important;
+                .embla {
+                    .embla__container {
+                        gap: 2.5rem !important;
+
+                        .embla__slide { 
+                            height: 1.35rem !important;
+                            margin: 0 !important;
+
+                            img {
+                                width: fit-content !important;
+                            }
+                        }
+
+                        .embla__slide:nth-child(7) {
+                            border: solid 1px $white-color;
+                            margin-right: 2.5rem !important;
+                        }
+                    }
                 }
             }
         }
