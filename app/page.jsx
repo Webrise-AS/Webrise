@@ -60,14 +60,10 @@ export default function Home() {
           <div className={styles.hero_content}>
             <div className={styles.hero_textfield}>
               <div style={{ overflow: "hidden" }}>
-                <motion.h3
-                  initial={{ y: "9.85vh", skewY: 5 }}
-                  animate={{ y: 0, skewY: 0 }}
-                  transition={{ ease: "easeIn", duration: 0.6 }}
-                >
+                <h3>
                   customer satisfaction guarantee
                   <BsPatchCheckFill />
-                </motion.h3>
+                </h3>
               </div>
               <div style={{ overflow: "hidden" }}>
                 <motion.h1
@@ -107,23 +103,20 @@ export default function Home() {
               </div>
               <div className={styles.subHero_group}>
                 <div style={{ overflow: "hidden" }}>
-                  <motion.p
-                    initial={{ y: "9vh", skewY: 1 }}
-                    animate={{ y: 0, skewY: 0 }}
-                    transition={{ ease: "easeIn", duration: 0.6 }}
-                  >
+                  <p>
                     Want a website that<span> customers love</span>? We build
                     reliable, <span>highly functional</span> and of course multi
                     device
                     <span> responsive</span> websites
                     <span> for brands like yours</span>.
-                  </motion.p>
+                  </p>
                 </div>
-                <motion.div
-                  initial={{ y: "15.05vh" }}
-                  animate={{ y: 0 }}
-                  transition={{ ease: "easeIn", duration: 0.6 }}
-                >
+                <p className={styles.hero_mobile_Paragraph}>
+                  Reliable, <span>highly functional </span> and multi device
+                  <span> responsive </span>
+                  websites for <span> brands like yours</span>
+                </p>
+                <div>
                   <ul>
                     <li>
                       <BsCheck />
@@ -154,22 +147,17 @@ export default function Home() {
                       </button>
                     </Link>
                   </div>
-                </motion.div>
+                </div>
               </div>
             </div>
-            <motion.div
-              className={styles.hero_image_section}
-              initial={{ x: 50, opacity: 0 }}
-              animate={{ x: 0, opacity: 1 }}
-              transition={{ ease: "easeIn", duration: 0.6 }}
-            >
+            <div className={styles.hero_image_section}>
               <Image
                 src={homePage_data.heroSection.imageurl}
                 width={450}
                 height={663.2}
                 alt={homePage_data.heroSection.imageAlt}
               />
-            </motion.div>
+            </div>
           </div>
           <div className={styles.hero_slider}>
             <p>Meet our clients</p>

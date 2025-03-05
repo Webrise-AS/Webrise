@@ -35,7 +35,6 @@
         .hero_content {
             position: relative;
             overflow: hidden;
-            height: 100%;
             width: 100%;
             display: flex;
             justify-content: space-between;
@@ -86,8 +85,7 @@
                     flex-direction: column;
                     overflow: hidden;
 
-                    p {
-                        
+                    p, .hero_mobile_Paragraph {
                         width: 100%;
                         font-size: clamp(1rem, 1.709vw + 1rem - 1rem, 1.125rem);
                         font-weight: 500;
@@ -97,6 +95,10 @@
                         span {
                             font-weight: 700;
                         }
+                    }
+
+                    .hero_mobile_Paragraph { 
+                        display: none;
                     }
 
                     div {
@@ -952,19 +954,26 @@
     .home_container {
 
         .hero_container {
+            padding-top: 1.5rem;
             .hero_content {
+                flex-direction: column !important;
+
                 .hero_textfield {
                     align-items: center;
+
+                    h3 {
+                        margin-bottom: 0.85rem !important;
+                    }
                     
                     h1 {
                         text-align: center;
-                        width: 24.1rem ;
-                        font-size: 4.08rem ;
+                        padding-right: 0.3rem;
+                        font-size: 3.65rem !important;
                     }
                     
                     h2 {
                         text-align: center;
-                        font-size: 4.08rem ;
+                        font-size: 3.65rem !important;
                     }
     
                     .hero_styler {
@@ -975,12 +984,19 @@
                         width: 100% !important;
     
                         p {
-                            width: 89% !important;
+                            display: none;
+                        }
+
+                        .hero_mobile_Paragraph {
+                            display: block;
+                            width: 75% !important;
                             margin: 1rem auto !important;
                             text-align: center;
                         }
+
                         div {
                             ul {
+                                display: none;
                                 justify-content: center;
 
                                 li {
@@ -989,13 +1005,15 @@
                             }
     
                             .hero_action_buttons {
+                                
+                                align-self: center;
                                 row-gap: 0.5rem !important;
                                 flex-direction:  column !important;
-                                
+
                                 .hero_mainBtn, .hero_subBtn {
                                     border-radius: 1.5vw !important;
-                                    height: 3.75rem ;
-                                    width: 24.15rem ;
+                                    height: 3.45rem ;
+                                    width: 15.25rem !important;
                                 }
                             }
                         }
@@ -1003,16 +1021,19 @@
                 }
     
                 .hero_image_section {
-                    display: none !important;
+                    position: relative;
+                    margin-top: 2.5rem;
+                    height: 15rem;
+                    width: auto !important;
                 }
             }
     
             .hero_slider {
-                margin-top: 4.5rem !important;
+                margin-top: 2.5rem !important;
 
                 p {
                     font-size: 1.5rem !important;
-                    margin-bottom: 1.5rem !important;
+                    margin-bottom: 1.85rem !important;
                 }
 
                 .embla {
@@ -1020,7 +1041,7 @@
                         gap: 2.5rem !important;
 
                         .embla__slide { 
-                            height: 1.35rem !important;
+                            height: 1.25rem !important;
                             margin: 0 !important;
 
                             img {
@@ -1195,10 +1216,11 @@
 
     .hero_container {
         .hero_content {
+            
             .hero_textfield {
+                
                 h1 {
                     font-size: 3.5rem !important;
-                    width: 20.99rem !important;
                 }
                 
                 h2 {
@@ -1325,7 +1347,7 @@
                     div {
                         .hero_action_buttons {
                             .hero_mainBtn, .hero_subBtn {
-                                height: 2.9rem !important;
+                                height: 3rem !important;
                                 width: 17.89rem !important;
                             }
                         }
