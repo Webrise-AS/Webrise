@@ -968,12 +968,12 @@
                     h1 {
                         text-align: center;
                         padding-right: 0.3rem;
-                        font-size: 3.65rem !important;
+                        font-size: 4.11rem;
                     }
                     
                     h2 {
                         text-align: center;
-                        font-size: 3.65rem !important;
+                        font-size: 4.11rem;
                     }
     
                     .hero_styler {
@@ -1005,7 +1005,6 @@
                             }
     
                             .hero_action_buttons {
-                                
                                 align-self: center;
                                 row-gap: 0.5rem !important;
                                 flex-direction:  column !important;
@@ -1013,7 +1012,7 @@
                                 .hero_mainBtn, .hero_subBtn {
                                     border-radius: 1.5vw !important;
                                     height: 3.45rem ;
-                                    width: 15.25rem !important;
+                                    width: 15.25rem;
                                 }
                             }
                         }
@@ -1100,9 +1099,12 @@
             }
 
             .project_button_container {
+                width: 70% !important;
+                margin: 1rem auto auto auto;
 
                 .project_button {
-                    width: 100% !important;
+                    width: 100%;
+                    border-radius: 1vw !important;
                 }
 
                 .project_button:hover, .project_button:focus {
@@ -1218,15 +1220,10 @@
         .hero_content {
             
             .hero_textfield {
-                
-                h1 {
-                    font-size: 3.5rem !important;
+                h1, h2 {
+                    font-size: 3.549rem !important;
                 }
                 
-                h2 {
-                    font-size: 3.5rem !important;
-                }
-
                 .hero_styler {
                     padding: 0.5rem 1.45rem 0.5rem 0.5rem !important;
                 }
@@ -1235,7 +1232,7 @@
                     div {
                         .hero_action_buttons {
                             .hero_mainBtn, .hero_subBtn {
-                                width: 21.1rem !important;
+                                width: 14rem !important;
                             }
                         }
                     }
@@ -1336,7 +1333,7 @@
         .hero_content {
             .hero_textfield {
                 h1, h2 {
-                    font-size: 3.071rem !important;
+                    font-size: 3.023rem !important;
                 }
 
                 .hero_styler {
@@ -1344,11 +1341,15 @@
                 }
 
                 .subHero_group {
+                    .hero_mobile_Paragraph {
+                        font-size: 0.906rem !important;
+                    }
+
                     div {
                         .hero_action_buttons {
                             .hero_mainBtn, .hero_subBtn {
-                                height: 3rem !important;
-                                width: 17.89rem !important;
+                                height: 3.05rem !important;
+                                width: 12rem !important;
                             }
                         }
                     }
