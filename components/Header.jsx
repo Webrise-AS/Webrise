@@ -185,9 +185,9 @@ function Header({ color }) {
                 })}
               </ul>
               <Link href={"/contact"}>
-                <button>Book a call</button>
+                <button>Let&apos;s chat</button>
               </Link>
-              <BsList onClick={toggleMenu} />
+              <BsList className={styles.toggleMenu_icon} onClick={toggleMenu} />
             </div>
           </div>
           <AnimatePresence>

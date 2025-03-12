@@ -855,17 +855,24 @@
             }
     
             .project_gallery {
-    
                 .gallery_content {
                     width: 100% !important;
                 }
                 
+                .gallery_content:nth-child(1) {
+                    top: -55%;
+                }
+
                 .gallery_content:nth-child(2) {
                     display: none;
                 }
 
                 .gallery_content:nth-child(3) {
                     top: -25%;
+                } 
+
+                .gallery_content:nth-child(4) {
+                    top: -90%;
                 } 
             }
         }
@@ -1094,7 +1101,7 @@
                 }
 
                 .gallery_content:nth-child(3) {
-                    top: -85%;
+                    top: -80%;
                 }
             }
 
@@ -1207,7 +1214,7 @@
             .info_title {
     
                 h3 {
-                    font-size: 3.125rem !important;
+                    font-size: 2.5rem !important;
                 }
             }
         }

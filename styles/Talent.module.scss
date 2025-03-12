@@ -34,16 +34,16 @@
             margin: 0;
             font-size: clamp(1.563rem, 4.688vw + 1rem - 1rem, 3rem);
             font-weight: 600;
-            line-height: 100%;
+            line-height: 1;
             letter-spacing: -.04em;
         }
 
         button {
             width: 9.5%;
             height: 3rem;
-            background: transparent;
-            color: $white-color;
-            border: solid 0.08rem $white-color;
+            background: $white-color;
+            color: $black-color;
+            border: none;
             border-radius: 0.5vw;
             font-size: 1rem;
             font-weight: 500;
@@ -112,50 +112,30 @@
 /* ----------------------------------------------------- Mobile -------------------------------------------- */
 @media (max-width: 441px) {
     .hire_container {
-        height: 75vh !important;
-        padding-top: 45% !important;
+        height: 65vh !important;
+        padding-top: unset !important;
         
         .hire_content {
-            align-items: left;
+            justify-content: center;
 
             p {
-                font-size: 2rem !important;
-            }
-
-            button {
-                border-radius: 1vw !important;
-                height: 3rem !important;
-                width: 35% !important;
-            }
-
-        }
-    }
-}
-
-@media (max-width: 391px) {
-
-    .hire_container {
-        height: 80vh !important;
-        padding-top: 40% !important;
-
-        .hire_content {
-
-            p {
+                line-height: 1.05;
                 font-size: 1.875rem !important;
             }
 
             button {
-                height: 3rem !important;
-                width: 40.35% !important;
+                border-radius: 1vw !important;
+                height: 2.5rem !important;
+                width: 27% !important;
             }
         }
     }
 }
 
-@media (max-width: 321px) {
+@media (max-width: 394px) {
+
     .hire_container {
-        height: 105vh !important;
-        padding-top: 45% !important;
+        height: 70vh !important;
 
         .hire_content {
 
@@ -164,8 +144,24 @@
             }
 
             button {
-                
-                width: 45% !important;
+                width: 32.5% !important;
+            }
+        }
+    }
+}
+
+@media (max-width: 321px) {
+    .hire_container {
+        height: 90vh !important;
+
+        .hire_content {
+
+            p {
+                font-size: 1.625rem !important;
+            }
+
+            button {
+                width: 35% !important;
             }
         }
     }
