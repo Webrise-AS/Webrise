@@ -136,10 +136,18 @@
 
                             .hero_mainBtn {
                                 @include buttons;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
                                 height: 4.25rem;
                                 width: 12.15rem;
-                                font-size: 1rem;
-                                text-transform: uppercase;
+                                font-size: 1.16rem;
+                                
+
+                                svg {
+                                    margin: 0 0 0rem 0.7rem;
+
+                                }
                             }
 
                             .hero_mainBtn:hover {
@@ -155,8 +163,8 @@
                                 transition: transform 1000ms;
                                 height: 4.25rem;
                                 width: 12.15rem;
-                                font-size: 1rem;
-                                text-transform: uppercase;
+                                font-size: 1.16rem;
+                                
                             }
 
                             .hero_subBtn:hover {
@@ -189,7 +197,6 @@
                 font-weight: 600;
                 text-align: center;
                 margin: 0 0 3rem 0;
-                text-transform: capitalize;
             }
             
             .embla {

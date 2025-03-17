@@ -14,39 +14,64 @@ function Accordion({ data }) {
 
   return (
     <div className={styles.accordion_container}>
-      {data.map(({ id, question, answer }, i) => (
-        <div
-          className={styles.single_accordion}
-          key={id}
-          onClick={() => toggle(i)}
-        >
-          <div className={styles.single_accordion_title}>
-            <motion.span
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              transition={{ ease: "easeIn", transition: 0.6 }}
-            >
-              {selected === i ? "-" : "+"}
-            </motion.span>
-            <motion.h2
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              transition={{ ease: "easeIn", transition: 0.6 }}
-            >
-              {question}
-            </motion.h2>
-          </div>
+      {data.map(
+        (
+          {
+            id,
+            question,
+            answer,
+            answerOne,
+            answerTwo,
+            answerThree,
+            answerFoure,
+            answerFive,
+            answerSix,
+            answerSeven,
+            answerEight,
+          },
+          i
+        ) => (
           <div
-            className={
-              selected === i
-                ? styles.single_accordion_content_show
-                : styles.single_accordion_content
-            }
+            className={styles.single_accordion}
+            key={id}
+            onClick={() => toggle(i)}
           >
-            <p>{answer}</p>
+            <div className={styles.single_accordion_title}>
+              <motion.span
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ ease: "easeIn", transition: 0.6 }}
+              >
+                {selected === i ? "-" : "+"}
+              </motion.span>
+              <motion.h2
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ ease: "easeIn", transition: 0.6 }}
+              >
+                {question}
+              </motion.h2>
+            </div>
+            <div
+              className={
+                selected === i
+                  ? styles.single_accordion_content_show
+                  : styles.single_accordion_content
+              }
+            >
+              <p>{answer}</p>
+              <p>{answerOne}</p>
+              <p>{answerTwo}</p>
+              <p>{answerThree}</p>
+              <p>{answerFoure}</p>
+              <p>{answerFive}</p>
+              <p>{answerSix}</p>
+              <p>{answerSeven}</p>
+              <p>{answerEight}</p>
+            </div>
           </div>
-        </div>
-      ))}
+        )
+      )}
     </div>
   );
 }

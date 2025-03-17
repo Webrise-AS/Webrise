@@ -23,7 +23,7 @@ export default function Talent() {
             transition={{ ease: "easeIn", duration: 0.6 }}
           >
             <Link href={"/contact"}>
-              <button>Learn more</button>
+              <button>Join us</button>
             </Link>
           </motion.div>
         </div>

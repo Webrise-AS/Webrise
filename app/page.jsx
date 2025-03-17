@@ -4,7 +4,21 @@ import Head from "next/head";
 import Image from "next/image";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
-import { BsArrowUpRight, BsCheck, BsPatchCheckFill } from "react-icons/bs";
+import {
+  BsArrowRight,
+  BsArrowRightCircle,
+  BsArrowRightShort,
+  BsArrowRightSquare,
+  BsArrowUpRight,
+  BsChat,
+  BsCheck,
+  BsFillPhoneFill,
+  BsPatchCheckFill,
+  BsPhoneFill,
+  BsPhoneFlip,
+  BsPhoneLandscape,
+  BsPhoneVibrate,
+} from "react-icons/bs";
 import Accordion from "@/components/Accordion";
 import { motion, useScroll } from "framer-motion";
 import { useRef } from "react";
@@ -138,12 +152,12 @@ export default function Home() {
                   <div className={styles.hero_action_buttons}>
                     <Link href={"/contact"}>
                       <button className={styles.hero_mainBtn}>
-                        Book a call
+                        Let&apos;s chat <BsArrowRight />
                       </button>
                     </Link>
                     <Link href={"/projects"}>
                       <button className={styles.hero_subBtn}>
-                        Our Portfolio
+                        Our portfolio
                       </button>
                     </Link>
                   </div>
@@ -217,7 +231,7 @@ export default function Home() {
           >
             <Link href={"/projects"}>
               <button className={styles.project_button}>
-                CASE STUDIES <BsArrowUpRight />
+                Case studies <BsArrowUpRight />
               </button>
             </Link>
           </motion.div>

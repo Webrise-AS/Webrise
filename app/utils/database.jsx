@@ -110,35 +110,47 @@ export const database = {
       accordion: [
         {
           id: 1,
-          question: "What sets Webrise apart?",
-          answer: `Webrise™ stands out through our unique fusion of Berlin's artistic heritage
-                with modern digital innovation. Our approach is not just about creating visually
-                stunning designs; it's about delivering functional, user-centered experiences
-                that drive results and embody the vibrant spirit of our city.`,
+          question:
+            "What is your process for designing and developing a website?",
+          answer: ``,
+          answerOne: `Our process typically involves the following steps:`,
+          answerTwo: `1. Discovery: Understanding your goals, target audience, and requirements.`,
+          answerThree: `2. Planning: Creating sitemaps, wireframes, and a project timeline.`,
+          answerFoure: `3. Design: Developing mockups and prototypes for your approval.`,
+          answerFive: `4. Development: Building the website with a focus on functionality and responsiveness.`,
+          answerSix: `5. Testing: Conducting quality assurance and user testing.`,
+          answerSeven: `6. Launch: Deploying the website and providing training or documentation.`,
+          answerEight: `7. Support: Offering ongoing maintenance and updates.`,
         },
         {
           id: 2,
-          question: "How does Webrise ensure trends?",
-          answer: `Webrise™ stands out through our unique fusion of Berlin's artistic heritage
-                with modern digital innovation. Our approach is not just about creating visually
-                stunning designs; it's about delivering functional, user-centered experiences
-                that drive results and embody the vibrant spirit of our city.`,
+          question: "How long does it take to develop a custom website?",
+          answer: `The timeline depends on the complexity of the project. A simple brochure website may
+          take 2-4 weeks, while a more complex e-commerce platform or web application could take 8-12 weeks
+          or more. We provide a detailed project timeline after understanding your specific requirements.`,
         },
         {
           id: 3,
-          question: "Can Webrise help my brand?",
-          answer: `Webrise™ stands out through our unique fusion of Berlin's artistic heritage
-                with modern digital innovation. Our approach is not just about creating visually
-                stunning designs; it's about delivering functional, user-centered experiences
-                that drive results and embody the vibrant spirit of our city.`,
+          question: "Do you offer post-launch support and maintenance?",
+          answer: `Yes, we offer comprehensive post-launch support and maintenance packages. This includes
+          regular updates, security patches, bug fixes, and performance optimization to ensure your website
+          remains secure, up-to-date, and functional.`,
         },
         {
           id: 4,
-          question: "What is the process?",
-          answer: `Webrise™ stands out through our unique fusion of Berlin's artistic heritage
-                with modern digital innovation. Our approach is not just about creating visually
-                stunning designs; it's about delivering functional, user-centered experiences
-                that drive results and embody the vibrant spirit of our city.`,
+          question: "Do you work with clients to redesign existing websites?",
+          answer: `Yes, we specialize in website redesigns. Whether your current site is outdated, slow,
+          or not user-friendly, we can revamp it with a modern design, improved functionality,
+          and better performance while retaining your brand identity.`,
+        },
+        {
+          id: 5,
+          question:
+            "What is your pricing structure for web development projects?",
+          answer: `Our pricing is tailored to the scope and complexity of each project. 
+          We offer fixed-price contracts for well-defined projects and hourly rates for ongoing 
+          work or flexible requirements. During the initial consultation, we provide a detailed 
+          estimate based on your specific needs.`,
         },
       ],
     },
