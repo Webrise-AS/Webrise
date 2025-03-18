@@ -3,6 +3,8 @@
     background-color: $black-color;
     color: $white-color;
     padding: 4.8rem 0;
+    max-width: 90.438rem;
+    margin: auto;
 
     .projects_title {
         height: fit-content;
@@ -106,6 +108,7 @@
     padding: 3.5rem 0;
     width: 95%;
     margin: auto;
+    max-width: 90.438rem;
 
     @keyframes slide_up_text_big {
         from {

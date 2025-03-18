@@ -12,10 +12,9 @@ export default function Talent() {
             whileInView={{ y: 0, opacity: 1, skewY: 0 }}
             transition={{ duration: 0.6 }}
           >
-            Be part of the innovation journey with Webrise. Our monthly insights
-            showcase the cutting-edge trends, technologies, and creative
-            strategies shaping the future. Stay informed, inspired, and ahead of
-            the curve with Webrise
+            Ready to create stunning websites that set the standard? Work with
+            the latest tech, tackle exciting projects, and grow in a team that
+            values excellence. If you’re among the best, we want you!
           </motion.p>
           <motion.div
             animate={{ x: -50, opacity: 0 }}

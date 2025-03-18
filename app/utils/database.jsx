@@ -112,15 +112,11 @@ export const database = {
           id: 1,
           question:
             "What is your process for designing and developing a website?",
-          answer: ``,
-          answerOne: `Our process typically involves the following steps:`,
-          answerTwo: `1. Discovery: Understanding your goals, target audience, and requirements.`,
-          answerThree: `2. Planning: Creating sitemaps, wireframes, and a project timeline.`,
-          answerFoure: `3. Design: Developing mockups and prototypes for your approval.`,
-          answerFive: `4. Development: Building the website with a focus on functionality and responsiveness.`,
-          answerSix: `5. Testing: Conducting quality assurance and user testing.`,
-          answerSeven: `6. Launch: Deploying the website and providing training or documentation.`,
-          answerEight: `7. Support: Offering ongoing maintenance and updates.`,
+          answer: `We make building your website simple and stress-free! Here’s how it works: First, we 
+          listen to your goals and ideas. Then, we plan the layout and design, creating a blueprint for 
+          your site. Next, we bring it to life with beautiful visuals and smooth functionality. After 
+          testing everything to make sure it works perfectly, we launch your site and provide support to 
+          keep it running great. It’s a step-by-step process designed just for you!`,
         },
         {
           id: 2,
@@ -205,16 +201,12 @@ export const database = {
         {
           title: `Design`,
           paragraph: `
-            Adapting to Communication Styles: Digital communication varies
-            greatly from traditional methods. Couples need to adapt and
-            understand each other’s preferred styles, whether it’s texting,
-            emailing, or video calls. This helps in reducing
-            misunderstandings and fostering better communication. Balancing
-            Online Interaction: Digital age relationships often involve an
-            online component. Couples should discuss and agree on their
-            digital interaction levels, including social media usage, online
-            friendships, and digital footprints that they are comfortable
-            with.`,
+            We specialize in creating beautiful, easy-to-use websites that look fantastic on any device, 
+            whether it’s a computer, tablet, or phone. Our design process starts with understanding your 
+            brand and goals, so we can create a website that truly represents your business. We focus on 
+            making your site visually appealing, easy to navigate, and engaging for your visitors. From 
+            choosing the right colors and fonts to adding interactive features, we ensure your website not 
+            only looks amazing but also provides a great experience for everyone who uses it.`,
           imageurl: `https://assets-global.website-files.com/6606f0f658b42ca7220e3695/660723ab81a3f7d07a7a97d1_Testimonial.webp`,
           alt: ``,
         },
@@ -222,16 +214,12 @@ export const database = {
         {
           title: `Development`,
           paragraph: `
-            Adapting to Communication Styles: Digital communication varies
-            greatly from traditional methods. Couples need to adapt and
-            understand each other’s preferred styles, whether it’s texting,
-            emailing, or video calls. This helps in reducing
-            misunderstandings and fostering better communication. Balancing
-            Online Interaction: Digital age relationships often involve an
-            online component. Couples should discuss and agree on their
-            digital interaction levels, including social media usage, online
-            friendships, and digital footprints that they are comfortable
-            with.`,
+            We build fast, secure, and reliable websites tailored to your needs. Whether you need a simple 
+            website, an online store, or a custom web application, our team uses the latest tools and 
+            technologies to bring your vision to life. We make sure your website is easy for you to manage, 
+            with features like content management systems (CMS) that let you update your site without any 
+            technical knowledge. Plus, we ensure your site is optimized for speed and security, so it works 
+            perfectly for your visitors and grows with your business.`,
           imageurl: `https://assets-global.website-files.com/6606f0f658b42ca7220e36c3/6609a5f1b576d554df6331e4_Article%20Thumbnail%20%235-p-500.png`,
           alt: ``,
         },
@@ -239,16 +227,12 @@ export const database = {
         {
           title: `On-site SEO`,
           paragraph: `
-            Adapting to Communication Styles: Digital communication varies
-            greatly from traditional methods. Couples need to adapt and
-            understand each other’s preferred styles, whether it’s texting,
-            emailing, or video calls. This helps in reducing
-            misunderstandings and fostering better communication. Balancing
-            Online Interaction: Digital age relationships often involve an
-            online component. Couples should discuss and agree on their
-            digital interaction levels, including social media usage, online
-            friendships, and digital footprints that they are comfortable
-            with.`,
+            We help your website rank higher in search engines like Google so more people can find you online. 
+            Our team optimizes your site’s content, structure, and performance to make it 
+            search-engine-friendly. This includes using the right keywords, improving page speed, and making 
+            sure your site works well on mobile devices. We also optimize things like titles, descriptions, 
+            and images to help search engines understand your site better. The result? More visitors, more 
+            leads, and better results for your business.`,
           imageurl: `https://assets-global.website-files.com/6606f0f658b42ca7220e36c3/6609a5bbceb2ea2527a6dab2_Article%20Thumbnail%20%233-p-500.png`,
           alt: ``,
         },
@@ -256,16 +240,12 @@ export const database = {
         {
           title: `Hosting`,
           paragraph: `
-            Adapting to Communication Styles: Digital communication varies
-            greatly from traditional methods. Couples need to adapt and
-            understand each other’s preferred styles, whether it’s texting,
-            emailing, or video calls. This helps in reducing
-            misunderstandings and fostering better communication. Balancing
-            Online Interaction: Digital age relationships often involve an
-            online component. Couples should discuss and agree on their
-            digital interaction levels, including social media usage, online
-            friendships, and digital footprints that they are comfortable
-            with.`,
+            We offer fast, secure, and reliable hosting to keep your website up and running 24/7. Whether you 
+            need a basic plan for a small website or a powerful solution for a growing business, we have 
+            options to fit your needs. Our hosting services include automatic backups, strong security 
+            features like SSL certificates, and expert support to handle any issues that come up. With our 
+            hosting, you can focus on your business while we take care of keeping your website fast, safe, 
+            and always available to your visitors.`,
           imageurl: `https://assets-global.website-files.com/6606f0f658b42ca7220e3695/660723b3e10d6cd0f0ca10f6_Camera-p-800.webp`,
           alt: ``,
         },

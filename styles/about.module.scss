@@ -1,6 +1,8 @@
 .about_main_container {
     background-color: $primary-color;
     overflow: hidden;
+    max-width: 90.438rem;
+    margin: auto;
 
     .about_hero_section {
         height: fit-content;

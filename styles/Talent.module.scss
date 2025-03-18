@@ -1,16 +1,17 @@
 .hire_container {
     background-color: $black-color;
     color: $white-color;
-    height: clamp(95vh, 90vw + 1rem - 1rem, 145vh);
+    height: clamp(95vh, 90vw + 1rem - 1rem, 120vh);
+    max-height: 120vh;
     background-image: url('https://assets-global.website-files.com/6606f0f658b42ca7220e3695/660bfcae5749fee5cdae4952_Bg%20Text%20Video-poster-00001.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    padding-top: 32rem;
+    padding-top: 27rem;
     position: relative;
 
     .hire_overlay {
-        background-color: rgba(0, 0, 0, .05);
+        background-color: rgba(0, 0, 0, .2);
         position: absolute;
         top: 0%;
         bottom: 0%;
@@ -61,7 +62,7 @@
 /* ----------------------------------------------------- Laptop -------------------------------------------- */
 @media (max-width: 1115px) {
     .hire_container {
-        padding-top: 25.5rem ;
+        padding-top: 21rem ;
 
         .hire_content {
 

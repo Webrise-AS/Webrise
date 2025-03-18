@@ -1,8 +1,9 @@
 .contact_container {
-    height: 90dvh;
+    max-height: 90dvh;
     display: flex;
     width: 95%;
     margin: auto;
+    max-width: 90.438rem;
     justify-content: space-between;
     padding-top: clamp(4.5rem, 20vw + 1rem - 1rem, 8.5rem);
     padding-bottom: clamp(2rem, 10vw + 1rem - 1rem, 4rem);
