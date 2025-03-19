@@ -4,6 +4,7 @@ import styles from "@/styles/Home.module.scss";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { BsList } from "react-icons/bs";
+import { IoIosChatbubbles } from "react-icons/io";
 import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
 
@@ -101,7 +102,9 @@ function Header({ color }) {
                 })}
               </ul>
               <Link href={"/contact"}>
-                <button>Book a call</button>
+                <button>
+                  Let&apos;s chat <IoIosChatbubbles />
+                </button>
               </Link>
               <BsList onClick={toggleMenu} />
             </div>
@@ -185,7 +188,9 @@ function Header({ color }) {
                 })}
               </ul>
               <Link href={"/contact"}>
-                <button>Let&apos;s chat</button>
+                <button>
+                  Let&apos;s chat <IoIosChatbubbles />
+                </button>
               </Link>
               <BsList className={styles.toggleMenu_icon} onClick={toggleMenu} />
             </div>

@@ -4,21 +4,8 @@ import Head from "next/head";
 import Image from "next/image";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
-import {
-  BsArrowRight,
-  BsArrowRightCircle,
-  BsArrowRightShort,
-  BsArrowRightSquare,
-  BsArrowUpRight,
-  BsChat,
-  BsCheck,
-  BsFillPhoneFill,
-  BsPatchCheckFill,
-  BsPhoneFill,
-  BsPhoneFlip,
-  BsPhoneLandscape,
-  BsPhoneVibrate,
-} from "react-icons/bs";
+import { BsArrowUpRight, BsCheck, BsPatchCheckFill } from "react-icons/bs";
+import { IoIosChatbubbles } from "react-icons/io";
 import Accordion from "@/components/Accordion";
 import { motion, useScroll } from "framer-motion";
 import { useRef } from "react";
@@ -152,7 +139,7 @@ export default function Home() {
                   <div className={styles.hero_action_buttons}>
                     <Link href={"/contact"}>
                       <button className={styles.hero_mainBtn}>
-                        Let&apos;s chat <BsArrowRight />
+                        Let&apos;s chat <IoIosChatbubbles />
                       </button>
                     </Link>
                     <Link href={"/projects"}>
