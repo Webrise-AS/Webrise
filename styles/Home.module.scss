@@ -15,7 +15,7 @@
     height: 100%;
     margin: auto;
     width: initial;
-    max-width: 90.438rem;
+    max-width: 160.063rem;
     display: flex;
     flex-direction: column;
     padding: 1.5rem 0 0 0;
@@ -27,7 +27,7 @@
 
     .hero_container {
         height: fit-content;
-        width: 95%;
+        width: 70%;
         margin: auto;
         display: flex;
         flex-direction: column;
@@ -63,7 +63,7 @@
                     }
                 }
 
-                h1,h2 {
+                h1, h2 {
                     font-size: clamp(3.5rem, 10.254vw + 1rem - 1rem, 7.5rem);
                     font-weight: 700;
                     text-transform: uppercase;
@@ -82,13 +82,13 @@
                 }
 
                 .subHero_group {
-                    width: 87%;
+                    width: 66%;
                     display: flex;
                     flex-direction: column;
                     overflow: hidden;
 
                     p, .hero_mobile_Paragraph {
-                        width: 100%;
+                        width: 87%;
                         font-size: clamp(1rem, 1.709vw + 1rem - 1rem, 1.125rem);
                         font-weight: 500;
                         line-height: 100%;
@@ -191,7 +191,8 @@
         }
 
         .hero_slider {
-            margin-top: 6rem;
+            width: 75%;
+            margin: 6rem auto 0 auto;
 
             p {
                 font-size: 1.95rem;
@@ -220,7 +221,7 @@
 
     .about_container {
         height: fit-content;
-        width: 95%;
+        width: 70%;
         margin: auto;
         padding: 10rem 0;
         display: flex;
@@ -285,7 +286,7 @@
 
         .project_hero_textfield {
             height: fit-content;
-            width: 95%;
+            width: 70%;
             margin:  auto;
             display: flex;
             flex-direction: column;
@@ -304,7 +305,7 @@
 
         .project_gallery {
             height: 200vh;
-            width: 95%;
+            width: 70%;
             margin: auto;
             display: flex;
             flex-direction: row;
@@ -322,7 +323,7 @@
                 position: relative;
 
                 .image_container {
-                    height: 30rem;
+                    height: 41rem;
                     position: relative;
                     overflow: hidden;
                     border-radius: 1vw;
@@ -346,10 +347,10 @@
                     top:-45%;
                 }
                 &:nth-of-type(2) {
-                    top:-95%;
+                    top:-85%;
                 }
                 &:nth-of-type(3) {
-                    top: -45%;
+                    top: -30%;
                 }
                 &:nth-of-type(4) {
                     top:-80%;
@@ -358,7 +359,7 @@
         }
 
         .project_button_container {
-            width: 95%;
+            width: 70%;
             margin: 2rem auto auto auto;
 
             .project_button {
@@ -388,7 +389,7 @@
 
     .social_container {
         height: fit-content;
-        width: 95%;
+        width: 75%;
         padding: 10rem 0 0 0 ;
         margin: auto;
         display: flex;
@@ -498,7 +499,7 @@
 
     .article_container {
         height: fit-content;
-        width: 95%;
+        width: 70%;
         margin: auto;
         padding: 10rem 0;
         display: flex;
@@ -599,7 +600,7 @@
             row-gap: 5rem;
 
             h2 {
-                width: 95%;
+                width: 70%;
                 margin: 0 auto;
                 font-size: clamp(3.5rem, 11.719vw + 1rem - 1rem, 7.5rem);
                 font-weight: 700;
@@ -655,7 +656,7 @@
 
     .info_container {
         height: auto;
-        width: 95%;
+        width: 70%;
         margin: auto;
         padding: 10rem 0;
         display: flex;
@@ -676,6 +677,155 @@
         }
     }
 }
+
+/* ----------------------------------------------------- Desktop -------------------------------------------- */
+
+
+@media (max-width: 1921px) {
+    .home_container {
+
+        .hero_container {
+            width: 95%;
+            
+            .hero_content {
+                .hero_textfield {
+                    .subHero_group {
+                        width: 85%;
+                    }
+                }
+            }
+
+            .hero_slider {
+                width: 85%;
+            }
+        }
+
+        .about_container {
+            width: 95%;
+        }
+
+        .project_container {
+            .project_hero_textfield {
+                width: 95%;
+            }
+
+            .project_gallery {
+                width: 95%;
+            }
+
+            .project_button_container {
+                width: 95%;
+            }
+        }
+
+        .social_container {
+            width: 95%;
+        }
+
+        .article_container {
+            width: 95%;
+        }
+
+        .feedback_container {
+            .feedback_content {
+                h2 {
+                    width: 95%;
+                }
+            }
+        }
+
+        .info_container {
+            width: 95%;
+        }
+    }
+}
+
+@media (max-width: 1441px) {
+    .home_container {
+
+        .hero_container {
+            width: 95%;
+
+            .hero_content {
+                .hero_textfield {
+
+                    .subHero_group {
+                        width: 88%;
+
+                        p {
+                            width: 90%;
+                        }
+                    }
+                }
+            }
+
+            .hero_slider {
+                width: 80%;
+            }
+        }
+
+        .about_container {
+            width: 95%;
+        }
+
+        .project_container {
+            
+            .project_hero_textfield {
+                width: 95%;
+            }
+
+            .project_gallery {
+                width: 95%;
+
+                .gallery_content {
+
+                    .image_container {
+                        height: 35rem;
+                    }
+
+                    &:nth-child(2) {
+                        top: -80%;
+                    }
+
+                    &:nth-child(3) {
+                        top: -21.5%;
+                    }
+
+                    &:nth-child(4) {
+                        top: -75%;
+                    }
+                }    
+            }
+
+            .project_button_container {
+                width: 95%;
+            }
+        }
+
+        .social_container {
+            width: 95%;
+        }
+
+        .article_container {
+            width: 95%;
+        }
+
+        .feedback_container {
+
+            .feedback_content {
+
+                h2 {
+                    width: 95%;
+                }
+            }
+        }
+
+        .info_container {
+            width: 95%;
+        }
+    }
+}
+
 
 /* ----------------------------------------------------- Laptop -------------------------------------------- */
 @media (max-width: 1115px) {

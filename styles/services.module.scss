@@ -2,7 +2,7 @@
     padding: 1.5rem 0 5rem 0;
     min-height: fit-content;
     position: relative;
-    max-width: 90.438rem;
+    max-width: 160.063rem;
     margin: auto;
 
     @keyframes slide_up_header {
@@ -35,7 +35,7 @@
     .services_hero_section {
         height: fit-content;
         max-height: 83.35vh;
-        width: 95%;
+        width: 70%;
         margin: auto;
         display: flex;
         flex-direction: row-reverse;
@@ -45,7 +45,7 @@
             min-width: 90%;
             position: absolute;
             top: 1.5rem;
-            left: 2%;
+            left: 15%;
 
             h1 {
                 margin: 0;
@@ -105,7 +105,7 @@
     }
 
     .services_opener_paragraph {
-        width: 95%;
+        width: 70%;
         margin: 7rem auto 10rem auto;
         text-align: center;
         font-size: clamp(1.25rem, 3vw + 1rem - 1rem, 2rem);
@@ -116,7 +116,7 @@
     }
 
     .services_content_section {
-        width: 95%;
+        width: 70%;
         margin: auto;
         height: auto;
         display: flex;
@@ -134,7 +134,7 @@
             column-gap: 2.5rem;
             
             div:first-child {
-                width: clamp(18rem, 55vw + 1rem - 1rem, 44.5rem);
+                width: clamp(18rem, 55vw + 1rem - 1rem, 55rem);
                 display: flex;
                 flex-direction: column;
                 align-self: flex-end;
@@ -149,7 +149,6 @@
                 }
 
                 p {
-                    
                     margin: 1rem 0 2rem 0;
                     font-size: clamp(1rem, 2.5vw + 1rem - 1rem, 1.25rem);
                     font-weight: 400;
@@ -171,8 +170,8 @@
             }
 
             .content_speciality_image {
-                height: clamp(22.5rem, 52.5vw + 1rem - 1rem, 37.5rem);
-                width: clamp(15rem, 45vw + 1rem - 1rem, 37.5rem);
+                height: clamp(22.5rem, 52.5vw + 1rem - 1rem, 40rem);
+                width: clamp(15rem, 45vw + 1rem - 1rem, 40rem);
                 overflow: hidden;
 
                 img {
@@ -186,7 +185,7 @@
     }
 
     .services_slider_section {
-        width: 95%;
+        width: 70%;
         margin: 5rem auto 0 auto;
         display: flex;
         flex-direction: column;
@@ -201,7 +200,7 @@
             background-color: $black-color;
             padding: 2rem 0;
             overflow: hidden;
-            border-radius: 0.35vw;
+            border-radius: 0.75vw;
 
             .embla__container {
                 display: flex;
@@ -218,7 +217,61 @@
             }
         }
     }
+}
 
+/* ----------------------------------------------------- Desktop -------------------------------------------- */
+@media (max-width: 1921px) {
+    .services_container {
+
+        .services_hero_section {
+            width: 95%;
+
+            .hero_tittle_container {
+                left: 2.5%;
+            }
+        }
+
+        .services_opener_paragraph {
+            width: 95%;
+        }
+
+        .services_content_section {
+            width: 95%;
+        }
+
+        .services_slider_section {
+            width: 95%;
+        }
+    }
+}
+
+@media (max-width: 1441px) {
+    .services_container {
+
+        .services_hero_section {
+            width: 95%;
+
+            .hero_tittle_container {
+                left: 2%;
+            }
+        }
+
+        .services_opener_paragraph {
+            width: 95%;
+        }
+
+        .services_content_section {
+            width: 95%;
+
+            .content_speciality_section {
+                column-gap: 5rem;
+            }
+        }
+
+        .services_slider_section {
+            width: 95%;
+        }
+    }
 }
 
 /* ----------------------------------------------------- laptop -------------------------------------------- */

@@ -1,12 +1,12 @@
 .about_main_container {
     background-color: $primary-color;
     overflow: hidden;
-    max-width: 90.438rem;
+    max-width: 160.063rem;
     margin: auto;
 
     .about_hero_section {
         height: fit-content;
-        width: 95%;
+        width: 70%;
         margin: auto;
         padding: clamp(1.5rem, 2.5vw + 1rem - 1rem, 3rem) 0;
         border-bottom: solid 1px $black-color;
@@ -21,13 +21,13 @@
                 height: fit-content;
                 display: flex;
                 flex-direction: column;
-                row-gap: clamp(4rem, 10vw + 1rem - 1rem, 17rem);
+                row-gap: clamp(4rem, 10vw + 1rem - 1rem, 6rem);
 
                 .image_wrapper {
                     border-radius: 0.5rem;
                     overflow: hidden;
-                    height: clamp(4.3rem, 15vw + 1rem - 1rem, 10rem);
-                    width: clamp(8rem, 30vw + 1rem - 1rem, 18.688rem);
+                    height: clamp(4.3rem, 15vw + 1rem - 1rem, 14rem);
+                    width: clamp(8rem, 30vw + 1rem - 1rem, 28rem);
 
                     img {
                         height: 100%;
@@ -48,8 +48,8 @@
             }
 
             .image_wrapperTwo {
-                height: clamp(12rem, 35vw + 1rem - 1rem, 28.375rem);
-                width: clamp(7.5rem, 25vw + 1rem - 1rem, 19.375rem);
+                height: clamp(12rem, 35vw + 1rem - 1rem, 30rem);
+                width: clamp(7.5rem, 25vw + 1rem - 1rem, 23rem);
 
                 img {
                     height: 100%;
@@ -69,7 +69,6 @@
                 font-weight: 600;
                 line-height: 83%;
                 letter-spacing: -.08em;
-                padding-right: 0.65rem;
             }
 
             h2 {
@@ -80,7 +79,6 @@
                 letter-spacing: -.08em;
             }
         }
-
     }
 
     .about_content_section {
@@ -92,7 +90,7 @@
             display: flex;
             flex-direction: column;
             row-gap: 2rem;
-            width: 95%;
+            width: 70%;
             margin: auto;
             
             p {
@@ -109,9 +107,8 @@
             display: flex;
             flex-direction: column;
             row-gap: clamp(3.5rem, 15vw + 1rem - 1rem, 7.5rem);
-            margin-top: clamp(3rem, 12vw + 1rem - 1rem, 10rem);
+            margin: clamp(3rem, 12vw + 1rem - 1rem, 10rem) auto 0 auto;
             height: fit-content;
-            width: 100%;
             
             .embla {
                 overflow: hidden;
@@ -120,8 +117,8 @@
                     display: flex;
                     
                     .embla__slide {
-                        height: clamp(19rem, 40vw + 1rem - 1rem, 30rem);
-                        margin-right: clamp(0.5rem, 2.5vw + 1rem - 1rem, 1.5rem);
+                        height: clamp(19rem, 40vw + 1rem - 1rem, 37rem);
+                        margin-right: clamp(0.5rem, 2.5vw + 1rem - 1rem, 2.5rem);
 
                         img {
                             height: 100%;
@@ -133,7 +130,7 @@
                     
                     .embla__slide2 {
                         text-align: center;
-                        margin-left: 1.8rem;
+                        margin-left: 3.5rem;
                         font-size: clamp(3.5rem, 10.71vw + 1rem - 1rem, 7.5rem);
                         font-weight: 700;
                         line-height: 86%;
@@ -146,7 +143,7 @@
         }
 
         .content_section_info {
-            width: 95%;
+            width: 70%;
             margin: clamp(5rem, 15vw + 1rem - 1rem, 12.5rem) auto;
             display: flex;
             flex-direction: reverse;
@@ -204,6 +201,47 @@
                         }
                     }
                 }
+            }
+        }
+    }
+}
+
+/* ----------------------------------------------------- Desktop -------------------------------------------- */
+@media (max-width: 1921px) {
+    .about_main_container {
+
+        .about_hero_section {
+            width: 95%;
+        }
+
+        .about_content_section {
+
+            .content_section_story {
+                width: 95%;
+            }
+
+            .content_section_info {
+                width: 95%;
+            }
+        }
+    }
+}
+
+@media (max-width: 1441px) {
+    .about_main_container {
+
+        .about_hero_section {
+            width: 95%;
+        }
+
+        .about_content_section {
+
+            .content_section_story {
+                width: 95%;
+            }
+
+            .content_section_info {
+                width: 95%;
             }
         }
     }

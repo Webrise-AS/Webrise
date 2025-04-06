@@ -9,7 +9,7 @@
     }
     
     .single_accordion {
-        width: clamp(15rem, 54.5vw + 1rem - 1rem, 50rem);
+        width: clamp(15rem, 54.5vw + 1rem - 1rem, 55rem);
         padding: clamp(0.5rem, 5vw + 1rem - 1rem, 2.5rem) 0;
 
         .single_accordion_title {
@@ -78,8 +78,24 @@
     }
 }
 
+/* ----------------------------------------------------- Desktop -------------------------------------------- */
+
+@media (max-width: 1441px) {
+    .accordion_container {
+        .single_accordion {
+            width: 45rem;
+        }
+    }
+}
+
 /* ----------------------------------------------------- laptop -------------------------------------------- */
-@media (max-width: 1025px) {}
+@media (max-width: 1115px) {
+    .accordion_container {
+        .single_accordion {
+            width: 34rem;
+        }
+    }
+}
 
 /* ----------------------------------------------------- Tablet -------------------------------------------- */
 @media (max-width: 835px) {

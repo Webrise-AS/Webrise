@@ -1,7 +1,7 @@
 .nav_container {
     height: 5rem;
     width: 100%;
-    max-width: 90.438rem;
+    max-width: 160.063rem;
     margin: auto;
     position: sticky;
     top: 0;
@@ -13,7 +13,7 @@
     
     .nav_content {
         height: 100%;
-        width: 95%;
+        width: 70%;
         margin: auto;
         display: flex;
         align-items: center;
@@ -116,7 +116,7 @@
 .nav_dark_container {
     height: 5rem;
     width: 100%;
-    max-width: 90.438rem;
+    max-width: 160.063rem;
     margin: auto;
     position: sticky;
     top: 0;
@@ -127,7 +127,7 @@
 
     .nav_dark_content {
         height: 100%;
-        width: 95%;
+        width: 70%;
         margin: auto;
         display: flex;
         align-items: center;
@@ -287,7 +287,7 @@
     justify-content: space-between;
     height: auto;
     width: 100%;
-    max-width: 90.438rem;
+    max-width: 160.063rem;
     margin: auto;
     padding: 5rem 0 1rem 0;
     background-color: $black-color;
@@ -295,7 +295,7 @@
 
     .footer_top {
         height: 100%;
-        width: 95%;
+        width: 70%;
         margin: 0 auto;
         display: flex;
         justify-content: space-between;
@@ -327,7 +327,6 @@
                 @include footer_text_links;
                 width: 14rem;
                 margin: 0;
-                
             }
 
             input {
@@ -348,14 +347,14 @@
                 position: absolute;
                 font-size: 2.2rem;
                 margin-top: 4.8rem;
-                right: 1.7rem;
+                right: 23.5rem;
             }
         }
     }
 
     .footer_bottom {
         height: 100%;
-        width: 95%;
+        width: 70%;
         margin: 0 auto;
         display: flex;
         flex-direction: column;
@@ -380,6 +379,77 @@
                 line-height: 150%;
                 font-weight: 500;
             }
+        }
+    }
+}
+
+/* ----------------------------------------------------- Desktop -------------------------------------------- */
+@media (max-width: 1921px) {
+
+    .nav_container {
+
+        .nav_content {
+            width: 95%;
+        }
+    }
+
+    .nav_dark_container {
+
+        .nav_dark_content {
+            width: 95%;
+        }
+    }
+
+    .footer_container {
+
+        .footer_top {
+            width: 95%;
+
+            .footer_top_newsletter {
+
+                svg {
+                    right: 2.15rem;
+                }
+            }
+        }
+
+        .footer_bottom{
+            width: 95%;
+        }
+    }
+}
+
+@media (max-width: 1441px) {
+
+    .nav_container {
+
+        .nav_content {
+            width: 95%;
+        }
+    }
+
+    .nav_dark_container {
+
+        .nav_dark_content {
+            width: 95%;
+        }
+    }
+
+    .footer_container {
+
+        .footer_top {
+            width: 95%;
+
+            .footer_top_newsletter {
+
+                svg {
+                    right: 2rem;
+                }
+            }
+        }
+
+        .footer_bottom{
+            width: 95%;
         }
     }
 }

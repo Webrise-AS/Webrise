@@ -1,14 +1,15 @@
 .contact_container {
-    max-height: 90dvh;
+    height: 85vh;
     display: flex;
-    width: 95%;
+    width: 70%;
     margin: auto;
-    max-width: 90.438rem;
+    max-width: 160.063rem;
     justify-content: space-between;
     padding-top: clamp(4.5rem, 20vw + 1rem - 1rem, 8.5rem);
     padding-bottom: clamp(2rem, 10vw + 1rem - 1rem, 4rem);
     
     .contact_content {
+        align-self: self-end;
         display: flex;
         flex-direction: column;
         row-gap: clamp(1rem, 15.4vw + 1rem - 1rem, 12rem);
@@ -59,8 +60,9 @@
     }
     
     .contact_tittle {
+        align-self: self-end;
         height: fit-content;
-        width: 49rem;
+        width: 50rem;
         padding-right: 0.23rem;
         overflow: hidden;
         padding: 0 0 0.85rem 0; 
@@ -73,6 +75,19 @@
             letter-spacing: -.08em;
             margin: 0;
         }
+    }
+}
+
+/* ----------------------------------------------------- Desktop -------------------------------------------- */
+@media (max-width: 1921px) {
+    .contact_container {
+        width: 95%;
+    }
+}
+
+@media (max-width: 1441px) {
+    .contact_container {
+        width: 95%;
     }
 }
 
