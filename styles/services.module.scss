@@ -132,9 +132,10 @@
             display: flex;
             justify-content: space-between;
             column-gap: 2.5rem;
-            
+            padding: 1rem 0;
+
             div:first-child {
-                width: clamp(18rem, 55vw + 1rem - 1rem, 55rem);
+                width: clamp(18rem, 55vw + 1rem - 1rem, 62.5rem);
                 display: flex;
                 flex-direction: column;
                 align-self: flex-end;

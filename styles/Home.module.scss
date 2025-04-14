@@ -323,7 +323,7 @@
                 position: relative;
 
                 .image_container {
-                    height: 41rem;
+                    height: 50rem;
                     position: relative;
                     overflow: hidden;
                     border-radius: 1vw;
@@ -347,13 +347,13 @@
                     top:-45%;
                 }
                 &:nth-of-type(2) {
-                    top:-85%;
+                    top:-65%;
                 }
                 &:nth-of-type(3) {
-                    top: -30%;
+                    top: -20%;
                 }
                 &:nth-of-type(4) {
-                    top:-80%;
+                    top:-60%;
                 }
             }
         }
@@ -691,12 +691,21 @@
                 .hero_textfield {
                     .subHero_group {
                         width: 85%;
+
+                        p, .hero_mobile_Paragraph {
+                            width: 67%;
+                        }
+
+                        div {
+                            justify-content: unset;
+                            column-gap: 5.3rem;
+                        }
                     }
                 }
             }
 
             .hero_slider {
-                width: 85%;
+                width: 75%;
             }
         }
 
@@ -753,7 +762,7 @@
                         width: 88%;
 
                         p {
-                            width: 90%;
+                            width: 86%;
                         }
                     }
                 }
@@ -1112,6 +1121,7 @@
     }
 
 }
+
 
 /* ----------------------------------------------------- Mobile -------------------------------------------- */
 @media (max-width: 441px) {

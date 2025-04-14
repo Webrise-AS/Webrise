@@ -1,12 +1,12 @@
 .hire_container {
     background-color: $black-color;
     color: $white-color;
-    height: 70vh;
+    height: 65vh;
     background-image: url('https://assets-global.website-files.com/6606f0f658b42ca7220e3695/660bfcae5749fee5cdae4952_Bg%20Text%20Video-poster-00001.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    padding-top: 20rem;
+    padding-top: 27rem;
     position: relative;
 
     .hire_overlay {
@@ -61,7 +61,8 @@
 /* ----------------------------------------------------- Desktop -------------------------------------------- */
 @media (max-width: 1921px) {
     .hire_container {
-        height: 100vh;
+        height: 80vh;
+        padding-top: 25rem;
 
         .hire_content {
             width: 95%;
