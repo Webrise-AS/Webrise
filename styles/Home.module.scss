@@ -847,10 +847,27 @@
                     width: 64.4%;
                     
                     .subHero_group {
-                        width: 100%;
+                        width: 90%;
+
+                        div {
+                            flex-direction: column;
+                            row-gap:  1.625rem;
+                        }
+
+                        ul {
+                            flex-direction: row !important;
+                            flex-wrap: wrap;
+                            column-gap: 0.5rem;
+
+                            li:nth-child(2) {
+                                margin-left: 0.2rem !important;
+                            }
+                        }
                     }
 
                     .hero_action_buttons {
+                        align-self: flex-start;
+
                         .hero_mainBtn, .hero_subBtn {
                             height: 4rem;
                             width: 10.9rem;
@@ -861,7 +878,7 @@
                 .hero_image_section {
                     position: absolute ;
                     height: 100%;
-                    width: 31.5%;
+                    width: 35.5%;
                     top: 0;
                     right: 0;
                 }
@@ -886,12 +903,20 @@
 
             .project_gallery {
 
+                .image_container {
+                    height: 26rem !important;
+                }
+
                 .gallery_content:nth-of-type(2) {
                     top: -59% ;
                 }
 
                 .gallery_content:nth-of-type(3) {
-                    top: -20% ;
+                    top: -18.5% ;
+                }
+
+                .gallery_content:nth-of-type(4) {
+                    top: -48.75% ;
                 }
             }
         }
@@ -1203,6 +1228,7 @@
             }
     
             .hero_slider {
+                width: 100% !important;
                 margin-top: 2.5rem !important;
 
                 p {
