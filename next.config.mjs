@@ -27,6 +27,11 @@ const nextConfig = {
         hostname: "cdn.pixabay.com",
         pathname: "**",
       },
+      {
+        protocol: "https",
+        hostname: "blob:https://chatgpt.com",
+        pathname: "**",
+      },
     ],
   },
 };

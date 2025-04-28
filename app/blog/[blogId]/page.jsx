@@ -57,6 +57,7 @@ export default async function BlogDetails(props) {
             <div className={styles.info_block}>
               <h2>{singleArticle[0].actOne.title}</h2>
               <p>{singleArticle[0].actOne.description}</p>
+              <p>{singleArticle[0].actOne.descriptionTwo}</p>
             </div>
             <div className={styles.info_image_container}>
               <Image
@@ -70,11 +71,21 @@ export default async function BlogDetails(props) {
             <div className={styles.info_block}>
               <h2>{singleArticle[0].actTwo.title}</h2>
               <p>{singleArticle[0].actTwo.description}</p>
+              <p>{singleArticle[0].actTwo.descriptionTwo}</p>
+              <h5>{singleArticle[0].actTwo.quotation}</h5>
             </div>
-            <h5>{singleArticle[0].actTwo.quotation}</h5>
             <div className={styles.info_block}>
               <h2>{singleArticle[0].actThree.title}</h2>
               <p>{singleArticle[0].actThree.description}</p>
+              <p>{singleArticle[0].actThree.descriptionTwo}</p>
+            </div>
+            <div className={styles.info_block}>
+              <h2>{singleArticle[0].actFour.title}</h2>
+              <p>{singleArticle[0].actFour.description}</p>
+            </div>
+            <div className={styles.info_block}>
+              <h2>{singleArticle[0].actFive.title}</h2>
+              <p>{singleArticle[0].actFive.description}</p>
             </div>
           </div>
         </div>
