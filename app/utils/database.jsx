@@ -42,21 +42,21 @@ export const database = {
     articleSection: [
       {
         id: 1,
-        title: `Unveiling the Future of Web Design: Trends to Watch in Berlin's Digital Scene`,
+        title: `On-Site SEO vs. Off-Site SEO: What You Control and What You Influence`,
         subtittle: "(01)",
         imageurl: `https://cdn.prod.website-files.com/6606f0f658b42ca7220e36c3/6609a62e7562434e6b933981_Article%20Thumbnail%20%238-p-500.png`,
         imageAlt: `image related to the article`,
       },
       {
         id: 2,
-        title: `Inside Webrise™: A Day in the Life of Berlin's Most Innovative Creative Team`,
+        title: `Web Development Best Practices for Small Businesses and Website Owners`,
         subtittle: "(02)",
         imageurl: `https://cdn.prod.website-files.com/6606f0f658b42ca7220e36c3/6609a5f1b576d554df6331e4_Article%20Thumbnail%20%235-p-500.png`,
         imageAlt: `image related to the article`,
       },
       {
         id: 3,
-        title: `Sustainable Design: Webrise™'s Approach to Eco-Friendly Digital Solutions`,
+        title: `Web Design That Works: Essential Practices for Small Business Owners`,
         subtittle: "(03)",
         imageurl: `https://cdn.prod.website-files.com/6606f0f658b42ca7220e36c3/6609a5bbceb2ea2527a6dab2_Article%20Thumbnail%20%233-p-500.png`,
         imageAlt: `image related to the article`,
@@ -963,7 +963,7 @@ export const database = {
       date: `february 21, 2025`,
       slogan: `Web Design That Works: Essential Practices for Small Business Owners`,
       intro: `When someone visits your website, you have just a few seconds to make a good impression. A great 
-      design is about more than just looking nice — it helps people trust your business, find what they are 
+      design is about more than just looking nice, it helps people trust your business, find what they are 
       looking for, and feel confident in choosing you. In this article, we explore simple web design best 
       practices that can make a real difference for small business owners and website owners.`,
       heroImage: `https://cdn.prod.website-files.com/6606f0f658b42ca7220e36c3/6609a61bf5ced39c23f99a20_Article%20Thumbnail%20%237-p-500.png`,
@@ -971,18 +971,16 @@ export const database = {
       actOne: {
         title: `Designing for Simplicity and Clarity`,
         description: `Making a Strong First Impression: Good web design starts with simplicity. A clean and 
-        uncluttered layout makes it easy for visitors to focus on what matters most — your products, your 
-        services, or your message. When a website is too busy or confusing, people feel overwhelmed and may 
-        leave before they even understand what you offer. A simple design, with clear headings and enough space 
+        uncluttered layout makes it easy for visitors to focus on what matters most, your products, your 
+        services, or your message. When a website is too busy or confusing people feel overwhelmed and may 
+        leave before they even understand what you offer. A simple design with clear headings and enough space 
         around elements, guides visitors naturally to where they want to go without making them think too hard.`,
         descriptionTwo: `Thinking About Mobile Users: Today, most people visit websites from their phones. This 
         means your design should adjust automatically to different screen sizes, a concept called "responsive 
         design." Whether someone is on a laptop or a smartphone, your site should look good and work properly. 
         Easy-to-read text, large enough buttons, and layouts that fit small screens make the experience 
-        comfortable for all visitors.
-
-        "A clean, focused design welcomes visitors in — it invites them to stay, explore, and connect with your 
-        business."`,
+        comfortable for all visitors. A clean focused design welcomes visitors and it invites them to stay, 
+        explore, and connect with your business.`,
         imageurl: `https://cdn.prod.website-files.com/6606f0f658b42ca7220e36c3/6609a511d3a32bb0fd0f8bc4_Article%20Body.png`,
       },
 
@@ -991,11 +989,11 @@ export const database = {
         description: `Creating a Professional Feel: The colors, fonts, and images you choose say a lot about 
         your brand. Bright, clashing colors can feel chaotic, while a calm and consistent color scheme builds 
         trust. Choosing two or three main colors and using them throughout the site helps create a professional 
-        look. Fonts should be easy to read — simple is better than fancy. Images should be clear, high-quality, 
-        and relevant to your message. Avoid using too many decorative graphics that slow down the page or 
-        distract from what’s important. Telling Your Story Visually: Great design is not just about decoration; it’s about communication. Every photo, icon, or graphic should support the story you are trying to tell about your business. By choosing visuals thoughtfully, you help visitors connect emotionally with your brand and understand what you stand for.`,
+        look. Fonts should be easy to read also simple is better than fancy. Images should be clear, high-quality, 
+        and relevant to your message.`,
         descriptionTwo: ``,
-        quotation: `"Design is not just how something looks — it's how it makes people feel and what it helps them understand."`,
+        quotation: `"Design is not just how something looks, it's how it makes people feel and what it helps 
+        them understand."`,
       },
 
       actThree: {
@@ -1005,19 +1003,16 @@ export const database = {
         showing clearly where to find the most important pages like 'About Us,' 'Services,' 'Products,' and 
         'Contact.' Each page should naturally guide visitors to the next step, whether it’s reading more, 
         signing up, or making a purchase. The easier it is for people to find what they are looking for, the 
-        more likely they are to stay and take action.
-        Keeping It Consistent: Every part of your website should feel connected. Using the same style for 
-        buttons, menus, and headings on every page makes your site feel organized and trustworthy. When 
-        everything matches, visitors don’t have to re-learn how to use your site on each page — they feel 
-        comfortable and in control.`,
-        descriptionTwo: `"A well-designed website feels like a helpful guide, leading visitors wherever they 
-        want to go without any confusion."
-
-        A great website design is not just about looks — it’s about making your visitors feel welcome, 
-        comfortable, and confident. By focusing on simplicity, using colors and images wisely, and making 
-        navigation easy, you create a site that works for your business and builds lasting trust with your 
-        customers. Good design doesn’t just happen once; it’s something to care for and refine over time as your 
-        business grows.`,
+        more likely they are to stay and take action. `,
+        descriptionTwo: `Keeping It Consistent: Every part of your website should feel connected. Using the 
+        same style for buttons, menus, and headings on every page makes your site feel organized and trustworthy. 
+        When everything matches, visitors don’t have to re-learn how to use your site on each page they feel 
+        comfortable and in control. "A well-designed website feels like a helpful guide, leading visitors 
+        wherever they want to go without any confusion." A great website design is not just about looks it’s 
+        about making your visitors feel welcome, comfortable, and confident. By focusing on simplicity, using 
+        colors and images wisely, and making navigation easy, you create a site that works for your business 
+        and builds lasting trust with your customers. Good design doesn’t just happen once; it’s something to 
+        care for and refine over time as your business grows.`,
       },
       actFour: {
         title: ``,
