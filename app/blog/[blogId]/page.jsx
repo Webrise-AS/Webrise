@@ -16,7 +16,7 @@ export default async function BlogDetails(props) {
     return dataToFilter.filter((item) => item.id === prop);
   }
   function filterRelatedArticles(dataToFilter, id) {
-    return dataToFilter.filter((item) => item.id != id).slice(2, 5);
+    return dataToFilter.filter((item) => item.id != id).slice(1, 4);
   }
   const singleArticle = filterBlog(blogPage_data, id);
   const OtherArticlesData = filterRelatedArticles(blogPage_data, id);
@@ -82,10 +82,12 @@ export default async function BlogDetails(props) {
             <div className={styles.info_block}>
               <h2>{singleArticle[0].actFour.title}</h2>
               <p>{singleArticle[0].actFour.description}</p>
+              <p>{singleArticle[0].actFour.descriptionTwo}</p>
             </div>
             <div className={styles.info_block}>
               <h2>{singleArticle[0].actFive.title}</h2>
               <p>{singleArticle[0].actFive.description}</p>
+              <p>{singleArticle[0].actFive.descriptionTwo}</p>
             </div>
           </div>
         </div>

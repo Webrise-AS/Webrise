@@ -49,21 +49,21 @@ export const database = {
       },
       {
         id: 2,
-        title: `Web Development Best Practices for Small Businesses and Website Owners`,
+        title: `Web Development Best Practices`,
         subtittle: "(02)",
         imageurl: `https://cdn.prod.website-files.com/6606f0f658b42ca7220e36c3/6609a5f1b576d554df6331e4_Article%20Thumbnail%20%235-p-500.png`,
         imageAlt: `image related to the article`,
       },
       {
         id: 3,
-        title: `Web Design That Works: Essential Practices for Small Business Owners`,
+        title: `Why Good Web Design Matters for Your Business`,
         subtittle: "(03)",
         imageurl: `https://cdn.prod.website-files.com/6606f0f658b42ca7220e36c3/6609a5bbceb2ea2527a6dab2_Article%20Thumbnail%20%233-p-500.png`,
         imageAlt: `image related to the article`,
       },
       {
         id: 4,
-        title: `Unveiling the Future of Web Design: Trends to Watch in Berlin's Digital Scene`,
+        title: `Why Every Business Needs a Website`,
         subtittle: "(04)",
         imageurl: `https://cdn.prod.website-files.com/6606f0f658b42ca7220e36c3/6609a61bf5ced39c23f99a20_Article%20Thumbnail%20%237-p-500.png`,
         imageAlt: `image related to the article`,
@@ -233,8 +233,8 @@ export const database = {
             sure your site works well on mobile devices. We also optimize things like titles, descriptions, 
             and images to help search engines understand your site better. The result? More visitors, more 
             leads, and better results for your business.`,
-          imageurl: `/./Images/services/seoIllustrasion.png`,
-          alt: ``,
+          imageurl: `/./Images/services/seo_illustration_2.png`,
+          alt: `an illustration of a team of professionals working on the seo of a website`,
         },
 
         {
@@ -883,19 +883,13 @@ export const database = {
         sites (off-site SEO). This combination tells search engines that not only is your website helpful, but 
         other people think so too.`,
       },
-      actFour: {
-        title: ``,
-        description: ``,
-      },
-      actFive: {
-        title: ``,
-        description: ``,
-      },
+      actFour: {},
+      actFive: {},
     },
     {
       id: 2,
       date: `March 1, 2025`,
-      slogan: `Web Development Best Practices for Small Businesses and Website Owners`,
+      slogan: `Web Development Best Practices`,
       intro: `Today, your website is often the first introduction customers have to your business. With over 
       5.4 billion people online worldwide​, a friendly and reliable website helps you reach these potential 
       visitors and build trust. A well-built site feels professional and is easy to use, so customers feel 
@@ -949,171 +943,187 @@ export const database = {
         site maintained, you ensure that visitors have a positive experience. Following these simple best 
         practices makes a big difference in how people perceive and trust your business online.`,
       },
-      actFour: {
-        title: ``,
-        description: ``,
-      },
-      actFive: {
-        title: ``,
-        description: ``,
-      },
+      actFour: {},
+      actFive: {},
     },
     {
       id: 3,
       date: `february 21, 2025`,
-      slogan: `Web Design That Works: Essential Practices for Small Business Owners`,
-      intro: `When someone visits your website, you have just a few seconds to make a good impression. A great 
-      design is about more than just looking nice, it helps people trust your business, find what they are 
-      looking for, and feel confident in choosing you. In this article, we explore simple web design best 
-      practices that can make a real difference for small business owners and website owners.`,
+      slogan: `Why Good Web Design Matters for Your Business`,
+      intro: `Your website is often the first impression people get of your business. Before they call you, 
+      visit your shop, or send an email, many will first take a look at your site. That is why good web design 
+      is not just about making things look nice. It is about creating a space where your visitors feel 
+      confident, comfortable, and ready to take action. In this article, we explain why strong web design 
+      matters and how it helps your business succeed.`,
       heroImage: `https://cdn.prod.website-files.com/6606f0f658b42ca7220e36c3/6609a61bf5ced39c23f99a20_Article%20Thumbnail%20%237-p-500.png`,
 
       actOne: {
-        title: `Designing for Simplicity and Clarity`,
-        description: `Making a Strong First Impression: Good web design starts with simplicity. A clean and 
-        uncluttered layout makes it easy for visitors to focus on what matters most, your products, your 
-        services, or your message. When a website is too busy or confusing people feel overwhelmed and may 
-        leave before they even understand what you offer. A simple design with clear headings and enough space 
-        around elements, guides visitors naturally to where they want to go without making them think too hard.`,
-        descriptionTwo: `Thinking About Mobile Users: Today, most people visit websites from their phones. This 
-        means your design should adjust automatically to different screen sizes, a concept called "responsive 
-        design." Whether someone is on a laptop or a smartphone, your site should look good and work properly. 
-        Easy-to-read text, large enough buttons, and layouts that fit small screens make the experience 
-        comfortable for all visitors. A clean focused design welcomes visitors and it invites them to stay, 
-        explore, and connect with your business.`,
+        title: `First Impressions Count`,
+        description: `People judge quickly. If your website looks outdated, cluttered, or confusing, they may 
+        assume your business is the same way. On the other hand, a clean and simple design gives a sense of 
+        professionalism and care. It shows that you take your business seriously and that you are ready to 
+        serve your customers well.`,
+        descriptionTwo: `Design sets the tone. Whether you want to come across as friendly and warm, modern and 
+        sleek, or bold and confident, your website is the place to show it. A strong first impression can turn a 
+        curious visitor into a loyal customer. When people land on your website, you want them to feel that they 
+        are in the right place.`,
         imageurl: `https://cdn.prod.website-files.com/6606f0f658b42ca7220e36c3/6609a511d3a32bb0fd0f8bc4_Article%20Body.png`,
       },
 
       actTwo: {
-        title: `Using Colors, Fonts, and Images Wisely`,
-        description: `Creating a Professional Feel: The colors, fonts, and images you choose say a lot about 
-        your brand. Bright, clashing colors can feel chaotic, while a calm and consistent color scheme builds 
-        trust. Choosing two or three main colors and using them throughout the site helps create a professional 
-        look. Fonts should be easy to read also simple is better than fancy. Images should be clear, high-quality, 
-        and relevant to your message.`,
-        descriptionTwo: ``,
-        quotation: `"Design is not just how something looks, it's how it makes people feel and what it helps 
-        them understand."`,
+        title: `Clear Layout and Easy Navigation`,
+        description: `A good website does not make people guess where to click. It guides them naturally. The 
+        menu should be easy to find and understand. The pages should be well organized. Visitors should be able 
+        to find what they need quickly and without frustration.`,
+        descriptionTwo: `If someone is looking for your services, your contact details, or examples of your 
+        work, they should be able to find them in just a few clicks. The easier your website is to use, the 
+        more likely people are to stay and take action.`,
+        quotation: `"Good design removes obstacles and helps people connect with your business faster."`,
       },
 
       actThree: {
-        title: `Making Your Website Easy to Navigate`,
-        description: `Helping Visitors Find Their Way: A beautiful website means little if people get lost in 
-        it. Good navigation is like giving your visitors a map. Your main menu should be simple and visible, 
-        showing clearly where to find the most important pages like 'About Us,' 'Services,' 'Products,' and 
-        'Contact.' Each page should naturally guide visitors to the next step, whether it’s reading more, 
-        signing up, or making a purchase. The easier it is for people to find what they are looking for, the 
-        more likely they are to stay and take action. `,
-        descriptionTwo: `Keeping It Consistent: Every part of your website should feel connected. Using the 
-        same style for buttons, menus, and headings on every page makes your site feel organized and trustworthy. 
-        When everything matches, visitors don’t have to re-learn how to use your site on each page they feel 
-        comfortable and in control. "A well-designed website feels like a helpful guide, leading visitors 
-        wherever they want to go without any confusion." A great website design is not just about looks it’s 
-        about making your visitors feel welcome, comfortable, and confident. By focusing on simplicity, using 
-        colors and images wisely, and making navigation easy, you create a site that works for your business 
-        and builds lasting trust with your customers. Good design doesn’t just happen once; it’s something to 
-        care for and refine over time as your business grows.`,
+        title: `Design for Phones and All Screen Sizes`,
+        description: `Today, most people visit websites from their phones. That means your site needs to look 
+        good and work properly on small screens as well as on desktops and laptops. This is called responsive 
+        design, and it is a basic part of good web design.`,
+        descriptionTwo: `If your site is hard to read or use on a phone, people will leave quickly. On the 
+        other hand, a mobile-friendly site helps you reach more customers and gives them a smooth experience no 
+        matter how they access it. A website that works well on all devices helps your business stay connected 
+        with everyone.`,
       },
       actFour: {
-        title: ``,
-        description: ``,
+        title: `Consistent Branding and Visuals`,
+        description: `Your website should feel like your business. The colors, fonts, and images should match 
+        your logo and overall look. This builds trust and helps customers remember you. A website that looks 
+        put together and consistent feels more professional and more reliable.`,
+        descriptionTwo: `Images also matter. Clear and high quality photos of your work, products, or team help 
+        people get to know your business. Avoid clutter and distractions. Everything on your site should support 
+        your message and help people take the next step. Design is not just about decoration. It is about 
+        communication.`,
       },
       actFive: {
-        title: ``,
-        description: ``,
+        title: `Design That Supports Your Goals`,
+        description: `Every business website has a purpose. Whether you want people to contact you, book a 
+        service, visit your location, or buy a product, the design should help them get there. Strong calls to 
+        action, easy forms, and simple contact options make a big difference. The best web design supports your 
+        business goals and makes things easier for both you and your customers. It works quietly in the 
+        background, helping you grow without getting in the way.`,
+        descriptionTwo: `Your website should work for you, not against you. Great web design is not about 
+        trends or flashy effects. It is about clarity, trust, and connection. It helps people find you, 
+        understand you, and feel good about choosing your business. No matter what you do or sell, a well 
+        designed website is one of the best tools you can have.`,
       },
     },
     {
       id: 4,
-      date: `April 13, 2024`,
-      slogan: `Unveiling the Future of Web Design: Trends to Watch in Berlin's Digital Scene`,
-      intro: `In an era where digital technology and social media are integral parts of our daily lives,
-        modern couples face unique challenges. This article explores how couples can navigate relationships
-        in the digital age, striking a balance between the online world and their personal connection.`,
+      date: `January 13, 2025`,
+      slogan: `Why Every Business Needs a Website`,
+      intro: `In today’s world, most people turn to the internet first when they want to learn about a product 
+      or service. Whether someone is looking for a restaurant, a local service provider, or a unique product, 
+      their first step is usually a search online. If your business does not have a website, you are missing 
+      out on opportunities to reach new customers, build trust, and grow. In this article, we explain in simple 
+      terms why having a website is no longer optional but necessary for a business to succeed.`,
       heroImage: `https://cdn.prod.website-files.com/6606f0f658b42ca7220e36c3/6609a605c9163707cd3907e7_Article%20Thumbnail%20%236-p-500.png`,
 
       actOne: {
-        title: `Communication Dynamics`,
-        description: `Adapting to Communication Styles: Digital communication varies greatly from traditional
-          methods. Couples need to adapt and understand each other’s preferred styles, whether it’s texting,
-          emailing, or video calls. This helps in reducing misunderstandings and fostering better communication.
-          Balancing Online Interaction: Digital age relationships often involve an online component.
-          Couples should discuss and agree on their digital interaction levels, including social media usage,
-          online friendships, and digital footprints that they are comfortable with.`,
+        title: `Being Found Where People Are Looking`,
+        description: `Customers are online every day. They use search engines to compare options, check 
+        reviews, and make decisions. A website gives your business a place to be seen and discovered. Even if 
+        you rely on word of mouth or a physical location, people often look you up online before they visit or 
+        call. Without a website, your business can seem less professional or harder to trust.`,
+        descriptionTwo: `A website acts like your digital storefront. It is open all day and night, giving 
+        people a way to find you even outside of business hours. Whether someone hears about your business 
+        through a friend or stumbles upon your name online, your website gives them a place to learn more and 
+        take the next step. Your customers are online. Your business should be there too.`,
         imageurl: `https://cdn.prod.website-files.com/6606f0f658b42ca7220e36c3/6609a511d3a32bb0fd0f8bc4_Article%20Body.png`,
       },
 
       actTwo: {
-        title: `Digital communication varies`,
-        description: `Adapting to Communication Styles: Digital communication varies greatly from traditional
-          methods. Couples need to adapt and understand each other’s preferred styles, whether it’s texting,
-          emailing, or video calls. This helps in reducing misunderstandings and fostering better communication.
-          Balancing Online Interaction: Digital age relationships often involve an online component.
-          Couples should discuss and agree on their digital interaction levels, including social media usage,
-          online friendships, and digital footprints that they are comfortable with.`,
-        quotation: `“Couples should find a balance where they feel comfortable sharing online passwords or
-        friend lists without feeling obligated or pressured.”`,
+        title: `Building Trust and Showing What You Offer`,
+        description: `People want to know who they are buying from. A website helps you build trust by sharing 
+        your story, showing your services or products, and making it easy for customers to understand what you 
+        do. It also allows you to display reviews, testimonials, and photos of your work, which all help build 
+        confidence.`,
+        descriptionTwo: `A website gives you control over your message. You can highlight what makes your 
+        business special, answer common questions, and help customers feel more comfortable choosing you. A 
+        strong online presence shows that your business is active, reliable, and ready to help.`,
+        quotation: `“When people can clearly see who you are and what you offer, they are more likely to become customers.”`,
       },
 
       actThree: {
-        title: `Balancing Online Interaction`,
-        description: `Adapting to Communication Styles: Digital communication varies greatly from traditional
-          methods. Couples need to adapt and understand each other’s preferred styles, whether it’s texting,
-          emailing, or video calls. This helps in reducing misunderstandings and fostering better communication.
-          Balancing Online Interaction: Digital age relationships often involve an online component.
-          Couples should discuss and agree on their digital interaction levels, including social media usage,
-          online friendships, and digital footprints that they are comfortable with.`,
+        title: `Saving Time and Helping Your Business Grow`,
+        description: `A website can save you time by answering questions before people even contact you. You 
+        can explain your services, provide directions, and even allow people to book appointments or make 
+        purchases online. This helps reduce phone calls and makes your business more efficient. It also opens 
+        the door for growth. With a website, you are not limited to the people who walk by your shop or hear 
+        about you locally. You can reach a wider audience and attract new customers through search engines and 
+        social media. A simple, well-made website can help your business grow without adding extra stress to 
+        your daily work.`,
+        descriptionTwo: `A website works for you even when you are not working. It keeps your business visible 
+        and active around the clock. Having a website is one of the most valuable investments you can make as a 
+        business owner. It helps people find you, builds trust, saves time, and creates new opportunities. 
+        Whether your business is new or established, small or growing, a website gives you the foundation you 
+        need to succeed in a world where almost everything starts online.`,
       },
-      actFour: {
-        title: ``,
-        description: ``,
-      },
-      actFive: {
-        title: ``,
-        description: ``,
-      },
+      actFour: {},
+      actFive: {},
     },
     {
       id: 5,
-      date: `April 13, 2024`,
-      slogan: `Inside Webrise: A Day in the Life of Berlin's Most Innovative Creative Team`,
-      intro: `In an era where digital technology and social media are integral parts of our daily lives,
-        modern couples face unique challenges. This article explores how couples can navigate relationships
-        in the digital age, striking a balance between the online world and their personal connection.`,
+      date: `December 6, 2024`,
+      slogan: `Web Hosting Explained: What Website Owners Need to Know`,
+      intro: `When you build a website, you also need a place to store it. That is where web hosting comes in. 
+      Hosting is often something that happens in the background, but it plays a big role in how your website 
+      performs. In this article, we break down what web hosting is, why it matters, and what to look for when 
+      choosing a hosting provider, all in simple, practical terms.`,
       heroImage: `https://cdn.prod.website-files.com/6606f0f658b42ca7220e36c3/6609a5f1b576d554df6331e4_Article%20Thumbnail%20%235-p-500.png`,
 
       actOne: {
-        title: `Communication Dynamics`,
-        description: `Adapting to Communication Styles: Digital communication varies greatly from traditional
-          methods. Couples need to adapt and understand each other’s preferred styles, whether it’s texting,
-          emailing, or video calls. This helps in reducing misunderstandings and fostering better communication.
-          Balancing Online Interaction: Digital age relationships often involve an online component.
-          Couples should discuss and agree on their digital interaction levels, including social media usage,
-          online friendships, and digital footprints that they are comfortable with.`,
+        title: `What Is Web Hosting and Why Does It Matter`,
+        description: `Every website needs a home. Think of web hosting like renting space for your website on the 
+        internet. Just like a shop needs a physical location, your website needs a digital space where its files, 
+        images, and content are stored so people can visit it. When someone types in your web address, your hosting 
+        provider delivers your website to their screen.`,
+        descriptionTwo: `Speed, uptime, and reliability all depend on your hosting service. If your hosting is slow 
+        or unreliable, visitors might leave before your site even loads. A good host makes sure your website is 
+        available whenever customers need it and loads quickly enough to keep their attention. Hosting also helps 
+        protect your site from crashes and sudden traffic spikes during busy times. Hosting is like the 
+        foundation of your website. When it is strong and stable, everything else works better.`,
         imageurl: `https://cdn.prod.website-files.com/6606f0f658b42ca7220e36c3/6609a511d3a32bb0fd0f8bc4_Article%20Body.png`,
       },
 
       actTwo: {
-        title: `Digital communication varies`,
-        description: `Adapting to Communication Styles: Digital communication varies greatly from traditional
-          methods. Couples need to adapt and understand each other’s preferred styles, whether it’s texting,
-          emailing, or video calls. This helps in reducing misunderstandings and fostering better communication.
-          Balancing Online Interaction: Digital age relationships often involve an online component.
-          Couples should discuss and agree on their digital interaction levels, including social media usage,
-          online friendships, and digital footprints that they are comfortable with.`,
-        quotation: `“Couples should find a balance where they feel comfortable sharing online passwords or
-        friend lists without feeling obligated or pressured.”`,
+        title: `Choosing the Right Hosting for Your Business`,
+        description: `There are different types of hosting depending on what your site needs. If you are just 
+        starting out, shared hosting is usually a good fit. It is affordable and easy to use. As your site 
+        grows and more people start visiting, you might need something more powerful. In that case, options 
+        like virtual private servers or cloud hosting can give you more speed and control.`,
+        descriptionTwo: `When choosing a hosting provider, it is important to look beyond just the monthly 
+        price. A reliable host should have good customer support, strong security features, and a history of 
+        staying online with minimal downtime. It is also helpful if the hosting company offers simple tools to 
+        manage your website and makes regular backups automatically.`,
+        quotation: `“Choose hosting the way you would choose a 
+        trusted partner. You want someone who is reliable, helpful, and focused on your success”`,
       },
 
       actThree: {
-        title: `Balancing Online Interaction`,
-        description: `Adapting to Communication Styles: Digital communication varies greatly from traditional
-          methods. Couples need to adapt and understand each other’s preferred styles, whether it’s texting,
-          emailing, or video calls. This helps in reducing misunderstandings and fostering better communication.
-          Balancing Online Interaction: Digital age relationships often involve an online component.
-          Couples should discuss and agree on their digital interaction levels, including social media usage,
-          online friendships, and digital footprints that they are comfortable with.`,
+        title: `Keeping Your Hosting Secure and Up to Date`,
+        description: `Security is one of the most important parts of hosting. A good provider offers features 
+        that protect your website behind the scenes. This includes SSL certificates to keep data secure, 
+        firewalls to block unwanted traffic, and regular updates to prevent hackers from finding weak spots. 
+        Another key feature is backup. Even with the best setup, mistakes and unexpected problems can happen. 
+        Whether it is an update that goes wrong or content that gets accidentally deleted, backups allow you to 
+        restore your site quickly. Many hosts offer automatic daily backups, which give you peace of mind 
+        without any extra work.`,
+        descriptionTwo: `A great host does not just keep your site online. It helps keep it safe and ready for 
+        whatever comes next. Your website is one of the most important tools in your business. Hosting keeps 
+        it running smoothly, even when you are not thinking about it. By understanding the basics and choosing 
+        a provider that meets your needs, you make sure your site stays fast, secure, and easy for your 
+        visitors to access. Good hosting may be behind the scenes, but it supports everything your website does 
+        in front of your customers.`,
       },
+      actFour: {},
+      actFive: {},
     },
   ],
 

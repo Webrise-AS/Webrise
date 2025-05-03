@@ -222,7 +222,7 @@
                 }
             }
 
-            .info_block:last-child {
+            .info_block:nth-child(6), .info_block:nth-child(7) {
                 margin: 3rem 0 0 0;
             }
 
@@ -231,17 +231,16 @@
                     height: 100%;
                     width: 100%;
                     border-radius: 0.5rem;
-                    margin: 1.6rem 0 clamp(3rem, 15vw + 1rem - 1rem, 8.95rem) 0;
+                    margin: 1.6rem 0 clamp(3rem, 15vw + 1rem - 1rem, 6rem) 0;
                     background-repeat: no-repeat;
                     background-size: cover;
                     background-position: center;
                 }
             }
     
-    
             h5 {
                 font-size: clamp(1.2rem, 3.25vw + 1rem - 1rem, 2em);
-                margin: 2.75rem 0 2.75rem 0;
+                margin: 1rem 0 3rem 0;
                 font-weight: 600;
                 line-height: 100%;
                 letter-spacing: -.04em;

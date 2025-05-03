@@ -171,14 +171,14 @@
             }
 
             .content_speciality_image {
-                height: clamp(22.5rem, 52.5vw + 1rem - 1rem, 40rem);
-                width: clamp(15rem, 45vw + 1rem - 1rem, 40rem);
+                height: clamp(22.5rem, 52.5vw + 1rem - 1rem, 31.5rem);
                 overflow: hidden;
-
+                
                 img {
                     height: 100%;
                     width: 100%;
                     object-fit: cover;
+                    object-position: center;
                     border-radius: 1vw;
                 }
             }
