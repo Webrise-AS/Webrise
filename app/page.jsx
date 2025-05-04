@@ -196,14 +196,16 @@ export default function Home() {
           <div className={styles.about_content_right}>
             <p>
               <span>
-                At Webrise, we are a dedicated web development agency comprised
-                of a team of creative professionals committed to helping your
-                business thrive in the ever-changing digital landscape.
+                We’re a small web development team based in Oslo, Norway,
+                dedicated to building tailored websites for small to
+                medium-sized businesses. With a focus on clean design,
+                performance,
                 <br />
                 <br />
-                Our mission is to design and develop visually stunning and
-                highly functional websites that perfectly reflect your brand and
-                meet your unique needs.
+                and usability we help our clients stand out online with
+                solutions that fit their unique needs and goals. Whether
+                you&apos;re starting from scratch or looking to improve an
+                existing site, we&apos;re here to make the web work for you.
               </span>
             </p>
           </div>

@@ -86,7 +86,6 @@
         height: fit-content;
 
         .content_section_story {
-            
             display: flex;
             flex-direction: column;
             row-gap: 2rem;
@@ -94,7 +93,7 @@
             margin: auto;
             
             p {
-                width: clamp(18rem, 69.3vw + 1rem - 1rem, 52.4rem);
+                width: clamp(18rem, 69.3vw + 1rem - 1rem, 62.4rem);
                 margin: 0;
                 font-size: clamp(1.5rem, 4.1vw + 1rem - 1rem, 3rem);
                 font-weight: 600;

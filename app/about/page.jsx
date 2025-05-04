@@ -105,17 +105,41 @@ export default function About() {
               whileInView={{ y: 0, skewY: 0, opacity: 1 }}
               transition={{ duration: 0.6 }}
             >
-              Situated in the pulsating heart of Berlin, Webrise thrives on the
-              island’s eclectic energy and rich cultural tapestry.
+              We’re a small web development team based in Oslo, Norway,
+              dedicated to building tailored websites for small to medium-sized
+              businesses.
             </motion.p>
             <motion.p
               animate={{ y: 100, skewY: 10, opacity: 0 }}
               whileInView={{ y: 0, skewY: 0, opacity: 1 }}
               transition={{ duration: 0.6 }}
             >
-              Our holistic, collaborative approach is tailored to navigate the
-              challenges and opportunities of our era. Experience transformative
-              digital solutions that captivate and engage.
+              With a focus on clean design, performance, and usability, we help
+              our clients stand out online with solutions that fit their unique
+              needs and goals. Whether you&apos;re starting from scratch or
+              looking to improve an existing site, we&apos;re here to make the
+              web work for you.
+            </motion.p>
+            <motion.p
+              animate={{ y: 100, skewY: 10, opacity: 0 }}
+              whileInView={{ y: 0, skewY: 0, opacity: 1 }}
+              transition={{ duration: 0.6 }}
+            >
+              We offer a complete range of services including design,
+              development, on site SEO, and hosting. As a small team, we work
+              closely with each client to deliver websites that are visually
+              appealing, high performing, and optimized for search engines.
+            </motion.p>
+            <motion.p
+              animate={{ y: 100, skewY: 10, opacity: 0 }}
+              whileInView={{ y: 0, skewY: 0, opacity: 1 }}
+              transition={{ duration: 0.6 }}
+            >
+              Our approach is personal and hands on. We take the time to
+              understand your business and build solutions that truly support
+              your goals. When you work with us, you get more than just a
+              website. You gain a reliable digital partner who is committed to
+              your success.
             </motion.p>
           </div>
           <div className={styles.content_section_sliders}>
