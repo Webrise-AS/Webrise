@@ -44,21 +44,21 @@ export const database = {
         id: 1,
         title: `On-Site SEO vs. Off-Site SEO: What You Control and What You Influence`,
         subtittle: "(01)",
-        imageurl: `https://cdn.prod.website-files.com/6606f0f658b42ca7220e36c3/6609a62e7562434e6b933981_Article%20Thumbnail%20%238-p-500.png`,
-        imageAlt: `image related to the article`,
+        imageurl: `/./Images/blog/seo_blog_heroImage.jpg`,
+        imageAlt: `image of a hand pointing at a blue led text that says SEO`,
       },
       {
         id: 2,
         title: `Web Development Best Practices`,
         subtittle: "(02)",
-        imageurl: `https://cdn.prod.website-files.com/6606f0f658b42ca7220e36c3/6609a5f1b576d554df6331e4_Article%20Thumbnail%20%235-p-500.png`,
+        imageurl: `/./Images/blog/dev_blog_heroImage.jpg`,
         imageAlt: `image related to the article`,
       },
       {
         id: 3,
         title: `Why Good Web Design Matters for Your Business`,
         subtittle: "(03)",
-        imageurl: `https://cdn.prod.website-files.com/6606f0f658b42ca7220e36c3/6609a5bbceb2ea2527a6dab2_Article%20Thumbnail%20%233-p-500.png`,
+        imageurl: `/./Images/blog/design_blog_heroImage.jpg`,
         imageAlt: `image related to the article`,
       },
       {
@@ -207,7 +207,7 @@ export const database = {
             making your site visually appealing, easy to navigate, and engaging for your visitors. From 
             choosing the right colors and fonts to adding interactive features, we ensure your website not 
             only looks amazing but also provides a great experience for everyone who uses it.`,
-          imageurl: `https://assets-global.website-files.com/6606f0f658b42ca7220e3695/660723ab81a3f7d07a7a97d1_Testimonial.webp`,
+          imageurl: `/./Images/services/design_illustration.png`,
           alt: ``,
         },
 
@@ -220,8 +220,8 @@ export const database = {
             with features like content management systems (CMS) that let you update your site without any 
             technical knowledge. Plus, we ensure your site is optimized for speed and security, so it works 
             perfectly for your visitors and grows with your business.`,
-          imageurl: `https://assets-global.website-files.com/6606f0f658b42ca7220e36c3/6609a5f1b576d554df6331e4_Article%20Thumbnail%20%235-p-500.png`,
-          alt: ``,
+          imageurl: `/./Images/services/development_illustration.png`,
+          alt: `An illustration of a team of professionals working on developing a website.`,
         },
 
         {
@@ -233,8 +233,8 @@ export const database = {
             sure your site works well on mobile devices. We also optimize things like titles, descriptions, 
             and images to help search engines understand your site better. The result? More visitors, more 
             leads, and better results for your business.`,
-          imageurl: `/./Images/services/seo_illustration_2.png`,
-          alt: `an illustration of a team of professionals working on the seo of a website`,
+          imageurl: `/./Images/services/seo_illustration.png`,
+          alt: `An illustration of a team of professionals working on the seo of a website`,
         },
 
         {
@@ -246,8 +246,8 @@ export const database = {
             features like SSL certificates, and expert support to handle any issues that come up. With our 
             hosting, you can focus on your business while we take care of keeping your website fast, safe, 
             and always available to your visitors.`,
-          imageurl: `https://assets-global.website-files.com/6606f0f658b42ca7220e3695/660723b3e10d6cd0f0ca10f6_Camera-p-800.webp`,
-          alt: ``,
+          imageurl: `/./Images/services/hosting_illustration.png`,
+          alt: `An illustration of a team of professionals working on the hoasting of a website`,
         },
       ],
     },
@@ -836,7 +836,7 @@ export const database = {
       elsewhere on the internet that helps people find you). Both matter, but they work 
       differently and require different approaches. Understanding this difference can help you 
       focus your efforts where they'll make the most impact for your business.`,
-      heroImage: `https://cdn.prod.website-files.com/6606f0f658b42ca7220e36c3/6609a62e7562434e6b933981_Article%20Thumbnail%20%238-p-500.png`,
+      heroImage: `/./Images/blog/seo_blog_heroImage.jpg`,
 
       actOne: {
         title: `On-Site SEO: What You Control on Your Website`,
@@ -850,7 +850,7 @@ export const database = {
         through your content. Think of it like setting up a physical store - you want good lighting, clear 
         signs, and products arranged so customers can find what they need without asking for help. The easier 
         your website is to use, the longer people will stay, and the more likely they'll contact you.`,
-        imageurl: `https://cdn.prod.website-files.com/6606f0f658b42ca7220e36c3/6609a511d3a32bb0fd0f8bc4_Article%20Body.png`,
+        imageurl: `/./Images/blog/seo_blog_image.jpg`,
       },
 
       actTwo: {
@@ -895,7 +895,7 @@ export const database = {
       visitors and build trust. A well-built site feels professional and is easy to use, so customers feel 
       comfortable exploring and learning about what you offer. By following simple best practices, your website 
       can make a positive first impression, meet customer expectations, and ultimately grow your business.`,
-      heroImage: `https://cdn.prod.website-files.com/6606f0f658b42ca7220e36c3/6609a65bb576d554df639bb3_Article%20Thumbnail%20%239-p-500.png`,
+      heroImage: `/./Images/blog/dev_blog_heroImage.jpg`,
 
       actOne: {
         title: `Building a Website That Works for Everyone`,
@@ -955,7 +955,7 @@ export const database = {
       is not just about making things look nice. It is about creating a space where your visitors feel 
       confident, comfortable, and ready to take action. In this article, we explain why strong web design 
       matters and how it helps your business succeed.`,
-      heroImage: `https://cdn.prod.website-files.com/6606f0f658b42ca7220e36c3/6609a61bf5ced39c23f99a20_Article%20Thumbnail%20%237-p-500.png`,
+      heroImage: `/./Images/blog/design_blog_heroImage.jpg`,
 
       actOne: {
         title: `First Impressions Count`,
@@ -967,7 +967,7 @@ export const database = {
         sleek, or bold and confident, your website is the place to show it. A strong first impression can turn a 
         curious visitor into a loyal customer. When people land on your website, you want them to feel that they 
         are in the right place.`,
-        imageurl: `https://cdn.prod.website-files.com/6606f0f658b42ca7220e36c3/6609a511d3a32bb0fd0f8bc4_Article%20Body.png`,
+        imageurl: `/./Images/blog/design_blog_image.jpg`,
       },
 
       actTwo: {

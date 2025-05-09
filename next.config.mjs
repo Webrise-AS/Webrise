@@ -29,7 +29,12 @@ const nextConfig = {
       },
       {
         protocol: "https",
-        hostname: "blob:https://chatgpt.com",
+        hostname: "img.freepik.com",
+        pathname: "**",
+      },
+      {
+        protocol: "https",
+        hostname: "images.unsplash.com",
         pathname: "**",
       },
     ],

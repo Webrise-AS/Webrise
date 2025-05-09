@@ -80,7 +80,7 @@ function Footer() {
               whileInView={{ y: 0, opacity: 1 }}
               transition={{ ease: "easeIn", duration: 0.6 }}
             >
-              ©2024 Webrise
+              ©2025 Webrise
             </motion.span>
           </div>
         </div>
