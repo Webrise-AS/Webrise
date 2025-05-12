@@ -540,7 +540,7 @@
 
                 span {
                     width: clamp(100%, 50vw + 1rem - 1rem, 71.5rem);
-                    font-size: clamp(1.5rem, 4.688vw + 1rem - 1rem, 3rem);
+                    font-size: clamp(1.2rem, 4.688vw + 1rem - 1rem, 3rem);
                     font-weight: 600;
                     letter-spacing: -.04em;
                     line-height: 100%;
@@ -1083,21 +1083,22 @@
             padding: 5rem 0  !important;
     
             h2 {
-                font-size: 3.875rem !important;
+                font-size: 3.875rem ;
             }
     
             .article_content {
+                
                 .single_article {
                     justify-content: space-around !important;
                     column-gap: 2.5rem !important;
                     
                     h3 {
-                        font-size: 1.25rem !important;
+                        font-size: 1.25rem ;
                         color: $black-color;
                     }
                     
                     span {
-                        font-size: 2.5rem !important;
+                        font-size: 2.5rem ;
                         color: $black-color;
                     }
                     
@@ -1213,7 +1214,7 @@
                                 .hero_mainBtn, .hero_subBtn {
                                     border-radius: 1.5vw !important;
                                     height: 3.45rem ;
-                                    width: 15.25rem;
+                                    width: 12.5rem;
                                 }
                             }
                         }
@@ -1301,7 +1302,7 @@
             }
 
             .project_button_container {
-                width: 70% !important;
+                width: 50% !important;
                 margin: 1rem auto auto auto;
 
                 .project_button {
@@ -1373,6 +1374,7 @@
     
             .article_content {
                 margin-top: 3rem !important;
+
                 .single_article{
                     flex-direction: column !important;
                     row-gap: 1.5rem;

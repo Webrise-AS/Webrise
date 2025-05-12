@@ -101,13 +101,14 @@
         height: auto;
         flex-direction: column;
         row-gap: 3rem;
-
+        
         .contact_tittle {
             align-self: flex-end;
             width: fit-content !important;
         }
-
+        
         .contact_content {
+            align-self: flex-start;
             width: fit-content;
         }
     }

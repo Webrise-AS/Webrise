@@ -682,7 +682,7 @@
     }
 
     .footer_container {
-
+        gap: 3rem !important;
         .footer_top {
             flex-direction: column;
 
@@ -725,6 +725,7 @@
     }
 
     .footer_container {
+        gap: 2rem !important; 
         padding: 2.3rem 0 0.5rem 0 !important;
 
         .footer_top {
