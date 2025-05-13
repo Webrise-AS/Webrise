@@ -1083,7 +1083,7 @@
             padding: 5rem 0  !important;
     
             h2 {
-                font-size: 3.875rem ;
+                font-size: 4.5rem ;
             }
     
             .article_content {
@@ -1141,7 +1141,7 @@
             .info_title {
     
                 h3 {
-                    font-size: 4rem !important;
+                    font-size: 4.5rem !important;
                 }
             }
         }
@@ -1369,22 +1369,23 @@
         .article_container {
 
             h2 {
-                font-size: 2.82rem !important;
+                font-size: 3.125rem !important;
             }
     
             .article_content {
                 margin-top: 3rem !important;
-
+                
                 .single_article{
                     flex-direction: column !important;
-                    row-gap: 1.5rem;
+                    row-gap: 0.75rem;
+                    padding: 1.75rem 0 !important;
     
                     h3 {
-                        font-size: 1rem !important;
+                        font-size: 0.875rem !important;
                     }
     
                     span {
-                        font-size: 1.5rem !important;
+                        font-size: 1.56rem !important;
                     }
     
                     .image_container {
@@ -1411,7 +1412,7 @@
             .info_title {
     
                 h3 {
-                    font-size: 2.5rem !important;
+                    font-size: 3.125rem !important;
                 }
             }
         }
