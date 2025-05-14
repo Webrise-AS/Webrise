@@ -1,12 +1,11 @@
 .hire_container {
     background-color: $black-color;
     color: $white-color;
-    height: 65vh;
+    height: 80vh;
     background-image: url('https://assets-global.website-files.com/6606f0f658b42ca7220e3695/660bfcae5749fee5cdae4952_Bg%20Text%20Video-poster-00001.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    padding-top: 27rem;
     position: relative;
 
     .hire_overlay {
@@ -20,7 +19,7 @@
     }
 
     .hire_content {
-        height: 100%;
+        height:100%;
         width: 70%;
         margin: auto;
         display: flex;
@@ -28,6 +27,8 @@
         row-gap: 2rem;
         position: inherit;
         z-index: $base-index !important;
+        justify-content: flex-end;
+        bottom: 15%;
 
         p {
             width: clamp(18.3rem, 76vw + 1rem - 1rem, 60rem);
@@ -39,7 +40,7 @@
         }
 
         button {
-            width: 9.5%;
+            width: 9%;
             height: 3rem;
             background: $white-color;
             color: $black-color;
@@ -61,8 +62,7 @@
 /* ----------------------------------------------------- Desktop -------------------------------------------- */
 @media (max-width: 1921px) {
     .hire_container {
-        height: 80vh;
-        padding-top: 25rem;
+        height: 90vh;
 
         .hire_content {
             width: 95%;
@@ -72,7 +72,7 @@
 
 @media (max-width: 1441px) {
     .hire_container {
-
+        height: 80vh;
         .hire_content {
             width: 95%;
         }
@@ -82,10 +82,8 @@
 /* ----------------------------------------------------- Laptop -------------------------------------------- */
 @media (max-width: 1115px) {
     .hire_container {
-        padding-top: 21rem ;
-
+        height: 70vh;
         .hire_content {
-
             p {
                 width: 100% ;
             }
@@ -100,8 +98,7 @@
 /* ----------------------------------------------------- Tablet -------------------------------------------- */
 @media (max-width: 835px) {
     .hire_container {
-        height: 50vh !important;
-        padding-top: 30% !important;
+        height: 55vh ;
 
         .hire_content {
 
@@ -123,22 +120,12 @@
     }
 }
 
-@media (max-width: 769px) {
-    .hire_container {
-        height: 55vh !important;
-        padding-top: 25% !important;
-    }
-}
-
 /* ----------------------------------------------------- Mobile -------------------------------------------- */
 @media (max-width: 441px) {
     .hire_container {
-        height: 65vh !important;
-        padding-top: unset !important;
+        height: 55vh;
         
         .hire_content {
-            justify-content: center;
-
             p {
                 line-height: 1.05;
                 font-size: 1.875rem !important;
@@ -156,8 +143,6 @@
 @media (max-width: 394px) {
 
     .hire_container {
-        height: 70vh !important;
-
         .hire_content {
 
             p {
@@ -173,8 +158,6 @@
 
 @media (max-width: 321px) {
     .hire_container {
-        height: 90vh !important;
-
         .hire_content {
 
             p {
