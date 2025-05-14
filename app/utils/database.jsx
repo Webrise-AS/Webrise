@@ -1,7 +1,7 @@
 export const database = {
   homePage_data: {
     heroSection: {
-      imageurl: `https://placehold.jp/151515/ffffff/500x611.png`,
+      imageurl: `/Images/services/design_illustration.png`,
       imageAlt: `image of ...`,
 
       brandSlider: [
@@ -30,7 +30,7 @@ export const database = {
     },
 
     aboutSection: {
-      imageurl: `https://cdn.prod.website-files.com/6606f0f658b42ca7220e36c3/6609a61bf5ced39c23f99a20_Article%20Thumbnail%20%237-p-500.png`,
+      imageurl: `/Images/home/team_illustration.png`,
       imageAlt: `image of about of...`,
     },
 
