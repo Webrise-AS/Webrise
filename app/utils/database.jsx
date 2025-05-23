@@ -35,7 +35,7 @@ export const database = {
     },
 
     socialSection: {
-      imageurl: `https://placehold.jp/1318x350.png`,
+      imageurl: `/Images/home/social_illustration.png`,
       imageAlt: `image of social of...`,
     },
 
@@ -207,8 +207,8 @@ export const database = {
             making your site visually appealing, easy to navigate, and engaging for your visitors. From 
             choosing the right colors and fonts to adding interactive features, we ensure your website not 
             only looks amazing but also provides a great experience for everyone who uses it.`,
-          imageurl: `/./Images/services/design_illustration.png`,
-          alt: ``,
+          imageurl: `/Images/services/design_illustration.png`,
+          alt: `An illustration of a professional working on designing a website.`,
         },
 
         {
@@ -220,7 +220,7 @@ export const database = {
             with features like content management systems (CMS) that let you update your site without any 
             technical knowledge. Plus, we ensure your site is optimized for speed and security, so it works 
             perfectly for your visitors and grows with your business.`,
-          imageurl: `/./Images/services/development_illustration.png`,
+          imageurl: `/Images/services/development_illustration.png`,
           alt: `An illustration of a team of professionals working on developing a website.`,
         },
 
@@ -233,7 +233,7 @@ export const database = {
             sure your site works well on mobile devices. We also optimize things like titles, descriptions, 
             and images to help search engines understand your site better. The result? More visitors, more 
             leads, and better results for your business.`,
-          imageurl: `/./Images/services/seo_illustration.png`,
+          imageurl: `/Images/services/seo_illustration.png`,
           alt: `An illustration of a team of professionals working on the seo of a website`,
         },
 
@@ -246,7 +246,7 @@ export const database = {
             features like SSL certificates, and expert support to handle any issues that come up. With our 
             hosting, you can focus on your business while we take care of keeping your website fast, safe, 
             and always available to your visitors.`,
-          imageurl: `/./Images/services/hosting_illustration.png`,
+          imageurl: `/Images/services/hosting_illustration.png`,
           alt: `An illustration of a team of professionals working on the hoasting of a website`,
         },
       ],
@@ -836,7 +836,7 @@ export const database = {
       elsewhere on the internet that helps people find you). Both matter, but they work 
       differently and require different approaches. Understanding this difference can help you 
       focus your efforts where they'll make the most impact for your business.`,
-      heroImage: `/./Images/blog/seo_blog_heroImage.jpg`,
+      heroImage: `/Images/blog/seo_blog_heroImage.jpg`,
 
       actOne: {
         title: `On-Site SEO: What You Control on Your Website`,
@@ -850,7 +850,7 @@ export const database = {
         through your content. Think of it like setting up a physical store - you want good lighting, clear 
         signs, and products arranged so customers can find what they need without asking for help. The easier 
         your website is to use, the longer people will stay, and the more likely they'll contact you.`,
-        imageurl: `/./Images/blog/seo_blog_image.jpg`,
+        imageurl: `/Images/blog/seo_blog_image.jpg`,
       },
 
       actTwo: {
@@ -895,7 +895,7 @@ export const database = {
       visitors and build trust. A well-built site feels professional and is easy to use, so customers feel 
       comfortable exploring and learning about what you offer. By following simple best practices, your website 
       can make a positive first impression, meet customer expectations, and ultimately grow your business.`,
-      heroImage: `/./Images/blog/dev_blog_heroImage.jpg`,
+      heroImage: `/Images/blog/dev_blog_heroImage.jpg`,
 
       actOne: {
         title: `Building a Website That Works for Everyone`,
@@ -967,7 +967,7 @@ export const database = {
         sleek, or bold and confident, your website is the place to show it. A strong first impression can turn a 
         curious visitor into a loyal customer. When people land on your website, you want them to feel that they 
         are in the right place.`,
-        imageurl: `/./Images/blog/design_blog_image.jpg`,
+        imageurl: `/Images/blog/design_blog_image.jpg`,
       },
 
       actTwo: {
