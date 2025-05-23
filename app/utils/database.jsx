@@ -44,21 +44,21 @@ export const database = {
         id: 1,
         title: `On-Site SEO vs. Off-Site SEO: What You Control and What You Influence`,
         subtittle: "(01)",
-        imageurl: `/./Images/blog/seo_blog_heroImage.jpg`,
+        imageurl: `/Images/blog/seo_blog_heroImage.jpg`,
         imageAlt: `image of a hand pointing at a blue led text that says SEO`,
       },
       {
         id: 2,
         title: `Web Development Best Practices`,
         subtittle: "(02)",
-        imageurl: `/./Images/blog/dev_blog_heroImage.jpg`,
+        imageurl: `/Images/blog/dev_blog_heroImage.jpg`,
         imageAlt: `image related to the article`,
       },
       {
         id: 3,
         title: `Why Good Web Design Matters for Your Business`,
         subtittle: "(03)",
-        imageurl: `/./Images/blog/design_blog_heroImage.jpg`,
+        imageurl: `/Images/blog/design_blog_heroImage.jpg`,
         imageAlt: `image related to the article`,
       },
       {
@@ -955,7 +955,7 @@ export const database = {
       is not just about making things look nice. It is about creating a space where your visitors feel 
       confident, comfortable, and ready to take action. In this article, we explain why strong web design 
       matters and how it helps your business succeed.`,
-      heroImage: `/./Images/blog/design_blog_heroImage.jpg`,
+      heroImage: `/Images/blog/design_blog_heroImage.jpg`,
 
       actOne: {
         title: `First Impressions Count`,
