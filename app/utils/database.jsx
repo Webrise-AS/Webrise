@@ -52,21 +52,21 @@ export const database = {
         title: `Web Development Best Practices`,
         subtittle: "(02)",
         imageurl: `/Images/blog/dev_blog_heroImage.jpg`,
-        imageAlt: `image related to the article`,
+        imageAlt: `image of a persone working on a laptop with codes on the screen`,
       },
       {
         id: 3,
         title: `Why Good Web Design Matters for Your Business`,
         subtittle: "(03)",
         imageurl: `/Images/blog/design_blog_heroImage.jpg`,
-        imageAlt: `image related to the article`,
+        imageAlt: `image of a table with different design tools on it and a laptop`,
       },
       {
         id: 4,
         title: `Why Every Business Needs a Website`,
         subtittle: "(04)",
-        imageurl: `https://cdn.prod.website-files.com/6606f0f658b42ca7220e36c3/6609a61bf5ced39c23f99a20_Article%20Thumbnail%20%237-p-500.png`,
-        imageAlt: `image related to the article`,
+        imageurl: `/Images/blog/bizz_blog_heroImage.jpg`,
+        imageAlt: `image of a local florist in her shop holding some flowers`,
       },
     ],
 
@@ -908,7 +908,7 @@ export const database = {
         sites drive them away. Studies show that pages with longer load times tend to have higher bounce rates 
         (meaning more people leave quickly) and lower engagement​. By focusing on usability, making your site 
         mobile-friendly, and optimizing performance, you help ensure every visitor has a good experience.`,
-        imageurl: `https://cdn.prod.website-files.com/6606f0f658b42ca7220e36c3/6609a511d3a32bb0fd0f8bc4_Article%20Body.png`,
+        imageurl: `/Images/blog/dev_blog_image.jpg`,
       },
 
       actTwo: {
@@ -1023,7 +1023,7 @@ export const database = {
       their first step is usually a search online. If your business does not have a website, you are missing 
       out on opportunities to reach new customers, build trust, and grow. In this article, we explain in simple 
       terms why having a website is no longer optional but necessary for a business to succeed.`,
-      heroImage: `https://cdn.prod.website-files.com/6606f0f658b42ca7220e36c3/6609a605c9163707cd3907e7_Article%20Thumbnail%20%236-p-500.png`,
+      heroImage: `/Images/blog/bizz_blog_heroImage.jpg`,
 
       actOne: {
         title: `Being Found Where People Are Looking`,
@@ -1035,7 +1035,7 @@ export const database = {
         people a way to find you even outside of business hours. Whether someone hears about your business 
         through a friend or stumbles upon your name online, your website gives them a place to learn more and 
         take the next step. Your customers are online. Your business should be there too.`,
-        imageurl: `https://cdn.prod.website-files.com/6606f0f658b42ca7220e36c3/6609a511d3a32bb0fd0f8bc4_Article%20Body.png`,
+        imageurl: `/Images/blog/bizz_blog_image.jpg`,
       },
 
       actTwo: {
@@ -1076,7 +1076,7 @@ export const database = {
       Hosting is often something that happens in the background, but it plays a big role in how your website 
       performs. In this article, we break down what web hosting is, why it matters, and what to look for when 
       choosing a hosting provider, all in simple, practical terms.`,
-      heroImage: `https://cdn.prod.website-files.com/6606f0f658b42ca7220e36c3/6609a5f1b576d554df6331e4_Article%20Thumbnail%20%235-p-500.png`,
+      heroImage: `/Images/blog/hosting_blog_heroImage.jpg`,
 
       actOne: {
         title: `What Is Web Hosting and Why Does It Matter`,
@@ -1089,7 +1089,7 @@ export const database = {
         available whenever customers need it and loads quickly enough to keep their attention. Hosting also helps 
         protect your site from crashes and sudden traffic spikes during busy times. Hosting is like the 
         foundation of your website. When it is strong and stable, everything else works better.`,
-        imageurl: `https://cdn.prod.website-files.com/6606f0f658b42ca7220e36c3/6609a511d3a32bb0fd0f8bc4_Article%20Body.png`,
+        imageurl: `/Images/blog/hosting_blog_image.jpg`,
       },
 
       actTwo: {
