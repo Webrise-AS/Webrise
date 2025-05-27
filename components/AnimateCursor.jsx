@@ -13,7 +13,7 @@ export default function AnimateCursor() {
         hasBlendMode={true}
         showSystemCursor={false}
         outerStyle={{
-          mixBlendMode: "plus-lighter",
+          mixBlendMode: "color-dodge",
           zIndex: "9999",
         }}
         innerStyle={{

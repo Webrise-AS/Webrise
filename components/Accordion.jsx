@@ -1,3 +1,4 @@
+"use client";
 import styles from "../styles/Home.module.scss";
 import { useState } from "react";
 import { motion } from "framer-motion";

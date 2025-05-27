@@ -1,14 +1,12 @@
 "use client";
 import styles from "../styles/Home.module.scss";
-import Head from "next/head";
 import Image from "next/image";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 import { BsArrowUpRight, BsCheck, BsPatchCheckFill } from "react-icons/bs";
 import { IoIosChatbubbles } from "react-icons/io";
 import Accordion from "@/components/Accordion";
-import { motion, useScroll } from "framer-motion";
-import { useRef } from "react";
+import { motion } from "framer-motion";
 import Gallery from "@/components/gallery";
 import Link from "next/link";
 import MediaIcons from "@/components/MediaIcons";
@@ -18,6 +16,12 @@ import AnimateCursor from "@/components/AnimateCursor";
 import LenisScroll from "@/components/LenisScroll";
 import { database } from "@/app/utils/database";
 import Talent from "@/components/Talent";
+
+const metadata = {
+  title: "WEBRISE - Website, SEO, and maintenance",
+  description:
+    "WEBRISE is a web development team based in Oslo, Norway, specializing in creating tailored websites for small to medium-sized businesses. We focus on clean design, performance, and usability to help our clients stand out with solutions that fit their unique needs and goals.",
+};
 
 const homePage_data = database.homePage_data;
 
@@ -35,24 +39,8 @@ export default function Home() {
     AutoScroll({ speed: 0.75, direction: "backward" }),
   ]);
 
-  const ref = useRef(null);
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ["1 1.95", "-0.35"],
-  });
-
   return (
     <>
-      <Head>
-        <title>Home | Webrise</title>
-        <meta
-          name="description"
-          content="This is the browse page for the Bits & bots online game store"
-        />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
       <AnimateCursor />
       <LenisScroll />
 
@@ -180,18 +168,14 @@ export default function Home() {
         </section>
         <section className={styles.about_container}>
           <div className={styles.about_content_left}>
-            <motion.div
-              ref={ref}
-              style={{ scale: scrollYProgress, opacity: scrollYProgress }}
-              className={styles.image_container}
-            >
+            <div className={styles.image_container}>
               <Image
                 src={homePage_data.aboutSection.imageurl}
                 width={400}
                 height={450}
                 alt={homePage_data.aboutSection.imageAlt}
               />
-            </motion.div>
+            </div>
           </div>
           <div className={styles.about_content_right}>
             <p>

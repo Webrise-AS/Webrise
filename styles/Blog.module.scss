@@ -1,4 +1,6 @@
 .blog_container {
+    color: $black-color;
+    background-color: $white-color;
     min-height: 100vh;
     max-width: 160.063rem;
     width: 70%;
@@ -102,6 +104,8 @@
 }
 
 .blogDetails_container {
+    color: $black-color;
+    background-color: $white-color;
     height: fit-content;
     max-width: 160.063rem;
     margin: auto;
