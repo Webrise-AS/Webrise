@@ -8,99 +8,331 @@ import { Parallax } from "react-scroll-parallax";
 import { motion } from "framer-motion";
 import Talent from "./Talent";
 import Image from "next/image";
+import { BsArrowUpRight, BsCheck, BsPatchCheckFill } from "react-icons/bs";
+import { IoIosChatbubbles } from "react-icons/io";
+import Accordion from "@/components/Accordion";
+import Gallery from "@/components/gallery";
+import MediaIcons from "@/components/MediaIcons";
+import { Typewriter } from "react-simple-typewriter";
+import { SliderClients, SliderReview } from "@/components/Sliders";
 
-export function ContactContent() {
+export function HomeContent({ data }) {
   return (
     <>
-      <Parallax speed={-8}>
-        <section className={styles.contact_container}>
-          <div className={styles.contact_content}>
-            <div style={{ overflow: "hidden" }}>
-              <motion.h3
-                initial={{ y: "10vh", skewY: 8 }}
-                animate={{ y: 0, skewY: 0 }}
-                transition={{ ease: "easeIn", duration: 0.6 }}
-              >
-                (Contact)
-              </motion.h3>
-            </div>
-            <ul>
+      <section className={styles.home_container}>
+        <section className={styles.hero_container}>
+          <div className={styles.hero_content}>
+            <div className={styles.hero_textfield}>
               <div style={{ overflow: "hidden" }}>
-                <Link href={"tel:+4799592853"}>
-                  <motion.li
-                    initial={{ y: "10vh", skewY: 8 }}
-                    animate={{ y: 0, skewY: 0 }}
-                    transition={{ ease: "easeIn", duration: 0.6 }}
-                  >
-                    <BsArrowRightShort
-                      fontSize={40}
-                      color="#151515"
-                      fontWeight={400}
-                    />
-                    <h2>+47 995 928 53</h2>
-                  </motion.li>
-                </Link>
+                <h3>
+                  customer satisfaction guarantee
+                  <BsPatchCheckFill />
+                </h3>
               </div>
               <div style={{ overflow: "hidden" }}>
-                <Link href={"mailto:info@webrise.no"}>
-                  <motion.li
-                    initial={{ y: "10vh", skewY: 8 }}
-                    animate={{ y: 0, skewY: 0 }}
-                    transition={{ ease: "easeIn", duration: 0.6 }}
-                  >
-                    <BsArrowRightShort
-                      fontSize={40}
-                      color="#151515"
-                      fontWeight={400}
-                    />
-                    <h2>info@webrise.no</h2>
-                  </motion.li>
-                </Link>
-              </div>
-              <div style={{ overflow: "hidden" }}>
-                <Link
-                  href={
-                    "https://www.google.com/maps/place/Oslo/@59.8937521,10.6203131,11z/data=!3m1!4b1!4m6!3m5!1s0x46416e61f267f039:0x7e92605fd3231e9a!8m2!3d59.9138688!4d10.7522454!16zL20vMDVsNjQ?entry=ttu"
-                  }
+                <motion.h1
+                  initial={{ y: "160%", skewY: 10 }}
+                  animate={{ y: 0, skewY: 0 }}
+                  transition={{ ease: "easeIn", duration: 0.6 }}
                 >
-                  <motion.li
-                    initial={{ y: "10vh", skewY: 8 }}
-                    animate={{ y: 0, skewY: 0 }}
-                    transition={{ ease: "easeIn", duration: 0.6 }}
-                  >
-                    <BsArrowRightShort
-                      fontSize={40}
-                      color="#151515"
-                      fontWeight={400}
-                    />
-                    <h2>Oslo, Norway</h2>
-                  </motion.li>
-                </Link>
+                  MEMORABLE
+                </motion.h1>
               </div>
-            </ul>
+              <div style={{ overflow: "hidden" }}>
+                <motion.h2
+                  className={styles.hero_styler}
+                  initial={{ y: "160%", skewY: 10 }}
+                  animate={{ y: 0, skewY: 0 }}
+                  transition={{ ease: "easeIn", duration: 0.6 }}
+                >
+                  <Typewriter
+                    words={["WEBSITES", "WEBRISE"]}
+                    loop={true}
+                    cursor
+                    cursorStyle="!"
+                    typeSpeed={80}
+                    deleteSpeed={80}
+                    delaySpeed={2500}
+                  />
+                </motion.h2>
+              </div>
+              <div style={{ overflow: "hidden" }}>
+                <motion.h2
+                  initial={{ y: "160%", skewY: 10 }}
+                  animate={{ y: 0, skewY: 0 }}
+                  transition={{ ease: "easeIn", duration: 0.6 }}
+                >
+                  THAT SELL.
+                </motion.h2>
+              </div>
+              <div className={styles.subHero_group}>
+                <div style={{ overflow: "hidden" }}>
+                  <p>
+                    Want a website that<span> customers love</span>? We build
+                    reliable, <span>highly functional</span> and of course multi
+                    device
+                    <span> responsive</span> websites
+                    <span> for brands like yours</span>.
+                  </p>
+                </div>
+                <p className={styles.hero_mobile_Paragraph}>
+                  Reliable, <span>highly functional </span> and multi device
+                  <span> responsive </span>
+                  websites for <span> brands like yours</span>
+                </p>
+                <div>
+                  <ul>
+                    <li>
+                      <BsCheck />
+                      earn more customers
+                    </li>
+                    <li>
+                      <BsCheck />
+                      sell more products
+                    </li>
+                    <li>
+                      <BsCheck />
+                      outshine competitiors
+                    </li>
+                    <li>
+                      <BsCheck />
+                      recruit more talent
+                    </li>
+                  </ul>
+                  <div className={styles.hero_action_buttons}>
+                    <Link href={"/contact"}>
+                      <button className={styles.hero_mainBtn}>
+                        Let&apos;s chat <IoIosChatbubbles />
+                      </button>
+                    </Link>
+                    <Link href={"/projects"}>
+                      <button className={styles.hero_subBtn}>
+                        Our portfolio
+                      </button>
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className={styles.hero_image_section}>
+              <Image
+                src={data.heroSection.imageurl}
+                width={450}
+                height={663.2}
+                alt={data.heroSection.imageAlt}
+              />
+            </div>
           </div>
-          <div className={styles.contact_tittle}>
-            <div style={{ overflow: "hidden" }}>
-              <motion.h1
-                initial={{ y: "132%", skewY: 12 }}
-                animate={{ y: 0, skewY: 0 }}
-                transition={{ ease: "easeIn", duration: 0.6 }}
-              >
-                GET IN
-              </motion.h1>
-            </div>
-            <div style={{ overflow: "hidden" }}>
-              <motion.h1
-                initial={{ y: "132%", skewY: 12 }}
-                animate={{ y: 0, skewY: 0 }}
-                transition={{ ease: "easeIn", duration: 0.6 }}
-              >
-                TOUCH
-              </motion.h1>
-            </div>
+          <div className={styles.hero_slider}>
+            <p>Meet our clients</p>
+            <SliderClients data={data} />
           </div>
         </section>
-      </Parallax>
+        <section className={styles.about_container}>
+          <div className={styles.about_content_left}>
+            <div className={styles.image_container}>
+              <Image
+                src={data.aboutSection.imageurl}
+                width={400}
+                height={450}
+                alt={data.aboutSection.imageAlt}
+              />
+            </div>
+          </div>
+          <div className={styles.about_content_right}>
+            <p>
+              <span>
+                We’re a small web development team based in Oslo, Norway,
+                dedicated to building tailored websites for small to
+                medium-sized businesses. With a focus on clean design,
+                performance,
+                <br />
+                <br />
+                and usability we help our clients stand out online with
+                solutions that fit their unique needs and goals. Whether
+                you&apos;re starting from scratch or looking to improve an
+                existing site, we&apos;re here to make the web work for you.
+              </span>
+            </p>
+          </div>
+        </section>
+        <section className={styles.project_container}>
+          <Gallery />
+          <motion.div
+            className={styles.project_button_container}
+            animate={{ x: -50, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            transition={{ ease: "easeIn", duration: 0.6 }}
+          >
+            <Link href={"/projects"}>
+              <button className={styles.project_button}>
+                Case studies <BsArrowUpRight />
+              </button>
+            </Link>
+          </motion.div>
+        </section>
+        <section className={styles.social_container}>
+          <div>
+            <div style={{ overflow: "hidden" }}>
+              <motion.h2
+                animate={{ y: "160%", skewY: 13 }}
+                whileInView={{ y: 0, skewY: 0 }}
+                transition={{ ease: "easeIn", duration: 0.6 }}
+              >
+                Follow our
+              </motion.h2>
+            </div>
+            <div style={{ overflow: "hidden" }}>
+              <motion.h2
+                animate={{ y: "160%", skewY: 13 }}
+                whileInView={{ y: 0, skewY: 0 }}
+                transition={{ ease: "easeIn", duration: 0.6 }}
+              >
+                journey to
+              </motion.h2>
+            </div>
+            <div style={{ overflow: "hidden" }}>
+              <motion.h2
+                animate={{ y: "160%", skewY: 13 }}
+                whileInView={{ y: 0, skewY: 0 }}
+                transition={{ ease: "easeIn", duration: 0.6 }}
+              >
+                PROPEL BRANDS
+              </motion.h2>
+            </div>
+            <div style={{ overflow: "hidden" }}>
+              <motion.h2
+                animate={{ y: "160%", skewY: 13 }}
+                whileInView={{ y: 0, skewY: 0 }}
+                transition={{ ease: "easeIn", duration: 0.6 }}
+              >
+                TO all NEW
+              </motion.h2>
+            </div>
+            <div style={{ overflow: "hidden" }}>
+              <motion.h2
+                animate={{ y: "160%", skewY: 13 }}
+                whileInView={{ y: 0, skewY: 0 }}
+                transition={{ ease: "easeIn", duration: 0.6 }}
+              >
+                HEIGHTS
+              </motion.h2>
+            </div>
+          </div>
+          <MediaIcons />
+          <div className={styles.social_image_container}>
+            <Image
+              src={data.socialSection.imageurl}
+              width={1318}
+              height={350}
+              alt={data.socialSection.imageAlt}
+            />
+          </div>
+        </section>
+        <section className={styles.article_container}>
+          <div style={{ overflow: "hidden" }}>
+            <motion.h2
+              animate={{ y: "100%", skewY: 9 }}
+              whileInView={{ y: 0, skewY: 0 }}
+              transition={{ ease: "easeIn", duration: 0.6 }}
+            >
+              LATEST
+            </motion.h2>
+          </div>
+          <div style={{ overflow: "hidden" }}>
+            <motion.h2
+              animate={{ y: "100%", skewY: 9 }}
+              whileInView={{ y: 0, skewY: 0 }}
+              transition={{ ease: "easeIn", duration: 0.6 }}
+            >
+              ARTICLES
+            </motion.h2>
+          </div>
+          <div className={styles.article_content}>
+            {data.articleSection.map(
+              ({ id, subtittle, title, imageurl, imageAlt }) => (
+                <Link key={id} href={"/blog/" + id}>
+                  <div className={styles.single_article}>
+                    <motion.h3
+                      animate={{ y: 50, opacity: 0 }}
+                      whileInView={{ y: 0, opacity: 1 }}
+                      transition={{ duration: 0.6 }}
+                    >
+                      {subtittle}
+                    </motion.h3>
+                    <motion.span
+                      animate={{ y: 50, opacity: 0 }}
+                      whileInView={{ y: 0, opacity: 1 }}
+                      transition={{ duration: 0.6 }}
+                    >
+                      {title}
+                    </motion.span>
+                    <div className={styles.image_container}>
+                      <Image
+                        src={imageurl}
+                        width={204}
+                        height={306}
+                        alt={imageAlt}
+                      />
+                    </div>
+                  </div>
+                </Link>
+              )
+            )}
+          </div>
+        </section>
+        <section className={styles.feedback_container}>
+          <div className={styles.feedback_content}>
+            <div>
+              <div style={{ overflow: "hidden" }}>
+                <motion.h2
+                  animate={{ y: "153%", skewY: 9 }}
+                  whileInView={{ y: 0, skewY: 0 }}
+                  transition={{ ease: "easeIn", duration: 0.6 }}
+                >
+                  HAPPY
+                </motion.h2>
+              </div>
+              <div style={{ overflow: "hidden" }}>
+                <motion.h2
+                  animate={{ y: "153%", skewY: 9 }}
+                  whileInView={{ y: 0, skewY: 0 }}
+                  transition={{ ease: "easeIn", duration: 0.6 }}
+                >
+                  CLIENTS
+                </motion.h2>
+              </div>
+            </div>
+            <SliderReview data={data} />
+          </div>
+        </section>
+        <Talent />
+        <section className={styles.info_container}>
+          <div className={styles.info_title}>
+            <div style={{ overflow: "hidden" }}>
+              <motion.h3
+                animate={{ y: "130%", skewY: 11 }}
+                whileInView={{ y: 0, skewY: 0 }}
+                transition={{ ease: "easeIn", duration: 0.6 }}
+              >
+                YOU ASK
+              </motion.h3>
+            </div>
+            <div style={{ overflow: "hidden" }}>
+              <motion.h3
+                animate={{ y: "130%", skewY: 11 }}
+                whileInView={{ y: 0, skewY: 0 }}
+                transition={{ ease: "easeIn", duration: 0.6 }}
+              >
+                WE ANSWER
+              </motion.h3>
+            </div>
+          </div>
+          <div style={styles.info_accordion}>
+            <Accordion data={data.infoSection.accordion} />
+          </div>
+        </section>
+      </section>
     </>
   );
 }
@@ -544,6 +776,98 @@ export function BlogEndContent({ data }) {
   );
 }
 
-export function HomeContent({ data }) {
-  return <></>;
+export function ContactContent() {
+  return (
+    <>
+      <Parallax speed={-8}>
+        <section className={styles.contact_container}>
+          <div className={styles.contact_content}>
+            <div style={{ overflow: "hidden" }}>
+              <motion.h3
+                initial={{ y: "10vh", skewY: 8 }}
+                animate={{ y: 0, skewY: 0 }}
+                transition={{ ease: "easeIn", duration: 0.6 }}
+              >
+                (Contact)
+              </motion.h3>
+            </div>
+            <ul>
+              <div style={{ overflow: "hidden" }}>
+                <Link href={"tel:+4799592853"}>
+                  <motion.li
+                    initial={{ y: "10vh", skewY: 8 }}
+                    animate={{ y: 0, skewY: 0 }}
+                    transition={{ ease: "easeIn", duration: 0.6 }}
+                  >
+                    <BsArrowRightShort
+                      fontSize={40}
+                      color="#151515"
+                      fontWeight={400}
+                    />
+                    <h2>+47 995 928 53</h2>
+                  </motion.li>
+                </Link>
+              </div>
+              <div style={{ overflow: "hidden" }}>
+                <Link href={"mailto:info@webrise.no"}>
+                  <motion.li
+                    initial={{ y: "10vh", skewY: 8 }}
+                    animate={{ y: 0, skewY: 0 }}
+                    transition={{ ease: "easeIn", duration: 0.6 }}
+                  >
+                    <BsArrowRightShort
+                      fontSize={40}
+                      color="#151515"
+                      fontWeight={400}
+                    />
+                    <h2>info@webrise.no</h2>
+                  </motion.li>
+                </Link>
+              </div>
+              <div style={{ overflow: "hidden" }}>
+                <Link
+                  href={
+                    "https://www.google.com/maps/place/Oslo/@59.8937521,10.6203131,11z/data=!3m1!4b1!4m6!3m5!1s0x46416e61f267f039:0x7e92605fd3231e9a!8m2!3d59.9138688!4d10.7522454!16zL20vMDVsNjQ?entry=ttu"
+                  }
+                >
+                  <motion.li
+                    initial={{ y: "10vh", skewY: 8 }}
+                    animate={{ y: 0, skewY: 0 }}
+                    transition={{ ease: "easeIn", duration: 0.6 }}
+                  >
+                    <BsArrowRightShort
+                      fontSize={40}
+                      color="#151515"
+                      fontWeight={400}
+                    />
+                    <h2>Oslo, Norway</h2>
+                  </motion.li>
+                </Link>
+              </div>
+            </ul>
+          </div>
+          <div className={styles.contact_tittle}>
+            <div style={{ overflow: "hidden" }}>
+              <motion.h1
+                initial={{ y: "132%", skewY: 12 }}
+                animate={{ y: 0, skewY: 0 }}
+                transition={{ ease: "easeIn", duration: 0.6 }}
+              >
+                GET IN
+              </motion.h1>
+            </div>
+            <div style={{ overflow: "hidden" }}>
+              <motion.h1
+                initial={{ y: "132%", skewY: 12 }}
+                animate={{ y: 0, skewY: 0 }}
+                transition={{ ease: "easeIn", duration: 0.6 }}
+              >
+                TOUCH
+              </motion.h1>
+            </div>
+          </div>
+        </section>
+      </Parallax>
+    </>
+  );
 }
