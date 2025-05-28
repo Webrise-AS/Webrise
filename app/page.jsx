@@ -1,8 +1,6 @@
 "use client";
 import styles from "../styles/Home.module.scss";
 import Image from "next/image";
-import useEmblaCarousel from "embla-carousel-react";
-import Autoplay from "embla-carousel-autoplay";
 import { BsArrowUpRight, BsCheck, BsPatchCheckFill } from "react-icons/bs";
 import { IoIosChatbubbles } from "react-icons/io";
 import Accordion from "@/components/Accordion";
@@ -10,35 +8,22 @@ import { motion } from "framer-motion";
 import Gallery from "@/components/gallery";
 import Link from "next/link";
 import MediaIcons from "@/components/MediaIcons";
-import AutoScroll from "embla-carousel-auto-scroll";
 import { Typewriter } from "react-simple-typewriter";
 import AnimateCursor from "@/components/AnimateCursor";
 import LenisScroll from "@/components/LenisScroll";
 import { database } from "@/app/utils/database";
 import Talent from "@/components/Talent";
+import { SliderClients, SliderReview } from "@/components/Sliders";
 
 const metadata = {
   title: "WEBRISE - Website, SEO, and maintenance",
   description:
-    "WEBRISE is a web development team based in Oslo, Norway, specializing in creating tailored websites for small to medium-sized businesses. We focus on clean design, performance, and usability to help our clients stand out with solutions that fit their unique needs and goals.",
+    "WEBRISE is a web development company based in Oslo, Norway, specializing in creating tailored websites for small to medium-sized businesses. We focus on clean design, performance, and usability to help our clients stand out with solutions that fit their unique needs and goals.",
 };
 
 const homePage_data = database.homePage_data;
 
 export default function Home() {
-  const [emblaRef] = useEmblaCarousel({ loop: true }, [
-    Autoplay({
-      stopOnInteraction: false,
-      delay: 3500,
-      stopOnMouseEnter: false,
-      watchDrag: false,
-    }),
-  ]);
-
-  const [emblaRef2] = useEmblaCarousel({ loop: true, watchDrag: false }, [
-    AutoScroll({ speed: 0.75, direction: "backward" }),
-  ]);
-
   return (
     <>
       <AnimateCursor />
@@ -150,20 +135,7 @@ export default function Home() {
           </div>
           <div className={styles.hero_slider}>
             <p>Meet our clients</p>
-            <div className={styles.embla} ref={emblaRef2}>
-              <div className={styles.embla__container}>
-                {homePage_data.heroSection.brandSlider.map((slider, i) => (
-                  <div className={styles.embla__slide} key={i}>
-                    <Image
-                      src={slider.imageurl}
-                      width={200}
-                      height={60}
-                      alt="image of one of clients logo"
-                    />
-                  </div>
-                ))}
-              </div>
-            </div>
+            <SliderClients data={homePage_data} />
           </div>
         </section>
         <section className={styles.about_container}>
@@ -341,16 +313,7 @@ export default function Home() {
                 </motion.h2>
               </div>
             </div>
-            <div className={styles.embla} ref={emblaRef}>
-              <div className={styles.embla__container}>
-                {homePage_data.feedbackSection.map(({ id, client, review }) => (
-                  <div className={styles.embla__slide} key={id}>
-                    <h3>{client}</h3>
-                    <p>{review}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
+            <SliderReview data={homePage_data} />
           </div>
         </section>
         <Talent />

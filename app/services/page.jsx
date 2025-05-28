@@ -1,33 +1,22 @@
-"use client";
 import styles from "../../styles/Home.module.scss";
 import Image from "next/image";
-import Head from "next/head";
 import Link from "next/link";
 import AnimateCursor from "@/components/AnimateCursor";
-import useEmblaCarousel from "embla-carousel-react";
-import AutoScroll from "embla-carousel-auto-scroll";
 import LenisScroll from "@/components/LenisScroll";
 import { database } from "../utils/database";
+import { SliderService } from "@/components/Sliders";
+
+export const metadata = {
+  title: "WEBRISE - Design, development,on-site SEO, and hosting",
+  description:
+    "We specialize in creating tailored websites for your unique needs, which includes Design, Development, Hosting and On-site SEO.",
+};
 
 const servicesPage_data = database.servicesPage_data;
 
 export default function Services() {
-  const [emblaRef] = useEmblaCarousel({ loop: true, watchDrag: false }, [
-    AutoScroll({ speed: 1.25, direction: "backward" }),
-  ]);
-
   return (
     <>
-      <Head>
-        <title>Services | Webrise</title>
-        <meta
-          name="description"
-          content="This is the browse page for the Bits & bots online game store"
-        />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
       <AnimateCursor />
       <LenisScroll />
 
@@ -84,25 +73,7 @@ export default function Services() {
           )}
         </div>
 
-        <div className={styles.services_slider_section}>
-          <p>We got the right tools for the job!</p>
-          <div className={styles.embla} ref={emblaRef}>
-            <div className={styles.embla__container}>
-              {servicesPage_data.sliderSection.images.map(
-                ({ imageurl }, index) => (
-                  <div className={styles.embla__slide} key={index}>
-                    <Image
-                      src={imageurl}
-                      height={200}
-                      width={200}
-                      alt="Logo of one of the tech stacks that we use"
-                    />
-                  </div>
-                )
-              )}
-            </div>
-          </div>
-        </div>
+        <SliderService data={servicesPage_data} />
       </section>
     </>
   );

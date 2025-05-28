@@ -6,6 +6,44 @@ import LenisScroll from "@/components/LenisScroll";
 import AnimateCursor from "@/components/AnimateCursor";
 import { database } from "@/app/utils/database";
 
+// Generate dynamic metadata
+export async function generateMetadata({ params }) {
+  const id = Number(params.blogId);
+  const article = blogPage_data.find((item) => item.id === id);
+
+  if (!article) {
+    return {
+      title: "Article Not Found | Webrise",
+      description: "The requested article could not be found",
+    };
+  }
+
+  return {
+    title: `${article.title} | WEBRISE`,
+    description: article.intro.substring(0, 160) + "...", // Truncate intro for meta description
+    openGraph: {
+      title: `${article.title} | WEBRISE`,
+      description: article.intro.substring(0, 160) + "...",
+      images: [
+        {
+          url: article.heroImage,
+          width: 1200,
+          height: 630,
+          alt: article.title,
+        },
+      ],
+      type: "article",
+      publishedTime: article.date,
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${article.title} | Webrise`,
+      description: article.intro.substring(0, 160) + "...",
+      images: [article.heroImage],
+    },
+  };
+}
+
 const blogPage_data = database.blogPage_data;
 
 export default async function BlogDetails(props) {
