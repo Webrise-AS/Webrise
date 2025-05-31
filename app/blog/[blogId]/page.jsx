@@ -1,28 +1,28 @@
 import styles from "../../../styles/Home.module.scss";
-import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import LenisScroll from "@/components/LenisScroll";
 import AnimateCursor from "@/components/AnimateCursor";
 import { database } from "@/app/utils/database";
 
-// Generate dynamic metadata
+const blogPage_data = database.blogPage_data;
+
 export async function generateMetadata({ params }) {
-  const id = Number(params.blogId);
+  const { id } = await Number(params.blogId);
   const article = blogPage_data.find((item) => item.id === id);
 
   if (!article) {
     return {
-      title: "Article Not Found | Webrise",
+      title: "Article Not Found | WEBRISE",
       description: "The requested article could not be found",
     };
   }
 
   return {
-    title: `${article.title} | WEBRISE`,
-    description: article.intro.substring(0, 160) + "...", // Truncate intro for meta description
+    title: `${article.slogan} | WEBRISE`,
+    description: article.intro.substring(0, 160) + "...",
     openGraph: {
-      title: `${article.title} | WEBRISE`,
+      title: `${article.slogan} | WEBRISE`,
       description: article.intro.substring(0, 160) + "...",
       images: [
         {
@@ -35,16 +35,8 @@ export async function generateMetadata({ params }) {
       type: "article",
       publishedTime: article.date,
     },
-    twitter: {
-      card: "summary_large_image",
-      title: `${article.title} | Webrise`,
-      description: article.intro.substring(0, 160) + "...",
-      images: [article.heroImage],
-    },
   };
 }
-
-const blogPage_data = database.blogPage_data;
 
 export default async function BlogDetails(props) {
   const params = await props.params;
@@ -61,16 +53,6 @@ export default async function BlogDetails(props) {
 
   return (
     <>
-      <Head>
-        <title>{singleArticle[0].title} | Webrise</title>
-        <meta
-          name="description"
-          content="This is the browse page for the Bits & bots online game store"
-        />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
       <AnimateCursor />
       <LenisScroll />
 
