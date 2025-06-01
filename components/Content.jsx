@@ -369,7 +369,6 @@ export function ProjectContent({ data }) {
                       width={500}
                       height={700}
                       alt={"image for the specified blog card"}
-                      loading="lazy"
                     />
                   </div>
                   <h2>{brandName}</h2>
