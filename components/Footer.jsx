@@ -7,38 +7,51 @@ import { BsArrowRightShort } from "react-icons/bs";
 import Image from "next/image";
 
 function Footer() {
+  const mainLinks = [
+    { href: "/services", label: "Services" },
+    { href: "/projects", label: "Projects" },
+    { href: "/blog", label: "Blog" },
+    { href: "/about", label: "About" },
+    { href: "/contact", label: "Contact" },
+  ];
+
+  const socialLinks = [
+    {
+      href: "https://www.linkedin.com/company/webrise-no/about/?viewAsMember=true",
+      label: "Linkedin",
+    },
+    { href: "https://www.tiktok.com/", label: "Tiktok" },
+    { href: "https://www.instagram.com/", label: "Instagram" },
+  ];
+
   return (
     <>
       <div className={styles.footer_container}>
         <div className={styles.footer_top}>
           <div className={styles.footer_top_links}>
             <ul>
-              <Link href={"/services"}>
-                <li>Services</li>
-              </Link>
-              <Link href={"/projects"}>
-                <li>Projects</li>
-              </Link>
-              <Link href={"/blog"}>
-                <li>Blog</li>
-              </Link>
-              <Link href={"/about"}>
-                <li>About</li>
-              </Link>
-              <Link href={"/contact"}>
-                <li>Contact</li>
-              </Link>
+              {mainLinks.map((link) => (
+                <li key={link.href}>
+                  <Link href={link.href} className={styles.footer_link}>
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
             </ul>
             <ul>
-              <Link href={"#"}>
-                <li>Linkedin</li>
-              </Link>
-              <Link href={"#"}>
-                <li>Tiktok</li>
-              </Link>
-              <Link href={"#"}>
-                <li>Instagram</li>
-              </Link>
+              {socialLinks.map((link) => (
+                <li key={link.href}>
+                  <Link
+                    href={link.href}
+                    className={styles.footer_link}
+                    aria-label={`${link.label} (opens in new tab)`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
           <div className={styles.footer_top_newsletter}>
@@ -54,7 +67,7 @@ function Footer() {
                 src="/logoDark.png"
                 width={1370}
                 height={260}
-                alt="image of the webrise logo"
+                alt="Image of the webrise logo"
               />
             </Link>
           </div>
@@ -63,6 +76,7 @@ function Footer() {
               animate={{ y: 30, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
               transition={{ ease: "easeIn", duration: 0.6 }}
+              viewport={{ once: true }}
             >
               <Link href={"#"}>
                 <span>Privacy Policy</span>
@@ -72,15 +86,17 @@ function Footer() {
               animate={{ y: 30, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
               transition={{ ease: "easeIn", duration: 0.6 }}
+              viewport={{ once: true }}
             >
-              Design & Development by Webrise
+              Design & Development by WEBRISE
             </motion.span>
             <motion.span
               animate={{ y: 30, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
               transition={{ ease: "easeIn", duration: 0.6 }}
+              viewport={{ once: true }}
             >
-              ©2025 Webrise
+              ©2025 WEBRISE
             </motion.span>
           </div>
         </div>

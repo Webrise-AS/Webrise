@@ -17,13 +17,34 @@ import { Typewriter } from "react-simple-typewriter";
 import { SliderClients, SliderReview } from "@/components/Sliders";
 
 export function HomeContent({ data }) {
+  const {
+    heroSection,
+    aboutSection,
+    socialSection,
+    articleSection,
+    infoSection,
+  } = data;
+
+  const textReveal = {
+    hidden: { y: "160%", skewY: 10 },
+    visible: { y: 0, skewY: 0, transition: { ease: "easeIn", duration: 0.6 } },
+  };
+
+  const fadeUp = {
+    hidden: { y: 50, opacity: 0 },
+    visible: { y: 0, opacity: 1, transition: { duration: 0.6 } },
+  };
+
   return (
     <>
       <section className={styles.home_container}>
-        <section className={styles.hero_container}>
+        <section
+          className={styles.hero_container}
+          aria-labelledby="hero-heading"
+        >
           <div className={styles.hero_content}>
             <div className={styles.hero_textfield}>
-              <div style={{ overflow: "hidden" }}>
+              <div>
                 <h3>
                   customer satisfaction guarantee
                   <BsPatchCheckFill />
@@ -66,7 +87,7 @@ export function HomeContent({ data }) {
                 </motion.h2>
               </div>
               <div className={styles.subHero_group}>
-                <div style={{ overflow: "hidden" }}>
+                <div>
                   <p>
                     Want a website that<span> customers love</span>? We build
                     reliable, <span>highly functional</span> and of course multi
@@ -82,27 +103,22 @@ export function HomeContent({ data }) {
                 </p>
                 <div>
                   <ul>
-                    <li>
-                      <BsCheck />
-                      earn more customers
-                    </li>
-                    <li>
-                      <BsCheck />
-                      sell more products
-                    </li>
-                    <li>
-                      <BsCheck />
-                      outshine competitiors
-                    </li>
-                    <li>
-                      <BsCheck />
-                      recruit more talent
-                    </li>
+                    {[
+                      "earn more customers",
+                      "sell more products",
+                      "outshine competitors",
+                      "recruit more talent",
+                    ].map((item) => (
+                      <li key={item}>
+                        <BsCheck aria-hidden="true" />
+                        {item}
+                      </li>
+                    ))}
                   </ul>
                   <div className={styles.hero_action_buttons}>
                     <Link href={"/contact"}>
                       <button className={styles.hero_mainBtn}>
-                        Let&apos;s chat <IoIosChatbubbles />
+                        Let&apos;s chat <IoIosChatbubbles aria-hidden="true" />
                       </button>
                     </Link>
                     <Link href={"/projects"}>
@@ -116,10 +132,11 @@ export function HomeContent({ data }) {
             </div>
             <div className={styles.hero_image_section}>
               <Image
-                src={data.heroSection.imageurl}
+                src={heroSection.imageurl}
                 width={450}
                 height={663.2}
-                alt={data.heroSection.imageAlt}
+                alt={heroSection.imageAlt}
+                priority
               />
             </div>
           </div>
@@ -128,14 +145,17 @@ export function HomeContent({ data }) {
             <SliderClients data={data} />
           </div>
         </section>
-        <section className={styles.about_container}>
+        <section
+          className={styles.about_container}
+          aria-labelledby="about-heading"
+        >
           <div className={styles.about_content_left}>
             <div className={styles.image_container}>
               <Image
-                src={data.aboutSection.imageurl}
+                src={aboutSection.imageurl}
                 width={400}
                 height={450}
-                alt={data.aboutSection.imageAlt}
+                alt={aboutSection.imageAlt}
               />
             </div>
           </div>
@@ -156,114 +176,94 @@ export function HomeContent({ data }) {
             </p>
           </div>
         </section>
-        <section className={styles.project_container}>
+        <section
+          className={styles.project_container}
+          aria-labelledby="project-heading"
+        >
           <Gallery />
           <motion.div
             className={styles.project_button_container}
             animate={{ x: -50, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
             transition={{ ease: "easeIn", duration: 0.6 }}
+            viewport={{ once: true }}
           >
             <Link href={"/projects"}>
               <button className={styles.project_button}>
-                Case studies <BsArrowUpRight />
+                Case studies <BsArrowUpRight aria-hidden="true" />
               </button>
             </Link>
           </motion.div>
         </section>
-        <section className={styles.social_container}>
+        <section
+          className={styles.social_container}
+          aria-labelledby="social-heading"
+        >
           <div>
-            <div style={{ overflow: "hidden" }}>
-              <motion.h2
-                animate={{ y: "160%", skewY: 13 }}
-                whileInView={{ y: 0, skewY: 0 }}
-                transition={{ ease: "easeIn", duration: 0.6 }}
-              >
-                Follow our
-              </motion.h2>
-            </div>
-            <div style={{ overflow: "hidden" }}>
-              <motion.h2
-                animate={{ y: "160%", skewY: 13 }}
-                whileInView={{ y: 0, skewY: 0 }}
-                transition={{ ease: "easeIn", duration: 0.6 }}
-              >
-                journey to
-              </motion.h2>
-            </div>
-            <div style={{ overflow: "hidden" }}>
-              <motion.h2
-                animate={{ y: "160%", skewY: 13 }}
-                whileInView={{ y: 0, skewY: 0 }}
-                transition={{ ease: "easeIn", duration: 0.6 }}
-              >
-                PROPEL BRANDS
-              </motion.h2>
-            </div>
-            <div style={{ overflow: "hidden" }}>
-              <motion.h2
-                animate={{ y: "160%", skewY: 13 }}
-                whileInView={{ y: 0, skewY: 0 }}
-                transition={{ ease: "easeIn", duration: 0.6 }}
-              >
-                TO all NEW
-              </motion.h2>
-            </div>
-            <div style={{ overflow: "hidden" }}>
-              <motion.h2
-                animate={{ y: "160%", skewY: 13 }}
-                whileInView={{ y: 0, skewY: 0 }}
-                transition={{ ease: "easeIn", duration: 0.6 }}
-              >
-                HEIGHTS
-              </motion.h2>
-            </div>
+            {[
+              "Follow our",
+              "journey to",
+              "PROPEL BRANDS",
+              "TO all NEW",
+              "HEIGHTS",
+            ].map((text) => (
+              <div key={text} style={{ overflow: "hidden" }}>
+                <motion.h2
+                  initial="hidden"
+                  whileInView="visible"
+                  variants={textReveal}
+                  transition={{ ease: "easeIn", duration: 0.6 }}
+                  viewport={{ once: true }}
+                >
+                  {text}
+                </motion.h2>
+              </div>
+            ))}
           </div>
           <MediaIcons />
           <div className={styles.social_image_container}>
             <Image
-              src={data.socialSection.imageurl}
+              src={socialSection.imageurl}
               width={1318}
               height={350}
-              alt={data.socialSection.imageAlt}
+              alt={socialSection.imageAlt}
             />
           </div>
         </section>
-        <section className={styles.article_container}>
-          <div style={{ overflow: "hidden" }}>
-            <motion.h2
-              animate={{ y: "100%", skewY: 9 }}
-              whileInView={{ y: 0, skewY: 0 }}
-              transition={{ ease: "easeIn", duration: 0.6 }}
-            >
-              LATEST
-            </motion.h2>
-          </div>
-          <div style={{ overflow: "hidden" }}>
-            <motion.h2
-              animate={{ y: "100%", skewY: 9 }}
-              whileInView={{ y: 0, skewY: 0 }}
-              transition={{ ease: "easeIn", duration: 0.6 }}
-            >
-              ARTICLES
-            </motion.h2>
-          </div>
+        <section
+          className={styles.article_container}
+          aria-labelledby="articles-heading"
+        >
+          {["LATEST", "ARTICLES"].map((text) => (
+            <div key={text} style={{ overflow: "hidden" }}>
+              <motion.h2
+                initial={{ y: "100%", skewY: 9 }}
+                whileInView={{ y: 0, skewY: 0 }}
+                transition={{ ease: "easeIn", duration: 0.6 }}
+                viewport={{ once: true }}
+              >
+                {text}
+              </motion.h2>
+            </div>
+          ))}
           <div className={styles.article_content}>
-            {data.articleSection.map(
+            {articleSection.map(
               ({ id, subtittle, title, imageurl, imageAlt }) => (
-                <Link key={id} href={"/blog/" + id}>
+                <Link key={id} href={`/blog/${id}`} passHref>
                   <div className={styles.single_article}>
                     <motion.h3
-                      animate={{ y: 50, opacity: 0 }}
-                      whileInView={{ y: 0, opacity: 1 }}
-                      transition={{ duration: 0.6 }}
+                      initial="hidden"
+                      whileInView="visible"
+                      variants={fadeUp}
+                      viewport={{ once: true }}
                     >
                       {subtittle}
                     </motion.h3>
                     <motion.span
-                      animate={{ y: 50, opacity: 0 }}
-                      whileInView={{ y: 0, opacity: 1 }}
-                      transition={{ duration: 0.6 }}
+                      initial="hidden"
+                      whileInView="visible"
+                      variants={fadeUp}
+                      viewport={{ once: true }}
                     >
                       {title}
                     </motion.span>
@@ -281,240 +281,51 @@ export function HomeContent({ data }) {
             )}
           </div>
         </section>
-        <section className={styles.feedback_container}>
+        <section
+          className={styles.feedback_container}
+          aria-labelledby="feedback-heading"
+        >
           <div className={styles.feedback_content}>
             <div>
-              <div style={{ overflow: "hidden" }}>
-                <motion.h2
-                  animate={{ y: "153%", skewY: 9 }}
-                  whileInView={{ y: 0, skewY: 0 }}
-                  transition={{ ease: "easeIn", duration: 0.6 }}
-                >
-                  HAPPY
-                </motion.h2>
-              </div>
-              <div style={{ overflow: "hidden" }}>
-                <motion.h2
-                  animate={{ y: "153%", skewY: 9 }}
-                  whileInView={{ y: 0, skewY: 0 }}
-                  transition={{ ease: "easeIn", duration: 0.6 }}
-                >
-                  CLIENTS
-                </motion.h2>
-              </div>
+              {["HAPPY", "CLIENTS"].map((text) => (
+                <div key={text} style={{ overflow: "hidden" }}>
+                  <motion.h2
+                    initial={{ y: "153%", skewY: 9 }}
+                    whileInView={{ y: 0, skewY: 0 }}
+                    transition={{ ease: "easeIn", duration: 0.6 }}
+                    viewport={{ once: true }}
+                  >
+                    {text}
+                  </motion.h2>
+                </div>
+              ))}
             </div>
             <SliderReview data={data} />
           </div>
         </section>
         <Talent />
-        <section className={styles.info_container}>
+        <section
+          className={styles.info_container}
+          aria-labelledby="info-heading"
+        >
           <div className={styles.info_title}>
-            <div style={{ overflow: "hidden" }}>
-              <motion.h3
-                animate={{ y: "130%", skewY: 11 }}
-                whileInView={{ y: 0, skewY: 0 }}
-                transition={{ ease: "easeIn", duration: 0.6 }}
-              >
-                YOU ASK
-              </motion.h3>
-            </div>
-            <div style={{ overflow: "hidden" }}>
-              <motion.h3
-                animate={{ y: "130%", skewY: 11 }}
-                whileInView={{ y: 0, skewY: 0 }}
-                transition={{ ease: "easeIn", duration: 0.6 }}
-              >
-                WE ANSWER
-              </motion.h3>
-            </div>
+            {["YOU ASK", "WE ANSWER"].map((text) => (
+              <div key={text} style={{ overflow: "hidden" }}>
+                <motion.h3
+                  initial={{ y: "130%", skewY: 11 }}
+                  whileInView={{ y: 0, skewY: 0 }}
+                  transition={{ ease: "easeIn", duration: 0.6 }}
+                  viewport={{ once: true }}
+                >
+                  {text}
+                </motion.h3>
+              </div>
+            ))}
           </div>
           <div style={styles.info_accordion}>
-            <Accordion data={data.infoSection.accordion} />
+            <Accordion data={infoSection.accordion} />
           </div>
         </section>
-      </section>
-    </>
-  );
-}
-
-export function AboutMainContent({ data }) {
-  const [emblaRef] = useEmblaCarousel({ watchDrag: false, loop: true }, [
-    AutoScroll({ speed: 0.6 }),
-  ]);
-
-  const [emblaRef2] = useEmblaCarousel({ loop: true, watchDrag: false }, [
-    AutoScroll({ speed: 1.1, direction: "backward" }),
-  ]);
-  return (
-    <>
-      <section className={styles.about_main_container}>
-        <div className={styles.about_hero_section}>
-          <div className={styles.hero_section_top}>
-            <div>
-              <motion.div
-                className={styles.image_wrapper}
-                initial={{ x: 50, opacity: 0 }}
-                animate={{ x: 0, opacity: 1 }}
-                transition={{ ease: "easeIn", duration: 0.6 }}
-              >
-                <Image
-                  src={data.heroSection.imageOne}
-                  width={299}
-                  height={160}
-                  alt={"image of a woman in an office useing a pc for work"}
-                />
-              </motion.div>
-              <motion.span
-                initial={{ y: 50, opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
-                transition={{ ease: "easeIn", duration: 0.6 }}
-              >
-                (About)
-              </motion.span>
-            </div>
-            <motion.div
-              className={styles.image_wrapperTwo}
-              initial={{ x: -50, opacity: 0 }}
-              animate={{ x: 0, opacity: 1 }}
-              transition={{ ease: "easeIn", duration: 0.6 }}
-            >
-              <Image
-                src={data.heroSection.imageTwo}
-                width={310}
-                height={454}
-                alt={"image of a woman in an office useing a pc for work"}
-              />
-            </motion.div>
-          </div>
-          <div className={styles.hero_section_bottom}>
-            <div style={{ overflow: "hidden" }}>
-              <motion.h1
-                initial={{ y: "132%", skewY: 15 }}
-                animate={{ y: 0, skewY: 0 }}
-                transition={{ ease: "easeIn", duration: 0.6 }}
-              >
-                DIGITAL
-              </motion.h1>
-            </div>
-            <div style={{ overflow: "hidden" }}>
-              <motion.h2
-                initial={{ y: "185%", skewY: 15 }}
-                animate={{ y: 0, skewY: 0 }}
-                transition={{ ease: "easeIn", duration: 0.6 }}
-              >
-                EXPERTS.
-              </motion.h2>
-            </div>
-          </div>
-        </div>
-
-        <div className={styles.about_content_section}>
-          <div className={styles.content_section_story}>
-            <motion.p
-              animate={{ y: 100, skewY: 10, opacity: 0 }}
-              whileInView={{ y: 0, skewY: 0, opacity: 1 }}
-              transition={{ duration: 0.6 }}
-            >
-              We’re a small web development team based in Oslo, Norway,
-              dedicated to building tailored websites for small to medium-sized
-              businesses.
-            </motion.p>
-            <motion.p
-              animate={{ y: 100, skewY: 10, opacity: 0 }}
-              whileInView={{ y: 0, skewY: 0, opacity: 1 }}
-              transition={{ duration: 0.6 }}
-            >
-              With a focus on clean design, performance, and usability, we help
-              our clients stand out online with solutions that fit their unique
-              needs and goals. Whether you&apos;re starting from scratch or
-              looking to improve an existing site, we&apos;re here to make the
-              web work for you.
-            </motion.p>
-            <motion.p
-              animate={{ y: 100, skewY: 10, opacity: 0 }}
-              whileInView={{ y: 0, skewY: 0, opacity: 1 }}
-              transition={{ duration: 0.6 }}
-            >
-              We offer a complete range of services including design,
-              development, on site SEO, and hosting. As a small team, we work
-              closely with each client to deliver websites that are visually
-              appealing, high performing, and optimized for search engines.
-            </motion.p>
-            <motion.p
-              animate={{ y: 100, skewY: 10, opacity: 0 }}
-              whileInView={{ y: 0, skewY: 0, opacity: 1 }}
-              transition={{ duration: 0.6 }}
-            >
-              Our approach is personal and hands on. We take the time to
-              understand your business and build solutions that truly support
-              your goals. When you work with us, you get more than just a
-              website. You gain a reliable digital partner who is committed to
-              your success.
-            </motion.p>
-          </div>
-          <div className={styles.content_section_sliders}>
-            <div className={styles.embla} ref={emblaRef}>
-              <div className={styles.embla__container}>
-                {data.sliderSection.images.map(({ imageurl }, index) => (
-                  <div key={index} className={styles.embla__slide}>
-                    <Image
-                      src={imageurl}
-                      width={640}
-                      height={880}
-                      alt="image desplaying one of our project"
-                    />
-                  </div>
-                ))}
-              </div>
-            </div>
-            <div className={styles.embla} ref={emblaRef2}>
-              <div className={styles.embla__container}>
-                <div className={styles.embla__slide2}>—</div>
-                <div className={styles.embla__slide2}>Design</div>
-                <div className={styles.embla__slide2}>—</div>
-                <div className={styles.embla__slide2}>Develop</div>
-                <div className={styles.embla__slide2}>—</div>
-                <div className={styles.embla__slide2}>Optimize</div>
-                <div className={styles.embla__slide2}>—</div>
-                <div className={styles.embla__slide2}>Host</div>
-              </div>
-            </div>
-          </div>
-          <div className={styles.content_section_info}>
-            <div className={styles.section_info_image}>
-              <Image
-                src={data.infoSection.image}
-                width={640}
-                height={880}
-                alt={"image of a woman in an office useing a pc for work"}
-              />
-            </div>
-            <div className={styles.section_info_container}>
-              <h2>OUR CORE VALUES</h2>
-              <div className={styles.values_container}>
-                {data.infoSection.values.map(({ number, title }, index) => (
-                  <div className={styles.single_value} key={index}>
-                    <motion.h4
-                      animate={{ y: 50, opacity: 0 }}
-                      whileInView={{ y: 0, opacity: 1 }}
-                      transition={{ duration: 0.6 }}
-                    >
-                      {number}
-                    </motion.h4>
-                    <motion.h3
-                      animate={{ y: 50, opacity: 0 }}
-                      whileInView={{ y: 0, opacity: 1 }}
-                      transition={{ duration: 0.6 }}
-                    >
-                      {title}
-                    </motion.h3>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-        <Talent />
       </section>
     </>
   );
@@ -771,6 +582,189 @@ export function BlogEndContent({ data }) {
             </div>
           </div>
         </Parallax>
+      </section>
+    </>
+  );
+}
+
+export function AboutMainContent({ data }) {
+  const [emblaRef] = useEmblaCarousel({ watchDrag: false, loop: true }, [
+    AutoScroll({ speed: 0.6 }),
+  ]);
+
+  const [emblaRef2] = useEmblaCarousel({ loop: true, watchDrag: false }, [
+    AutoScroll({ speed: 1.1, direction: "backward" }),
+  ]);
+  return (
+    <>
+      <section className={styles.about_main_container}>
+        <div className={styles.about_hero_section}>
+          <div className={styles.hero_section_top}>
+            <div>
+              <motion.div
+                className={styles.image_wrapper}
+                initial={{ x: 50, opacity: 0 }}
+                animate={{ x: 0, opacity: 1 }}
+                transition={{ ease: "easeIn", duration: 0.6 }}
+              >
+                <Image
+                  src={data.heroSection.imageOne}
+                  width={299}
+                  height={160}
+                  alt={"image of a woman in an office useing a pc for work"}
+                />
+              </motion.div>
+              <motion.span
+                initial={{ y: 50, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                transition={{ ease: "easeIn", duration: 0.6 }}
+              >
+                (About)
+              </motion.span>
+            </div>
+            <motion.div
+              className={styles.image_wrapperTwo}
+              initial={{ x: -50, opacity: 0 }}
+              animate={{ x: 0, opacity: 1 }}
+              transition={{ ease: "easeIn", duration: 0.6 }}
+            >
+              <Image
+                src={data.heroSection.imageTwo}
+                width={310}
+                height={454}
+                alt={"image of a woman in an office useing a pc for work"}
+              />
+            </motion.div>
+          </div>
+          <div className={styles.hero_section_bottom}>
+            <div style={{ overflow: "hidden" }}>
+              <motion.h1
+                initial={{ y: "132%", skewY: 15 }}
+                animate={{ y: 0, skewY: 0 }}
+                transition={{ ease: "easeIn", duration: 0.6 }}
+              >
+                DIGITAL
+              </motion.h1>
+            </div>
+            <div style={{ overflow: "hidden" }}>
+              <motion.h2
+                initial={{ y: "185%", skewY: 15 }}
+                animate={{ y: 0, skewY: 0 }}
+                transition={{ ease: "easeIn", duration: 0.6 }}
+              >
+                EXPERTS.
+              </motion.h2>
+            </div>
+          </div>
+        </div>
+
+        <div className={styles.about_content_section}>
+          <div className={styles.content_section_story}>
+            <motion.p
+              animate={{ y: 100, skewY: 10, opacity: 0 }}
+              whileInView={{ y: 0, skewY: 0, opacity: 1 }}
+              transition={{ duration: 0.6 }}
+            >
+              We’re a small web development team based in Oslo, Norway,
+              dedicated to building tailored websites for small to medium-sized
+              businesses.
+            </motion.p>
+            <motion.p
+              animate={{ y: 100, skewY: 10, opacity: 0 }}
+              whileInView={{ y: 0, skewY: 0, opacity: 1 }}
+              transition={{ duration: 0.6 }}
+            >
+              With a focus on clean design, performance, and usability, we help
+              our clients stand out online with solutions that fit their unique
+              needs and goals. Whether you&apos;re starting from scratch or
+              looking to improve an existing site, we&apos;re here to make the
+              web work for you.
+            </motion.p>
+            <motion.p
+              animate={{ y: 100, skewY: 10, opacity: 0 }}
+              whileInView={{ y: 0, skewY: 0, opacity: 1 }}
+              transition={{ duration: 0.6 }}
+            >
+              We offer a complete range of services including design,
+              development, on site SEO, and hosting. As a small team, we work
+              closely with each client to deliver websites that are visually
+              appealing, high performing, and optimized for search engines.
+            </motion.p>
+            <motion.p
+              animate={{ y: 100, skewY: 10, opacity: 0 }}
+              whileInView={{ y: 0, skewY: 0, opacity: 1 }}
+              transition={{ duration: 0.6 }}
+            >
+              Our approach is personal and hands on. We take the time to
+              understand your business and build solutions that truly support
+              your goals. When you work with us, you get more than just a
+              website. You gain a reliable digital partner who is committed to
+              your success.
+            </motion.p>
+          </div>
+          <div className={styles.content_section_sliders}>
+            <div className={styles.embla} ref={emblaRef}>
+              <div className={styles.embla__container}>
+                {data.sliderSection.images.map(({ imageurl }, index) => (
+                  <div key={index} className={styles.embla__slide}>
+                    <Image
+                      src={imageurl}
+                      width={640}
+                      height={880}
+                      alt="image desplaying one of our project"
+                    />
+                  </div>
+                ))}
+              </div>
+            </div>
+            <div className={styles.embla} ref={emblaRef2}>
+              <div className={styles.embla__container}>
+                <div className={styles.embla__slide2}>—</div>
+                <div className={styles.embla__slide2}>Design</div>
+                <div className={styles.embla__slide2}>—</div>
+                <div className={styles.embla__slide2}>Develop</div>
+                <div className={styles.embla__slide2}>—</div>
+                <div className={styles.embla__slide2}>Optimize</div>
+                <div className={styles.embla__slide2}>—</div>
+                <div className={styles.embla__slide2}>Host</div>
+              </div>
+            </div>
+          </div>
+          <div className={styles.content_section_info}>
+            <div className={styles.section_info_image}>
+              <Image
+                src={data.infoSection.image}
+                width={640}
+                height={880}
+                alt={"image of a woman in an office useing a pc for work"}
+              />
+            </div>
+            <div className={styles.section_info_container}>
+              <h2>OUR CORE VALUES</h2>
+              <div className={styles.values_container}>
+                {data.infoSection.values.map(({ number, title }, index) => (
+                  <div className={styles.single_value} key={index}>
+                    <motion.h4
+                      animate={{ y: 50, opacity: 0 }}
+                      whileInView={{ y: 0, opacity: 1 }}
+                      transition={{ duration: 0.6 }}
+                    >
+                      {number}
+                    </motion.h4>
+                    <motion.h3
+                      animate={{ y: 50, opacity: 0 }}
+                      whileInView={{ y: 0, opacity: 1 }}
+                      transition={{ duration: 0.6 }}
+                    >
+                      {title}
+                    </motion.h3>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+        <Talent />
       </section>
     </>
   );

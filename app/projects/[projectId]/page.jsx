@@ -7,7 +7,8 @@ import { database } from "@/app/utils/database";
 
 const projectsPage_data = database.projectsPage_data;
 
-export async function generateMetadata({ params }) {
+export async function generateMetadata(props) {
+  const params = await props.params;
   try {
     const id = Number(params.projectId);
     const project = projectsPage_data.find((item) => item.id === id);
@@ -44,7 +45,8 @@ export async function generateMetadata({ params }) {
   }
 }
 
-export default async function ProjectDetails({ params }) {
+export default async function ProjectDetails(props) {
+  const params = await props.params;
   try {
     const id = Number(params.projectId);
 

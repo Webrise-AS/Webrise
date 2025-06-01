@@ -20,7 +20,9 @@ export function SliderClients({ data }) {
                 src={slider.imageurl}
                 width={200}
                 height={60}
-                alt="image of one of clients logo"
+                alt="Image of clients logo"
+                quality={85}
+                priority={i < 3}
               />
             </div>
           ))}

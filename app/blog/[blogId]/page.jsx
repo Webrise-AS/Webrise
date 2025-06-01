@@ -7,8 +7,9 @@ import { database } from "@/app/utils/database";
 
 const blogPage_data = database.blogPage_data;
 
-export async function generateMetadata({ params }) {
-  const { id } = await Number(params.blogId);
+export async function generateMetadata(props) {
+  const params = await props.params;
+  const id = Number(params.blogId);
   const article = blogPage_data.find((item) => item.id === id);
 
   if (!article) {

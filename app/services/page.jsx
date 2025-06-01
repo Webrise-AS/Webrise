@@ -7,11 +7,23 @@ import { database } from "../utils/database";
 import { SliderService } from "@/components/Sliders";
 
 export const metadata = {
-  title: "WEBRISE - Design, development,on-site SEO, and hosting",
+  title: "WEBRISE - Design, Development, On-site SEO, and Hosting",
   description:
-    "We specialize in creating tailored websites for your unique needs, which includes Design, Development, Hosting and On-site SEO.",
+    "We specialize in creating tailored websites for your unique needs, including Design, Development, Hosting and On-site SEO.",
+  openGraph: {
+    title: "WEBRISE - Our Services",
+    description:
+      "Professional web design, development, SEO and hosting services tailored to your business needs.",
+    images: [
+      {
+        url: database.servicesPage_data.heroSection.imageurl,
+        width: 1200,
+        height: 630,
+        alt: "Webrise services overview",
+      },
+    ],
+  },
 };
-
 const servicesPage_data = database.servicesPage_data;
 
 export default function Services() {
