@@ -487,7 +487,7 @@
         }
 
         .social_image_container {
-            height:  clamp(5rem, 22vw + 1rem - 1rem, 20rem);
+            height:  clamp(17rem, 24vw + 1rem - 1rem, 25rem);
             overflow: hidden;
 
             img {
@@ -1333,7 +1333,7 @@
             .icons_container {
     
                 .neutral_link, .neutral_link:nth-child(2)  {
-                    height: 4.65rem ;
+                    height: 5.5rem ;
                     width: 6.65rem ;
                 }
     
@@ -1361,8 +1361,7 @@
             }
             
             .social_image_container {
-                width: 95% !important;
-                height: 100% !important;
+                height: 11.5rem !important;
             }
         }
     
@@ -1484,7 +1483,7 @@
         .icons_container {
 
             .neutral_link {
-                height: 4.1rem !important;
+                height: 4.7rem !important;
                 width: 5.8rem !important;
 
                 svg {
@@ -1585,7 +1584,7 @@
         .icons_container {
 
             .neutral_link {
-                height: 3.6rem !important;
+                height: 4.2rem !important;
                 width: 5.2rem !important;
 
                 svg {
