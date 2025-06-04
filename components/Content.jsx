@@ -342,6 +342,7 @@ export function ProjectContent({ data }) {
                 initial={{ y: "39.2vh", skewY: 10 }}
                 animate={{ y: 0, skewY: 0 }}
                 transition={{ ease: "easeIn", duration: 0.6 }}
+                viewport={{ once: true }}
               >
                 OUR WORK
               </motion.h1>
@@ -362,6 +363,7 @@ export function ProjectContent({ data }) {
                   animate={{ y: "10vh", scale: 0.95 }}
                   whileInView={{ y: 0, scale: 1 }}
                   transition={{ ease: "easeIn", duration: 0.6 }}
+                  viewport={{ once: true }}
                 >
                   <div className={styles.image_wrapper}>
                     <Image
@@ -405,6 +407,7 @@ export function ProjectEndContent({ data }) {
                 initial={{ y: "40vh", skewY: 10 }}
                 animate={{ y: 0, skewY: 0 }}
                 transition={{ ease: "easeIn", duration: 0.6 }}
+                viewport={{ once: true }}
               >
                 OUR WORK
               </motion.h1>
@@ -453,6 +456,7 @@ export function BlogContent({ data }) {
                 initial={{ y: "41.5vh", skewY: 10 }}
                 animate={{ y: 0, skewY: 0 }}
                 transition={{ ease: "easeIn", duration: 0.6 }}
+                viewport={{ once: true }}
               >
                 NEWS
               </motion.h1>
@@ -462,6 +466,7 @@ export function BlogContent({ data }) {
                 initial={{ y: "41.5vh", skewY: 10 }}
                 animate={{ y: 0, skewY: 0 }}
                 transition={{ ease: "easeIn", duration: 0.6 }}
+                viewport={{ once: true }}
               >
                 & BLOG
               </motion.h2>
@@ -475,6 +480,7 @@ export function BlogContent({ data }) {
               initial={{ y: "30vh" }}
               animate={{ y: 0 }}
               transition={{ ease: "easeIn", duration: 0.6 }}
+              viewport={{ once: true }}
             >
               {data.slice(0, 8).map(({ id, heroImage, date, slogan }) => (
                 <Link href={"/blog/" + id} key={id}>
@@ -483,6 +489,7 @@ export function BlogContent({ data }) {
                     animate={{ y: "10vh", scale: 0.95 }}
                     whileInView={{ y: 0, scale: 1 }}
                     transition={{ ease: "easeIn", duration: 0.6 }}
+                    viewport={{ once: true }}
                   >
                     <div className={styles.image_wrapper}>
                       <Image
@@ -528,6 +535,7 @@ export function BlogEndContent({ data }) {
                 initial={{ y: "41.5vh", skewY: 10 }}
                 animate={{ y: 0, skewY: 0 }}
                 transition={{ ease: "easeIn", duration: 0.6 }}
+                viewport={{ once: true }}
               >
                 NEWS
               </motion.h1>
@@ -537,6 +545,7 @@ export function BlogEndContent({ data }) {
                 initial={{ y: "41.5vh", skewY: 10 }}
                 animate={{ y: 0, skewY: 0 }}
                 transition={{ ease: "easeIn", duration: 0.6 }}
+                viewport={{ once: true }}
               >
                 & BLOG
               </motion.h1>
@@ -550,6 +559,7 @@ export function BlogEndContent({ data }) {
               initial={{ y: "27vh" }}
               animate={{ y: 0 }}
               transition={{ ease: "easeIn", duration: 0.6 }}
+              viewport={{ once: true }}
             >
               {data.slice(8, 10).map(({ id, heroImage, date, slogan }) => (
                 <Link href={"/blog/" + id} key={id}>
@@ -663,6 +673,7 @@ export function AboutMainContent({ data }) {
               animate={{ y: 100, skewY: 10, opacity: 0 }}
               whileInView={{ y: 0, skewY: 0, opacity: 1 }}
               transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
             >
               We’re a small web development team based in Oslo, Norway,
               dedicated to building tailored websites for small to medium-sized
@@ -672,6 +683,7 @@ export function AboutMainContent({ data }) {
               animate={{ y: 100, skewY: 10, opacity: 0 }}
               whileInView={{ y: 0, skewY: 0, opacity: 1 }}
               transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
             >
               With a focus on clean design, performance, and usability, we help
               our clients stand out online with solutions that fit their unique
@@ -683,6 +695,7 @@ export function AboutMainContent({ data }) {
               animate={{ y: 100, skewY: 10, opacity: 0 }}
               whileInView={{ y: 0, skewY: 0, opacity: 1 }}
               transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
             >
               We offer a complete range of services including design,
               development, on site SEO, and hosting. As a small team, we work
@@ -693,6 +706,7 @@ export function AboutMainContent({ data }) {
               animate={{ y: 100, skewY: 10, opacity: 0 }}
               whileInView={{ y: 0, skewY: 0, opacity: 1 }}
               transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
             >
               Our approach is personal and hands on. We take the time to
               understand your business and build solutions that truly support
@@ -747,6 +761,7 @@ export function AboutMainContent({ data }) {
                       animate={{ y: 50, opacity: 0 }}
                       whileInView={{ y: 0, opacity: 1 }}
                       transition={{ duration: 0.6 }}
+                      viewport={{ once: true }}
                     >
                       {number}
                     </motion.h4>
@@ -754,6 +769,7 @@ export function AboutMainContent({ data }) {
                       animate={{ y: 50, opacity: 0 }}
                       whileInView={{ y: 0, opacity: 1 }}
                       transition={{ duration: 0.6 }}
+                      viewport={{ once: true }}
                     >
                       {title}
                     </motion.h3>
