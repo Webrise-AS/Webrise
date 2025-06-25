@@ -829,7 +829,7 @@ export function ContactContent() {
                       color="#151515"
                       fontWeight={400}
                     />
-                    <h2>info@webrise.no</h2>
+                    <h2>Info@webrise.dev</h2>
                   </motion.li>
                 </Link>
               </div>
