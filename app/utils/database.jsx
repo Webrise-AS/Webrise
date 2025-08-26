@@ -74,35 +74,37 @@ export const database = {
       {
         id: 1,
         client: `Lena M. – Founder of Caffeine Coders`,
-        review: `The creativity of Webrise is unmatched. They've
-              crafted an online experience that captures the essence of
-              our kitchen's innovation. It's not just our pasta
-              that's artful now—our digital platform is too!`,
+        review: `Amazing experience! As an online store owner, I needed a website that looked professional but
+        was also easy for my customers to use. They nailed it. The design is modern, the checkout process is 
+        smooth, and sales have already improved since launch. 
+        I’ve had so many compliments from shoppers it really feels like my business leveled up!`,
       },
 
       {
         id: 2,
         client: `Marco G. – Head Chef at Pasta Palette`,
-        review: `Webrise transformed our digital presence with a stunning website that not only
-              looks sleek but functions like a dream. Our site now truly reflects the vibrant
-              energy of our coding café in Berlin.`,
+        review: `We hired them to rebuild our corporate website, and the results speak for themselves. 
+        The new site loads quickly, looks great on mobile, and has helped us generate more leads through our 
+        contact forms. Their team was professional, reliable, and always kept deadlines. It’s clear they 
+        understand the needs of growing businesses.`,
       },
 
       {
         id: 3,
         client: `Linda M. – Founder of Caffeine Coders`,
-        review: `The creativity of Webrise is unmatched. They've
-              crafted an online experience that captures the essence of
-              our kitchen's innovation. It's not just our pasta
-              that's artful now—our digital platform is too!`,
+        review: `The creativity and attention to detail were outstanding. We’re a design-focused company, so 
+        aesthetics matter a lot to us, and they delivered a site that perfectly reflects our brand. Everything 
+        from the typography to the layout feels thoughtful and on-brand. We finally have a website that matches 
+        the quality of our own work.`,
       },
 
       {
         id: 4,
         client: `Abel Y. – Head Chef at Pasta Palette`,
-        review: `Webrise transformed our digital presence with a stunning website that not only
-              looks sleek but functions like a dream. Our site now truly reflects the vibrant
-              energy of our coding café in Berlin.`,
+        review: `Working with this team was stress-free and straightforward. As a small business owner, I don’t 
+        have much technical knowledge, but they explained everything clearly and gave me a site I can actually 
+        manage myself. They were always quick to respond and made the whole process feel easy. Now I have a 
+        website I’m proud to share with my customers.`,
       },
     ],
 
