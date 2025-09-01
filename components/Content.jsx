@@ -788,7 +788,7 @@ export function AboutMainContent({ data }) {
 export function ContactContent() {
   return (
     <>
-      <Parallax speed={-8}>
+      <Parallax speed={0}>
         <section className={styles.contact_container}>
           <div className={styles.contact_content}>
             <div style={{ overflow: "hidden" }}>

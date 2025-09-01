@@ -92,7 +92,7 @@ export const database = {
       {
         id: 3,
         client: `Linda M. – Founder of Caffeine Coders`,
-        review: `The creativity and attention to detail were outstanding. We’re a design-focused company, so 
+        review: `The creativity and attention to detail were outstanding. We’re a design focused company, so 
         aesthetics matter a lot to us, and they delivered a site that perfectly reflects our brand. Everything 
         from the typography to the layout feels thoughtful and on-brand. We finally have a website that matches 
         the quality of our own work.`,
