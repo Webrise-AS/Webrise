@@ -48,7 +48,6 @@
             position: absolute;
             top: 1.5rem;
             left: 15%;
-            border: solid 1px red;
 
             h1 {
                 margin: 0;
@@ -90,7 +89,6 @@
             } 
 
             .hero_image_container {
-                border: solid 1px red;
                 height: 27rem;
                 animation: ease-in 0.6s slide_in_card;
                 align-self: flex-end;
@@ -283,9 +281,14 @@
     .services_hero_section {
         min-height: 81dvh !important;
         
-        .hero_image_container {
-            height: 14.25rem !important;
-            width: 24rem !important;
+
+        .hero_content_container {
+
+            .hero_image_container {
+            
+                height: 18rem !important;
+                width: 28rem !important;
+            }
         }
     }
 
@@ -385,8 +388,9 @@
                 }
 
                 .hero_image_container {
-                    height: 13.15rem !important;
-                    width: 24.25rem !important;
+                    margin-top: 1.5rem;
+                    height: 14.5rem ;
+                    width: auto ;
                 }
             }
         }
@@ -444,8 +448,7 @@
         }
 
         .hero_image_container {
-            height: 11rem ;
-            width: 10rem ;
+            height: 11rem;
         }
     }
 }
@@ -461,7 +464,7 @@
         }
 
         .hero_image_container {
-            height: 5rem;
+            height: 8rem;
         }
     }
 
