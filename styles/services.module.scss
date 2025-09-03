@@ -171,7 +171,7 @@
             }
 
             .content_speciality_image {
-                height: clamp(22.5rem, 52.5vw + 1rem - 1rem, 34rem);
+                height: clamp(20rem, 30vw + 1rem - 1rem, 34rem);
                 overflow: hidden;
                 
                 img {
@@ -255,6 +255,14 @@
             .hero_tittle_container {
                 left: 2%;
             }
+
+            .hero_content_container {
+                margin-top: 11rem;
+
+                .hero_image_container{
+                    height: 23rem;
+                }
+            }
         }
 
         .services_opener_paragraph {
@@ -280,14 +288,12 @@
 
     .services_hero_section {
         min-height: 81dvh !important;
-        
 
         .hero_content_container {
+            margin-top: 0rem;
 
             .hero_image_container {
-            
-                height: 18rem !important;
-                width: 28rem !important;
+                height: 13rem ;
             }
         }
     }
@@ -296,7 +302,8 @@
         width: 89% !important;
     }
 
-    .services_content_section {      
+    .services_content_section {  
+
         .content_speciality_section {
             column-gap: 2rem !important;
         }
@@ -321,8 +328,7 @@
                 margin-top: 10rem ;
 
                 .hero_image_container {
-                    height: 10.5rem !important;
-                    width: 17.5rem !important;
+                    height: 13rem ;
                 }
             }
         }
@@ -342,7 +348,7 @@
                 }
     
                 .content_speciality_image {
-                    width: 100% !important;
+                    width: 50%;
                 }
             }
         }
@@ -380,7 +386,7 @@
             min-height: 40dvh !important;
 
             .hero_content_container {
-                margin-top: 11rem !important;
+                margin-top: 4.5rem;
 
                 h4 {
                     width: 95% !important;
@@ -388,8 +394,7 @@
                 }
 
                 .hero_image_container {
-                    margin-top: 1.5rem;
-                    height: 14.5rem ;
+                    height: 9.5rem ;
                     width: auto ;
                 }
             }
@@ -419,6 +424,10 @@
                         }
                     }
                 }
+
+                .content_speciality_image {
+                    width: auto !important;
+                }
             }
         }
     
@@ -434,7 +443,6 @@
             }
         }
     }
-
 }
 
 @media (max-width: 391px) {
@@ -447,24 +455,33 @@
             }
         }
 
-        .hero_image_container {
-            height: 11rem;
+        .hero_content_container {
+            margin-top: 2.5rem;
+
+            .hero_image_container {
+                height: 8rem !important;
+            }
         }
     }
 }
 
 @media (max-width: 321px) {
-
     .services_hero_section {
-
         .hero_tittle_container {
+            width: 85%;
             h1,h2 {
                 font-size: 5.313rem !important;
             }
         }
 
-        .hero_image_container {
-            height: 8rem;
+        .hero_content_container {
+            h4 {
+                display: none;
+            }
+
+            .hero_image_container {
+                height: 6.5rem !important;
+            }
         }
     }
 
