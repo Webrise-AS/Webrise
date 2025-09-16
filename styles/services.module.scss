@@ -171,9 +171,8 @@
             }
 
             .content_speciality_image {
-                height: clamp(20rem, 30vw + 1rem - 1rem, 34rem);
+                height: clamp(25rem, 30vw + 1rem - 1rem, 34rem);
                 overflow: hidden;
-                
                 img {
                     height: 100%;
                     width: 100%;
@@ -420,7 +419,8 @@
 
                         button {
                             height: 3rem !important;
-                            width: 100% !important;
+                            width: 40% !important;
+                            margin-left: 0.9rem;
                         }
                     }
                 }
@@ -432,15 +432,26 @@
         }
     
         .services_slider_section {
-    
             span {
                 min-width: 6.8rem !important ;
             }
-    
-            .embla__slide {
-                height: 2rem !important;
-                margin-left: 3rem !important;
+
+            p {
+                margin-bottom: 1.75rem;
             }
+
+            .embla {
+                padding: 1rem 0 0 0;
+
+                .embla__slide {
+                    margin-left: 3rem !important;
+    
+                    img {
+                        height: 1.4rem !important;
+                    }
+                }
+            }
+    
         }
     }
 }
@@ -461,6 +472,12 @@
             .hero_image_container {
                 height: 8rem !important;
             }
+        }
+    }
+
+    .services_content_section {
+        .content_speciality_image {
+            height: 20rem !important;
         }
     }
 }
