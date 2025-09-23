@@ -34,7 +34,7 @@ export default function Gallery() {
 
   const parallaxConfig = useMemo(
     () => ({
-      speed: -4.3,
+      speed: -4,
       easing: [0.42, 0, 0.58, 1],
     }),
     []

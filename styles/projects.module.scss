@@ -430,6 +430,18 @@
 
 }
 
+@media (max-width: 769px) {
+    .projects_container {
+        
+        .projects_content {
+            
+            .projects_cards_container {
+                grid-template-columns: repeat(2, minmax(12rem, 1fr) );
+            }
+        }
+    }
+}
+
 /* ----------------------------------------------------- Mobile -------------------------------------------- */
 @media (max-width: 441px) {
 

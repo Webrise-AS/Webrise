@@ -37,7 +37,7 @@ export function HomeContent({ data }) {
 
   return (
     <>
-      <section className={styles.home_container}>
+      <div className={styles.home_container}>
         <section
           className={styles.hero_container}
           aria-labelledby="hero-heading"
@@ -145,6 +145,7 @@ export function HomeContent({ data }) {
             <SliderClients data={data} />
           </div>
         </section>
+
         <section
           className={styles.about_container}
           aria-labelledby="about-heading"
@@ -176,6 +177,7 @@ export function HomeContent({ data }) {
             </p>
           </div>
         </section>
+
         <section
           className={styles.project_container}
           aria-labelledby="project-heading"
@@ -195,6 +197,7 @@ export function HomeContent({ data }) {
             </Link>
           </motion.div>
         </section>
+
         <section
           className={styles.social_container}
           aria-labelledby="social-heading"
@@ -230,6 +233,7 @@ export function HomeContent({ data }) {
             />
           </div>
         </section>
+
         <section
           className={styles.article_container}
           aria-labelledby="articles-heading"
@@ -281,6 +285,7 @@ export function HomeContent({ data }) {
             )}
           </div>
         </section>
+
         <section
           className={styles.feedback_container}
           aria-labelledby="feedback-heading"
@@ -303,7 +308,9 @@ export function HomeContent({ data }) {
             <SliderReview data={data} />
           </div>
         </section>
+
         <Talent />
+
         <section
           className={styles.info_container}
           aria-labelledby="info-heading"
@@ -326,7 +333,7 @@ export function HomeContent({ data }) {
             <Accordion data={infoSection.accordion} />
           </div>
         </section>
-      </section>
+      </div>
     </>
   );
 }
