@@ -101,7 +101,7 @@ export const database = {
       {
         id: 4,
         client: `Abel Y. - Founder of Abel Y. Design`,
-        review: `Working with this team was stress-free and straightforward. As a small business owner, I don’t 
+        review: `Working with this team was stress free and straightforward. As a small business owner, I don’t 
         have much technical knowledge, but they explained everything clearly and gave me a site I can actually 
         manage myself. They were always quick to respond and made the whole process feel easy. Now I have a 
         website I’m proud to share with my customers.`,
