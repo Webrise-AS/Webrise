@@ -73,7 +73,7 @@ export const database = {
     feedbackSection: [
       {
         id: 1,
-        client: `Lena M. – Founder of Caffeine Coders`,
+        client: `Lena M. – Owner of Butter Bliss Bakery`,
         review: `Amazing experience! As an online store owner, I needed a website that looked professional but
         was also easy for my customers to use. They nailed it. The design is modern, the checkout process is 
         smooth, and sales have already improved since launch. 
@@ -82,7 +82,7 @@ export const database = {
 
       {
         id: 2,
-        client: `Marco G. – Head Chef at Pasta Palette`,
+        client: `Marco G. – CEO of Tech Solutions Inc`,
         review: `We hired them to rebuild our corporate website, and the results speak for themselves. 
         The new site loads quickly, looks great on mobile, and has helped us generate more leads through our 
         contact forms. Their team was professional, reliable, and always kept deadlines. It’s clear they 
@@ -100,7 +100,7 @@ export const database = {
 
       {
         id: 4,
-        client: `Abel Y. – Head Chef at Pasta Palette`,
+        client: `Abel Y. - Founder of Abel Y. Design`,
         review: `Working with this team was stress-free and straightforward. As a small business owner, I don’t 
         have much technical knowledge, but they explained everything clearly and gave me a site I can actually 
         manage myself. They were always quick to respond and made the whole process feel easy. Now I have a 

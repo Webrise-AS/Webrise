@@ -12,8 +12,8 @@ export default function MediaIcons() {
             "https://www.linkedin.com/company/webrise-no/?viewAsMember=true"
           }
         />
-        <LinkBox Icon={BsTiktok} href={"#"} />
-        <LinkBox Icon={BsInstagram} href={"#"} />
+        <LinkBox Icon={BsTiktok} href={"https://www.tiktok.com/"} />
+        <LinkBox Icon={BsInstagram} href={"https://www.instagram.com/"} />
       </div>
     </>
   );
