@@ -1160,6 +1160,7 @@
 
         .hero_container {
             padding-top: 1.5rem;
+
             .hero_content {
                 flex-direction: column !important;
 
@@ -1225,10 +1226,11 @@
                 }
     
                 .hero_image_section {
+                    align-self: center;
                     position: relative;
                     margin-top: 2.5rem;
                     height: 15rem;
-                    width: auto !important;
+                    width: 75% !important;
                 }
             }
     
